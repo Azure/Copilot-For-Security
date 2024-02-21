@@ -1,0 +1,19 @@
+![Copilot for Security Overview](https://github.com/KwachSean/Copilot-For-Security/blob/main/Copilot%20for%20Security.png)
+# Copilot for Security - Customer Guide
+Welcome to the Copilot for Security Customer Guide! This document serves as your comprehensive resource for leveraging specific skill sets, querying sample prompts, managing identities, and addressing various security scenarios within Copilot. Whether you're new to the platform or looking to deepen your understanding, this guide will equip you with the knowledge and tools needed to maximize the effectiveness of Copilot for Security.
+
+# Introduction
+Copilot for Security is a powerful platform designed to empower security professionals with advanced capabilities for threat detection, incident response, and security operations. By harnessing the latest advancements in artificial intelligence and machine learning, Copilot enables organizations to proactively defend against cyber threats, streamline security workflows, and protect critical assets.
+
+# Key Features
+# 1. Specific Skill Sets
+Copilot offers a diverse range of skill sets tailored to address specific security challenges and scenarios. These skill sets are designed to provide actionable insights, automate repetitive tasks, and enhance overall security posture.
+
+# 2.  Sample Prompts
+To effectively utilize Copilot's capabilities, it's essential to understand how to formulate queries and prompts that yield relevant insights. Sample prompts cover a variety of security topics.
+
+# 3. Identity Management
+Managing identities and access controls is critical for maintaining security and compliance within an organization. Copilot provides robust identity management features, allowing you to authenticate users, authorize access, and monitor user activity.
+
+# 4.  Scenarios
+Copilot for Security can be applied to a wide range of security scenarios, including but not limited to threat hunting, incident response, and compliance monitoring.

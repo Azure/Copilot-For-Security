@@ -1,0 +1,31 @@
+Descriptor:
+  Name: Hunting IP historical data
+  DisplayName: ADX IP hunt
+  Description: hunting IP historical data
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: huntipcolddata
+        DisplayName: Hunting IP historical data
+        Description: search Ip on cold storage on Azure data explorer
+        Inputs:
+          - Name: ipaddress
+            Description: ipaddress
+            Required: true
+        Settings:
+          Target: Kusto
+          Cluster: https://amycluster.kusto.windows.net
+          Database: mydbname
+          Template: |-
+            let SecurityEventtable = view() {
+            SecurityEvent
+            | where IpAddress == '{{ipaddress}}'
+            | project TimeGenerated, Account, Computer, Channel,EventID, Activity, IpAddress
+            };
+            let SigninLogstable = view() {
+            SigninLogs
+            | where IPAddress == '{{ipaddress}}'
+            | project ['TimeGenerated _UTC_'], OperationName, IPAddress, Category, Identity, AlternateSignInName
+            };
+            union withsource="newresults" SecurityEventtable,SigninLogstable
+            | project-away  newresults
