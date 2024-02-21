@@ -1,14 +1,12 @@
-# Project
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
-
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+# Copilot-For-Security
+Welcome to the Copilot for Security Repository! We're your go-to destination for comprehensive security solutions, offering a range of tools and resources to bolster your defenses and hunt down threats proactively. Explore our array of offerings, from out-of-the-box detections to custom plugins and playbooks. Contribute your expertise to enrich our repository and empower security professionals worldwide. Dive in, engage with us, and shape the future of security operations. Welcome aboard!
+# Resources
+- https://learn.microsoft.com/en-us/security-copilot/
+- https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot
+- https://learn.microsoft.com/en-us/security-copilot/plugin_overview
+- https://learn.microsoft.com/en-us/security-copilot/connectors-overview
+- https://aka.ms/copilotforsecurity
 
 ## Contributing
 
@@ -24,10 +22,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Trademarks
+### Pull Request
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+- After you push your changes, you will need to submit the [Pull Request (PR)](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+- After submission, check the [Pull Request](https://github.com/Azure/Microsoft-Defender-for-Cloud/pulls) for comments.
+- Make changes as suggested and update your branch or explain why no change is needed. Resolve the comment when done.
+
+When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
