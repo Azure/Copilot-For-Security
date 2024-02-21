@@ -1,4 +1,4 @@
-
+![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Securitycopilotlogo.png)
 # Copilot-For-Security
 Welcome to the Copilot for Security Repository! We're your go-to destination for comprehensive security solutions, offering a range of tools and resources to bolster your defenses and hunt down threats proactively. Explore our array of offerings, from out-of-the-box detections to custom plugins and playbooks. Contribute your expertise to enrich our repository and empower security professionals worldwide. Dive in, engage with us, and shape the future of security operations. Welcome aboard!
 # Resources
