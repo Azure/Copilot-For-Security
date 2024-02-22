@@ -1,6 +1,7 @@
+![ServiceNow Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Customer%20Guides%20Sample%20prompts/Service%20Now%20Guide/Servicenow%20logo.png)
+
 ### Microsoft Security Copilot Plugin Guide – ServiceNow  
 
- 
 ## Plugin overview 
 
 ServiceNow is an enterprise app ecosystem designed to connect and automate business processes, delivered as a SaaS application. Many security operation centers (SOCs) use ServiceNow as part of their incident management flow, and often extend the core functionality with customizations, integrations, and security-specific modules. 
