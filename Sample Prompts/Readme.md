@@ -158,6 +158,7 @@ methodologies.
 - Does [CveId] have known exploitations?
 - Is my environment vulnerable to CVE [CVEID]? 
 
+
 ## Purview
 <a name="Purview"></a>
 - Show me the top 5 DLP alerts that I should prioritize today?
@@ -172,6 +173,5 @@ methodologies.
 - For the files related to the alert, show me all activities done in the last 7 days?
 - Can you get me the status of labeling on these files
 
-[Up][def]
 
-[def]: #
+[![alt text](../Images/BackToTopIcon.png)](#sample-prompts-library)
