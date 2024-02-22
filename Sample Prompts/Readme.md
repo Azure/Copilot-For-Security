@@ -2,6 +2,8 @@
 
 ## Sample prompts 
 
+[[_TOC_]]
+
 # Entra
 - Whoami
 - What is the status of the user account for <Username>? Is it locked out?
