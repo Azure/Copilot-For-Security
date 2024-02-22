@@ -153,7 +153,7 @@ methodologies.
 - Is my environment vulnerable to CVE [CVEID]? 
 
 # Purview
-<a name="VPurview"></a>
+<a name="Purview"></a>
 - Show me the top 5 DLP alerts that I should prioritize today?
 - Can you summarize purview alert <AlertID>? 
 - Can you summarize the risk associated with user: <UPN> involved in this alert?
