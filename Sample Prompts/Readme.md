@@ -1,18 +1,24 @@
 ![Copilot for Security Overview](https://github.com/KwachSean/Copilot-For-Security/blob/main/Copilot%20for%20Security.png)
 
-## Sample prompts 
+# Sample prompts Library
+Welcome to our page of sample prompts! Here, we offer a variety of examples to demonstrate how prompts can be used to achieve different security tasks. Our examples showcase how specific prompts can be utilized to perform a range of tasks. This is a collaborative page where people can learn from the examples and contribute their own.
 
-## Table of Contents
-- [EASM](#EASM)
-- [Entra](#Entra)
-- [Intune](#Intune)
-- [Defender & Sentinel](#Defender_and_Sentinel)
-- [Threat Intelligence](#Threat_Intelligence)
-- [Vulnerabilities](#Vulnerabilities)
-- [Purview](#Purview)
+We have organized our examples into the following categories:
 
 
-# EASM
+
+- [Sample prompts Library](#sample-prompts-library)
+  - [EASM](#easm)
+  - [Entra](#entra)
+  - [Intune](#intune)
+  - [Defender \& Sentinel](#defender--sentinel)
+  - [Threat Intelligence](#threat-intelligence)
+  - [Vulnerabilities](#vulnerabilities)
+  - [Purview](#purview)
+
+
+## EASM
+<a name="EASM"></a>
 Microsoft Defender External Attack Surface Management (EASM): 
 - Show me the attack surface summary for <Woodgrove Bank>
 - How many domains are expired in the <Woodgrove Bank> organization's attack surface?
@@ -36,7 +42,7 @@ Microsoft Defender External Attack Surface Management (EASM):
 - Create a report for this copilot session and include sections for: An Overview of MDEASM, The Summary of the Attack Surface for <Woodgrove Bank>, List of Expired Domains and whois info, The list of Common Names from Expired SSL Certificates, Describe the Vulnerabilities on the Host <test.example.com> with CVSS scores, Detailed Steps for Mitigating Vulnerabilities on <test.wexample.com>
 
 
-# Entra
+## Entra
 <a name="Entra"></a>
 - Whoami
 - What is the status of the user account for <Username>? Is it locked out?
@@ -53,7 +59,7 @@ reasons.
 - List the groups I am part of
 - List the groups <Username> is part of 
 
-# Intune
+## Intune
 <a name="Intune"></a>
 - Which devices are used by user <UPN>
 - Tell me about this device.
@@ -77,7 +83,7 @@ policy?
 - Tell me about the app policy that isn't compliant. Why would this device not have the policy 
 applied and why is it in a state of non-compliance?
 
-# Defender & Sentinel
+## Defender & Sentinel
 <a name="Defender_and_Sentinel"></a>
 - Provide me a summary of Defender incident <Incident ID>
 - Tell me more about Sentinel incident <Incident ID>
@@ -112,7 +118,7 @@ Typhoon>?
 - show me MITRE TTPs from M365D incidents in the last month.
 - What is the MITRE TTP number for account manipulation?
 
-# Threat Intelligence
+## Threat Intelligence
 <a name="Threat_Intelligence"></a>
 - Summarize recent threat intelligence.
 - What threat actors have been active lately?
@@ -142,7 +148,7 @@ methodologies.
 - Show relevant TTPs.
 - Show a relevant list of indicators.
 
-# Vulnerabilities
+## Vulnerabilities
 <a name="Vulnerabilities"></a>
 - Summarize the latest Vulnerabilities from the last week.
 - Summarize <CVE-XXXX> vulnerability.
@@ -152,7 +158,7 @@ methodologies.
 - Does [CveId] have known exploitations?
 - Is my environment vulnerable to CVE [CVEID]? 
 
-# Purview
+## Purview
 <a name="Purview"></a>
 - Show me the top 5 DLP alerts that I should prioritize today?
 - Can you summarize purview alert <AlertID>? 
@@ -165,3 +171,7 @@ methodologies.
 - What are the data risks related to this alert?
 - For the files related to the alert, show me all activities done in the last 7 days?
 - Can you get me the status of labeling on these files
+
+[Up][def]
+
+[def]: #
