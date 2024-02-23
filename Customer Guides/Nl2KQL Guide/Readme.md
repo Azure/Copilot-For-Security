@@ -1,3 +1,4 @@
+![Copilot for Security Overview](https://github.com/KwachSean/Copilot-For-Security/blob/main/Copilot%20for%20Security.png)
 # Security Copilot Preview
 ## Featured Capability: Generate Hunting Queries
 
