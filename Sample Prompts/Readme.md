@@ -1,8 +1,49 @@
 ![Copilot for Security Overview](https://github.com/KwachSean/Copilot-For-Security/blob/main/Copilot%20for%20Security.png)
 
-## Sample prompts 
+# Sample prompts Library
+Welcome to our page of sample prompts! Here, we offer a variety of examples to demonstrate how prompts can be used to achieve different security tasks. Our examples showcase how specific prompts can be utilized to perform a range of tasks. This is a collaborative page where people can learn from the examples and contribute their own.
 
-# Entra
+We have organized our examples into the following categories:
+
+
+
+- [Sample prompts Library](#sample-prompts-library)
+  - [EASM](#easm)
+  - [Entra](#entra)
+  - [Intune](#intune)
+  - [Defender \& Sentinel](#defender--sentinel)
+  - [Threat Intelligence](#threat-intelligence)
+  - [Vulnerabilities](#vulnerabilities)
+  - [Purview](#purview)
+
+
+## EASM
+<a name="EASM"></a>
+Microsoft Defender External Attack Surface Management (EASM): 
+- Show me the attack surface summary for <Woodgrove Bank>
+- How many domains are expired in the <Woodgrove Bank> organization's attack surface?
+- How many SSL certificates are expired in the <Woodgrove Bank> attack surface?
+- Are there any vulnerabilities impacting the host <testsd.woodgrovebank.com>?
+- Provide the CVSS scores for the CVE IDs on the asset <testsd.woodgrovebank.com>
+- What are the mitigation steps for the CVE <CVE-ID>?
+- Show me the intel profile for <Hazel Sandstorm>
+- Show me any associated indicators for the above actor.
+- What are some of the domain indicators for this actor.
+- Get me the reputations for hostname "service-logins.com"
+- What are some of the web components for the ip address mentioned above?
+- Get the most recent whois record for <manniewith98.com>
+- Summarize threat intelligence articles related to the actor mentioned above.
+- Are there any threat intelligence articles that reference the IOCs that were found?
+- Show me the profiles of any threat actors referenced.
+- Are any of these CVEs impacting my internet-facing assets? 
+- Is my environment vulnerable to any of the CVEs from the list above? 
+- Is my environment vulnerable to CVE [CVEID]?
+- Check my cloud assets for vulnerabilities related to <CVE-XXXX>
+- Create a report for this copilot session and include sections for: An Overview of MDEASM, The Summary of the Attack Surface for <Woodgrove Bank>, List of Expired Domains and whois info, The list of Common Names from Expired SSL Certificates, Describe the Vulnerabilities on the Host <test.example.com> with CVSS scores, Detailed Steps for Mitigating Vulnerabilities on <test.wexample.com>
+
+
+## Entra
+<a name="Entra"></a>
 - Whoami
 - What is the status of the user account for <Username>? Is it locked out?
 - What login attempts exist for the user on December 31st? (Created KQL)
@@ -18,7 +59,8 @@ reasons.
 - List the groups I am part of
 - List the groups <Username> is part of 
 
-# Intune
+## Intune
+<a name="Intune"></a>
 - Which devices are used by user <UPN>
 - Tell me about this device.
 - Identify Weak hosts. 
@@ -41,7 +83,8 @@ policy?
 - Tell me about the app policy that isn't compliant. Why would this device not have the policy 
 applied and why is it in a state of non-compliance?
 
-# Defender & Sentinel
+## Defender & Sentinel
+<a name="Defender_and_Sentinel"></a>
 - Provide me a summary of Defender incident <Incident ID>
 - Tell me more about Sentinel incident <Incident ID>
 - Extract the entities associated with the incident.
@@ -75,7 +118,8 @@ Typhoon>?
 - show me MITRE TTPs from M365D incidents in the last month.
 - What is the MITRE TTP number for account manipulation?
 
-# Threat Intelligence
+## Threat Intelligence
+<a name="Threat_Intelligence"></a>
 - Summarize recent threat intelligence.
 - What threat actors have been active lately?
 - How should I harden my environment to prevent these attacks?
@@ -104,7 +148,8 @@ methodologies.
 - Show relevant TTPs.
 - Show a relevant list of indicators.
 
-# Vulnerabilities
+## Vulnerabilities
+<a name="Vulnerabilities"></a>
 - Summarize the latest Vulnerabilities from the last week.
 - Summarize <CVE-XXXX> vulnerability.
 - What vulnerabilities have been exploited recently by threat actors?
@@ -113,7 +158,9 @@ methodologies.
 - Does [CveId] have known exploitations?
 - Is my environment vulnerable to CVE [CVEID]? 
 
-# Purview
+
+## Purview
+<a name="Purview"></a>
 - Show me the top 5 DLP alerts that I should prioritize today?
 - Can you summarize purview alert <AlertID>? 
 - Can you summarize the risk associated with user: <UPN> involved in this alert?
@@ -125,3 +172,6 @@ methodologies.
 - What are the data risks related to this alert?
 - For the files related to the alert, show me all activities done in the last 7 days?
 - Can you get me the status of labeling on these files
+
+
+[![alt text](../Images/BackToTopIcon.png)](#sample-prompts-library)
