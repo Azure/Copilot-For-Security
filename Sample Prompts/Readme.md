@@ -174,4 +174,4 @@ methodologies.
 - Can you get me the status of labeling on these files
 
 
-[![alt text](../Images/BackToTopIcon.png)](#sample-prompts-library)
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
