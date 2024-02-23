@@ -1,8 +1,8 @@
 ![Copilot for Security Overview](https://github.com/KwachSean/Copilot-For-Security/blob/main/Copilot%20for%20Security.png)
 
-### Guide to Create your Custom Plug-in
+# Copilot for Security Guide to Create your Custom Plug-in
 
-# Name of Plugin
+**Name of Plugin
 **Author: John DOE**
 **Publisher: Example**
 
