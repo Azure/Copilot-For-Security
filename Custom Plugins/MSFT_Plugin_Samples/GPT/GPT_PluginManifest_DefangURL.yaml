@@ -1,0 +1,25 @@
+Descriptor:
+  Name: SampleGPT
+  DisplayName: My Sample GPT Skillset
+  Description: Skills for defanging URLs
+
+SkillGroups:
+  - Format: GPT
+    Skills:
+      - Name: DefangUrls
+        DisplayName: Defang URLs
+        Description: Defangs URLs in the given text
+        Inputs:
+          - Name: text
+            Description: The text containing URLs to be defanged
+        Settings:
+          ModelName: gpt-4-32k-v0613
+          Template: |-
+            To 'defang' a URL means to change the scheme to either hxxp or hxxps and replace '.' with '[.]' in the domain so that the URL is still easily readable by a human but doesn't automatically render as a hyperlink if rendered in a rich client such as Outlook. This is often done when sharing potentially malicious links to prevent the reader accidentally clicking on them and visiting a malicious website.
+
+            Some examples of defanging URLs:
+            1. https://example.com --> hxxps://example[.]com
+            2. http://subdomain.example.com/path.with.dots/ --> hxxp://subdomain[.]example[.]com/path.with.dots/
+
+            Defang any URLs in the following text and return the new text:
+            {{text}}

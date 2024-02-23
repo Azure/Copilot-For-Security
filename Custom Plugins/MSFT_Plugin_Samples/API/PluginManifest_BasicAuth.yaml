@@ -1,0 +1,11 @@
+Descriptor:
+  Name: SampleAPIForBasicAuth
+  DisplayName: httpbin.org
+  Description: Plugin for making example http requests
+  SupportedAuthTypes:
+    - Basic
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://gist.githubusercontent.com/PetRich-MSFT/fd3a8a92cbd7b6c120569a7a2c96c93c/raw/04230ad20469fba4aacacfe7f26e99d16b9f128e/openapi.yaml
