@@ -13,4 +13,4 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://gist.githubusercontent.com/jmf321/ad258c301ce9a6362583303b98a5bb9e/raw/bfa9c4c794a0d3f7b7c6bd55b42f00bfbc75ccef/vt1.yaml
+      OpenApiSpecUrl: https://gist.githubusercontent.com/jmf321/ad258c301ce9a6362583303b98a5bb9e/raw/d22b81a2fc12e027fce045c351d4487f2d88739b/vt1.yaml
