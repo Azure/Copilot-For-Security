@@ -1,16 +1,22 @@
-## Shodan Custom Plugin
+![Shodan Logo](https://github.com/Azure/Copilot-For-Security/raw/main/Custom%20Plugins/Shodan/shodanlogo.png)
 
-The following is Custom plugin for Shodan , here you will be able to achieve the following :
+### Shodan Custom Plugin
 
-ShodanGetServicesOnIP
-- Returns all services that have been found on the given host IP.
-ShodanGetHostResultCount
-- This method behaves identical to "/shodan/host/search" with the only difference that this method does not return any host results, it only returns the total number of results that matched the query and any facet information that was requested. As a result this method does not consume query credits.
-ShodanGetSearchSummary
-- Search Shodan using the same query syntax as the website and use facets to get summary information for different properties.
-ShodanListFacets
-- This method returns a list of search filters that can be used in the search query.
-ShodanListSearchFilters
-- This method returns a list of search filters that can be used in the search query.
-ShodanSearchTokens
-- This method lets you determine which filters are being used by the query string and what parameters were provided to the filters.
+Welcome to the Shodan custom plugin! Here, you'll unlock powerful functionalities tailored to enhance your Shodan experience:
+
+#### Features:
+
+- **ShodanGetServicesOnIP:** Obtain a comprehensive list of all services detected on a specified host IP address.
+
+- **ShodanGetHostResultCount:** Retrieve the total number of results matching a query, along with facet information, without consuming query credits.
+
+- **ShodanGetSearchSummary:** Utilize Shodan's query syntax to search for specific properties and generate summary information using facets.
+
+- **ShodanListFacets:** Access a list of search filters that can refine your search query for more precise results.
+
+- **ShodanListSearchFilters:** Explore a range of search filters available to further tailor your search parameters.
+
+- **ShodanSearchTokens:** Gain insights into the filters applied to your query string and the parameters associated with them.
+
+Enhance your Shodan exploration with these powerful tools designed to streamline your search and analysis process. Let's dive in! 🚀
+
