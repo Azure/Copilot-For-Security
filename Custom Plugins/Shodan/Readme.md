@@ -1,5 +1,4 @@
 ![Shodan Logo](https://github.com/Azure/Copilot-For-Security/raw/main/Custom%20Plugins/Shodan/shodanlogo.png)
-
 ### Shodan Custom Plugin
 
 Welcome to the Shodan custom plugin! Here, you'll unlock powerful functionalities tailored to enhance your Shodan experience:
