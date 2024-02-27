@@ -15,6 +15,7 @@ We have organized our examples into the following categories:
   - [Threat Intelligence](#threat-intelligence)
   - [Vulnerabilities](#vulnerabilities)
   - [Purview](#purview)
+  - [Script Analysis](#script-analysis)
 
 
 ## EASM
@@ -41,7 +42,7 @@ Microsoft Defender External Attack Surface Management (EASM):
 - Check my cloud assets for vulnerabilities related to <CVE-XXXX>
 - Create a report for this copilot session and include sections for: An Overview of MDEASM, The Summary of the Attack Surface for <Woodgrove Bank>, List of Expired Domains and whois info, The list of Common Names from Expired SSL Certificates, Describe the Vulnerabilities on the Host <test.example.com> with CVSS scores, Detailed Steps for Mitigating Vulnerabilities on <test.wexample.com>
 
-
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
 ## Entra
 <a name="Entra"></a>
 - Whoami
@@ -60,7 +61,7 @@ reasons.
 - List the groups I am part of
 - List the groups <Username> is part of 
 
-
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
 ## Intune
 <a name="Intune"></a>
 - Which devices are used by user <UPN>
@@ -85,6 +86,7 @@ policy?
 - Tell me about the app policy that isn't compliant. Why would this device not have the policy 
 applied and why is it in a state of non-compliance?
 
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
 ## Defender & Sentinel
 <a name="Defender_and_Sentinel"></a>
 - Provide me a summary of Defender incident <Incident ID>
@@ -97,11 +99,8 @@ title, severity, timestamp, Attack Techniques, and Categories for any incidents 
 account name or alias. Search account name containing <User full name> or <user first 
 name>
 - List the 10 most critical defender incidents.
-- Write a PowerShell script to test the SMB versions and state across all the affected devices 
-via remote connection.
-- Write a PowerShell script to test the SMB versions and state across all the affected 
-machines.
-- Extract the entities from the script analysis (If script analysis is done)
+- Show defender incidents detected over the last 14 days and summarize the trends
+- - Show sentinel incidents detected over the last 14 days and summarize the trend
 - Write a report summarizing the investigation. Lead with a non-technical executive summary. 
 Next provide the breakdown of the Defender incident report, the takeaways from the 
 Sentinel Hunt, the Intune device state, and finally the threat intel summary
@@ -121,6 +120,7 @@ Typhoon>?
 - show me MITRE TTPs from M365D incidents in the last month.
 - What is the MITRE TTP number for account manipulation?
 
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
 ## Threat Intelligence
 <a name="Threat_Intelligence"></a>
 - Summarize recent threat intelligence.
@@ -151,6 +151,7 @@ methodologies.
 - Show relevant TTPs.
 - Show a relevant list of indicators.
 
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
 ## Vulnerabilities
 <a name="Vulnerabilities"></a>
 - Summarize the latest Vulnerabilities from the last week.
@@ -161,7 +162,7 @@ methodologies.
 - Does [CveId] have known exploitations?
 - Is my environment vulnerable to CVE [CVEID]? 
 
-
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
 ## Purview
 <a name="Purview"></a>
 - Show me the top 5 DLP alerts that I should prioritize today?
@@ -175,6 +176,21 @@ methodologies.
 - What are the data risks related to this alert?
 - For the files related to the alert, show me all activities done in the last 7 days?
 - Can you get me the status of labeling on these files
+  
+  
+[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
+## Script Analysis
+<a name="Script Analysis"></a>
+- What actions are performed by this script?
+- Explain how this script could be used maliciously
+- Is this script malicious?
+- Evaluate the provided script for malicious intent. Justify your assessment with supporting evidence and a confidence level.
+- Write a PowerShell script to test the SMB versions and state across all the affected devices 
+via remote connection.
+- Write a PowerShell script to test the SMB versions and state across all the affected 
+machines.
+- Extract the entities from the script analysis (If script analysis is done)
+- Give me recommendations to protect my organization against this script
 
 
 [![alt text](../Images/backtotop.svg)](#sample-prompts-library)
