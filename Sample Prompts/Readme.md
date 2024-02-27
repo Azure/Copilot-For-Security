@@ -11,6 +11,7 @@ We have organized our examples into the following categories:
   - [EASM](#easm)
   - [Entra](#entra)
     - [Entitlement Management](#entitlement-management)
+    - [Access Reviews](#access-reviews)
   - [Intune](#intune)
   - [Defender \& Sentinel](#defender--sentinel)
   - [Threat Intelligence](#threat-intelligence)
@@ -73,7 +74,7 @@ reasons.
     - Who is the sponsor from the connected organization who can approval the assignment of Sales access package
     - Who approved the Sales access package assignment?
     - Why was the Sales access package requested by user(s)
-- ### Access Reviews
+  ### Access Reviews
 <a name="Access Reviews"></a>
 - List access reviews
     - Show access reviews
