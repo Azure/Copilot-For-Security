@@ -18,8 +18,9 @@ We have organized our examples into the following categories:
   - [Script Analysis](#script-analysis)
 
 
----
 
+***
+&nbsp;
 ## EASM
 <a name="EASM"></a>
 Microsoft Defender External Attack Surface Management (EASM): 
