@@ -109,6 +109,7 @@ Sentinel Hunt, the Intune device state, and finally the threat intel summary
 Next provide the breakdown of the Defender incident report, the takeaways from the 
 Sentinel Hunt, the Intune device state, the threat intel summary, and finally next steps for 
 remediation
+-Can you provide me with a concise summary of the key actions and entities involved in this security incident?
 - What are the critical Sentinel incidents right now?
 - What are the critical Defender incidents right now?
 - List the alerts on Sentinel incident <Incident ID>
