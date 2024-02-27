@@ -1,5 +1,5 @@
 
-<p align="right">
+<p align="center">
   <img src="../Images/libary.svg">
 </p>
 
