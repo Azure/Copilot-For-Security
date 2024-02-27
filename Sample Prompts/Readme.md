@@ -10,8 +10,6 @@ We have organized our examples into the following categories:
 - [Sample prompts Library](#sample-prompts-library)
   - [EASM](#easm)
   - [Entra](#entra)
-    - [Entitlement Management](#entitlement-management)
-    - [Access Reviews](#access-reviews)
   - [Intune](#intune)
   - [Defender \& Sentinel](#defender--sentinel)
   - [Threat Intelligence](#threat-intelligence)
@@ -62,33 +60,6 @@ reasons.
 - List the groups I am part of
 - List the groups <Username> is part of 
 
-### Entitlement Management
-<a name="Entitle Management"></a>
-- Show me the list of all the access packages in my tenant
-    - Show details of an access package for Sales team
-    - Show objects which are incompatible for Sales team access package
-    - Show groups which are incompatible for Sales team access package
-    - Show access package assignment requests in my tenant
-    - Show me the assignment activity for the Sales access package
-    - Show me which connected organizations can access the Sales access package
-    - Who is the sponsor from the connected organization who can approval the assignment of Sales access package
-    - Who approved the Sales access package assignment?
-    - Why was the Sales access package requested by user(s)
-  ### Access Reviews
-<a name="Access Reviews"></a>
-- List access reviews
-    - Show access reviews
-    - Get all access reviews
-    - Get access review by
-    - Show access review by review id
-    - Get all access review associated with
-    - Get all access review by displayName
-    - show status of access review
-    - access review createdBy
-    - List status of all access reviews
-    - show settings of all access reviews
-    - who are all the reviewers of the access reviews
-    - show settings of access review
 
 ## Intune
 <a name="Intune"></a>
