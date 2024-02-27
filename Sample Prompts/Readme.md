@@ -1,14 +1,17 @@
 
+<p align="left"><img src="../Images/libary.svg">
+
+# Sample prompts Library 
 
 
-# Sample prompts Library <img src="../Images/libary.svg">
 Welcome to our page of sample prompts! Here, we offer a variety of examples to demonstrate how prompts can be used to achieve different security tasks. Our examples showcase how specific prompts can be utilized to perform a range of tasks. This is a collaborative page where people can learn from the examples and contribute their own.
+
 
 We have organized our examples into the following categories:
 
 
 
-- [Sample prompts Library ](#sample-prompts-library-)
+- [Sample prompts Library](#sample-prompts-library)
   - [EASM](#easm)
   - [Entra](#entra)
   - [Intune](#intune)
