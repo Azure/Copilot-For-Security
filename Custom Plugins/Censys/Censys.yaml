@@ -1,0 +1,11 @@
+Descriptor:
+  Name: Censys
+  DisplayName: Censys
+  Description: Censys is a platform that helps information security practitioners discover, monitor, and analyze devices that are accessible from the Internet.
+  SupportedAuthTypes:
+    - Basic
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://gist.githubusercontent.com/jmf321/bf733a52bde8da632924ec39f6fa9d1c/raw/5e86c492ee5f18ae10717cf5f531017fd5a68a81/censys.yaml
