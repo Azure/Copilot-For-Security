@@ -18,6 +18,8 @@ We have organized our examples into the following categories:
   - [Script Analysis](#script-analysis)
 
 
+---
+
 ## EASM
 <a name="EASM"></a>
 Microsoft Defender External Attack Surface Management (EASM): 
@@ -42,7 +44,7 @@ Microsoft Defender External Attack Surface Management (EASM):
 - Check my cloud assets for vulnerabilities related to <CVE-XXXX>
 - Create a report for this copilot session and include sections for: An Overview of MDEASM, The Summary of the Attack Surface for <Woodgrove Bank>, List of Expired Domains and whois info, The list of Common Names from Expired SSL Certificates, Describe the Vulnerabilities on the Host <test.example.com> with CVSS scores, Detailed Steps for Mitigating Vulnerabilities on <test.wexample.com>
 
-[![alt text](../Images/backtotop.svg)](#sample-prompts-library)
+
 ## Entra
 <a name="Entra"></a>
 - Whoami
