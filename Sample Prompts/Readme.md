@@ -77,6 +77,7 @@ reasons.
 - Tell me about security group <**_`<name>`_**?  including who created it and how many members are in it.
 
 
+
 [![alt text](../Images/backtotop.svg)](#sample-prompts-library)
 ## Intune
 <a name="Intune"></a>
@@ -115,7 +116,6 @@ title, severity, timestamp, Attack Techniques, and Categories for any incidents 
 account name or alias. Search account name containing **_`<User full name>`_** or **_`<User first name>`_**
 - List the 10 most critical defender incidents.
 - Show defender incidents detected over the last 14 days and summarize the trends
-- - Show sentinel incidents detected over the last 14 days and summarize the trend
 - Write a report summarizing the investigation. Lead with a non-technical executive summary. 
 Next provide the breakdown of the Defender incident report, the takeaways from the 
 Sentinel Hunt, the Intune device state, and finally the threat intel summary
