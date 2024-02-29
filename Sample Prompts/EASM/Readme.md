@@ -36,6 +36,6 @@
 - Create a report for this copilot session and include sections for: An Overview of MDEASM, The Summary of the Attack Surface for **_`<Woodgrove Bank>`_**, List of Expired Domains and whois info, The list of Common Names from Expired SSL Certificates, Describe the Vulnerabilities on the Host **_`<testsd.woodgrovebank.com>`_** with CVSS scores, Detailed Steps for Mitigating Vulnerabilities on **_`<testsd.woodgrovebank.com>`_**
 
 &nbsp;
-[![alt text](../../Images/backtotop.svg)](#entra)
+[![alt text](../../Images/backtotop.svg)](#microsoft-defender-external-attack-surface-management-easm)
 
 ***
