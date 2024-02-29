@@ -13,7 +13,7 @@ We have organized our examples into the following categories:
 
   - [EASM](./EASM/Easm.md)
   - [Entra](./Entra/Entra.md)
-  - [Intune](#intune)
+  - [Intune](./Intune/Intune.md)
   - [Defender \& Sentinel](#defender--sentinel)
   - [Threat Intelligence](#threat-intelligence)
   - [Vulnerabilities](#vulnerabilities)
