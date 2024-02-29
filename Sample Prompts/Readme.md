@@ -12,7 +12,7 @@ We have organized our examples into the following categories:
 
 
 - [Sample prompts Library](#sample-prompts-library)
-  - [EASM](#easm)
+  - [EASM](./EASM/Readme.md)
   - [Entra](./Entra/Readme.md)
   - [Intune](#intune)
   - [Defender \& Sentinel](#defender--sentinel)
