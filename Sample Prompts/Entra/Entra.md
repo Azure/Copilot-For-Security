@@ -27,7 +27,7 @@ reasons.
 -  Show me the sign-in logs of users who signed in from ,**_`<location>`_**? 
 -  Show me the authentication methods enabled for user
 -  What are the terms of use agreements for this user
--  - Show me the successfully deleted users in the last 7 days.
+-  Show me the successfully deleted users in the last 7 days.
 - List the groups **_`<Username>`_**?  is part of 
 - Tell me about security group <**_`<name>`_**?  including who created it and how many members are in it.
 - What is the status of the user account for **_`<UPN>`_**? Is it locked out?
