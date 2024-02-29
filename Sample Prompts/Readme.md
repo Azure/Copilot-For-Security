@@ -15,7 +15,7 @@ We have organized our examples into the following categories:
   - [Entra](./Entra/Entra.md)
   - [Intune](./Intune/Intune.md)
   - [Defender \& Sentinel](./Defender%20and%20Sentinel/Defender%20and%20Sentinel.md)
-  - [Threat Intelligence](#threat-intelligence)
+  - [Threat Intelligence](./MDTI/MDTI.md)
   - [Vulnerabilities](#vulnerabilities)
   - [Purview](#purview)
   - [Script Analysis](#script-analysis)
