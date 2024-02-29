@@ -119,22 +119,21 @@ reasons.
 
 ## Privileged Access Management
 
-- Show me the details of eligible Entra (Azure AD) role assignments which I can activate through PIM
- - Show me the details of a request made to activate an Entra (Azure AD) role through PIM
-- Show me the details of a specific active Entra (Azure AD) role assignment request made through PIM
+- Show me the details of eligible Entra role assignments which I can activate through PIM
+ - Show me the details of a request made to activate an Entra role through PIM
+- Show me the details of a specific active Entra role assignment request made through PIM
 - Show me the details of requests made to create eligible Entra (Azure AD) role assignments through PIM
 - Show me the details of a specific eligible Entra (Azure AD) role assignment request made through PIM
-- Show me the details of all active Entra (Azure AD) role assignments
-- Show me the details of a specific active Entra (Azure AD) role assignment (unifiedRoleAssignmentScheduleId)
+- Show me the details of a specific active Entra role assignment (unifiedRoleAssignmentScheduleId)
 - Show me the details of all eligible Entra (Azure AD) role assignments
- - Show me the details of a specific eligible Entra (Azure AD) role assignment (unifiedRoleEligibilityScheduleId)
+ - Show me the details of a specific eligible Entra role assignment (unifiedRoleEligibilityScheduleId)
  - Show me the details of requests made to create active role assignments through PIM
-- Show me the details of role management policies that apply to Entra (Azure AD) roles
-- Show me the details of a specific role management policy that apply to Entra (Azure AD) roles (unifiedRoleManagementPolicyId)
-- Show me the rules or settings defined for a specific role management policy that apply to Entra (Azure AD) roles
-- Show me a rule or a setting defined for a specific role management policy that apply to Entra (Azure AD) roles
- - Show me the details of all role management policy assignments including the policies and rules associated with the Entra (Azure AD) roles
-- Show me the details of a role management policy assignment including the policy and rules associated with the Entra (Azure AD) role
+- Show me the details of role management policies that apply to Entra roles
+- Show me the details of a specific role management policy that apply to Entra roles (unifiedRoleManagementPolicyId)
+- Show me the rules or settings defined for a specific role management policy that apply to Entra roles
+- Show me a rule or a setting defined for a specific role management policy that apply to Entra roles
+ - Show me the details of all role management policy assignments including the policies and rules associated with the Entra roles
+- Show me the details of a role management policy assignment including the policy and rules associated with the Entra role
 
 
 &nbsp;
