@@ -27,3 +27,8 @@
 ## Hardware and Compliance
 - Show me the difference in the hardware for the above device
 - Show me the difference in managed applications for the above devices.
+
+&nbsp;
+[![alt text](../../Images/backtotop.svg)](#intune-management)
+
+***
