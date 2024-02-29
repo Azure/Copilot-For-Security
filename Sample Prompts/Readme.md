@@ -1,7 +1,7 @@
 
 
 
-# Sample prompts Library 
+# Sample Prompts Library 
 
 
 Welcome to our page of sample prompts! Here, we offer a variety of examples to demonstrate how prompts can be used to achieve different security tasks. Our examples showcase how specific prompts can be utilized to perform a range of tasks. This is a collaborative page where people can learn from the examples and contribute their own.
