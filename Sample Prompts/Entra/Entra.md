@@ -122,8 +122,8 @@ reasons.
 - Show me the details of eligible Entra role assignments which I can activate through PIM
  - Show me the details of a request made to activate an Entra role through PIM
 - Show me the details of a specific active Entra role assignment request made through PIM
-- Show me the details of requests made to create eligible Entra (Azure AD) role assignments through PIM
-- Show me the details of a specific eligible Entra (Azure AD) role assignment request made through PIM
+- Show me the details of requests made to create eligible Entra role assignments through PIM
+- Show me the details of a specific eligible Entra role assignment request made through PIM
 - Show me the details of a specific active Entra role assignment (unifiedRoleAssignmentScheduleId)
 - Show me the details of all eligible Entra (Azure AD) role assignments
  - Show me the details of a specific eligible Entra role assignment (unifiedRoleEligibilityScheduleId)
