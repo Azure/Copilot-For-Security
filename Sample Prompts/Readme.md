@@ -11,11 +11,11 @@ We have organized our examples into the following categories:
 
 
 
-  - [EASM](./EASM/Easm.md)
+  - [External Attack (EASM)](./EASM/Easm.md)
   - [Entra](./Entra/Entra.md)
   - [Intune](./Intune/Intune.md)
   - [Defender \& Sentinel](./Defender%20and%20Sentinel/Defender%20and%20Sentinel.md)
-  - [Threat Intelligence](./MDTI/MDTI.md)
+  - [Threat Intelligence (MDTI)](./MDTI/MDTI.md)
   - [Vulnerabilities](./Vulnerabilities/Vulnerabilities.md)
   - [Purview](./Purview/Purview.md)
   - [Script Analysis](./Scripts/Scripts.md)
