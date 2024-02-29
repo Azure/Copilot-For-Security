@@ -10,7 +10,7 @@ Welcome to our page of sample prompts! Here, we offer a variety of examples to d
 We have organized our examples into the following categories:
 
 
-- [Sample prompts Library](#sample-prompts-library)
+
   - [EASM](./EASM/easm.md)
   - [Entra](./Entra/entra.md)
   - [Intune](#intune)
