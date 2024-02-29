@@ -1,5 +1,5 @@
 
-<p align="left"><img src="../Images/libary.svg">
+
 
 # Sample prompts Library 
 
@@ -10,10 +10,9 @@ Welcome to our page of sample prompts! Here, we offer a variety of examples to d
 We have organized our examples into the following categories:
 
 
-
 - [Sample prompts Library](#sample-prompts-library)
-  - [EASM](./EASM/Readme.md)
-  - [Entra](./Entra/Readme.md)
+  - [EASM](./EASM/easm.md)
+  - [Entra](./Entra/entra.md)
   - [Intune](#intune)
   - [Defender \& Sentinel](#defender--sentinel)
   - [Threat Intelligence](#threat-intelligence)
