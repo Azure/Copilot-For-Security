@@ -8,12 +8,12 @@ We have organized our examples into the following categories:
 
 
 
-  - [External Attack (EASM)](./EASM/Readme.md
+  - [External Attack (EASM)](./EASM/Readme.md)
   - [Entra](./Entra/Readme.md)
   - [Intune](./Intune/Readme.md)
-  - [Defender \& Sentinel](./Defender%20and%20Sentinel/Readme.md
-  - [Threat Intelligence (MDTI)](./MDTI/Readme.md
-  - [Vulnerabilities](./Vulnerabilities/Readme.md
+  - [Defender \& Sentinel](./Defender%20and%20Sentinel/Readme.md)
+  - [Threat Intelligence (MDTI)](./MDTI/Readme.md)
+  - [Vulnerabilities](./Vulnerabilities/Readme.md)
   - [Purview](./Purview/Readme.md)
   - [Script Analysis](./Scripts/)
 
