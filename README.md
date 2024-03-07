@@ -1,7 +1,6 @@
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 # Microsoft Copilot For Security 
-Welcome to the Copilot for Security Repository! We're your go-to destination for comprehensive security solutions, offering a range of tools and resources to bolster your defenses and hunt down threats proactively. Explore our array of offerings, from out-of-the-box detections to custom plugins and playbooks. Contribute your expertise to enrich our repository and empower security professionals worldwide. Dive in, engage with us, and shape the future of security operations. Welcome aboard!
-# Resources
+Welcome to the Copilot for Security Repository! Microsoft Copilot for Security is a generative AI-powered assistant for daily operations in security and IT that empowers teams to protect at the speed and scale of AI.
 - https://learn.microsoft.com/en-us/security-copilot/
 - https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot
 - https://learn.microsoft.com/en-us/security-copilot/plugin_overview
