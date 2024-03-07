@@ -1,6 +1,6 @@
 ![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 # Microsoft Copilot for Security Custom Plugins
-The Security Copilot Logic Apps connector now supports custom plugins, enhancing its capabilities for third-party integrations and tailored automation. This document introduces the functionality of custom plugins and provides insight into their use cases, focusing on bridging the gap for 3rd party connections to Copilot for security, enabling automation from the Standalone portal, and the ability to query custom tables in KQL.
+The Microsoft COpilot for Security t Logic Apps connector now supports custom plugins, enhancing its capabilities for third-party integrations and tailored automation. This document introduces the functionality of custom plugins and provides insight into their use cases, focusing on bridging the gap for 3rd party connections to Copilot for security, enabling automation from the Standalone portal, and the ability to query custom tables in KQL.
 Documentation : https://learn.microsoft.com/en-us/security-copilot/plugin_overview
 
 # Custom Plugin Features
