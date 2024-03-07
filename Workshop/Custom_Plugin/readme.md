@@ -1,7 +1,7 @@
 # Welcome to Security Copilot Custom PlugIn Labs!
 
 <p align="center">
-<img src="./images/SecCopilotlogo.jpg?raw=true">
+![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 </p>
 
 ## Introduction
