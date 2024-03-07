@@ -1,5 +1,5 @@
 # Copilot-For-Security-ThreatBulletin
-
+Author: Sean Wasonga
 ## Overview
 This playbook serves as a cornerstone for Security Copilot, facilitating integration with Microsoft Defender Threat Intelligence (MDTI) to swiftly provide the latest threat bulletins for threat articles. By consolidating this connection, users can efficiently access comprehensive threat article information. Over time, this foundational playbook may expand to incorporate additional capabilities. If you encounter any issues or require further assistance, please don't hesitate to reach out to your designated account representative
 
