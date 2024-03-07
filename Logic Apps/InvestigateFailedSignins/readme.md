@@ -1,5 +1,5 @@
 # Copilot-For-Security-Investigate-FailedSignins
-
+Author: Sean Wasonga
 ## Overview
 This playbook stands as a cornerstone in our security operations, dedicated to identifying users with multiple failed sign-ins and conducting in-depth investigations into associated IP addresses using threat intelligence sources. In addition to this, it meticulously analyzes various risk factors linked to the user, including their membership group status, device compliance, and other pertinent issues
 
