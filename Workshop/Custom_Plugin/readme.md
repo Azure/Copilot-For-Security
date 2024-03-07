@@ -1,10 +1,10 @@
-# Welcome to Security Copilot Custom PlugIn Labs!
+# Welcome to Copilot for Security Labs!
 
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 
 ## Introduction
 
-Our labs project help you get ramped up with Microsoft Security Copilot and provide hands-on practical experience for managing cusotm Plugins.
+Our labs project help you get ramped up with Microsoft Copilot for Security and provide hands-on practical experience for managing cusotm Plugins.
 
 
 ## What is Custom plugins
