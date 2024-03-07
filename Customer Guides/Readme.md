@@ -1,4 +1,4 @@
-![Copilot for Security Overview](https://https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
+![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 # Microsoft Copilot for Security - Customer Guide
 Welcome to the Copilot for Security Customer Guide! This document serves as your comprehensive resource for leveraging specific skill sets, querying sample prompts, managing identities, and addressing various security scenarios within Copilot. Whether you're new to the platform or looking to deepen your understanding, this guide will equip you with the knowledge and tools needed to maximize the effectiveness of Copilot for Security.
 
