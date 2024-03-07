@@ -1,7 +1,7 @@
 ![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 # Microsoft Copilot for Security playbooks
 
-The Security Copilot Logic Apps connector allows you to call into Security Copilot from a Logic Apps workflow. This document provides an introduction to the new connector actions you can leverage as well as sample use cases you can deploy to automate investigations such as on Sentinel incidents, email phishing, and others.
+The Microsoft Copilot for Security Logic Apps connector allows you to call into Security Copilot from a Logic Apps workflow. This document provides an introduction to the new connector actions you can leverage as well as sample use cases you can deploy to automate investigations such as on Sentinel incidents, email phishing, and others.
 
 The first iteration of the Logic Apps connector exposes two actions:
 
