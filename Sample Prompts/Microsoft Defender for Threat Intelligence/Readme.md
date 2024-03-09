@@ -1,4 +1,4 @@
-# Threat Intelligence
+# Microsoft Defender Threat Intelligence
 <a name="Threat_Intelligence"></a>
 
 ## Threat Actor Profiles and Activities
