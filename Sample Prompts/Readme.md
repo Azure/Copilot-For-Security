@@ -8,7 +8,7 @@ We have organized our examples into the following categories:
 
 
 
-  - [Microsoft Defender External Attack Surface Management](https://github.com/Azure/Copilot-For-Security/blob/main/Sample%20Prompts/Microsoft%20Defender%20External%20Attack%20Surface%20Management/Readme.md)
+  - [Microsoft External Attack Surface Management README](https://github.com/Azure/Copilot-For-Security/blob/main/Sample%20Prompts/Microsoft%20External%20Attack%20Surface%20Management/Readme.md)
   - [Entra](./Entra/Readme.md)
   - [Intune](./Intune/Readme.md)
   - [Defender \& Sentinel](./Defender%20and%20Sentinel/Readme.md)
