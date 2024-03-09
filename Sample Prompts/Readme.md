@@ -8,7 +8,8 @@ We have organized our examples into the following categories:
 
 
 
-  - [External Attack (EASM)](./Microsoft External Attack Surface Management/Readme.md)
+  - [External Attack (EASM)]([Link to README](https://github.com/Azure/Copilot-For-Security/blob/main/Sample%20Prompts/Microsoft%20External%20Attack%20Surface%20Management/Readme.md)
+)
   - [Entra](./Entra/Readme.md)
   - [Intune](./Intune/Readme.md)
   - [Defender \& Sentinel](./Defender%20and%20Sentinel/Readme.md)
