@@ -1,4 +1,4 @@
-# Defender & Sentinel
+# Microsoft Defender & Microsoft Sentinel
 <a name="Defender_and_Sentinel"></a>
 
 ## Incident Summaries
