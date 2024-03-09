@@ -1,4 +1,4 @@
-# Intune Management
+# Microssoft Intune
 <a name="Intune"></a>
 
 ## Device Information
