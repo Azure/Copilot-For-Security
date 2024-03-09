@@ -1,4 +1,4 @@
-*** NETSCOPE**
+# Netscope
 
 Microsoft has enhanced Microsoft Copilot for Security by preinstalling a set of plugins for their security services and frequently used websites. Additionally, you have the option to incorporate Netskope custom plugins, expanding Gen AI capabilities on your Netskope platform.
 
