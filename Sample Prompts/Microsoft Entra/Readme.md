@@ -1,5 +1,5 @@
 
-# Entra
+# Microsoft Entra
 
 - [Entra](#entra)
   - [User Details](#user-details)
