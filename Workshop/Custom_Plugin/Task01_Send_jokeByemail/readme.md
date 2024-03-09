@@ -1,5 +1,5 @@
 # Introduction
-
+![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 #### ⌛ Estimated time to complete this lab: 10 minutes
 #### 🎓 Level: 100 (Beginner)
 
