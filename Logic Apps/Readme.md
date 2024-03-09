@@ -1,13 +1,13 @@
 ![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 # Microsoft Copilot for Security playbooks
 
-The Microsoft Copilot for Security Logic Apps connector allows you to call into Security Copilot from a Logic Apps workflow. This document provides an introduction to the new connector actions you can leverage as well as sample use cases you can deploy to automate investigations such as on Sentinel incidents, email phishing, and others.
+The Microsoft Copilot for Security Logic Apps connector allows you to call into Microsoft Copilot for Security from a Logic Apps workflow. This document provides an introduction to the new connector actions you can leverage as well as sample use cases you can deploy to automate investigations such as on Sentinel incidents, email phishing, and others.
 
 The first iteration of the Logic Apps connector exposes two actions:
 
-Evaluate Prompt - Given a natural language prompt, this action will invoke a new evaluation within Security Copilot and return the output to your logic app workflow. The user can provide an optional sessionId, which will include relevant session context for the evaluation performed. If the sessionId is omitted, the action will create a new session.
+Evaluate Prompt - Given a natural language prompt, this action will invoke a new evaluation within Microsoft Copilot for Security and return the output to your logic app workflow. The user can provide an optional sessionId, which will include relevant session context for the evaluation performed. If the sessionId is omitted, the action will create a new session.
 
-Evaluate Direct Skill - Given a natural language prompt, a skill name, and the skill required inputs, invoke a new evaluation and return its output. Use this action when you know the exact security copilot skill that is required for the task. This action also allows the option to provide a sessionId.
+Evaluate Direct Skill - Given a natural language prompt, a skill name, and the skill required inputs, invoke a new evaluation and return its output. Use this action when you know the exact Microsoft Copilot for Security skill that is required for the task. This action also allows the option to provide a sessionId.
 
 Both the "Evaluate Prompt" and "Evaluate Direct Skill" actions allow the user to set an optional sessionId to execute the evaluation within the context of an existing session. If omitted, a new session will be created for the investigation.
 
