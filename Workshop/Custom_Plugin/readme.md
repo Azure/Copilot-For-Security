@@ -1,4 +1,4 @@
-# Welcome to Copilot for Security Labs!
+# Welcome to Microsoft Copilot for Security Labs!
 
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 
@@ -9,9 +9,9 @@ Our labs project help you get ramped up with Microsoft Copilot for Security and 
 
 ## What is Custom plugins
 
-Security Copilot custom plugins enable developers\power users to seamlessly integrate the power of the GPT models into third-party platforms, enhancing functionality and user experience. 
+Microsoft Copilot for Security custom plugins enable developers\power users to seamlessly integrate the power of the GPT models into third-party platforms, enhancing functionality and user experience. 
 These plugins act as a bridge between the raw capabilities of the model and specific applications, allowing for tailored outputs in diverse use-cases. 
-By utilizing custom plugins, users can harness the expansive knowledge of Security Copilot models in a contextually relevant and user-friendly manner.
+By utilizing custom plugins, users can harness the expansive knowledge of Microsoft Copilot for Security models in a contextually relevant and user-friendly manner.
 
 
 ## Modules
