@@ -3,7 +3,7 @@
 The Microsoft Copilot for Security  connector now supports custom plugins, enhancing its capabilities for third-party integrations and tailored automation. This document introduces the functionality of custom plugins and provides insight into their use cases, focusing on bridging the gap for 3rd party connections to Copilot for security, enabling automation from the Standalone portal, and the ability to query custom tables in KQL.
 Documentation : https://learn.microsoft.com/en-us/security-copilot/plugin_overview
 
-# Mirosoft Copilot for Security Custom Plugin Features
+# Microsoft Copilot for Security Custom Plugin Features
 
 With custom plugins, you can extend the functionality of Security Copilot to suit specific integration requirements. Key features include:
 - **Flexible Integration:** Seamlessly integrate third-party tools and services with Security Copilot to enhance security operations.
