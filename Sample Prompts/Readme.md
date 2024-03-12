@@ -16,6 +16,8 @@ We have organized our examples into the following categories:
   - [Vulnerabilities](./Vulnerabilities/Readme.md)
   - [Microsoft Purview](https://github.com/Azure/Copilot-For-Security/blob/main/Sample%20Prompts/Microsoft%20Purview/Readme.md)
   - [Script Analysis](./Scripts/)
+  - [CISO experience sample prompts](https://github.com/Azure/Copilot-For-Security/blob/main/Sample%20Prompts/Ciso%20Experience%20Sample%20Prompts/readme.md)
+
 
 
 
