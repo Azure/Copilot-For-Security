@@ -1,12 +1,6 @@
 ![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 # Microsoft Copilot for Security Logic Apps 
 Documentation : [https://learn.microsoft.com/en-us/security-copilot/connector_logicapp](https://learn.microsoft.com/en-us/security-copilot/connector_logicapp) 
-
-| Action | Description |
-|---|---|
-| Evaluate Prompt | Given a natural language prompt, this action will invoke a new evaluation within Microsoft Copilot for Security and return the output to your logic app workflow. The user can provide an optional sessionId, which will include relevant session context for the evaluation performed. If the sessionId is omitted, the action will create a new session. |
-| Evaluate Direct Skill | Given a natural language prompt, a skill name, and the skill required inputs, invoke a new evaluation and return its output. Use this action when you know the exact Microsoft Copilot for Security skill that is required for the task. This action also allows the option to provide a sessionId. |
-
 | **What you will achieve here** |
 |---|
 | Here you will find an array of different playbooks aligned with CyberSec scenarios that aim to achieve the following: |
