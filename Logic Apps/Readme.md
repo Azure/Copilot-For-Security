@@ -1,7 +1,6 @@
-| ![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png) | 
-|---|
-| # Microsoft Copilot for Security Logic Apps |
-| Documentation : [https://learn.microsoft.com/en-us/security-copilot/connector_logicapp](https://learn.microsoft.com/en-us/security-copilot/connector_logicapp) |
+![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
+# Microsoft Copilot for Security Logic Apps 
+Documentation : [https://learn.microsoft.com/en-us/security-copilot/connector_logicapp](https://learn.microsoft.com/en-us/security-copilot/connector_logicapp) 
 
 | Action | Description |
 |---|---|
