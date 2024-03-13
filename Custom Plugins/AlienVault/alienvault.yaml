@@ -1,0 +1,16 @@
+Descriptor:
+  Name: AlienVault Reports
+  DisplayName: AlienVault Reports
+  Description: Skills for looking up reports using the Free AlienVault API
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: x-apikey
+    Location: Header
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://gist.githubusercontent.com/KwachSean/9a719a03089095c9fb46b2d54ca5de01/raw/9a86c097004fb051eb33ed8f8acafac42d5d4d2d/Alienvault.yml
