@@ -1,3 +1,4 @@
+![Purview Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/purviewpng.jpg)
 # Microsoft Purview
 
 - Show me the top 5 DLP alerts that I should prioritize today?
