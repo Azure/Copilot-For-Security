@@ -10,7 +10,7 @@ Our lab initiatives are tailored to expedite your acclimatization to Microsoft C
 
 **Microsoft Copilot for Security** allows you to integrate your organization’s knowledge base as an additional source of information. The inclusion of knowledge bases gives **Copilot** more context, resulting in responses that are more relevant, specific, and customized to the user.
 
-### Options To integrate your Knowledge Base into Copilot For Security
+## Options To integrate your Knowledge Base into Copilot For Security
 
 | Options to Integrate KBs into Copilot for Security | Ways to integrate KBs into Copilot                                                                                                    |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
