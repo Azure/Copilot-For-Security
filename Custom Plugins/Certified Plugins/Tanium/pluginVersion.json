@@ -1,0 +1,86 @@
+{
+  "Name": "Tanium",
+  "Skills": [
+    {
+      "Name": "List Child Processes for Process File",
+      "Path": "/v1/process-files/{filename}/child-processes"
+    },
+    {
+      "Name": "Count Endpoints Having Package Version",
+      "Path": "/v1/packages/{packageName}/versions/{packageVersion}/endpoints"
+    },
+    {
+      "Name": "Get Vulnerability Test Results",
+      "Path": "/v1/cves/{cveId}/test-results"
+    },
+    {
+      "Name": "List Endpoints Having Package",
+      "Path": "/v1/packages/{packageName}/endpoints"
+    },
+    {
+      "Name": "List Endpoints with Process Command",
+      "Path": "/v1/process-command-lines/{commandLine}/endpoints"
+    },
+    {
+      "Name": "List Endpoints with Process Name",
+      "Path": "/v1/process-files/{name}/endpoints"
+    },
+    {
+      "Name": "List Endpoints with Process MD5 Hash",
+      "Path": "/v1/process-hashes/{md5Hash}/endpoints"
+    },
+    {
+      "Name": "List Endpoints Vulnerable to CVE",
+      "Path": "/v1/cves/{cveId}/vulnerable-endpoints"
+    },
+    {
+      "Name": "List Process SHA-256 Hashes and Versions",
+      "Path": "/v1/processes/{filename}/hashes"
+    },
+    {
+      "Name": "List Processes Connected To IPv4 Address",
+      "Path": "/v1/processes"
+    },
+    {
+      "Name": "List Processes Ran As User",
+      "Path": "/v1/processes/ran-as-user/{username}"
+    },
+    {
+      "Name": "Get Real Time Tanium Parameterized Sensor Data",
+      "Path": "/v1/ask-parameterized-question"
+    },
+    {
+      "Name": "Get Real-time Data from Endpoints",
+      "Path": "/v1/sensor-results"
+    },
+    {
+      "Name": "List File Operations",
+      "Path": "/v1/file-operations"
+    },
+    {
+      "Name": "List Service Module Details",
+      "Path": "/v1/endpoints/{endpointName}/service-module-details"
+    },
+    {
+      "Name": "Get Logged In User",
+      "Path": "/v1/endpoints/{endpointName}/logged-in-user"
+    },
+    {
+      "Name": "List Service Process Details",
+      "Path": "/v1/endpoints/{endpointName}/service-process-details"
+    },
+    {
+      "Name": "List WMI Event Consumers",
+      "Path": "/v1/endpoints/{endpointName}/wmi-event-consumers"
+    },
+    {
+      "Name": "View Endpoint Processes",
+      "Path": "/v1/endpoints/{endpointName}/process-view-url"
+    },
+    {
+      "Name": "List File Details",
+      "Path": "/v1/files/{filename}/details"
+    }
+  ],
+  "Version": "1.0.0"
+}
