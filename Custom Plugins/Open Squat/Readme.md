@@ -1,4 +1,4 @@
-### openSquat: OSINT Security Tool for Cyber Squatting Threats
+### openSquat Custom Plugin: OSINT Security Tool for Cyber Squatting Threats
 openSquat is an open-source Intelligence (OSINT) security tool designed to identify cyber squatting threats targeting specific companies or domains. It helps detect various threats including:
 
 - Phishing campaigns
