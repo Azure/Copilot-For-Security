@@ -1,5 +1,4 @@
 
-![VirusTotal Logo](https://github.com/Azure/Copilot-For-Security/raw/main/Custom%20Plugins/VirusTotal/Virustotal%20logo.png)
 ### VirusTotal Custom Plugin
 
 Welcome to the VirusTotal custom plugin! Here, you'll discover a suite of features designed to empower your malware analysis and threat intelligence efforts:
