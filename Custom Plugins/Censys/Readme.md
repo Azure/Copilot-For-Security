@@ -1,4 +1,4 @@
-### Censys Plugin
+### Censys Custom Plugin
 
 Censys is a powerful search engine designed for researchers, analysts, and security professionals to explore and understand the ever-expanding landscape of the internet. With its comprehensive database and intuitive interface, Censys empowers users to uncover valuable insights and assess the security posture of networks, devices, and websites across the globe.
 
