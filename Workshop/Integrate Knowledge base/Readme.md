@@ -10,16 +10,17 @@ Our lab initiatives are tailored to expedite your acclimatization to Microsoft C
 
 **Microsoft Copilot for Security** allows you to integrate your organization’s knowledge base as an additional source of information. The inclusion of knowledge bases gives **Copilot** more context, resulting in responses that are more relevant, specific, and customized to the user.
 
-**Options To integrate your Knowledge Base into Copilot For Security**
+### Options To integrate your Knowledge Base into Copilot For Security
 
 | Options to Integrate KBs into Copilot for Security | Ways to integrate KBs into Copilot                                                                                                    |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | Azure AI Search plugin (BYO index)                | Follow the steps in [Prompting for a KB connected using Azure AI Search](https://review.learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-a-knowledge-base-connected-using-azure-ai-search).    |
 | File upload                                        | Follow the steps in [Prompting for an uploaded file](https://review.learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-an-uploaded-file).    |
 
+## Modules
+
 - **Module 1 - Connect your Knowledge Base and Accessing it Using Azure AI Search**
-- **Module 2 - Leverage the SANS (" Hunt Evil Poster Document ) to guide Investigation Scenarios**
+- **Module 2 - Leverage the SANS ("Hunt Evil Poster Document) to guide Investigation Scenarios**
 - **Module 3 - Asset Management and Incident Response: Leveraging Knowledge Bases to Safeguard Crown Jewel Assets**
 - **Module 4 - Mire Enrichment with your Knowledge Base**
 - **Module 5 - Phishing Scenario**
-
