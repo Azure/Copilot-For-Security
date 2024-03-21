@@ -7,7 +7,7 @@
 
 Upon completing this technical guide, you will gain the following abilities:<br>
 
-* Upload a cusotm plug from API type.<br>
+* Upload a Custom plug from API type.<br>
 * Learn how to use script analysis promptbook.<br>
 * Learn how to analze and encode Script.<br>
 * Generete report that will levrage the custom plugin source.<br>
