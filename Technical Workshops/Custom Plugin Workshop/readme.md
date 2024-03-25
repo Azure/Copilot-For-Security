@@ -24,5 +24,5 @@ By utilizing custom plugins, users can harness the expansive knowledge of Micros
 
 [**Module 4 – GeoIp02 - GPT plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task04_GEO_IP_script)
 
-[**Module 5 – KQL - KQL plugin**](https://github.com/Azure/Copilot-For-Security/blob/main/Workshop/Custom_Plugin/Task05_KQL/readme.md)
+[**Module 5 – KQL - KQL plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task05_KQL)
 
