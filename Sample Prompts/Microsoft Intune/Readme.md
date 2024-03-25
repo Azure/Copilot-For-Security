@@ -1,4 +1,4 @@
-# Microssoft Intune
+# Microsoft Intune
 <a name="Intune"></a>
 
 ## Device Information
