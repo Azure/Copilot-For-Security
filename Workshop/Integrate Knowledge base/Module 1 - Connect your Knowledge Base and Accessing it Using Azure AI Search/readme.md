@@ -1,3 +1,4 @@
+# Welcome to Microsoft Copilot for Security Labs!
 # Introduction
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 ## Setup to Azure AI search 
