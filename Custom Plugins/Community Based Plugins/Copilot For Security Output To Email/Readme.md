@@ -30,5 +30,9 @@ To deploy the "Send Copilot Output to Email" plugin, follow these steps:
 ## Usage
 
 After deploying and configuring the plugin, Copilot will automatically send the output to the designated email address whenever relevant security events occur. Users can monitor their email inbox for important notifications and take appropriate actions based on the information provided.
+Copilot investigation and action using the Custom plugin to send an email of the output 
+![Copilot Output to Email](https://github.com/Azure/Copilot-For-Security/blob/main/Custom%20Plugins/Community%20Based%20Plugins/Images/Copilotoutputtoemail1.png)
 
+The Eamil Output being received
+![Copilot Output to Email](https://github.com/Azure/Copilot-For-Security/blob/main/Custom%20Plugins/Community%20Based%20Plugins/Images/Copilotoutputtoemail2.png)
 
