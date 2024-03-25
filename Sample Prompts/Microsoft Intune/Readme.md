@@ -17,7 +17,7 @@
 ## User and Device Specific Queries
 - Tell me about devices for **_`<Username>`_**?
 - Show me the devices for **_`<Username>`_**?
-- How are managed apps on this device different from Shobhit's device? (Shobhit is another user in this example)
+- How are managed apps on this device different from (insertDevice name? 
 - Give me the status of the **_`<Devicename>`_**?. Is it managed, is it compliant with management policies?
 
 ## Application and Group Management
