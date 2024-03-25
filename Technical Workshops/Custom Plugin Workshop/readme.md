@@ -20,7 +20,7 @@ By utilizing custom plugins, users can harness the expansive knowledge of Micros
 
 [**Module 2 – DefangUrl - GPT plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task02_Defang_URL)
 
-[**Module 3 – GeoIP01 - API plugin**](https://github.com/Azure/Copilot-For-Security/blob/main/Workshop/Custom_Plugin/Task03_GEO_IP_report/readme.md)
+[**Module 3 – GeoIP01 - API plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task03_GEO_IP_report)
 
 [**Module 4 – GeoIp02 - GPT plugin**](https://github.com/Azure/Copilot-For-Security/blob/main/Workshop/Custom_Plugin/Task04_GEO_IP_script/readme.md)
 
