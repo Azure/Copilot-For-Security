@@ -1,5 +1,6 @@
 # Introduction
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
+## Setup to Azure AI search 
 #### ⌛ Estimated time to complete this lab: 10 minutes
 #### 🎓 Level: 100 (Beginner)
 
@@ -18,57 +19,83 @@ Upon completing this technical guide, you will gain the following abilities:<br>
 * You should have permission to create an AZURE AI Instance.<br>
 * You should have permission to create a bob storage.<br>
 
-# Workshop Agenda: Azure AI 
+# Workshop Agenda: Azure AI Search
+
+# Workshop Agenda: Azure Search Workshop
 
 ## 1. Introduction to Azure Search:
 - Overview of Azure Search features and capabilities.
 - Understanding the benefits of using [Azure Search](https://azure.microsoft.com/en-us/services/search/) for building search solutions.
-- Reference: ![Azure Search Logo](insert_image_url_here)
 
-## 2. Preparing Your Environment:
-- Setting up an [Azure subscription](https://azure.microsoft.com/free/) (if you haven't already).
-- Creating a resource group for your search service.
+## 2. Setting Up Environment:
 - Provisioning an [Azure Search service instance](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal).
-- Reference: ![Azure Subscription](insert_image_url_here), ![Azure Search Service Instance](insert_image_url_here)
 
-## 3. Designing Your Search Index:
-- Defining the schema for your search index.
-- Mapping data fields to index fields.
-- Configuring indexers to ingest data into your search index.
-- Reference: ![Search Index Design](insert_image_url_here), ![Mapping Fields](insert_image_url_here)
+## 3. Designing Search Index:
+- Defining schema, mapping fields, and configuring indexers.
+  
+## 4. Customizing Search Experience:
+- Creating custom search UI and implementing filters.
+  
+## 5. Building Search UI:
+- Exploring UI frameworks and configuring search widgets.
+  
+## 6. Enhancing Search Solution:
+- Leveraging [Azure Cognitive Search](https://azure.microsoft.com/en-us/services/cognitive-services/search/) for advanced features.
 
-## 4. Customizing Your Search Experience:
-- Creating search indexes with specific analyzers and tokenizers.
-- Implementing search filters and facets to enhance user experience.
-- Integrating custom scoring profiles to optimize search results.
-- Reference: ![Customized Search UI](insert_image_url_here), ![Search Filters](insert_image_url_here)
+## Set up Blob Storage to act as your knowledgeBase
+# Workshop Agenda: Azure Blob Storage Quickstart Workshop
 
-## 5. Building Your Search UI:
-- Exploring different UI frameworks compatible with Azure Search.
-- Configuring search widgets and components for your portal.
-- Implementing [search APIs](https://docs.microsoft.com/en-us/rest/api/searchservice/) to retrieve and display search results.
-- Reference: ![Search UI Frameworks](insert_image_url_here), ![Search Widgets](insert_image_url_here)
+## 1. Introduction to Azure Blob Storage:
+- Overview of Azure Blob Storage features and capabilities.
+- Understanding the benefits of using [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) for storing unstructured data.
+- Reference: ![Azure Blob Storage Logo](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction.svg)
 
-## 6. Enhancing Your Search Solution:
-- Leveraging Azure Cognitive Search features for advanced search capabilities.
-- Implementing suggesters and autocomplete functionality.
-- Integrating geospatial search for location-based queries.
-- Reference: ![Azure Cognitive Search](insert_image_url_here), ![Geospatial Search](insert_image_url_here)
+## 2. Setting Up Your Azure Environment:
+- Setting up an [Azure subscription](https://azure.microsoft.com/free/) (if you haven't already).
+- Creating a resource group for your storage account.
+- Provisioning an [Azure Storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal).
+- Reference: ![Azure Subscription](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-create-storage-account/create-storage-account-1.png), ![Azure Storage Account](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-create-storage-account/create-storage-account-2.png)
 
-## 7. Securing Your Search Service:
-- Setting up authentication and authorization for your search service.
-- Configuring access control policies to restrict user permissions.
-- Implementing encryption and data protection measures for sensitive information.
-- Reference: ![Security Configuration](insert_image_url_here), ![Access Control](insert_image_url_here)
+## 3. Creating a Blob Container:
+- Creating a container within your storage account to organize your blobs.
+- Configuring container properties such as access level and metadata.
+- Reference: ![Create Blob Container](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-quickstart-blobs-portal/create-blob-container.png)
 
-## 8. Scaling and Monitoring:
-- Optimizing performance and scalability of your search service.
-- Monitoring search traffic and usage patterns.
-- Implementing proactive measures to maintain service reliability.
-- Reference: ![Scaling Search Service](insert_image_url_here), ![Monitoring Dashboard](insert_image_url_here)
+## 4. Uploading and Managing Blobs:
+- Uploading files and data to your blob container using the Azure Portal.
+- Viewing and managing blobs within your container, including properties and metadata.
+- Reference: ![Upload Blob](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-quickstart-blobs-portal/upload-blob.png), ![Manage Blobs](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-quickstart-blobs-portal/manage-blob.png)
 
-## 9. Deployment and Maintenance:
-- Deploying your search service portal to production.
-- Implementing continuous integration and deployment pipelines.
-- Performing routine maintenance tasks and updates.
-- Reference: ![Deployment Pipeline](insert_image_url_here), ![Maintenance Tasks](insert_image_url_here)
+## 5. Accessing Blobs:
+- Configuring access permissions for blobs and containers.
+- Generating shared access signatures (SAS) for secure access to blobs.
+- Reference: ![Access Control](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-quickstart-blobs-portal/access-control.png), ![Generate SAS](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-quickstart-blobs-portal/generate-sas.png)
+
+## 6. Monitoring and Managing Storage Accounts:
+- Monitoring storage account metrics and logs.
+- Setting up alerts and diagnostics for storage account health.
+- Reference: ![Monitor Storage Account](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-quickstart-blobs-portal/monitor-storage-account.png), ![Manage Storage Account](https://docs.microsoft.com/en-us/azure/storage/blobs/media/storage-quickstart-blobs-portal/manage-storage-account.png)
+
+## Azure Blob Storage Integration with Azure Search
+## Agenda:
+
+1. **Key Concepts**
+   - Explaining indexing and querying within Azure Search. [Learn more about Azure Search](https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search)
+   - Understanding blob storage containers and blobs. [Read documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction)
+
+2. **Integration Setup**
+   - Step-by-step guide to setting up Azure Blob Storage and Azure Search services.
+   - Configuring permissions and access policies.
+
+3. **Indexing Blob Data**
+   - Demonstrating how to index blob data using Azure Search.
+   - Mapping blob properties to searchable fields.
+
+4. **Querying Blob Data**
+   - Hands-on exercises on querying blob data using Azure Search.
+   - Discussion on different query types and their applications.
+
+5. **Customizing Search Experience**
+   - Exploring options to customize search experiences.
+   - Implementing filters, facets, and sorting for enhanced user experience.
+
