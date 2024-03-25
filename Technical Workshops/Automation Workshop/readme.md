@@ -12,7 +12,7 @@ The [Copilot for Security Logic Apps connector](https://learn.microsoft.com/en-u
 
 ## Modules
 
-[**Module 1 – The Threat Articles Bulletin**](https://github.com/Azure/Copilot-For-Security/blob/main/Workshop/Automation%20with%20Copilot%20For%20Security/Module%201-%20Threat%20Articles%20bulletin/readme.md)
+[**Module 1 – The Threat Articles Bulletin**](https://github.com/Azure/Copilot-For-Security/blob/main/Technical%20Workshops/Automation%20Workshop/Module%201-%20Threat%20Articles%20bulletin/readme.md)
 
 [**Module 2 – Sentinel Incident Enrichment**](https://github.com/Azure/Copilot-For-Security/blob/main/Workshop/Automation%20with%20Copilot%20For%20Security/Module%202%20-%20Sentinel%20Incident%20%20enrichment/readme.md)
 
