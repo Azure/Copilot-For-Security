@@ -22,10 +22,13 @@ To deploy the "Send Copilot Output to Email" plugin, follow these steps:
 1. **Modify YAML Configuration**: Update the YAML file included in the solution with the appropriate email address where you want the Copilot output to be sent.
 
 2. **Deploy Logic App**: Deploy the Logic App included in the solution to your Azure environment. Ensure that it is properly configured and connected to Copilot.
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKwachSean%2FSecurityCopilot%2Fmain%2Fplaybooks%2FInvestigateFailedSignins%2Fazuredeploy.json" target="_blank">
+    <img src="https://aka.ms/deploytoazurebutton"/>
+</a>
 
-3. **Add Plugin to Copilot**: Once the Logic App is deployed and configured, add the "Send Copilot Output to Email" plugin to your Copilot instance. Provide any necessary authorization or connection details required for the plugin to communicate with Copilot and trigger the email sending process.
+4. **Add Plugin to Copilot**: Once the Logic App is deployed and configured, add the "Send Copilot Output to Email" plugin to your Copilot instance. Provide any necessary authorization or connection details required for the plugin to communicate with Copilot and trigger the email sending process.
 
-4. **Test**: Test the plugin by generating sample output from Copilot and verifying that the email is sent to the designated address.
+5. **Test**: Test the plugin by generating sample output from Copilot and verifying that the email is sent to the designated address.
 
 ## Usage
 
