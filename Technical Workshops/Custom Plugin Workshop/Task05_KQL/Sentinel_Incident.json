@@ -1,0 +1,144 @@
+{
+    "body": {
+        "eventUniqueId": "50847e4a-07b6-4adc-9ed5-29a9ffc37b43",
+        "objectSchemaType": "Incident",
+        "objectEventType": "Create",
+        "workspaceInfo": {
+        },
+        "workspaceId": "029c55c8-a7ec-418e-b741-de9d24add5fa",
+        "object": {
+            "name": "2483d213-ea73-45c2-951c-437c3a61e43b",
+            "etag": "\"5b03ef6d-0000-0100-0000-656dec3a0000\"",
+            "type": "Microsoft.SecurityInsights/Incidents",
+            "properties": {
+                "title": "SAP - (Preview) File Downloaded From a Malicious IP Address",
+                "description": "User has downloaded a file from an SAP system using an IP address known to be malicious.\nMalicious IP addresses are obtained from threat intelligence services. For additional information visit the [Connect your threat intelligence platform to Microsoft Sentinel]\n( https://learn.microsoft.com/Azure/sentinel/connect-threat-intelligence-tip) how-to page.\nThis Alert rule allows for a cross-workspace query to accommodate an architecture where the threat intelligence data resides in a different workspace than the one which holds the SAP data.",
+                "severity": "Medium",
+                "status": "New",
+                "owner": {
+                    "objectId": null,
+                    "email": null,
+                    "assignedTo": null,
+                    "userPrincipalName": null
+                },
+                "labels": [],
+                "firstActivityTimeUtc": "2023-12-03T15:06:49.8395988Z",
+                "lastActivityTimeUtc": "2023-12-04T15:06:49.8395988Z",
+                "lastModifiedTimeUtc": "2023-12-04T15:11:54.3729192Z",
+                "createdTimeUtc": "2023-12-04T15:11:54.3729192Z",
+                "incidentNumber": 37664,
+                "additionalData": {
+                    "alertsCount": 1,
+                    "bookmarksCount": 0,
+                    "commentsCount": 0,
+                    "alertProductNames": [
+                        "Azure Sentinel"
+                    ],
+                    "tactics": [
+                        "Exfiltration"
+                    ],
+                    "techniques": []
+                },
+                "relatedAnalyticRuleIds": [
+                    "/subscriptions/ab48f397-fc82-xxxx-xxxx-xxxxxxx/resourceGroups/woodgrove-rg/providers/Microsoft.OperationalInsights/workspaces/workspace/providers/Microsoft.SecurityInsights/alertRules/daf3f4df-bb2f-4da9-82a3-20da534c0ae8"
+                ],
+                "incidentUrl": "https://portal.azure.com/#asset/Microsoft_Azure_Security_Insights/Incident/subscriptions/ab48f397-xxxx-xxxx-xxxx-62dd91xxxx/resourceGroups/rg/providers/Microsoft.OperationalInsights/workspaces/workspace/providers/Microsoft.SecurityInsights/Incidents/2483d213-ea73-45c2-951c-437c3a61e43b",
+                "providerName": "Azure Sentinel",
+                "providerIncidentId": "37664",
+                "alerts": [
+                    {
+                        "id": "/subscriptions/ab48f397-fc82-4634-aa52-62dd91b3ebaa/resourceGroups/woodgrove-rg/providers/Microsoft.OperationalInsights/workspaces/woodgrove-loganalyiticsworkspace/providers/Microsoft.SecurityInsights/Entities/71e460c1-119b-cbab-99e1-d3fa5867729e",
+                        "name": "71e460c1-119b-cbab-99e1-d3fa5867729e",
+                        "type": "Microsoft.SecurityInsights/Entities",
+                        "kind": "SecurityAlert",
+                        "properties": {
+                            "systemAlertId": "71e460c1-119b-cbab-99e1-d3fa5867729e",
+                            "tactics": [
+                                "Exfiltration"
+                            ],
+                            "alertDisplayName": "SAP - (Preview) File Downloaded From a Malicious IP Address",
+                            "description": "User has downloaded a file from an SAP system using an IP address known to be malicious.\nMalicious IP addresses are obtained from threat intelligence services. For additional information visit the [Connect your threat intelligence platform to Microsoft Sentinel]\n( https://learn.microsoft.com/Azure/sentinel/connect-threat-intelligence-tip) how-to page.\nThis Alert rule allows for a cross-workspace query to accommodate an architecture where the threat intelligence data resides in a different workspace than the one which holds the SAP data.",
+                            "confidenceLevel": "Unknown",
+                            "severity": "Medium",
+                            "vendorName": "Microsoft",
+                            "productName": "Azure Sentinel",
+                            "productComponentName": "Scheduled Alerts",
+                            "alertType": "029c55c8-a7ec-418e-b741-de9d24add5fa_daf3f4df-bb2f-4da9-82a3-20da534c0ae8",
+                            "processingEndTime": "2023-12-04T15:11:53.8822034Z",
+                            "status": "New",
+                            "endTimeUtc": "2023-12-04T15:06:49.8395988Z",
+                            "startTimeUtc": "2023-12-03T15:06:49.8395988Z",
+                            "timeGenerated": "2023-12-04T15:11:53.9209395Z",
+                            "providerAlertId": "c9b11338-4ae5-4fd8-92db-425094c176de",
+                            "resourceIdentifiers": [
+                                {
+                                    "type": "LogAnalytics",
+                                    "workspaceId": "029c55c8-xxxx-xxxx-b741-de9d24add5fa"
+                                }
+                            ],
+                            "additionalData": {
+                                "Query Period": "1.00:00:00",
+                                "Trigger Operator": "GreaterThan",
+                                "Trigger Threshold": "0",
+                                "Correlation Id": "6da019d1-017f-49c0-94bb-0bcaf3ea536c",
+                                "Search Query Results Overall Count": "1",
+                                "Query": "// The query_now parameter represents the time (in UTC) at which the scheduled analytics rule ran to produce this alert.\nset query_now = datetime(2023-12-04T15:06:49.8395988Z);\n_GetWatchlist('zscaler')\r\n| take 1 \r\n| extend user1 = \"mscott@woodgrove.ms\"\r\n| extend ip1 = \"185.82.217.3\"\r\n| extend host1 = \"CPC-mscot-S0C0S\"",
+                                "Query Start Time UTC": "2023-12-03T15:06:49Z",
+                                "Query End Time UTC": "2023-12-04T15:06:50Z",
+                                "Analytic Rule Ids": "[\"daf3f4df-bb2f-4da9-82a3-20da534c0ae8\"]",
+                                "Event Grouping": "SingleAlert",
+                                "Analytic Rule Name": "SAP - (Preview) File Downloaded From a Malicious IP Address",
+                                "ProcessedBySentinel": "True",
+                                "Alert generation status": "Full alert created"
+                            },
+                            "friendlyName": "SAP - (Preview) File Downloaded From a Malicious IP Address"
+                        }
+                    }
+                ],
+                "bookmarks": [],
+                "relatedEntities": [
+                    {
+                        "id": "/subscriptions/ab48f397-fc82-4634-aa52-62dd91b3ebaa/resourceGroups/woodgrove-rg/providers/Microsoft.OperationalInsights/workspaces/woodgrove-loganalyiticsworkspace/providers/Microsoft.SecurityInsights/Entities/5f097292-3a78-8e63-e9ee-1e4310681b3c",
+                        "name": "5f097292-3a78-8e63-e9ee-1e4310681b3c",
+                        "type": "Microsoft.SecurityInsights/Entities",
+                        "kind": "Account",
+                        "properties": {
+                            "accountName": "LisaV",
+                            "upnSuffix": "woodgrove.ms",
+                            "sid": "S-1-12-1-3834083884-1079035900-3132596361-2383408245",
+                            "aadTenantId": "536279f6-15cc-45f2-be2d-61e352b51eef",
+                            "aadUserId": "e4877a2c-c7fc-4050-89a0-b7ba75ec0f8e",
+                            "isDomainJoined": true,
+                            "displayName": "LisaV@woodgrove.ms",
+                            "additionalData": {
+                                "UserPrincipalName": "LisaV@woodgrove.ms"
+                            }
+                        }
+                    },
+                    {
+                        "id": "/subscriptions/ab48f397-fc82-4634-aa52-62dd91b3ebaa/resourceGroups/woodgrove-rg/providers/Microsoft.OperationalInsights/workspaces/woodgrove-loganalyiticsworkspace/providers/Microsoft.SecurityInsights/Entities/adfc0103-c2d1-acc7-6bc2-7d3fa46a3c32",
+                        "name": "adfc0103-c2d1-acc7-6bc2-7d3fa46a3c32",
+                        "type": "Microsoft.SecurityInsights/Entities",
+                        "kind": "Ip",
+                        "properties": {
+                            "address": "185.82.217.3",
+                            "friendlyName": "185.82.217.3"
+                        }
+                    },
+                    {
+                        "id": "/subscriptions/ab48f397-fc82-4634-aa52-62dd91b3ebaa/resourceGroups/woodgrove-rg/providers/Microsoft.OperationalInsights/workspaces/woodgrove-loganalyiticsworkspace/providers/Microsoft.SecurityInsights/Entities/beeec36e-9d77-78c6-6b59-96127a531134",
+                        "name": "beeec36e-9d77-78c6-6b59-96127a531134",
+                        "type": "Microsoft.SecurityInsights/Entities",
+                        "kind": "Host",
+                        "properties": {
+                            "hostName": "CPC-LisaV-S0C0S",
+                            "netBiosName": "CPC-LisaV-S0C0S",
+                            "friendlyName": "CPC-LisaV-S0C0S"
+                        }
+                    }
+                ],
+                "comments": []
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+Descriptor:
+  Name: WoodgroveHR User Directory
+  DisplayName: WoodgroveHR User Directory  
+  Description: WoodgroveHR User Directory
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: WoodgroveHR User Directory
+        DisplayName: Pull woodgroveHR Directory
+        Description: Pull woodgroveHR Directory
+        Inputs:
+          - Name: username
+            Description: username
+            Required: true
+        Settings:
+          Target: Sentinel
+          TenantId: 536279f6-xxx-xxx-xx-61e352b51eef
+          SubscriptionId: ab48f397-fxxxxc82-xxxxx-xxxx-62dd91b3ebaa
+          ResourceGroupName: woodgrove-rg
+          WorkspaceName: your_log_analytics_workspace
+          Template: |-
+            externaldata (UserPrincipalName_s: string,PSComputerName_s:string,RunspaceId_g:string,PSShowComputerName_b:string,ExtensionProperty_odata_type_s:string,ExtensionProperty_onPremisesDistinguishedName_s:string,ExtensionProperty_thumbnailPhoto_odata_mediaEditLink_s:string,ObjectId_g:string,ObjectType_s:string,AccountEnabled_b:string,DirSyncEnabled_b:string,DisplayName_s:string,GivenName_s:string,ImmutableId_s:string,MailNickName_s:string,OnPremisesSecurityIdentifier_s:string,PasswordPolicies_s:string,Surname_s:string,UserType_s:string,CompanyName_s:string,Department_s:string,JobTitle_s:string,City_s:string,Mobile_s:string,PhysicalDeliveryOfficeName_s:string,PostalCode_s:string,State_s:string,StreetAddress_s:string,Type:string)
+            [@"https://raw.githubusercontent.com/Yaniv-Shasha/SecurityCopilot/main/Workshop/Custom_Plugin/Task05_KQL/AADUSerInfo.csv"]
+            with (formt='csv',ignoreFirstRecord=true)
+            | where UserPrincipalName_s contains '{{username}}'

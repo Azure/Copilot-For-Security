@@ -1,0 +1,23 @@
+Descriptor:
+  Name: SendjokeByEmail
+  DisplayName: SendjokeByEmail
+  Description: Skills to send security joke over email 
+
+SkillGroups:
+  - Format: LogicApp
+    Skills:
+      - Name: send Security Joke
+        DisplayName: logic app that send a joke over email
+        Description: run logic app to send a joke over emails
+        Inputs:
+          - Name: email
+            Description: email address
+            Required: true
+          - Name: joke
+            Description: security joke content
+            Required: true
+        Settings:
+          SubscriptionId: xxxxx-xxxx-xxxx
+          ResourceGroup: myRg
+          WorkflowName: SecCopilot-sendJokeByemail
+          TriggerName: manual
