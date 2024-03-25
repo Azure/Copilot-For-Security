@@ -1,4 +1,5 @@
-# Workshop Focus: Deploying a Logic App to Generate and Distribute Threat Bulletins from Microsoft Defender Threat Intelligence (MDTI) through Microsoft Copilot for Security 
+## Creating Threat Bulletins with Logic Apps & Microsoft Copilot for Security
+
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 #### ⌛ Estimated time to complete this lab: 10 minutes
 #### 🎓 Level: 100 (Beginner)
