@@ -16,6 +16,8 @@ In this comprehensive technical workshop, participants will delve into the deplo
 This Logic App will transition the incident status to active, generate dynamic tags (labels), and append them to the sentinel incident tags.  <br>
 Furthermore, the automation will determine and adjust the incident severity based on MDTI enrichment.  <br>
 It will also comprehensively document the investigation findings and the logic behind the incident classification in the comments section of the Microsoft sentinel incident. <br>
+
+#### Prerequisites
 To successfully complete this task, you must meet the following prerequisites:<br>
 Prior to beginning the installation process, it's crucial to confirm that you have met the following prerequisites: <br>
 • The user that will deploy this Logic app need to have a Contributor Role.<br>
