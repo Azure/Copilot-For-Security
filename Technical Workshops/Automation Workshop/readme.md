@@ -2,7 +2,7 @@
 
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 
-## Introduction to Automations with Copilot for security lab
+## Introduction to Automations with Copilot for Security lab
 
 Our labs project helps you get ramped up with Microsoft Copilot for Security and provides hands-on practical experience for deploying and using the Logic App connector in your day-to-day scenarios.
 
