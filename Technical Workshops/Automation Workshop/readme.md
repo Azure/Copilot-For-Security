@@ -20,8 +20,8 @@ Logic app Use cases: Remediation, Enrichments, business workflows, Logs transfer
 
 **[Module 1 - Leveraging the Microsoft Copilot For Security logic app Connector](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Automation%20Workshop/Module%201%20-Leveraging%20the%20Microsoft%20Copilot%20For%20Security%20logic%20app%20Connector)**
 
+**[Module 2 – Using Logic app Samples with the Microsoft Copilot For Security logic App Connector](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Automation%20Workshop/Module%202-%20Using%20Logic%20app%20samples%20with%20the%20Microsoft%20Security%20Logic%20App%20Connector)**
 
-[**Module 2 – Using Logic app Samples with the Microsoft Copilot For Security logic App Connector**](https://github.com/Azure/Copilot-For-Security/blob/main/Technical%20Workshops/Automation%20Workshop/Module%202%20-%20Sentinel%20Incident%20%20enrichment/readme.md)
 
 
 
