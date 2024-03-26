@@ -7,7 +7,6 @@
 Logic app connector documentation : https://learn.microsoft.com/en-us/security-copilot/connector_logicapp
 
 #### Objectives
-
 Upon completing this technical guide, you will gain the following abilities:<br>
 
 * Deploy an Azure Logic App capable of handling Microsoft Copilot for Security prompts using the Logic app connector .<br>
@@ -20,8 +19,8 @@ To successfully complete this task, you must meet the following prerequisites:<b
 3. **Azure Resource Group**: Logic Apps are deployed within [Azure resource groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups). Ensure that you have an appropriate resource group created or create one during the deployment process.
 4. **Access Permissions**: Ensure that you have the necessary [permissions](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to create resources in the Azure subscription and resource group where you plan to deploy the Logic App.
 
-## Steps to Follow
-### 1. Create a consuption logic app resource thats hosted in multitenant Azure logoc apps 
+#### Steps to Follow
+### 1. Create a consuption logic app resource thats hosted in multitenant Azure logic apps 
 
 - In the Azure portal search box, enter logic apps, and select Logic apps.
 - On the Logic apps page toolbar, select Add.
