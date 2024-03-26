@@ -1,5 +1,6 @@
 # Microsoft Intune
 <a name="Intune"></a>
+Documentation for the Micosoft Intune can be found here : https://learn.microsoft.com/en-us/mem/intune/fundamentals/security-copilot
 
 ## Device Information
 - Which devices are used by user **_`<UPN>`_**?
