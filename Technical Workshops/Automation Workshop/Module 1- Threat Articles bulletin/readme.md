@@ -52,6 +52,7 @@ To successfully complete this task, you must meet the following prerequisites:<b
 
 - Authenticate the Logic App Copilot For Security Connector 
 - Add context on the prompt 
+
 ![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp9.png)
 
 - Review the paramateres in the Logic App Copilot for Security connector
