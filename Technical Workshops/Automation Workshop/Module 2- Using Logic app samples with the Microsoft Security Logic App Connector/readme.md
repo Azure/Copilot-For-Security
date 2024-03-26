@@ -8,15 +8,15 @@
 Logic app connector documentation: [Link](https://learn.microsoft.com/en-us/security-copilot/connector_logicapp)
 
 #### Objectives
-Upon completing this technical guide, you will gain the following abilities:<br>
+Upon completing this technical guide, you will gain the following abilities:
 
-* Deploy an Azure Logic Apps capable of handling Microsoft Copilot for Security prompts using the Logic app connector.<br>
-* Leverage the Microsoft Copilot For Security GitHub to access logic app samples for testing .<br>
+* Deploy an Azure Logic Apps capable of handling Microsoft Copilot for Security prompts using the Logic app connector.
+* Leverage the Microsoft Copilot For Security GitHub to access logic app samples for testing.
 
 #### Prerequisites
-To successfully complete this task, you must meet the following prerequisites:<br>
+To successfully complete this task, you must meet the following prerequisites:
 
-1. You need your own tenant and Microsoft Copilot for Security instance.<br>
+1. You need your own tenant and Microsoft Copilot for Security instance.
 2. **Azure Subscription**: You need an active [Azure subscription](https://azure.microsoft.com/en-us/free/) to create and deploy a Logic App.
 3. **Azure Resource Group**: Logic Apps are deployed within [Azure resource groups](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups). Ensure that you have an appropriate resource group created or create one during the deployment process.
 4. **Access Permissions**: Ensure that you have the necessary [permissions](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to create resources in the Azure subscription and resource group where you plan to deploy the Logic App.
@@ -29,55 +29,49 @@ Now that we have successfully launched a Logic App utilizing the Copilot For Sec
 2) [Sentinel Investigation Logic App](https://github.com/Azure/Copilot-For-Security/tree/main/Logic%20Apps/Copilot-Sentinel_investigation-DynamicSev)
 
 
-#### **Scenario 1: Threat Article Bulletin
+#### **Scenario 1: Threat Article Bulletin**
 
 In this technical workshop, participants will learn how to deploy a Logic App designed to produce threat bulletins sourced from Microsoft Defender Threat Intelligence (MDTI) and send them to a designated email address. The workshop will cover the process of setting up the Logic App to gather threat intelligence information, create bulletins, and automate the distribution process via email.
 
-#### Steps fo follow 
-- Access the Logic app folder on the Github : [Azure Copilot For Security - Logic Apps](https://github.com/Azure/Copilot-For-Security/tree/main/Logic%20Apps)
-- proceed to Deploy
+#### Steps to Follow 
+- Access the Logic app folder on the GitHub: [Azure Copilot For Security - Logic Apps](https://github.com/Azure/Copilot-For-Security/tree/main/Logic%20Apps)
+- Proceed to Deploy
+
 ## Deployment
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKwachSean%2FSecurityCopilot%2Fmain%2Fplaybooks%2FThreatBulletinCopilot%2Fazuredeploy.json" target="_blank">
-    <img src="https://aka.ms/deploytoazurebutton"/>
-</a>
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKwachSean%2FSecurityCopilot%2Fmain%2Fplaybooks%2FThreatBulletinCopilot%2Fazuredeploy.json)
 
 ### Post-Deployment Instructions
 
-1. Select the freaquency on how many times you want the Logic App to run 
-2. Authenticate the Copilot Prompts with a User that has Access to Security Copilot 
-3. Proceed to run the Logic app and Prepare for the results 
+1. Select the frequency on how many times you want the Logic App to run.
+2. Authenticate the Copilot Prompts with a User that has Access to Security Copilot.
+3. Proceed to run the Logic app and Prepare for the results.
 
-Logic App View
+#### Logic App View
 ![Threat Bulletin Logic App](https://github.com/KwachSean/SecurityCopilot/raw/main/playbooks/ThreatBulletinCopilot/threatbulletinlogicapp.png)
 
-Results of the Logic APP
+#### Results of the Logic App
 ![Threat Bulletin Image](https://github.com/KwachSean/SecurityCopilot/raw/main/playbooks/ThreatBulletinCopilot/Threatbulletin.png)
 
-#### **Scenario 2: Sentinel Investigation Logic App
-In this comprehensive technical workshop, participants will delve into the deployment process of a specialized Logic App, Activating the 'Deploy' button will initiate the deployment of an Azure Logic App integrated with Security Copilot Actions, which utilizes a Microsoft Sentinel incident trigger. <br>
-This Logic App will transition the incident status to active, generate dynamic tags (labels), and append them to the sentinel incident tags.  <br>
-Furthermore, the automation will determine and adjust the incident severity based on MDTI enrichment.  <br>
-It will also comprehensively document the investigation findings and the logic behind the incident classification in the comments section of the Microsoft sentinel incident. <br>
+#### **Scenario 2: Sentinel Investigation Logic App**
 
-#### Steps fo follow 
-- Access the Logic app folder on the Github : [Azure Copilot For Security - Logic Apps](https://github.com/Azure/Copilot-For-Security/tree/main/Logic%20Apps)
-- proceed to Deploy
+In this comprehensive technical workshop, participants will delve into the deployment process of a specialized Logic App. Activating the 'Deploy' button will initiate the deployment of an Azure Logic App integrated with Security Copilot Actions, which utilizes a Microsoft Sentinel incident trigger. This Logic App will transition the incident status to active, generate dynamic tags (labels), and append them to the Sentinel incident tags. Furthermore, the automation will determine and adjust the incident severity based on MDTI enrichment. It will also comprehensively document the investigation findings and the logic behind the incident classification in the comments section of the Microsoft Sentinel incident.
+
+#### Steps to Follow 
+- Access the Logic app folder on the GitHub: [Azure Copilot For Security - Logic Apps](https://github.com/Azure/Copilot-For-Security/tree/main/Logic%20Apps)
+- Proceed to Deploy
 
 ### Deployment 
 
-To deploy the above logic app, you need to<br>
-•   Press on the Deploy option, select your subscription and the resource group (select the same tenant that Security Copilot is enabled)<br>
+To deploy the above logic app, you need to:
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FYaniv-Shasha%2FSecurityCopilot%2Fmain%2FPlaybooks%2FCopilot-Sentinel_investigation-DynamicSev%2Fazuredeploy.json" target="_blank">
-    <img src="https://aka.ms/deploytoazurebutton"/>
-</a>
-<br>
+* Press on the Deploy option, select your subscription and the resource group (select the same tenant that Security Copilot is enabled).
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FYaniv-Shasha%2FSecurityCopilot%2Fmain%2FPlaybooks%2FCopilot-Sentinel_investigation-DynamicSev%2Fazuredeploy.json)
 
 ### Post Deployment
 
-•   Authenticate with the users mention above (you can use different user for the Copilot actions and to the sentinel actions)<br>
-•   To run the logic app in a manual way, open Microsoft Sentinel incident page, right click on specific incident and press run playbook, select logic app you just deploy and press run.<br>
-•   To run the logic in automatic way, create an automation rule in sentinel and connect this playbook as the action for this rule.<br>
+* Authenticate with the users mentioned above (you can use different users for the Copilot actions and to the Sentinel actions).
+* To run the logic app manually, open the Microsoft Sentinel incident page, right-click on a specific incident, and press run playbook. Select the logic app you just deployed and press run.
+* To run the logic in an automatic way, create an automation rule in Sentinel and connect this playbook as the action for this rule.
 
-
-<img src="https://github.com/Yaniv-Shasha/SecurityCopilot/blob/ccbd305c539800eea2a1f7c1a0905aff954e2e25/Playbooks/Copilot-Sentinel_investigation-DynamicSev/images/full_logic_app.jpg"/>
+![Sentinel Investigation Logic App](https://github.com/Yaniv-Shasha/SecurityCopilot/blob/ccbd305c539800eea2a1f7c1a0905aff954e2e25/Playbooks/Copilot-Sentinel_investigation-DynamicSev/images/full_logic_app.jpg)
