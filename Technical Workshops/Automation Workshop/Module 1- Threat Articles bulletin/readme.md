@@ -23,32 +23,47 @@ To successfully complete this task, you must meet the following prerequisites:<b
 ### 1. Create a consuption logic app resource thats hosted in multitenant Azure logic apps 
 
 - In the Azure portal search box, enter logic apps, and select Logic apps.
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp1.png)
 - On the Logic apps page toolbar, select Add.
 - On the Create Logic App page, first select the Plan type for your logic app resource. That way, only the options for that plan type appear.
 - When you're done, your settings look similar to the following example:
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp2.png)
+
 - When you're ready, select Review + Create.
 - On the validation page that appears, confirm all the provided information, and select Create.
 
 ### 2. Select the blank logic app workflow template.
 - After Azure successfully deploys your logic app resource, select Go to resource. Or, find and select your logic app resource by typing the name in the Azure search box
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp3.png)
+
 - Scroll down past the video and the section named Start with a common trigger.
 - Under Templates, select Blank Logic App.
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp4.png)
 
 ### 3.  Add a trigger that specifies when to run the workflow.
 - on the workflow designer , select a trigger 
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp5.png)
+- Chpse the Recurrence Trigger and Select the Logic app should be intiated once a day 
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp6.png)
 
 ### 4.  Add the Copilot for Security Logic App connector within the workflow 
 - Select the Logic App Copilot For Security Connector 
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp7.png)
+
 - Authenticate the Logic App Copilot For Security Connector 
 - Add context on the prompt 
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp9.png)
+
 - Review the paramateres in the Logic App Copilot for Security connector
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp8.png)
+
 Optional Parameters and Inputs:
 
 Prompt Content: Prompt to be evaluated 
-Session Id: Session context
-Skill Inputs: Optional JSON body specifying values for required plugin (skill) parameters
-Skill Name: Call directly to a skill (bypass planner)
-Skillsets: Call directly to a skillset (bypass planner)
+- Session Id: Session context
+- Skill Inputs: Optional JSON body specifying values for required plugin (skill) parameters
+- Skill Name: Call directly to a skill (bypass planner)
+- Skillsets: Call directly to a skillset (bypass planner)
 
 - Save the workflow 
 
