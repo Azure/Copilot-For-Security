@@ -9,6 +9,12 @@ Our labs project helps you get ramped up with Microsoft Copilot for Security and
 ## What are Logic Apps and how do you use them in Copilot For Security?
 
 The [Copilot for Security Logic Apps connector](https://learn.microsoft.com/en-us/security-copilot/connector_logicapp) enables seamless integration between your Logic Apps workflows and Copilot for Security. This document serves as an introduction to the new connector actions available, along with sample use cases demonstrating their utility. These use cases include automating investigations into incidents flagged by Sentinel, detecting email phishing attempts, and addressing various security concerns.
+Azure logic app includes two main components: 
+- Triggers  
+- Connectors
+
+Logic app Use cases: Remediation, Enrichments, business workflows, Logs transfer, Logic App that calling Azure function.
+
 
 ## Modules
 
