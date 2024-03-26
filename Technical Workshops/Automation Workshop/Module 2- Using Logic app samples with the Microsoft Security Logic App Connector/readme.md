@@ -75,3 +75,12 @@ To deploy the above logic app, you need to:
 * To run the logic in an automatic way, create an automation rule in Sentinel and connect this playbook as the action for this rule.
 
 ![Sentinel Investigation Logic App](https://github.com/Yaniv-Shasha/SecurityCopilot/blob/ccbd305c539800eea2a1f7c1a0905aff954e2e25/Playbooks/Copilot-Sentinel_investigation-DynamicSev/images/full_logic_app.jpg)
+
+
+#### **bonus Module: Test the additional playbooks on Github and Create your own**
+
+- Access the Logic app folder on the GitHub: [Azure Copilot For Security - Logic Apps](https://github.com/Azure/Copilot-For-Security/tree/main/Logic%20Apps)
+
+![Logic App Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/Logicapp%20images/logicapp10.png)
+
+- Proceed to Deploy
