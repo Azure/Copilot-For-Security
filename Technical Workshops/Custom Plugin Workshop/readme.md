@@ -13,7 +13,8 @@ Our labs project help you get ramped up with Microsoft Copilot for Security and 
 Microsoft Copilot for Security custom plugins enable developers\power users to seamlessly integrate the power of the GPT models into third-party platforms, enhancing functionality and user experience. 
 These plugins act as a bridge between the raw capabilities of the model and specific applications, allowing for tailored outputs in diverse use-cases. 
 By utilizing custom plugins, users can harness the expansive knowledge of Microsoft Copilot for Security models in a contextually relevant and user-friendly manner.
-- We have also generated sample custom Plugins against 
+- We have also generated sample custom Plugins against
+---
 ## Modules
 
 [**Module 1 – The fun module- Logicapp plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task01_Send_jokeByemail)
@@ -26,8 +27,10 @@ By utilizing custom plugins, users can harness the expansive knowledge of Micros
 
 [**Module 5 – KQL - KQL plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task05_KQL)
 
-Other GitHub Plugins
-| Plugin Type                | Description                                                                                                    |
+---
+
+**Other GitHub Plugins**
+| Plugins                | Description                                                                                                    |
 |----------------------------|----------------------------------------------------------------------------------------------------------------|
 | [**Certified Plugins**](https://github.com/Azure/Copilot-For-Security/tree/main/Custom%20Plugins/Certified%20Plugins) | These are Microsoft certified Custom plugins for Copilot for Security.                                       |
 | [**Community Based Plugins**](https://github.com/Azure/Copilot-For-Security/tree/main/Custom%20Plugins/Community%20Based%20Plugins) | These are Plugins created and curated by The Copilot for Security Community.                                    |
