@@ -34,7 +34,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 **Clone the fork to your local machine:**:
 -	Create a directory on your local machine where you will pull down the repository to and where you will be working from. 
-    Example –“C:\Users\(username)\Documents\GitForks”
+    Example: “C:\Users\(username)\Documents\GitForks”
 -	Open Gitbash and move into the directory “C:\Users\(username)\Documents\GitForks”
 -	Run : Git init
 -	Run : Git clone <url of your fork> example: Git clone “https://github.com/(username)/ Copilot-For-Security-Fork”
