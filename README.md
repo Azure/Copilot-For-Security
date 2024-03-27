@@ -46,3 +46,5 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
     PS C:\Users\(username)\Documents\GitForks\Azure-Sentinel> git remote -v
     upstream        https://github.com/Azure/Copilot-For-Security (fetch)
     upstream        https://github.com/Azure/Copilot-For-Security (push)
+ 	
+![Clone to Local Dir](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Clone-Copilot-For-Security-Fork.png)
