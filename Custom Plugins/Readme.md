@@ -19,7 +19,8 @@ The Microsoft Copilot for Security connector now supports custom plugins, boosti
 **Please note:** We have three folders:
 
 1. **Certified Plugins** - These are Microsoft certified Custom plugins for Copilot for Security.
-2. **Community Based plugins** - These are Plugins created and curated by The Copilot for Security Community.
+2. [**Community Based Plugins**](https://github.com/Azure/Copilot-For-Security/tree/main/Custom%20Plugins/Community%20Based%20Plugins)
+ - These are Plugins created and curated by The Copilot for Security Community.
 3. [**MSFT_Plugin_Samples**](https://github.com/Azure/Copilot-For-Security/tree/main/Custom%20Plugins/MSFT_Plugin_Samples) -These are samples of Custom Plugins that will act as a guide you and give you the ability to create a custom plugin for Copilot For Security. The samples are API, GPT, and KQL samples.
 
 
