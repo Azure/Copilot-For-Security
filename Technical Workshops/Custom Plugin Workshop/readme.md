@@ -8,7 +8,6 @@ Our labs project help you get ramped up with Microsoft Copilot for Security and 
 
 **Documentation** : https://learn.microsoft.com/en-us/security-copilot/plugin_overview
 
-**MSFT Plugin Samples** - These are samples of Custom Plugins that will act as a guide you and give you the ability to create a custom plugin for Copilot For Security. The samples are API, GPT, and KQL samples.
 ## What are Custom plugins
 
 Microsoft Copilot for Security custom plugins enable developers\power users to seamlessly integrate the power of the GPT models into third-party platforms, enhancing functionality and user experience. 
@@ -27,3 +26,9 @@ By utilizing custom plugins, users can harness the expansive knowledge of Micros
 
 [**Module 5 – KQL - KQL plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task05_KQL)
 
+Other GitHub Plugins
+| Plugin Type                | Description                                                                                                    |
+|----------------------------|----------------------------------------------------------------------------------------------------------------|
+| [**Certified Plugins**](https://github.com/Azure/Copilot-For-Security/tree/main/Custom%20Plugins/Certified%20Plugins) | These are Microsoft certified Custom plugins for Copilot for Security.                                       |
+| [**Community Based Plugins**](https://github.com/Azure/Copilot-For-Security/tree/main/Custom%20Plugins/Community%20Based%20Plugins) | These are Plugins created and curated by The Copilot for Security Community.                                    |
+| [**MSFT_Plugin_Samples**](https://github.com/Azure/Copilot-For-Security/tree/main/Custom%20Plugins/MSFT_Plugin_Samples)   | These are samples of Custom Plugins that will act as a guide you and give you the ability to create a custom plugin for Copilot For Security. The samples are API, GPT, and KQL samples. |
