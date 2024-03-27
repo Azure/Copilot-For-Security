@@ -44,3 +44,14 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 -	Run : Git remote -v
 
  	 ![Clone to Local Dir](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Clonethefork.png)
+
+**Create a branch**:
+- You can work with the local main branch, but it is recommended to work with a branch so if you have separate projects you are working on you can keep them isolated. 
+- First you want to sync your local repository to the upstream master (the Azure community itself – not your fork)
+    Run : git pull upstream main
+- You should see a list of updates that are processed or a message saying you are up to date
+- Now that you are in sync create your new branch
+    Run : Git checkout -b <branch name> example Git checkout -b Sojeshs_CFSContributions
+
+![Clone to Local Dir](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Createnewbranch.png)
+
