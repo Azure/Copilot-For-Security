@@ -1,5 +1,5 @@
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
-# Microsoft Copilot For Security 
+# Microsoft Copilot For Security Community
 Welcome to the Copilot for Security Repository!
 
 Microsoft Copilot for Security is a generative AI-powered assistant for daily operations in security and IT that empowers teams to protect at the speed and scale of AI.
@@ -10,7 +10,7 @@ Microsoft Copilot for Security is a generative AI-powered assistant for daily op
 - https://aka.ms/copilotforsecurity
 
 ## Contributing
-
+**How to get started contributing**
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
@@ -23,3 +23,19 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+**GitHub account**: 
+
+Get a GitHub account – ([www.github.com](http://www.github.com) ) - Free account works fine.
+
+Login
+
+**Fork the Repository**:
+Go to the community page: https://github.com/Azure/Copilot-For-Security
+Make sure you are on the master branch
+
+Click "Fork"
+![](.github/Images/CFSGithubfork.png)
+![](.github/Images/CFSGithubforkcreate.png)
+
+This will create a copy of the Azure-Sentinel repository in your own GitHub account:
+![](.github/Images/CFSGithubforknew.png)
