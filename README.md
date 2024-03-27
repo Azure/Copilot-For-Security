@@ -55,3 +55,15 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 ![Create new Branch](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Createnewbranch.png)
 
+**Install VS Code:**
+
+[[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)]
+
+**Open Branch in VS Code:**
+
+Run VS Code and then File > Open Folder the local repository directory (Example: C:\Users\\(username)\Documents\GitForks\Copilot-For-Security-Fork)
+
+You should see all the directories and files in the repository and at the bottom you can see which branch you are working on. Ensure you have the right branch selected before making any changes.
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/VSCodeBranchConfirmation.png)
+
