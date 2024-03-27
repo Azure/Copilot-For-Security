@@ -26,7 +26,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 **Fork the Repository**:
 - Go to the community page: https://github.com/Azure/Copilot-For-Security
 - Make sure you are on the master branch
-- Click "Fork"
+- Click "Fork" -> Create a new fork
   ![Github New Fork](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubfork.png)
   ![Create New Fork](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubforkCreate.png)
 - This will create a copy of the Azure-Sentinel repository in your own GitHub account:
