@@ -15,7 +15,7 @@ These plugins act as a bridge between the raw capabilities of the model and spec
 By utilizing custom plugins, users can harness the expansive knowledge of Microsoft Copilot for Security models in a contextually relevant and user-friendly manner.
 - We have also generated sample custom Plugins against
 ---
-## Modules
+## Workshop Modules
 
 [**Module 1 – The fun module- Logicapp plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task01_Send_jokeByemail)
 
