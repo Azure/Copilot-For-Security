@@ -6,15 +6,11 @@
 
 Our labs project helps you get ramped up with Microsoft Copilot for Security and provides hands-on practical experience for managing custom Plugins.
 
---
-
 ## What are Custom plugins
 
 Microsoft Copilot for Security custom plugins enable developers\power users to seamlessly integrate the power of the GPT models into third-party platforms, enhancing functionality and user experience. These plugins act as a bridge between the raw capabilities of the model and specific applications, allowing for tailored outputs in diverse use-cases. By utilizing custom plugins, users can harness the expansive knowledge of Microsoft Copilot for Security models in a contextually relevant and user-friendly manner.
 
 Documentation: [https://learn.microsoft.com/en-us/security-copilot/plugin_overview](https://learn.microsoft.com/en-us/security-copilot/plugin_overview)
-
---
 
 ## Workshop Modules
 
@@ -24,9 +20,7 @@ Documentation: [https://learn.microsoft.com/en-us/security-copilot/plugin_overvi
 - [**Module 4 – GeoIp02 - GPT plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task04_GEO_IP_script)
 - [**Module 5 – KQL - KQL plugin**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop/Task05_KQL)
 
---
-
-**Other GitHub Plugins**
+## Other GitHub Plugins
 
 | Plugins                | Description                                                                                                    |
 |------------------------|----------------------------------------------------------------------------------------------------------------|
