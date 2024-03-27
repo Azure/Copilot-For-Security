@@ -42,8 +42,8 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 -	Set the upstream which is the original repo that you forked from ie the Copilot-For-Security community repo
 -	Run : Git remote add upstream https://github.com/Azure/Copilot-For-Security
 -	Run : Git remote -v
-  You should see something like this:
-    PS C:\Users\(username)\Documents\GitForks\Azure-Sentinel> git remote -v
-    upstream        https://github.com/Azure/Copilot-For-Security (fetch)
-    upstream        https://github.com/Azure/Copilot-For-Security (push)
+   -You should see something like this:
+     -PS C:\Users\(username)\Documents\GitForks\Azure-Sentinel> git remote -v
+       upstream        https://github.com/Azure/Copilot-For-Security (fetch)
+       upstream        https://github.com/Azure/Copilot-For-Security (push)
  	 ![Clone to Local Dir](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Clonethefork.png)
