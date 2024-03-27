@@ -22,6 +22,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 **GitHub account**: 
 - Get a GitHub account – ([www.github.com](http://www.github.com) ) - Free account works fine.
 - Login with your new account
+  
 **Fork the Repository**:
 - Go to the community page: https://github.com/Azure/Copilot-For-Security
 - Make sure you are on the master branch
