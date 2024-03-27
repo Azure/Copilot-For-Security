@@ -4,9 +4,9 @@
 
 ## Introduction
 
-Our labs project help you get ramped up with Microsoft Copilot for Security and provide hands-on practical experience for managing cusotm Plugins.
+Our labs project help you get ramped up with Microsoft Copilot for Security and provide hands-on practical experience for managing custom Plugins.
+Documentation: [https://learn.microsoft.com/en-us/security-copilot/plugin_overview](https://learn.microsoft.com/en-us/security-copilot/plugin_overview)
 
-**Documentation** : https://learn.microsoft.com/en-us/security-copilot/plugin_overview
 ---
 ## What are Custom plugins
 
