@@ -32,3 +32,17 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 - This will create a copy of the Azure-Sentinel repository in your own GitHub account:
   ![View Your New Fork](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubforknew.png)
 
+**Clone the fork to your local machine:**:
+-	Create a directory on your local machine where you will pull down the repository to and where you will be working from. 
+    Example –“C:\Users\(username)\Documents\GitForks”
+-	Open Gitbash and move into the directory “C:\Users\(username)\Documents\GitForks”
+-	Run : Git init
+-	Run : Git clone <url of your fork> example: Git clone “https://github.com/(username)/ Copilot-For-Security-Fork”
+-	Cd into the new directory that is created ie cd Copilot-For-Security-Fork
+-	Set the upstream which is the original repo that you forked from ie the Copilot-For-Security community repo
+-	Run : Git remote add upstream https://github.com/Azure/Copilot-For-Security
+-	Run : Git remote -v
+  You should see something like this:
+    PS C:\Users\(username)\Documents\GitForks\Azure-Sentinel> git remote -v
+    upstream        https://github.com/Azure/Copilot-For-Security (fetch)
+    upstream        https://github.com/Azure/Copilot-For-Security (push)
