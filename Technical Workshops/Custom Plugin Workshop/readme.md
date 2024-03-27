@@ -5,7 +5,7 @@
 ## Introduction
 
 Our labs project help you get ramped up with Microsoft Copilot for Security and provide hands-on practical experience for managing custom Plugins.
-Documentation: [https://learn.microsoft.com/en-us/security-copilot/plugin_overview](https://learn.microsoft.com/en-us/security-copilot/plugin_overview)
+
 
 ---
 ## What are Custom plugins
@@ -13,7 +13,8 @@ Documentation: [https://learn.microsoft.com/en-us/security-copilot/plugin_overvi
 Microsoft Copilot for Security custom plugins enable developers\power users to seamlessly integrate the power of the GPT models into third-party platforms, enhancing functionality and user experience. 
 These plugins act as a bridge between the raw capabilities of the model and specific applications, allowing for tailored outputs in diverse use-cases. 
 By utilizing custom plugins, users can harness the expansive knowledge of Microsoft Copilot for Security models in a contextually relevant and user-friendly manner.
-- We have also generated sample custom Plugins against
+
+Documentation: [https://learn.microsoft.com/en-us/security-copilot/plugin_overview](https://learn.microsoft.com/en-us/security-copilot/plugin_overview)
 ---
 ## Workshop Modules
 
