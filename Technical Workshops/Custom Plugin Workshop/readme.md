@@ -7,6 +7,7 @@
 Our labs project help you get ramped up with Microsoft Copilot for Security and provide hands-on practical experience for managing cusotm Plugins.
 
 **Documentation** : https://learn.microsoft.com/en-us/security-copilot/plugin_overview
+
 **MSFT Plugin Samples** - These are samples of Custom Plugins that will act as a guide you and give you the ability to create a custom plugin for Copilot For Security. The samples are API, GPT, and KQL samples.
 ## What are Custom plugins
 
