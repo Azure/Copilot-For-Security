@@ -53,5 +53,5 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 - Now that you are in sync create your new branch
     Run : Git checkout -b <branch name> example Git checkout -b Sojeshs_CFSContributions
 
-![Clone to Local Dir](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Createnewbranch.png)
+![Create new Branch](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Createnewbranch.png)
 
