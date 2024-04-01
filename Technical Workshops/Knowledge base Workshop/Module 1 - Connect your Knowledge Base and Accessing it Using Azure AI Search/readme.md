@@ -2,7 +2,7 @@
 # Introduction
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 ## Setup to Azure AI search 
-#### ⌛ Estimated time to complete this lab: 10 minutes
+#### ⌛ Estimated time to complete this lab: 20 minutes
 #### 🎓 Level: 100 (Beginner)
 
 #### Objectives
@@ -95,7 +95,7 @@ Upon completing this technical guide, you will gain the following abilities:<br>
 4. **Querying Blob Data**
    - Hands-on exercises on querying blob data using Azure Search.
    - Discussion on different query types and their applications.
-
+   
 5. **Customizing Search Experience**
    - Exploring options to customize search experiences.
    - Implementing filters, facets, and sorting for enhanced user experience.
