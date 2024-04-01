@@ -26,6 +26,7 @@ Our lab initiatives are tailored to expedite your acclimatization to Microsoft C
 [Module 3: Leverage the SANS Hunt Evil Poster Document to guide Investigation Scenarios](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Knowledge%20base%20Workshop/Module%203%20-%20Leverage%20the%20SANS%20Hunt%20Evil%20Poster%20Document%20to%20guide%20Investigation%20Scenarios)
 
 
+
 - **Module 4 - Asset Management and Incident Response: Leveraging Knowledge Bases to Safeguard Crown Jewel Assets**
 - **Module 5 - Mire Enrichment with your Knowledge Base**
 - **Module 6 - Phishing Scenario**
