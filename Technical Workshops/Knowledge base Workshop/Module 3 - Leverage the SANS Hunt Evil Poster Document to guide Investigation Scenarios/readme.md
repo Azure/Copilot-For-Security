@@ -22,7 +22,10 @@ Upon completing this technical guide, you will gain the following abilities:<br>
 # Workshop Agenda: Azure AI Search integration with Copilot For Security 
 
 ## 1. Access the SANS (" Hunt Evil Poster Document")
-- Access the Document from the samples folder in the GitHub Here  or access it from the Link here : https://www.sans.org/posters/hunt-evil/
+- Access the Document from the samples folder in the GitHub Here [Hunt Evil Poster PDF](https://github.com/Azure/Copilot-For-Security/blob/main/Technical%20Workshops/Knowledge%20base%20Workshop/Sample%20Files/Hunt%20Evil%20Poster.pdf) or access it from the Link here : https://www.sans.org/posters/hunt-evil/
+
+![Hunt Evil 3](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevil3.png?raw=true)
+
 - Ensure the document is added on your blob storage in the Azure AI search instance , this was already done in the previous Module , you can see the how to here :
 
 ## 2. Prompting Using Azure AI Search 
