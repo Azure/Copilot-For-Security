@@ -5,13 +5,7 @@
 #### ⌛ Estimated time to complete this lab: 10 minutes
 #### 🎓 Level: 100 (Beginner)
 
-#### Objectives
 
-Upon completing this technical guide, you will gain the following abilities:<br>
-
-* Set up a Blob Storage .<br>
-* Add Sample files to the Blob Storage.<br>
-* Set up an Azure AI Services AI search instance .<br>
 
 #### Scenario
 "In this technical workshop, participants will learn how to connect their Azure AI Search instance into Microsoft Copilot For Security.To successfully complete this task, you must meet the following prerequisites:<br>
