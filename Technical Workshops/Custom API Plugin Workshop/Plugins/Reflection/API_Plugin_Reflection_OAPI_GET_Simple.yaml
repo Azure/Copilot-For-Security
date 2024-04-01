@@ -1,4 +1,4 @@
-# Filename: API_Plugin_Reflection_OAI_GET_Simple.yaml
+# Filename: API_Plugin_Reflection_OAPI_GET_Simple.yaml
 # The basic template of this file can be generated using Bing Copilot using the following prompt:
 #   Write an OpenAPI specification document for an API that receives a variable called input in the path via a GET 
 #   request to /simple/{input} that outputs a JSON with the following fields: object, userdata,sourceip, useragent
