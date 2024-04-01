@@ -7,7 +7,7 @@ SkillGroups:
   - Format: LogicApp
     Skills:
       - Name: send Copilot investigation output to an  email
-        DisplayName: Send Email on Copilot Output throigh Logic App
+        DisplayName: Send Email on Copilot Output through Logic App
         Description: run logic app to send Copilot investigation output to email
         Inputs:
           - Name: email
