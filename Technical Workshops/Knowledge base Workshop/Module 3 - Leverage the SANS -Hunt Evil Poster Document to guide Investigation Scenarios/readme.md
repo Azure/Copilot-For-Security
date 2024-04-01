@@ -30,7 +30,8 @@ Upon completing this technical guide, you will gain the following abilities:<br>
 - send out the first Prompt Querying the data in the document , we will focus on a couple of senarios , in the hunt evil document we will focus on pulling infromation associated with Lateral Movement ( key focus on how its achieed with Remote Access or Remote Execution)
 
 Prompt 1: Using Azure AI search access the SANS hunt evil Poster doc, and share with me all the event ID's associated with Remote execution process in a table format
-
+![Hunt Evil Poster](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevil.png?raw=true)
 
 Prompt 2: Leveraging the above Event IDs , hunt my defender environment for any device traffic associated with them
+![Hunt Evil Poster 2](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevil2.png?raw=true)
 
