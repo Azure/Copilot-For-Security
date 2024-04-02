@@ -2,8 +2,10 @@
 #  Threat Bulletins Promptbook
 
 **Description**: Summarize the recent threat articles in a report format with actionable recommendations over a certain period
-**Required Plugin** Defender Threat intelligence 
-**Required Input** <Lookfarback>
+
+**Required Plugin**: Defender Threat intelligence 
+
+**Required Input**:<Lookfarback>
 
 1. Request for Latest threat article information
  ```
