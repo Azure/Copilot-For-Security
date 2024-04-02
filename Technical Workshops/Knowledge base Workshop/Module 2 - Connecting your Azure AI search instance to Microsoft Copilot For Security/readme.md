@@ -30,7 +30,13 @@
 
 - Log into Copilot for Security 
 - Access the sources , proceed to Azure AI search Instance 
-- Add the details from the Azure AI search instance 
-- Save the instance 
+- Add the details from the Azure AI search instance
+  
+![Connect Azure Index](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/connectAzureindex.png)
+
+- Save the instance
+
 - Try accessing the Skill in prompt guidance bar
+
+![Connect Azure Index](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/SerachazureAIindex.png)
 
