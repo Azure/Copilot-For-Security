@@ -4,9 +4,6 @@ Descriptor:
   DisplayName: McCulloch–Pitts's Reflection API plug-in using GET
   Description: Skills for getting a GET REST API call reflection
   DescriptionForModel: A set of plugins that reflect the data that was sent to the plugin  
-  ExamplePrompts:
-    - Get Reflection data for <value>
-    - Call Chait's Plugin
 
 SkillGroups:
   - Format: API
