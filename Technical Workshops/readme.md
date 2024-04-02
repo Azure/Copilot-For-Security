@@ -1,3 +1,5 @@
+![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
+
 # Technical Workshops for Microsoft Copilot for Security
 
 Welcome to the series of technical workshops designed to enhance your skills and knowledge in utilizing Microsoft Copilot for Security. Microsoft Copilot for Security is an innovative tool that integrates seamlessly with Microsoft's security solutions, providing users with enhanced capabilities to automate responses, generate security narratives, and much more, using advanced AI technologies. These workshops are tailored for security professionals, system administrators, and anyone interested in harnessing the power of AI to bolster their security infrastructure.
