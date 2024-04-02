@@ -14,11 +14,3 @@ Below is a table summarizing the focus areas of our workshop series:
 | [Copilot for Security: Custom Plugin Workshop](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop)| Dive into custom plugin creation to extend Copilot for Security's capabilities, enabling tailored solutions for your specific security needs.      |
 |[Copilot for Security: Automation Workshop](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Automation%20Workshop) workshop.| Discover how to use Microsoft Logic Apps to automate workflows and security responses, leveraging Copilot for Security for enhanced security management. |
 
-## Getting Started
-
-To participate in these workshops, please ensure you have:
-
-- A basic understanding of Microsoft's security tools and platforms.
-- Familiarity with AI concepts and their application in cybersecurity.
-- Access to a Microsoft Azure account for hands-on exercises.
-
