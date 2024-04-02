@@ -31,7 +31,7 @@ Here are the steps you can take to begin contributing to this project:
 - Click "Fork" -> "Create a new fork"
   ![Github New Fork](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubfork.png)
   ![Create New Fork](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubforkCreate.png)
-- This will create a copy of the Azure-Sentinel repository in your own GitHub account:
+- This will create a copy of the Copilot for Security repository in your own GitHub account:
   ![View Your New Fork](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubforknew.png)
 
 **Clone the fork to your local machine:**:
