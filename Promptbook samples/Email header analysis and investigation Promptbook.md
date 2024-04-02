@@ -3,10 +3,12 @@
 
 Description: Investigate a suspicious email by examining the headers , filtering out the entities and concluding with a summary of the email
 
-1. Triage the email 
+1. Triage the email
+   
 /AskGPT Can you triage the email header below and point out what you find suspicious? <emailheaders>
+'''
 
-2. Idenitfy technical indicators in the email header 
+3. Idenitfy technical indicators in the email header 
 
 prompt : Can you list all the Technical indicators in the above prompt that we can use for an investigation process
 
