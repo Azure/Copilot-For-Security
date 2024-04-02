@@ -1,5 +1,6 @@
-![Purview Image](https://github.com/Azure/Copilot-For-Security/raw/main/Images/purviewpng.jpg)
+
 # Microsoft Purview
+Documentation for Microsoft Purview and Copilot for Secuity can be found here : https://learn.microsoft.com/en-us/purview/copilot-in-purview-overview?bc=%2Fsecurity-copilot%2Fbreadcrumb%2Ftoc.json&toc=%2Fsecurity-copilot%2Ftoc.json
 
 - Show me the top 5 DLP alerts that I should prioritize today?
 - Can you summarize purview alert `<AlertID>`? 
