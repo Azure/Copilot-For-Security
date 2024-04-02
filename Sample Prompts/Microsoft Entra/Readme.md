@@ -137,6 +137,7 @@ reasons.
 
 
 &nbsp;
+Disclaimer: Please know these are sample prompts and are subject to Change
 [![alt text](../../Images/backtotop.svg)](#entra)
 
 ***
