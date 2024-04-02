@@ -5,7 +5,7 @@
 
 **Required Plugin**: Defender Threat intelligence 
 
-**Required Input**:<Lookfarback>
+**Required Input**:< Lookfarback >
 
 1. Request for Latest threat article information
  ```
