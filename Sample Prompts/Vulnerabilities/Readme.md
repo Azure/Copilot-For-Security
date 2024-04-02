@@ -3,7 +3,7 @@
 ```
 Summarize the latest Vulnerabilities from the last week.
 ``` 
-Summarize <**_`<CVE-XXXX>`_** vulnerability.
+Summarize <_`<CVE-XXXX>`_ vulnerability.
 ```
 What vulnerabilities have been exploited recently by threat actors?
 ```
