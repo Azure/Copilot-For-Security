@@ -14,8 +14,8 @@ Our lab initiatives are tailored to expedite your acclimatization to Microsoft C
 
 | Options to Integrate KBs into Copilot for Security | Ways to integrate KBs into Microsoft Copilot For Security                                                                                                     |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Azure AI Search plugin (BYO index)                | Follow the steps in [Prompting for a KB connected using Azure AI Search](https://review.learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-a-knowledge-base-connected-using-azure-ai-search).    |
-| File upload                                        | Follow the steps in [Prompting for an uploaded file](https://review.learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-an-uploaded-file).    |
+| Azure AI Search plugin                 | Follow the steps in [Prompting for a KB connected using Azure AI Search](https://learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-a-knowledge-base-connected-using-azure-ai-search).    |
+| File upload                                        | Follow the steps in [Prompting for an uploaded file](https://learn.microsoft.com/en-us/security-copilot/upload-file).    |
 
 ## Modules
 
@@ -23,5 +23,5 @@ Our lab initiatives are tailored to expedite your acclimatization to Microsoft C
 - [**Module 2 - Connecting your Azure AI search instance to Microsoft Copilot For Security**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Knowledge%20base%20Workshop/Module%202%20-%20Connecting%20your%20Azure%20AI%20search%20instance%20to%20Microsoft%20Copilot%20For%20Security)
 - [**Module 3: Leverage the SANS Hunt Evil Poster Document to guide Investigation Scenarios**](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Knowledge%20base%20Workshop/Module%203%20-%20Leverage%20the%20SANS%20Hunt%20Evil%20Poster%20Document%20to%20guide%20Investigation%20Scenarios)
 - **Module 4 - Asset Management and Incident Response: Leveraging Knowledge Bases to Safeguard Crown Jewel Assets**
-- **Module 5 - Mire Enrichment with your Knowledge Base**
+- **Module 5 - Mitre Enrichment with your Knowledge Base**
 - **Module 6 - Phishing Scenario**

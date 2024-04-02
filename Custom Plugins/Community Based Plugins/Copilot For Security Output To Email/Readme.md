@@ -1,5 +1,5 @@
 ![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
-# Microsoft Copilot for Security Custom Plugins - Send COpilot Output to Email 
+# Microsoft Copilot for Security Custom Plugins - Send Copilot Output to Email 
 
 # Send Copilot Output to Email Plugin
 
