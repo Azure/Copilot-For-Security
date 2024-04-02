@@ -11,8 +11,7 @@ Below is a table summarizing the focus areas of our workshop series:
 | Workshop Topic                                      | Brief Description                                                                                                                                 |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Knowledge Base Integration within Copilot for Security | Learn how to integrate various knowledge bases with Copilot for Security to enhance its ability to provide accurate, contextually relevant security insights. |
-| [Copilot for Security: Custom Plugin Workshop](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop)
- | Dive into custom plugin creation to extend Copilot for Security's capabilities, enabling tailored solutions for your specific security needs.      |
+| [Copilot for Security: Custom Plugin Workshop](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Custom%20Plugin%20Workshop)| Dive into custom plugin creation to extend Copilot for Security's capabilities, enabling tailored solutions for your specific security needs.      |
 |[Automation with Copilot for Security](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Automation%20Workshop) workshop.| Discover how to use Microsoft Logic Apps to automate workflows and security responses, leveraging Copilot for Security for enhanced security management. |
 
 ## Getting Started
