@@ -14,8 +14,8 @@ Our lab initiatives are tailored to expedite your acclimatization to Microsoft C
 
 | Options to Integrate KBs into Copilot for Security | Ways to integrate KBs into Microsoft Copilot For Security                                                                                                     |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Azure AI Search plugin (BYO index)                | Follow the steps in [Prompting for a KB connected using Azure AI Search](https://review.learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-a-knowledge-base-connected-using-azure-ai-search).    |
-| File upload                                        | Follow the steps in [Prompting for an uploaded file](https://review.learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-an-uploaded-file).    |
+| Azure AI Search plugin                 | Follow the steps in [Prompting for a KB connected using Azure AI Search](https://learn.microsoft.com/en-us/security-copilot/connect-org-kb#prompting-for-a-knowledge-base-connected-using-azure-ai-search).    |
+| File upload                                        | Follow the steps in [Prompting for an uploaded file](https://learn.microsoft.com/en-us/security-copilot/upload-file).    |
 
 ## Modules
 
