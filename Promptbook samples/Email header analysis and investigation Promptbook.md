@@ -5,7 +5,7 @@ Description: Investigate a suspicious email by examining the headers , filtering
 
 1. Triage the email 
 
-prompt : /AskGPT Can you triage the email header below and point out what you find suspicious? <emailheaders>
+/AskGPT Can you triage the email header below and point out what you find suspicious? <emailheaders>
 
 2. Idenitfy technical indicators in the email header 
 

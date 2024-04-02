@@ -10,5 +10,5 @@ You can create your own promptbook with the promptbook builder to automate inves
 - [Build your own promptbooks | Microsoft Learn](https://learn.microsoft.com/en-us/security-copilot/build-promptbooks)
 
 **Prerequisites**
-Check if you have appropriate access and permissions to create promptbooks.[Understand authentication in Microsoft Security Copilot | Microsoft Learn](https://learn.microsoft.com/en-us/security-copilot/authentication)
+- Check if you have appropriate access and permissions to create promptbooks.[Understand authentication in Microsoft Security Copilot | Microsoft Learn](https://learn.microsoft.com/en-us/security-copilot/authentication)
 
