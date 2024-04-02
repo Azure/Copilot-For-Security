@@ -1,7 +1,10 @@
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 #  Threat Bulletins Promptbook
 
-Description: Summarize the recent threat articles in a report format with actionable recommendations over a cerain period
+**Description**: Summarize the recent threat articles in a report format with actionable recommendations over a certain period
+**Required Plugin** Defender Threat intelligence 
+**Required Input** <Lookfarback>
+
 1. Request for Latest threat article information
  ```
 Share the latest Threat articles published in the last <Lookfarback> in a table format
