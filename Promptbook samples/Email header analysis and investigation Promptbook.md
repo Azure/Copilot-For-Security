@@ -3,6 +3,9 @@
 
 **Required plugins** : Microsoft Defender Threat intelligence, Natural Language to KQL to Microsoft Defender XDR, Microsoft Defender XDR
 
+**Required Input**:< Emailheaders >
+
+
 **Description**: Investigate a suspicious email by examining the headers , filtering out the entities and concluding with a summary of the email
 
 1. Triage the email
