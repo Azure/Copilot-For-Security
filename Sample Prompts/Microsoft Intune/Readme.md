@@ -33,3 +33,4 @@ Documentation for the Micosoft Intune can be found here : https://learn.microsof
 [![alt text](../../Images/backtotop.svg)](#intune-management)
 
 ***
+Disclaimer: Please know these are sample prompts and are subject to Change
