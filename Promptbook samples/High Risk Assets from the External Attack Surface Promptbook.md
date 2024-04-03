@@ -11,10 +11,9 @@
    ```
    Get the high priority attack surface insights using a prebuilt footprint for <CompanyName> using External Attack surface Management
    ```
-
 2. **Capture Specific CVES from summary**:
    ```
-  List all the CVE IDs from the above summary
+   List all the CVE IDs from the above summary
    ```
 3. **See how CVES are aligned to Threat articles**:
    ```
