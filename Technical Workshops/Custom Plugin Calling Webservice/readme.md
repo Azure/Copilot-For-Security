@@ -12,10 +12,10 @@ This folder contains a three plugins to send data via GET (with and without para
 
 2. Once you have proven your Flask web application is running locally, you will now need to run the above website in a host that is reachable from the Internet since Copilot for Security is a Cloud based application. The best option  is to use an Azure App Service and instructions to host and run a Python web application in Azure App Service are given [here](https://learn.microsoft.com/en-us/azure/app-service/quickstart-python?tabs=flask%2Cwindows%2Cazure-cli%2Czip-deploy%2Cdeploy-instructions-azportal%2Cterminal-bash%2Cdeploy-instructions-zip-azcli). Azure App Service also builds a TLS layer on your website (allowing you to use https) even though our webservice is non-TLS. The other option is to run the webserver from an Azure hosted VM, but you will not have the benefit of a TLS layer. While Copilot for Security can call both http and https websites, for any production application TLS is a must.
 
-3. Upload the OpenAPI document (with _OAPI_ names) in an Internet accessible location or download from this github. You can also use the Flask Webservice to serve them by moving the files in the <i>Files</i> folder.
+3. Upload the OpenAPI document (with _OAPI_ in filename) in an Internet accessible location or download from this github. You can also use the Flask Webservice to serve them by moving the files in the <i>Files</i> folder.
 
 4. Make sure the URLs for the OpenAPI specification document is correct in the main YAML files (one without the _OAPI_. There will be a corresponding main YAML file for each YAML file with the _OAPI_ name).
 
-5. Upload the main YAML document (one for each plugin) in Copilot and confirm the upload is successful. You can now start use the plugin. 
+5. Upload the main YAML document (one for each plugin) in Copilot and confirm the upload is successful. You can now start using the plugin. 
 
 
