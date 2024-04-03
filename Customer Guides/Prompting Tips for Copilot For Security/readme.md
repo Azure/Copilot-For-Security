@@ -18,17 +18,7 @@
 
 
 Following best practices above, listed below are good and bad examples of prompts intended to support various security-related use cases. 
-| Quality | Example |
-|---------|---------|
-| **Bad** | Provide an incident summary. |
-| **Good** | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. |
-| **Better** | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. List the entities of the incident in a table providing context from MDTI. |
-| **Best** | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. List the entities of the incident in a table which includes the following headers: "Entity", "Entity Type", "MDTI reputation". Within "Entity", list the entity associated with the incident or incident’s alerts. Within "Entity Type", list what type of entity it is, e.g., domain name, IP address, URL, hash. Within "MDTI reputation", enrich the entity against MDTI’s Copilot reputation skill. |
-
-```markdown
-| Quality | Example: KQL Query |
-|---------|---------------------|
-| **Bad** | Create a KQL query to hunt for hexadecimal strings. |
-| **Good** | Create a KQL query to hunt for hexadecimal strings associated with svchost.exe process. |
-| **Better** | **Prompt 1:** Create a Defender KQL query to hunt for hexadecimal strings associated with the svchost.exe process. **Prompt 2:** What threat actor groups tend to use this svchost.exe process? **Prompt 3:** What are the TTPs associated with these threat actor groups? **Prompt 4:** Create a table to list the MITRE ATT&CK techniques associated with each threat actor group as unique rows. List each technique in column 1, "MITRE ATT&CK technique", and which threat actor groups used that technique in column 2, "Threat Actor Group(s)". |
-| **Best** | **Prompts 1-4:** As Better. **Prompt 5:** Identify which MITRE ATT&CK techniques lack analytic rule coverage in our Sentinel. **Prompt 6:** Identify CVEs exploited by these groups. **Prompt 7:** Threat intelligence on these CVEs from MDTI. **Prompt 8:** Threat intelligence on these CVEs from inthewild.io. **Prompt 9:** Remediation for these CVEs from MDTI. **Prompt 10:** Vulnerable assets to these CVEs. **Prompt 11:** Check if remediation steps were followed based on incident comments or postmortem documentation. [Save as a custom promptbook] |
+|  | **Bad** | **Good** | **Better** | **Best** |
+|---|---|---|---|---|
+| **Incident Summary** | Provide an incident summary. | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. List the entities of the incident in a table providing context from MDTI. | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. List the entities of the incident in a table which includes headers: "Entity", "Entity Type", "MDTI reputation". List entity associated with the incident, its type (e.g., domain, IP, URL, hash), and enrich against MDTI’s Copilot reputation skill. |
+| **KQL Query for Hexadecimal Strings** | Create a KQL query to hunt for hexadecimal strings. | Create a KQL query to hunt for hexadecimal strings associated with svchost.exe process. | **Prompt 1-4:** As in the detailed Better example description. | **Prompts 1-11:** As in the detailed Best example description, including prompts for identifying CVEs, threat actor groups, TTPs, MITRE ATT&CK techniques, lack of detection rule coverage, threat intelligence, remediation recommendations, and asset vulnerabilities. |
