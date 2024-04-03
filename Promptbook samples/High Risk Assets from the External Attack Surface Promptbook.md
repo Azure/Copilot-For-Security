@@ -16,17 +16,14 @@
    ```
   List all the CVE IDs from the above summary
    ```
-
 3. **See how CVES are aligned to Threat articles**:
    ```
    Check if any of the CVE IDs are associated with any MDTI articles
    ```
-
 4. **Context on Threat articles**:
    ```
    List all the articles and the dates they were published
    ```
-
 5. **Narrow down to Articles published in a short time period**:
    ```
    List all the articles which were published in the last 3 months
