@@ -18,17 +18,17 @@
 
 
 Following best practices above, listed below are good and bad examples of prompts intended to support various security-related use cases. 
-
-| Quality | Examples |
-|---------|----------|
+| Quality | Example |
+|---------|---------|
 | **Bad** | Provide an incident summary. |
 | **Good** | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. |
 | **Better** | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. List the entities of the incident in a table providing context from MDTI. |
-| **Best** | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. List the entities of the incident in a table which includes the following headers, “Entity”, “Entity Type”, “MDTI reputation”. Within entity, please list the entity associated with the incident or incident’s alerts. Within Entity Type, please list what type of entity it is. For example, domain name, IP address, URL, hash. Within the MDTI reputation, please enrich the entity against MDTI’s Copilot reputation skill. |
+| **Best** | Provide a summary for incident 19247 from Defender catered to a non-technical executive audience. List the entities of the incident in a table which includes the following headers: "Entity", "Entity Type", "MDTI reputation". Within "Entity", list the entity associated with the incident or incident’s alerts. Within "Entity Type", list what type of entity it is, e.g., domain name, IP address, URL, hash. Within "MDTI reputation", enrich the entity against MDTI’s Copilot reputation skill. |
 
+```markdown
+| Quality | Example: KQL Query |
+|---------|---------------------|
 | **Bad** | Create a KQL query to hunt for hexadecimal strings. |
 | **Good** | Create a KQL query to hunt for hexadecimal strings associated with svchost.exe process. |
-| **Better** | Prompt 1: Create a Defender KQL query to hunt for hexadecimal strings associated with the svchost.exe process.<br>Prompt 2: What threat actor groups tend to use this svchost.exe process?<br>Prompt 3: What are the TTPs associated with these threat actor groups?<br>Prompt 4: Please create a table to list the MITRE ATT&CK techniques associated with each threat actor group as unique rows. List each MITRE ATT&CK technique associated with each threat actor group in column 1 “MITRE ATT&CK technique” and which threat actor groups used that technique in column 2, “Threat Actor Group(s)”. |
-| **Best** | Prompt 1: Create a Defender KQL query to hunt for hexadecimal strings associated with the svchost.exe process.<br>Prompt 2: What threat actor groups tend to use this svchost.exe process?<br>Prompt 3: What are the TTPs associated with these threat actor groups?<br>Prompt 4: Please create a table to list the MITRE ATT&CK techniques associated with each threat actor group as unique rows. List each MITRE ATT&CK technique associated with each threat actor group in column 1 “MITRE ATT&CK technique” and which threat actor groups used that technique in column 2, “Threat Actor Group(s)”.<br>Prompt 5: Based on the MITRE ATT&CK techniques gathered in the previous response, which ones do not have analytic (detection) rule coverage based on what our organization has configured in our Sentinel workspace?<br>Prompt 6: Which CVEs do these threat actor groups tend to exploit?<br>Prompt 7: What threat intelligence exists associated with each of these CVEs from MDTI?<br>Prompt 8: What threat intelligence exists associated with each of these CVEs from inthewild.io?<br>Prompt 9: What remediation and/or mitigation recommendations are associated with each of these CVEs from MDTI?<br>Prompt 10: Which of my MDEASM, MDVM, MDC, and IoT assets are vulnerable to these CVEs?<br>Prompt 11: Based on the incident comments (or wherever you document your postmortem steps), have these recommendations been followed?<br>\[Save this as a custom promptbook\] |
-
-
+| **Better** | **Prompt 1:** Create a Defender KQL query to hunt for hexadecimal strings associated with the svchost.exe process. **Prompt 2:** What threat actor groups tend to use this svchost.exe process? **Prompt 3:** What are the TTPs associated with these threat actor groups? **Prompt 4:** Create a table to list the MITRE ATT&CK techniques associated with each threat actor group as unique rows. List each technique in column 1, "MITRE ATT&CK technique", and which threat actor groups used that technique in column 2, "Threat Actor Group(s)". |
+| **Best** | **Prompts 1-4:** As Better. **Prompt 5:** Identify which MITRE ATT&CK techniques lack analytic rule coverage in our Sentinel. **Prompt 6:** Identify CVEs exploited by these groups. **Prompt 7:** Threat intelligence on these CVEs from MDTI. **Prompt 8:** Threat intelligence on these CVEs from inthewild.io. **Prompt 9:** Remediation for these CVEs from MDTI. **Prompt 10:** Vulnerable assets to these CVEs. **Prompt 11:** Check if remediation steps were followed based on incident comments or postmortem documentation. [Save as a custom promptbook] |
