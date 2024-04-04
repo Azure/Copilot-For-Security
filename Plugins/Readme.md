@@ -4,7 +4,7 @@ Documentation : https://learn.microsoft.com/en-us/security-copilot/plugin_overvi
 
 The Microsoft Copilot for Security connector now supports custom plugins, boosting its third-party integration and automation capabilities. This document highlights custom plugin functionality, emphasizing bridging the gap for 3rd party connections to Copilot, enabling automation from the Standalone portal, and querying custom tables in KQL.
 
-# Microsoft Copilot for Security Custom Plugin Features
+# Microsoft Copilot for Security  Plugin Features
 
 ### Custom Plugin Features
 
