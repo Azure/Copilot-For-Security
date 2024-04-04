@@ -1,0 +1,5 @@
+Settings:
+  # The Kusto cluster URL.
+  Cluster: 
+  # The Kusto database name.
+  Database:

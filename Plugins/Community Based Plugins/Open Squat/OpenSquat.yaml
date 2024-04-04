@@ -1,0 +1,16 @@
+Descriptor:
+  Name: OpenSquat
+  DisplayName: OpenSquat
+  Description: The openSquat is an open-source project for phishing domain and domain squatting detection by searching daily newly registered domains impersonating legit domains.
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: X-RapidAPI-Key
+    Location: Header
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://gist.github.com/jmf321/ab3ec3af89e35337bba532e40741907c/raw/fba818aafeef233cb4aeb3a92b6bc3bea997f28c/OpenSquat.yaml
