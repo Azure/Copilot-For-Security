@@ -1,5 +1,5 @@
 Descriptor:
-  Name: Summarize Sign-in logs from ADX Long Term Archive in tenant stelznet.com
+  Name: Summarize Sign-in logs from ADX Long Term Archive.
   DisplayName: "ADX KQL: Long Term Archive Sign-in Logs"
   Description: Get Sign-in logs from long term archive store in ADX (Azure data explorer) for a user or IP Address.
   #Can you describe the Sign in log results in detail from the ADX Long Term Archive store over a few paragraphs for user@contoso.com between Oct 23, 2023 and Oct 27, 2023?
