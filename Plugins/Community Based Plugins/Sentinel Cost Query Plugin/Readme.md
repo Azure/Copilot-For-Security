@@ -1,34 +1,33 @@
-# Copilot for Security Plugin: Dynamic KQL Query for Microsoft Sentinel Costs Estimation
+# Copilot for Security Custom Plugin - Sentinel KQL - Sentinel Costs
 
-This guide explains how to use a dynamic KQL query to estimate Microsoft Sentinel costs over a specific time and date range by querying the Usage table in Microsoft Sentinel.
+#### Copilot for Security Plugin to run a Dynamic KQL Query to estimate Microsoft Sentinel Costs for a specific time and date range by running a KQL query against the Usage table in Microsoft Sentinel.
 
-## Pre-requisites
+### Pre-requisites
 
-Before proceeding, ensure you have the following:
+* [Copilot for Security Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
+* [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
+* [Microsoft Sentinel Workspace](https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard) created.
+* Parameters for KQL Plugin - Microsoft Sentinel Workspace Name, Subscription ID, Resource Group Name and Entra Tenant ID
 
-1. Copilot for Security Enabled.
-2. Access to upload custom plugins.
-3. Microsoft Sentinel Workspace created.
-4. Parameters for KQL Plugin - Microsoft Sentinel Workspace Name, Subscription ID, Resource Group Name, and Entra Tenant ID.
+### Instructions
+#### Upload the Custom Plugin
 
-## Instructions
+1. Obtain the file [KQL-Sentinel-SentinelCost.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Sentinel%20Cost%20Query%20Plugin/KQL-SentinelCost.yaml) from this directory.
+2. Modify the yaml file to specify your specific Entra TentantId, SubscriptionId, ResourceGroupName and WorkspaceName for your Sentinel instance. You can also modify the KQL query at the bottom of the plugin to adjust your specific $ Per GB rate for Sentinel data ingestion (size * 4.3).
 
-### Upload the Custom Plugin
+![KQLConnection](https://github.com/SCStelz/CopilotForSecurity/blob/main/Images/kql-connection.png)
 
-1. Obtain the file `KQL-Sentinel-SentinelCost.yaml` from this directory.
-2. Modify the yaml file to specify your specific Entra TenantId, SubscriptionId, ResourceGroupName, and WorkspaceName for your Sentinel instance. You can also modify the KQL query at the bottom of the plugin to adjust your specific $ Per GB rate for Sentinel data ingestion (`size * 4.3`).
+3. [Upload the custom plugin](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#add-custom-plugins) and verify it's activated.
 
-    ![Upload Plugin Steps](https://github.com/amitdas130391/CFS-custom-plugin/assets/83881948/2e06ac42-ffd7-40b0-b883-2c83f3727cfd)
-
-3. Upload the custom plugin and verify it's activated.
-
-    ![Plugin Activation](https://github.com/amitdas130391/CFS-custom-plugin/assets/83881948/8bb4fc42-37f2-4c7b-a9d6-cfafb9afc6ce)
+![CopilotForSecurity](https://learn.microsoft.com/en-us/security-copilot/media/add-plugin-button.png)
 
 ### Plugin Utilization
 
-Utilize the following sample queries to trigger this plugin. Always include a time and date range in your queries.
+Here's some sample queries you can utilize to trigger this plugin - Always include a time and date range.
 
-- "Can you lookup what my Sentinel costs were in the past 7 days?"
-- "Can you provide me a summary of my total Sentinel costs between March 1, 2024, and March 15, 2024?"
+* Can you lookup what my Sentinel costs were in the past 7 days?
+* Can you provide me a summary of my total Sentinel costs between March 1, 2024 and March 15, 2024?
+* Can you provide a detailed summary of my total Sentinel costs for the past 90 days? Be sure to explain what each table is used for within Sentinel and the security value it provides. Also total up all the costs to give me an average monthly cost. Also be sure to give any cost saving recommendations based on my data ingestion.
 
-![Sample Queries](https://github.com/amitdas130391/CFS-custom-plugin/assets/83881948/9f15566c-9638-4623-bb31-47eaec86a0ff)
+![O365Logs](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Images/sentinel-cost.png)
+![O365Logs](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Images/sentinel-cost-2.png)
