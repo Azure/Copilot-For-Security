@@ -30,4 +30,4 @@ Here's some sample queries you can utilize to trigger this plugin - Always inclu
 * Can you provide a detailed summary of my total Sentinel costs for the past 90 days? Be sure to explain what each table is used for within Sentinel and the security value it provides. Also total up all the costs to give me an average monthly cost. Also be sure to give any cost saving recommendations based on my data ingestion.
 
 ![O365Logs](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Images/sentinel-cost.png)
-![O365Logs](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Images/sentinel-cost-2.png)
+![O365Logs](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Images/sentinel-cost-2%20.png)
