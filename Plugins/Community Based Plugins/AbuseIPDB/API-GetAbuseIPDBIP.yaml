@@ -13,4 +13,4 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/SCStelz/CopilotForSecurity/main/CustomPlugIns/API-GetAbuseIPDBIP/OpenAPI/API-GetAbuseIPDBIP-OAPI.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Plugins/Community%20Based%20Plugins/GetAbuseIPDBIP/OpenAPI/API-GetAbuseIPDBIP-OAPI.yaml
