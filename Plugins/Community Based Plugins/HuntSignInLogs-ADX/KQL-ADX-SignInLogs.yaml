@@ -1,0 +1,49 @@
+Descriptor:
+  Name: Summarize Sign-in logs from ADX Long Term Archive in tenant stelznet.com
+  DisplayName: "ADX KQL: Long Term Archive Sign-in Logs"
+  Description: Get Sign-in logs from long term archive store in ADX (Azure data explorer) for a user or IP Address.
+  #Can you describe the Sign in log results in detail from the ADX Long Term Archive store over a few paragraphs for user@contoso.com between Oct 23, 2023 and Oct 27, 2023?
+  #Can you describe in detail the sign-in's where Conditional Access status was a failure from the ADX Long Term Archive store for user@contoso.com during December 2023?  Be sure to include timestamps for the sign-in activities.
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: Get ADX Long Term Sign in Logs
+        DisplayName: "Get ADX Long Term Sign in Logs"
+        Description: Get Sign-in logs from long term archive store in ADX (Azure Data Explorer) for a user or IP Address.
+        Inputs:
+          - Name: username
+            Description: The username to lookup
+            Required: false
+          - Name: ip
+            Description: The ip to lookup
+            Required: false
+          - Name: fromDateTime
+            Description: The from time and date
+            Required: true
+          - Name: toDateTime
+            Description: The to time and date
+            Required: true
+        Settings:
+          Target: Kusto
+          Cluster: **ADX CLUSTER URL**
+          Database: **ADX DATABASE NAME**
+          TenantId: **ENTRA TENANT ID**
+          Template: |-
+            let upn='{{username}}';
+            let ip='{{ip}}';
+            let fromDateTime=datetime('{{fromDateTime}}');
+            let toDateTime=datetime('{{toDateTime}}');
+            SigninLogs
+            | where datetime_utc_to_local(TimeGenerated, "US/Pacific") between ( fromDateTime .. toDateTime )
+            | where IPAddress like ip
+            | where UserPrincipalName like upn
+            | extend LocationDetails=parse_json(LocationDetails)
+            | extend DeviceDetail=parse_json(DeviceDetail)
+            | extend City=tostring(LocationDetails.city)
+            | extend State=tostring(LocationDetails.state)
+            | extend Browser=DeviceDetail.browser
+            | extend OperatingSystem=DeviceDetail.operatingSystem
+            | extend displayName=DeviceDetail.displayName
+            | extend trustType=DeviceDetail.trustType
+            | extend isCompliant=DeviceDetail.isCompliant
+            | project TimeGenerated, UserPrincipalName, IPAddress, Location, City, State, AppDisplayName, ClientAppUsed, AuthenticationRequirement, ConditionalAccessStatus, ResultDescription, Browser, OperatingSystem, displayName, trustType, isCompliant
