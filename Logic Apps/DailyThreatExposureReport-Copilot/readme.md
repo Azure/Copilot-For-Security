@@ -26,6 +26,7 @@ Prior to beginning the installation process, it's crucial to confirm that you ha
 
 
 **Logic App View**
+
 ![Daily Threat Exposure](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Dailythreatexposure.png)
 
 **Results of the Logic APP**
