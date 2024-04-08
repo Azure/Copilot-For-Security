@@ -38,5 +38,6 @@ Upon completing this technical guide, you will gain the following abilities:<br>
 
 
 **Prompt 2: Leveraging the above Event IDs , hunt my defender environment for any events associated with them.**
+
 ![Hunt Evil Poster 2](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevilfileupload2.png)
 
