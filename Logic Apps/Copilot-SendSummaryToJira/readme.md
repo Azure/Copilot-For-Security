@@ -1,4 +1,4 @@
-# CCopilot-SendSummaryToJira
+# Copilot-SendSummaryToJira
 Author: Yaniv Shasha
 
 
