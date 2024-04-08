@@ -24,9 +24,10 @@ Prior to beginning the installation process, it's crucial to confirm that you ha
 2. Authenticate the Copilot Prompts with a User that has Access to Security Copilot 
 3. Proceed to run the Logic app and Prepare for the results 
 
-Logic App View
+
+**Logic App View**
 ![Daily Threat Exposure](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Dailythreatexposure.png)
 
-Results of the Logic APP
+**Results of the Logic APP**
 
 ![Daily Threat Exposure 2](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Dailythreatexposure2.png)
