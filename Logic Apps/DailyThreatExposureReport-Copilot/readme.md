@@ -14,7 +14,6 @@ Prior to beginning the installation process, it's crucial to confirm that you ha
 ## Deployment
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Fmain%2FLogic%2520Apps%2FDailyThreatExposureReport-Copilot%2Fazuredeploy.json" target="_blank">Deploy to Azure</a>
-
     <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
 
