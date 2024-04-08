@@ -83,7 +83,7 @@ Now, when you are ready to commit your changes click on the Source Control icon 
 
 ![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubCreateNewContentCommitChanges.png)
 
-You can now publish this work off to your personal GitHub by clicking the icon next to the branch name (if it throws up a list up top of repositories pick yours <youraccount>/Azure-Sentinel *NOT* Azure/Azure-Sentinel). In this case I am picking the main branch iteself.
+You can now publish this work off to your personal GitHub by clicking the icon next to the branch name (if it throws up a list up top of repositories pick yours <youraccount>/Copilot-For-Security *NOT* Azure/Copilot-For-Security). In this example case I am picking the main branch iteself to publish my changes with new plugin.
 
 ![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSPushChangestoYourGithub.png)
 
