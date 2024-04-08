@@ -16,9 +16,7 @@ Define the email you want the daily logic app to be sent too
 ## Deployment
 
  <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Fmain%2FLogic%2520Apps%2FThreatactorCopilot%2Fazuredeploy.json" target="_blank">
-
-    <img src="https://aka.ms/deploytoazurebutton"/>
-
+  <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
 
 
