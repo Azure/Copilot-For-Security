@@ -29,7 +29,7 @@ SkillGroups:
         Description: Fetches the latest emails received by the user with the specified email address
         Inputs:
           - Name: email
-            Description: The email address of the recipient - e.g. sojesh@contoso.com
+            Description: The email address of the recipient - e.g. xxxxxxx@contoso.com
             Required: true
         Settings:
           Target: Defender
