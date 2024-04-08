@@ -105,6 +105,8 @@ Once the changes are merged to the main GitHub, you should be able to see change
 ![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSMergePullRequesttoMainGithub.png)
 
 **Check your pull request status and sync from main repository**
+
 After your Pull Request has been merged, please check to make sure it got into the main repository. We recommend checking both in the GitHub website as well as by doing a sync to my local repo and verifying it there. You want to be certain that everything looks right before you delete anything.
+
 
 **Good Luck and get contributing to the Community!!!**
