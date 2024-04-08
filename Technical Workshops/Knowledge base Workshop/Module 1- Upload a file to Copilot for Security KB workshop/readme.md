@@ -30,13 +30,14 @@ Upon completing this technical guide, you will gain the following abilities:<br>
 
 2. In the Copilot home page, select the sources icon Screenshot of sources icon. in the prompt bar to open the Manage sources page.
 
-3. Select Files to open the file upload section. You can use the Sample Files from the Following Folder : https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Knowledge%20base%20Workshop/Sample%20Files
+3. Select Files to open the file upload section. You can use the Sample Files from the following [folder](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops/Knowledge%20base%20Workshop/Sample%20Files)
+ 
 
+![Hunt Evil Poster 2](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevilfileupload3.png)
 
 4. Select Upload file to look for your file.
 For the following workshop we shall be using the following Sample files 
-- Hunt Evil Poster SANS
-- Contoso_Data Handling Policy.docx
+- Hunt Evil Poster SANS (SANS_DFPS_FOR508_v4.10_02-23 (1).pdf)
 
 5. Wait for the file to appear in Uploads. If an error message appears, correct the problem and try again.
 
