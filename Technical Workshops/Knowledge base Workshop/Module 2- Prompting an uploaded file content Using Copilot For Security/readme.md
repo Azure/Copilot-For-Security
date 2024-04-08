@@ -34,8 +34,9 @@ Upon completing this technical guide, you will gain the following abilities:<br>
 
 **Prompt 1: Could you show me the event IDs associated with Remote execution from the SANS_DFPS_FOR508_v4.10_02-23 (1).pdf document from the uploaded files in a table format**
 
-![Hunt Evil Poster](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevil.png?raw=true)
+![hunt evil poster 1](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevilfileupload1.png)
+
 
 **Prompt 2: Leveraging the above Event IDs , hunt my defender environment for any events associated with them.**
-![Hunt Evil Poster 2](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevil2.png?raw=true)
+![Hunt Evil Poster 2](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KB%20Images/huntevilfileupload2)
 
