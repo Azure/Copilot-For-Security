@@ -35,9 +35,10 @@ Here are the steps you can take to begin contributing to this project:
   ![View Your New Fork](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubforknew.png)
 
 **Clone the fork to your local machine:**:
+- You can install Gitbash from https://git-scm.com/downloads if you dont already have it.
 -	Create a directory on your local machine where you will pull down the repository to and where you will be working from. 
     Example: “C:\Users\(username)\Documents\GitForks”
--	Open Gitbash and move into the directory “C:\Users\(username)\Documents\GitForks”
+-	Open Gitbash and move into the directory “C:\Users\(username)\Documents\GitForks” 
 -	Run : Git init
 -	Run : Git clone <url of your fork> example: Git clone “https://github.com/(username)/ Copilot-For-Security-Fork”
 -	Cd into the new directory that is created ie cd Copilot-For-Security-Fork
@@ -46,6 +47,8 @@ Here are the steps you can take to begin contributing to this project:
 -	Run : Git remote -v
 
  	 ![Clone to Local Dir](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Clonethefork.png)
+
+You can do this using GitHub Desktop as well by downloading it from https://desktop.github.com
 
 **Create a branch**:
 - You can work with the local main branch, but it is recommended to work with a branch so if you have separate projects you are working on you can keep them isolated. 
@@ -69,3 +72,39 @@ You should see all the directories and files in the repository and at the bottom
 
 ![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/VSCodeBranchConfirmation.png)
 
+**Stage, Commit and Publish your changes**
+
+When you have created the content that you want in VS Code you will need to stage and commit your changes. This will commit them to the branch you have created locally on you machine. For example, I created a new folder by name "SentinelDailyOperations" and KQL Plugin called “KQL_SentinelDailyOperationsSample.yml” within the "Community Based Plugins" directory. You can also add any additional content needed to document and deploy this Plugin. 
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubCreateNewContent.png)
+
+Now, when you are ready to commit your changes click on the Source Control icon on the left, enter a Message summarizing your changes and hit “+”. This stages the changes. Next click the checkmark to commit your changes.  These are still local to your machine. 
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubCreateNewContentStageandCommit.png)
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubCreateNewContentCommitChanges.png)
+
+You can now publish this work off to your personal GitHub by clicking the icon next to the branch name (if it throws up a list up top of repositories pick yours <youraccount>/Azure-Sentinel *NOT* Azure/Azure-Sentinel). In this case I am picking the main branch iteself.
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSPushChangestoYourGithub.png)
+
+You can now review your commited changes in your GitHub going to the respective branch:
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSSeeYourGithubCommittedChanges.png)
+
+If you are done with all your work and ready to submit to the main repository, then you need to do a Pull Request. This request will kick off a set of automated checks and if those pass then it goes to a board of reviewers – one of whom has to check your work and accept the request and merge it to the master branch. 
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSUpdateChangestoMainRepository.png)
+
+The top portion of the "Open a pull request" page is critical. This shows from which repository and branch are you pulling from and to which repository are you pulling to. You should fill in the comments section with a meaningful name and a list of what you have done since the reviewer will be reading this. Then click “Create pull request”
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSSeeChangesandCommitMainRepository.png)
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSCreaePullRequestFinal.png)
+
+Once the changes are merged to the main GitHub, you should be able to see changes committed to the main GitHub repository.
+
+![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSMergePullRequesttoMainGithub.png)
+
+**Check your pull request status and sync from main repository**
+After your Pull Request has been merged, please check to make sure it got into the main repository. We recommend checking both in the GitHub website as well as by doing a sync to my local repo and verifying it there. You want to be certain that everything looks right before you delete anything.
+
+**Good Luck and get contributing to the Community!!!**
