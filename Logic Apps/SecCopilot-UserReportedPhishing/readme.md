@@ -39,7 +39,8 @@ Additionally, if the phishing probability exceeds 75%, a Sentinel Incident will 
 To deploy the above logic app, you need to<br>
 •   Press on the Deploy option, select your subscription and the resource group (select the same tenant that Security Copilot is enabled)<br>
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FYaniv-Shasha%2FSecurityCopilot%2Fmain%2FPlaybooks%2FSecCopilot-UserReportedPhishing%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Fmain%2FLogic%2520Apps%2FSecCopilot-UserReportedPhishing%2Fazuredeploy.json" target="_blank">
+
     <img src="https://aka.ms/deploytoazurebutton"/>
 
 
