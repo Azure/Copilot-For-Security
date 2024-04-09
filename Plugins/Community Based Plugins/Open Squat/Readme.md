@@ -2,13 +2,9 @@
 openSquat is an open-source Intelligence (OSINT) security tool designed to identify cyber squatting threats targeting specific companies or domains. It helps detect various threats including:
 https://rapidapi.com/atenreiro/api/opensquat1
 
-- Phishing campaigns
+
 - Domain squatting
 - Typo squatting
-- Bitsquatting
-- IDN homograph attacks
-- Doppelganger domains
-- Other brand/domain related scams
 
 #### Key Features:
 - **Automatic Updates:** Automatically fetches newly registered domains once a day.
