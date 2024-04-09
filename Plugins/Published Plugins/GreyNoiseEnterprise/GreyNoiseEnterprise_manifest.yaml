@@ -1,0 +1,28 @@
+Descriptor:
+  Name: GreyNoise Enterprise
+  DisplayName: GreyNoise Enterprise (Preview) Plugin
+  DescriptionDisplay: GreyNoise Enterprise provides insight if an IP has been observed mass-scanning the internet or is part of a common business service.  It also includes the ability to use the GreyNoise Query Language (GNQL) for advanced queries.
+  Description: |-
+    Use this skill-set to call the GreyNoise API if the user provides a given IP and wants to know assess the likelihood of the IP address being associated with mass internet scanning or a common business service.
+    - This skill invokes the GreyNoise Enterprise API.
+    - Noise Contextual API: Requires knowledge of IP addresses and understanding of internet scanning activities. Ability to interpret context about an IP's behavior is crucial.
+    - Noise Quick API: Requires basic understanding of IP addresses and the concept of "noise", or mass internet scanning, in network traffic. Ability to quickly analyze and interpret whether an IP address is likely to be just "noise".
+    - Noise Multi API: Requires understanding of multiple IP addresses and the ability to analyze them in bulk. Knowledge of how to interpret whether a set of IP addresses are likely to be "noise".
+    - RIOT API: Requires knowledge of IP addresses that belong to a common business service. Ability to interpret whether an IP address is part of a common business service.
+    - GNQL API: Requires advanced knowledge of the GreyNoise Query Language (GNQL) and the ability to construct complex queries to extract specific information from the GreyNoise dataset.
+    - GNQL STATS API: Requires advanced knowledge of the GreyNoise Query Language (GNQL) and the ability to query stats information on CVEs
+    - Published by Microsoft and GreyNoise
+  Category: Other
+  Icon: https://info.greynoise.io/hubfs/greynoise_logo.png
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: Key
+    Location: Header
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://gist.githubusercontent.com/bradchiappetta/ae771fe4aaf8a3f6a49d805b6087ec36/raw/GreynoiseEnterprise_OpenAPI.yaml
