@@ -1,0 +1,19 @@
+Descriptor:
+  Name: ValenceSecurity
+  DisplayName: Valence Security
+  Description: Leverage the Valence SaaS Security Platform API to enhance your investigation with data from SaaS applications such as Salesforce, GitHub, Okta, Google Workspace and dozens others. Answer critical questions to understand your existing SaaS threats and suspicious activities, what access level your human and non-human identities have, where your business-critical data is potentially exposed, and what are the most significant SaaS risks you should prioritize to fix.
+  DescriptionDisplay: Find and fix your SaaS risks. Protect business-critical data and applications by streamlining incident investigations, and reducing SaaS identities, SaaS-to-SaaS integrations, data shares and misconfigurations risks.
+  Icon: https://app.valencesecurity.com/signin/symbol.png
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: ApiKey
+    AuthScheme: Bearer
+    Location: Header
+    Key: Authorization
+    Value:
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://app.valencesecurity.com/_074wktsp_microsoftsecuritycopilot/.well-known/swagger.yaml
