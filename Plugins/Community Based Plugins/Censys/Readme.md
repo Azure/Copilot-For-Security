@@ -5,6 +5,6 @@ Censys is a powerful search engine designed for researchers, analysts, and secur
 ### Instructions
 #### Upload the Custom Plugin
 
-1. Obtain the file [Shodan.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Shodan/Shodan.yaml) from this directory.
+1. Obtain the file [Censys.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Censys/Censys.yaml) from this directory.
 2. Upload the custom plugin
-3. Add the Shodan API Key
+3. Add the Censys API Key
