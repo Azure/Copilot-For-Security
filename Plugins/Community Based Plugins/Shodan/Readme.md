@@ -6,7 +6,7 @@ Welcome to the Shodan custom plugin! Here, you'll unlock powerful functionalitie
 
 1. Obtain the file [Shodan.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Shodan/Shodan.yaml) from this directory.
 2. Upload the custom plugin
-3. Add the Virus total API Key
+3. Add the Shodan API Key
 
 #### utilization of Plugins:
 
