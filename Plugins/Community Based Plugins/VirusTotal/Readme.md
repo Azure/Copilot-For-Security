@@ -2,8 +2,13 @@
 ### VirusTotal Custom Plugin
 
 Welcome to the VirusTotal custom plugin! Here, you'll discover a suite of features designed to empower your malware analysis and threat intelligence efforts:
+### Instructions
+#### Upload the Custom Plugin
 
-#### Features:
+1. Obtain the file [VirusTotal.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/VirusTotal/VirusTotal.yaml) from this directory.
+2. Upload the custom plugin
+3. Add the Virus total API Key
+#### Utlization of the plugin:
 
 - **VTDomainReport:** Receive a comprehensive summary report for a submitted domain, providing valuable insights into its reputation and associated threats.
 
