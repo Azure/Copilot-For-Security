@@ -675,8 +675,6 @@
             "location":  "[resourceGroup().location]",
             "tags":  {
                 "Created By":  "Sean Wesonga",
-                "CreatedDate":  "1/31/2024 12:29:40 PM",
-                "CreatorUPN":  "sewasong@woodgrove.ms",
                 "hidden-SentinelTemplateName":  "ThreatactorCopilot",
                 "hidden-SentinelTemplateVersion":  "1.0"
             },

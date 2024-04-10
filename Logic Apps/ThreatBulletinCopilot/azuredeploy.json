@@ -207,9 +207,9 @@
             "type":  "Microsoft.Logic/workflows",
             "location":  "[resourceGroup().location]",
             "tags":  {
-                "Created By":  "Sean Wesonga",
-                "CreatedDate":  "1/31/2024 5:12:16 PM",
-                "CreatorUPN":  "sewasong@woodgrove.ms",
+                "Created By":  "Sean Wasonga",
+                "CreatedDate":  "",
+                "CreatorUPN":  "Sean Wasonga",
                 "hidden-SentinelTemplateName":  "ThreatBulletinCopilot",
                 "hidden-SentinelTemplateVersion":  "1.0"
             },
