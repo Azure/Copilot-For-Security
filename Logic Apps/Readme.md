@@ -26,5 +26,6 @@ Here you will find an array of differnt playbooks aligned with CyberSec scenario
 **Disclaimer**: Please be aware that the logic apps provided are examples intended for use with Copilot for Security. Users are encouraged to customize these samples to meet their specific requirements. These should serve as guidelines and inspiration for creating tailored logic apps for ones own use
 
 **Technical Disclaimer: Logic Apps, SCU Usage, and Best Practices**
-Attention Customers,
-When utilizing Logic Apps on Copilot, please be aware that it may result in increased consumption of Service Compute Units (SCUs). We recommend closely monitoring SCU usage to optimize resource management. 
+
+**Attention Customers!**,
+When utilizing Logic Apps on Copilot, please be aware that it may result in increased consumption of Secure Compute Units (SCUs). We recommend closely monitoring SCU usage to optimize resource management. 
