@@ -18,4 +18,6 @@ This folder contains a three plugins to send data via GET (with and without para
 
 5. Upload the main YAML document (one for each plugin) in Copilot and confirm the upload is successful. You can now start using the plugin. 
 
+More instructions on using these plugins are give in this Microsoft Techcommunity [Article](https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/how-to-build-a-copilot-for-security-api-plugin-part-1/ba-p/4107604). 
+
 

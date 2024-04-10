@@ -1,0 +1,21 @@
+#Filename: API_Plugin_Reflection_GET_Params.yaml
+Descriptor:
+  Name: Vapnik's Reflection API plug-in using GET params along with Authorization
+  DisplayName: Vapnik's Reflection API plug-in using GET params along with authorization
+  Description: Skills for getting a GET REST API call reflection based on parameters that were passed
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: Authorization
+    Location: Header
+    AuthScheme: ''
+    
+SkillGroups:
+  - Format: API
+    Settings:
+      # Replace this with your own URL where the OpenAPI spec file is located.
+      OpenApiSpecUrl:  http://172.13.112.25:5000/file/API_Plugin_Reflection_OAI_GET_Params_Auth_Data.yaml
+
+
+
