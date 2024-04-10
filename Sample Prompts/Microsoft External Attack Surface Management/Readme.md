@@ -38,4 +38,5 @@
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#microsoft-defender-external-attack-surface-management-easm)
 
+Disclaimer: Please know these are sample prompts and are subject to Change
 ***

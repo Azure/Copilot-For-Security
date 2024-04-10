@@ -1,6 +1,6 @@
 # Microsoft Intune
 <a name="Intune"></a>
-Documentation for the Micosoft Intune can be found here : https://learn.microsoft.com/en-us/mem/intune/fundamentals/security-copilot
+Documentation for  Micosoft Intune and Copilot for Security  can be found here : https://learn.microsoft.com/en-us/mem/intune/fundamentals/security-copilot
 
 ## Device Information
 - Which devices are used by user **_`<UPN>`_**?
@@ -33,3 +33,4 @@ Documentation for the Micosoft Intune can be found here : https://learn.microsof
 [![alt text](../../Images/backtotop.svg)](#intune-management)
 
 ***
+Disclaimer: Please know these are sample prompts and are subject to Change

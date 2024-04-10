@@ -39,3 +39,5 @@
 
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#defender--sentinel)
+
+Disclaimer: Please know these are sample prompts and are subject to Change

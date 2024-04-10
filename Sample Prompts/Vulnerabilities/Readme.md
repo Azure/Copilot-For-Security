@@ -9,5 +9,5 @@
 - Is my environment vulnerable to CVE <**_`<CVE-ID>`_** ? 
 
 
-
+Disclaimer: Please know these are sample prompts and are subject to Change
 ***

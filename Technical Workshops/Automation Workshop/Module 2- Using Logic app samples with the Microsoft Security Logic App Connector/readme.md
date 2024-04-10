@@ -36,8 +36,7 @@ In this technical workshop, participants will learn how to deploy a Logic App de
 - Proceed to Deploy
 
 ## Deployment
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKwachSean%2FSecurityCopilot%2Fmain%2Fplaybooks%2FThreatBulletinCopilot%2Fazuredeploy.json)
-
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Fmain%2FLogic%2520Apps%2FThreatBulletinCopilot%2Fazuredeploy.json)
 ### Post-Deployment Instructions
 
 1. Select the frequency on how many times you want the Logic App to run.

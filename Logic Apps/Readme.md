@@ -22,3 +22,9 @@ Here you will find an array of differnt playbooks aligned with CyberSec scenario
 - Scalability: Automation enables cybersecurity operations to scale efficiently, keeping pace with growing volumes of threats and data.
 - Compliance automation: Automated processes help ensure adherence to cybersecurity regulations and standards, reducing compliance risks.
 - Resource optimization: By automating routine tasks, cybersecurity professionals can focus on strategic initiatives and proactive threat hunting.
+
+**Disclaimer**: Please be aware that the logic apps provided are examples intended for use with Copilot for Security. Users are encouraged to customize these samples to meet their specific requirements. These should serve as guidelines and inspiration for creating tailored logic apps for ones own use
+
+**Technical Disclaimer: Logic Apps, SCU Usage, and Best Practices**
+Attention Customers,
+When utilizing Logic Apps on Copilot, please be aware that it may result in increased consumption of Service Compute Units (SCUs). We recommend closely monitoring SCU usage to optimize resource management. 

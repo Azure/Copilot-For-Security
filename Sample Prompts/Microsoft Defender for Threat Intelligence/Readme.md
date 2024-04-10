@@ -29,5 +29,5 @@
 
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#threat-intelligence)
-
+Disclaimer: Please know these are sample prompts and are subject to Change
 ***

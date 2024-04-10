@@ -20,5 +20,6 @@ We have organized our examples into the following categories:
 
 
 
+**Disclaimer**: Please know these are sample prompts and are subject to Change
 
 ***

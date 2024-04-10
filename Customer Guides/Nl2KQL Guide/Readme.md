@@ -1,5 +1,5 @@
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
-# Copilot For Security 
+# Microsoft Copilot For Security 
 ## Featured Capability: Generate Hunting Queries
 
 ### Introduction

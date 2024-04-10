@@ -135,8 +135,9 @@ reasons.
  - Show me the details of all role management policy assignments including the policies and rules associated with the Entra roles
 - Show me the details of a role management policy assignment including the policy and rules associated with the Entra role
 
-
 &nbsp;
+
+**Disclaimer**: Please know these are sample prompts and are subject to Change
 [![alt text](../../Images/backtotop.svg)](#entra)
 
 ***

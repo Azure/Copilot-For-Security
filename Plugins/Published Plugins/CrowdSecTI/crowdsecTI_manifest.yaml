@@ -1,0 +1,30 @@
+Descriptor:
+  Name: CrowdSecTI
+  DisplayName: CrowdSec Threat Intelligence
+  DescriptionDisplay: Search threat intelligence data on IP addresses
+  Description: |-
+    Use this skillset to call the CrowdsecTI API if the user provides a given IP or list of IPs and wants to know more about:
+    - What it does: observed behaviors, targetted protocols, exploited vulnerabilities, etc.
+    - To what categories does it belong: proxy/VPN, CDN exit node, Legit security scanner, etc.
+    - What it targets: Country/region, services, etc.
+    - Existing cross-references: Existing lists, etc.
+    - How virulent it is
+    - For how long it has been reported by users
+    - The confidence level of the information.
+    - Published by Microsoft
+
+    Crowdsec's CTI API community plan uses one primary dataset:
+    - smoke: reflects most of the IPs reported by Crowdsec users
+  Icon: https://resources.crowdsec.net/securitycopilot/crowdsec-logo-128.png
+  SupportedAuthTypes:
+  - APIKey
+  Authorization:
+    Type: APIKey
+    Key: x-api-key
+    Location: Header
+    AuthScheme: ''
+SkillGroups:
+- Format: API
+  Settings:
+    OpenApiSpecUrl: https://resources.crowdsec.net/securitycopilot/crowdsecTI_smoke.yaml
+
