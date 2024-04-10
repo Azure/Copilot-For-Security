@@ -220,11 +220,6 @@
                                 "connectionId":  "[resourceId('Microsoft.Web/connections', variables('SecuritycopilotConnectionName'))]",
                                 "connectionName":  "[variables('SecuritycopilotConnectionName')]",
                                 "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Securitycopilot')]"
-                            },
-                            "securitycopilot_1":  {
-                                "connectionId":  "/subscriptions/ab48f397-fc82-4634-aa52-62dd91b3ebaa/resourceGroups/woodgrove-secco/providers/Microsoft.Web/connections/securitycopilot-52",
-                                "connectionName":  "securitycopilot-52",
-                                "id":  "/subscriptions/ab48f397-fc82-4634-aa52-62dd91b3ebaa/providers/Microsoft.Web/locations/westus2/managedApis/securitycopilot"
                             }
                         }
                     }
