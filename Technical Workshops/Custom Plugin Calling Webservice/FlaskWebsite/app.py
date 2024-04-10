@@ -76,10 +76,18 @@ def get_json(data):
 @app.route('/file/<fileName>')
 def get_file(fileName):
     try:
+        # Sanitize the fileName
+        fileName = str(fileName).replace('/','')
+        fileName = fileName.replace('\\','')
+        if(fileName.count('.')) > 1: # Reject
+            result = {'Error': "Illegal file name"}
+            return result, 400
         filePath = 'Files\\'+fileName
         return send_file(filePath,download_name=fileName,as_attachment=True)
     except Exception as e:
-        return str(e)
+        result = {'Error': "Exception"}
+        print(e)
+        return result,400
 
 # Private function to return IP Address
 def getIpAddr(request):
