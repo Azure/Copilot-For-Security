@@ -1,6 +1,26 @@
 {
     "$schema":  "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion":  "1.0.0.0",
+    "metadata":  {
+        "title":  "",
+        "description":  "",
+        "prerequisites":  "",
+        "postDeployment":  [
+        ],
+        "prerequisitesDeployTemplateFile":  "",
+        "lastUpdateTime":  "",
+        "entities":  [
+        ],
+        "tags":  [
+        ],
+        "support":  {
+            "tier":  "community",
+            "armtemplate":  "Generated from https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator"
+        },
+        "author":  {
+            "name":  ""
+        }
+    },
     "parameters":  {
         "PlaybookName":  {
             "defaultValue":  "DailyThreatExposureReport-Copilot",
@@ -231,8 +251,8 @@
             "tags":  {
                 "Created By":  "Sean Wesonga",
                 "CreatedDate":  "1/31/2024 5:12:16 PM",
-                "CreatorUPN":  "sewasong@woodgrove.ms",
-                "hidden-SentinelTemplateName":  "ThreatBulletinCopilot",
+                "CreatorUPN":  "sean wesonga",
+                "hidden-SentinelTemplateName":  "DailyThreatExposureReport-Copilot",
                 "hidden-SentinelTemplateVersion":  "1.0"
             },
             "identity":  {
