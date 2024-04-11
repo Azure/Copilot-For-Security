@@ -1,0 +1,19 @@
+{"name":"Email Header Analysis and Investigation",
+"description":"Investigate a suspicious email by examining the headers,filtering out the entities and concluding with a summary of the email",
+"prompts":
+[
+ {"promptType":"Prompt","content":"/AskGPT Can you triage the email header below and point out what you find suspicious? <emailheaders>","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":0},
+ {"promptType":"Prompt","content":"Can you list all the Technical indicators in the above prompt that we can use for an investigation process","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":1},
+ {"promptType":"Prompt","content":"Return the reputation for all the domains in the list","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":2},
+ {"promptType":"Prompt","content":"Return the reputation for all the IP addresses in the list","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":3},
+ {"promptType":"Prompt","content":"Can you check if there any threat articles associated with any of the Domains or IPS from the list above","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":4},
+ {"promptType":"Prompt","content":"What about the sender and return path emails are they associated with any intelligence articles","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":5},
+ {"promptType":"Prompt","content":"Based on the email title check if this email sent to other users?","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":6},
+ {"promptType":"Prompt","content":"Hunt my environment and determine if any of the users clicked any URL in the email above","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":7},
+ {"promptType":"Prompt","content":"/AskGPT Based on the above email investigation, summarize this investigation with all the investigation steps taken during this session. Also share supported evidence and let me know if this is a phishing email with certainty percentage: if the email is not suspicious give it 0-30% if it medium suspicious for phishing give it 30%-74% and if its high suspicious as phishing give it 75%-100%. Always include suspicious certainty percentage.","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":8}
+],
+"promptbookinputs":
+[
+ {"name":"emailheaders","description":"Email Headers"}
+],
+"visibility":"Private","tags":null}
