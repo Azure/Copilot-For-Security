@@ -521,8 +521,7 @@
             "location":  "[resourceGroup().location]",
             "tags":  {
                 "Created By":  "Sean Wesonga",
-                "CreatedDate":  "1/9/2024 2:23:55 PM",
-                "CreatorUPN":  "sewasong@woodgrove.ms"
+                "CreatorUPN":  "sean Wasonga"
             },
             "apiVersion":  "2017-07-01",
             "dependsOn":  [

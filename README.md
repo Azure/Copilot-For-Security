@@ -83,7 +83,7 @@ Now, when you are ready to commit your changes click on the Source Control icon 
 
 ![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSGithubCreateNewContentCommitChanges.png)
 
-You can now publish this work off to your personal GitHub by clicking the icon next to the branch name (if it throws up a list up top of repositories pick yours <youraccount>/Copilot-For-Security *NOT* Azure/Copilot-For-Security). In this example case I am picking the main branch iteself to publish my changes with new plugin.
+You can now publish this work off to your personal GitHub by clicking the icon next to the branch name (if it throws up a list up top of repositories pick yours <youraccount>/Copilot-For-Security *NOT* Azure/Copilot-For-Security). In this example case we are picking the main branch iteself to publish my changes with new plugin.
 
 ![Branch Selection](https://github.com/Azure/Copilot-For-Security/blob/main/Images/CFSPushChangestoYourGithub.png)
 
@@ -109,4 +109,4 @@ Once the changes are merged to the main GitHub, you should be able to see change
 After your Pull Request has been merged, please check to make sure it got into the main repository. We recommend checking both in the GitHub website as well as by doing a sync to your local repo and verifying the changes are now in place.
 
 
-**Good Luck and Happy Contributing to Copilot for Security Community !!!**
+**Good Luck and Happy Contributing to Copilot for Security Community !!!!**
