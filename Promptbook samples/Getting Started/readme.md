@@ -32,13 +32,13 @@ Several Promptbook JSON files have been provided in the Files folder so you can 
 
 Currently, the Azure CLI login command cannot fetch the token for Copilot for Security. Hence, you will need to get the access token from an existing session in the Browser. In the Microsoft Edge browser, login to the Copilot for Security console and after authentication process is complete via MFA etc, press 'F12' to open Browser devtools.  
 
-![Browser Tools](https://github.com/Azure/Copilot-For-Security/tree/main/Images/Promptbook_images/promptBook_devtools.png)
+![Browser Tools](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Promptbook_images/promptBook_devtools.png)
 
 Then navigate into the Promptbooks from the console, and then filter on 'Promptbooks' in the devtools (in network tab). You can get the access token from the headers for the GET request make to the Promptbooks URI(https://api.securitycopilot.microsoft.com/geo/eastus/promptbooks). Copy the entire request token, making sure not to copy the 'Bearer' keyword and not copying any extra space.
 
 Note that you can get the token from other URIs in the Copilot console, going to Promptbooks is just one way. With the token copied you are ready to execute the PowerShell.
 
-![Copy Access Token](https://github.com/Azure/Copilot-For-Security/tree/main/Images/Promptbook_images/promptBook_token.png)
+![Copy Access Token](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Promptbook_images/promptBook_token.png)
 
 # Execution
 
@@ -50,11 +50,11 @@ Execute the following command, pasting the token you copied form borwser after t
 
 Powershell -file PromptBooksUpload.ps1 -token <authorization token>
 
-![PowerShell Commandline](https://github.com/Azure/Copilot-For-Security/tree/main/Images/Promptbook_images/promptBook_commandLine.png)
+![PowerShell Commandline](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Promptbook_images/promptBook_commandLine.png)
 
 As the PowerShell executes it will output the file name and the status of each of the file uploads. If you get an error please see the troubleshooting section.
 
-![PowerShell Successful execution](https://github.com/Azure/Copilot-For-Security/tree/main/Images/Promptbook_images/promptBook_results.png)
+![PowerShell Successful execution](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Promptbook_images/promptBook_results.png)
 
 IMPORTANT: After the upload is successful, please logout of your Copilot for Security console so that the authorization token is no longer valid. While the token is valid for only a fixed amount of time, for security reasons you should do an explicit logout so the token cannot be used again.
 
