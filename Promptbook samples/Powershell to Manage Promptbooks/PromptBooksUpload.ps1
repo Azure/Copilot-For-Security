@@ -15,7 +15,7 @@ $headers = @{
 }
 
 # Get all files in the Files folder
-$allFiles = Get-ChildItem -Path "./Files"
+$allFiles = Get-ChildItem -Path "./Uploads"
 
 Write-Output "Starting PromptBooks upload ..."
 
