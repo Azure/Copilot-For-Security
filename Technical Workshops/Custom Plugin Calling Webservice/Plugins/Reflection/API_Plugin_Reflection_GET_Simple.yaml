@@ -3,6 +3,7 @@ Descriptor:
   Name: McCulloch–Pitts's Reflection API plug-in using GET
   DisplayName: McCulloch–Pitts's Reflection API plug-in using GET
   Description: Skills for getting a GET REST API call reflection
+  DescriptionForModel: Skills for getting a GET REST API call reflection. Uses ReflectionData as operationId
 
 SkillGroups:
   - Format: API
