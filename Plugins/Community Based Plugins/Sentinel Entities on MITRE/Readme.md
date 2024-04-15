@@ -1,7 +1,7 @@
 
 # Copilot for Security Custom Plugin - Sentinel Entities on MITRE
 
-#### Copilot for Security Plugin to run a Dynamic KQL Query to estimate Microsoft Sentinel Costs for a specific time and date range by running a KQL query against the Usage table in Microsoft Sentinel.
+#### Copilot for Security Plugin to Summarize Microsoft Sentinel Entities across MITRE tactics for a specified time and date range.
 
 ### Pre-requisites
 
@@ -26,7 +26,16 @@
 
 Here's some sample queries you can utilize to trigger this plugin - Always include a time and date range.
 
-* Can you lookup what my Sentinel costs were in the past 7 days?
-* Can you provide me a summary of my total Sentinel costs between March 1, 2024 and March 15, 2024?
-* Can you provide a detailed summary of my total Sentinel costs for the past 90 days? Be sure to explain what each table is used for within Sentinel and the security value it provides. Also total up all the costs to give me an average monthly cost. Also be sure to give any cost saving recommendations based on my data ingestion.
+* Please share sentinel entities on MITRE for last 30 days in a tabular format
+* Please share sentinel entities on MITRE for last 30 days
+* Cloud you please provide sentinel entities on MITRE for since April 1st in a tabular format
+
+
+![image](https://github.com/samikroy/Copilot-For-Security/assets/20562985/b38bf92d-8b0a-40c3-acae-50ec8d6b7c6d)
+
+
+![image](https://github.com/samikroy/Copilot-For-Security/assets/20562985/fd3a2849-8148-4743-b6cb-66f051e286d7)
+
+
+![image](https://github.com/samikroy/Copilot-For-Security/assets/20562985/9f13440d-1a0f-4a63-862b-d7b166595d38)
 
