@@ -1,0 +1,27 @@
+Descriptor:
+  Name: Detonate With Browserling
+  DisplayName: Detonate With Browserling
+  Description: Skills for detonating With Browserling
+
+SkillGroups:
+  - Format: GPT
+    Skills:
+      - Name: Detonate With Browserling
+        DisplayName: Detonate With Browserling
+        Description: Detonate With Browserling
+        Inputs:
+          - Name: text
+            Description: The url to be detonated
+            Required: true
+        Settings:
+          ModelName: gpt-4-32k-v0613
+          Template: |-
+            To detonate a URL means to append the domain to https://www.browserling.com/browse/win10/chrome116/
+
+            Some examples of detonating URLs:
+          
+            1. https://example.com --> https://www.browserling.com/browse/win10/chrome116/example.com
+            2. http://google.com --> https://www.browserling.com/browse/win10/chrome116/google.com
+
+            Detonate any URLs in the following text and return the new text:
+            {{text}}
