@@ -1,0 +1,16 @@
+Descriptor:
+  Name: Trellix Detection as a Service
+  DisplayName: Get Trellix DoD Sandbox Reports
+  Description: Get detailed sandbox analysis reports from Trellix DoD
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: feye-auth-key
+    Location: Header
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://fireeye.dev/static/858367bd0d40a8a8cf20484dcf09e21e/detection_on_demand.yml   
