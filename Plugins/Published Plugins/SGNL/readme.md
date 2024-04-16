@@ -14,7 +14,7 @@ Ensure your account has sufficient permission to read the SGNL Access Decision L
 
 
 ## Select or upload the attached manifest file into your Copilot for Security console
-1. From the plugin manager, locate the GreyNoise Enterprise Plugin and enable it
+1. From the plugin manager, locate the SGNL Plugin and enable it
 ![Enable Plugin](images/plugin-manager.png)
   
 
