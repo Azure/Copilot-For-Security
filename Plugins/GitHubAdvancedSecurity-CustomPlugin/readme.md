@@ -1,4 +1,5 @@
 **GitHub Advanced Security (GhAS) Custom Plugins**
+
 GitHub Advanced Security (GhAS) executes code scanning (Static Application Security Testing, SAST, via CodeQL), dependabot analysis (Software Composition Analysis, SCA) and secret scanning on the files in the repos of GitHub users and organizations.
 This folder contains 2 plugins:
 - One plugin has the skills to list all the alerts resulting from GhAS analysis on all the repos of an organization
