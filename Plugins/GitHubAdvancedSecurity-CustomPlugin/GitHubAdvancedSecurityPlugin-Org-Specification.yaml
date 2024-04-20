@@ -1,0 +1,70 @@
+openapi: 3.0.0
+
+info:
+    title: GitHub Advanced Security Code Scanning, Dependabot Scanning and Secret Scanning for GitHub Organizations
+    description: Skills to retrieve Code Scanning, Dependabot Scanning and Secret Scanning alerts for the default branch of
+        all the repositiories (repo) of the specified Organization in GitHub. 
+        These Secret scannings are executed by GitHub Advanced Security (GhAS).
+    version: "0.0.1"
+
+paths:
+    /code-scanning/alerts:
+        get: 
+            operationId: ListCodeScanningAlertsForAnOrganization
+            summary: Lists the alerts produced as result of the code scanning executed by GitHub Advanced Security (GhAS) 
+                Each alert is related to a specific code vulnerability found in one or more files in the repos of the specified Organization.
+                In each alert listed in the response, the field named "tool" contains the name of the code scanning tool that raised the alert.
+                The field "most_recent_instance" contains the location (path, start line & column, end line & column) of the most recent instance of this alert in the default branch.
+                The field "rule" contains the logic that found the code vulnerability and triggered the alert; the most relevant attributes for this rule are its "description" and its "severity".
+            parameters:
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+            responses:
+                200:
+                    description: Successful authentication. 
+                401:
+                    description: Unsuccessful authentication.
+    /dependabot/alerts:
+        get: 
+            operationId: ListDependabotAlertsForAnOrganization
+            summary: Lists the alerts produced as result of the dependabot scanning executed by GitHub Advanced Security (GhAS). 
+                Each alert is related to a specific software vulnerability existing in one of the software components found as dependencies in the solution in the repo.
+                In each alert listed in the response, the fields named "name" and "ecosystem", under the node "security_vulnerability/package", describe the name of the 
+                software component found as dependency to which the alert is related.
+                The field "value" with type "CVE" under "identifiers" gives the CVE name of the vulnerability found in the affected  software component.
+                The field named "references" include the links to all relevant official resources describing the vulnerability.
+                The fields named "vulnerable_version_range" and "first_patched_version" describe the versions that are vulnerable and the one where the vulnerability has been removed.
+            parameters:
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+            responses:
+                200:
+                    description: Successful authentication. 
+                401:
+                    description: Unsuccessful authentication.
+    /secret-scanning/alerts:
+        get: 
+            operationId: ListSecretScanningAlertsForAnOrganization
+            summary: Lists the alerts produced as result of the secret scanning executed by GitHub Advanced Security (GhAS). 
+                Each alert is related to a specific "secret" (text that should not be written in clear and stored in GitHub) found in one of the files in the repos of the specified Organization.
+                In each alert listed in the response, the field named "secret_type_display_name" include the display name of the type of secret found in the code. 
+                The field named "secret" include the content of the secret found. 
+                The filed "login" in the element "push_protection_bypassed_by" is the login name of the user who introduced that secret in the code.
+                Use the GetSecretScanningAlertLocations skill to get the location (path URL) of the file containing the secret.
+            parameters:
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+            responses:
+                200:
+                    description: Successful authentication. 
+                401:
+                    description: Unsuccessful authentication.
