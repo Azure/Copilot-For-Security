@@ -1,0 +1,62 @@
+# Filename: API_Plugin_Reflection_OAI_GET_Simple.yaml
+# The basic template of this file can be generated using Bing Copilot using the following prompt:
+#   Write an OpenAPI specification document for an API that receives a variable called input in the path via a GET 
+#   request to /simple/{input} that outputs a JSON with the following fields: object, userdata,sourceip, useragent
+
+openapi: 3.0.0
+
+info:
+    title: REST API Reflection using GET
+    description: Skills for getting reflection input for a GET REST API call
+    version: "v1"
+
+servers:
+#    Replace this with out own URL
+    - url: http://172.13.112.25:5000
+
+paths:
+    /simple/{input}:
+        get:
+            operationId: ReflectionData
+            summary: A Reflection Data Plugin
+            parameters:
+                - in: path
+                  name: input
+                  schema:
+                      type: string
+                  required: true
+                  description: Parameter Input
+                - in: header
+                  name: User-Agent
+                  schema:
+                       type: string
+                  required: true
+                  default: Copilot-For-Security
+                  description: Fixed value for the User-Agent header
+
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/ReflectionDataPluginResponse"
+
+# This is referred to by $ref
+components:
+    schemas:
+        ReflectionDataPluginResponse:
+            type: object
+            properties:
+                object:
+                    type: string
+                    description: main data
+                sourceip:
+                    type: string
+                    description: The Source IP
+                useragent:
+                    type: string
+                    description: The User Agent
+                value:
+                    type: string
+                    description: Fixed value
