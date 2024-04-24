@@ -1,0 +1,16 @@
+Descriptor:
+  Name: EchoTrail Insights reports
+  DisplayName: EchoTrail Insights reports
+  Description: Skills for looking up reports using EchoTrail to search for an exe or a hash and check the prevalence of a file in Windows environments. Also gives a rank- prevalence - the most common filepath and an overview along with some security information
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: x-apikey
+    Location: Header
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://raw.githubusercontent.com/hesaad/MSFTCopilot4Security/main/EchoTrailSkillgroups.yaml
