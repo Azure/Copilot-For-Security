@@ -16,8 +16,18 @@ Perform a search within a list of results from a process search. For example, se
 
 1. Add the custom plugin in Microsoft Copilot for Security 
 
+![Echo1](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Echo1.jpg)
+
 2. Add in the API value for the plugin
+
+![Echo1](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Echo2.jpg)
+
 
 3. Get visibility of the Skills asscociated with the Custom Plugin 
 
+![Echo1](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Echo3.jpg)
+
+
 4. Try the Echo trail insight Skill plugin by providing a hash ( should be a windows filename with extenstion or a sha256 fo a windows process or an MD5 has of a windows process)
+
+![Echo1](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Echo4.jpg)
