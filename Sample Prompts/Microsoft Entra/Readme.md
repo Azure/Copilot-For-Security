@@ -5,9 +5,7 @@
   - [User Details](#user-details)
   - [Audit Logs](#audit-logs)
   - [Sign in Logs](#sign-in-logs)
-  - [Access Reviews](#access-reviews)
-  - [Entitlement Management](#entitlement-management)
-  - [Privileged Access Management](#privileged-access-management)
+  
 ***
 &nbsp;
 ## User Details
@@ -70,53 +68,6 @@ reasons.
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#entra)
 
-## Access Reviews
-
-- Get access review by **_`<Name>`_**? 
-- Show access review by review **_`<ID>`_**? 
-- Get all access review associated with
-- Get all access review by **_`<Displayname>`_**? 
-- show status of access review
-- access review createdBy
-- show settings of access review **_`<Name>`_**? 
-
-
-&nbsp;
-[![alt text](../../Images/backtotop.svg)](#entra)
-
-## Entitlement Management
-
-
-- Show details of an access package for **_`<Sales Team>`_**? 
-- Show objects which are incompatible for **_`<Sales Team>`_**? access package
-- Show groups which are incompatible for **_`<Sales Team>`_**access package
-- Show access package assignment requests in my tenant
-- Show me the assignment activity for the **_`<Sales`_** access package
-- Show me which connected organizations can access the **_`<Sales`_** access package
-- Who is the sponsor from the connected organization who can approve the assignment of **_`<Sales`_**access package
-- Who approved the **_`<Sales`_** access package assignment?
-- Why was the **_`<Sales`_** access package requested by user(s)
-
-&nbsp;
-[![alt text](../../Images/backtotop.svg)](#entra)
-
-## Privileged Access Management
-
-- Show me the details of eligible Entra role assignments which I can activate through PIM
- - Show me the details of a request made to activate an Entra role through PIM
-- Show me the details of a specific active Entra role assignment request made through PIM
-- Show me the details of requests made to create eligible Entra role assignments through PIM
-- Show me the details of a specific eligible Entra role assignment request made through PIM
-- Show me the details of a specific active Entra role assignment (unifiedRoleAssignmentScheduleId)
-- Show me the details of all eligible Entra role assignments
- - Show me the details of a specific eligible Entra role assignment (unifiedRoleEligibilityScheduleId)
- - Show me the details of requests made to create active role assignments through PIM
-- Show me the details of role management policies that apply to Entra roles
-- Show me the details of a specific role management policy that apply to Entra roles (unifiedRoleManagementPolicyId)
-- Show me the rules or settings defined for a specific role management policy that apply to Entra roles
-- Show me a rule or a setting defined for a specific role management policy that apply to Entra roles
- - Show me the details of all role management policy assignments including the policies and rules associated with the Entra roles
-- Show me the details of a role management policy assignment including the policy and rules associated with the Entra role
 
 &nbsp;
 
