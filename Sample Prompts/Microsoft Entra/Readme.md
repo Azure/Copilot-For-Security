@@ -5,7 +5,6 @@
   - [User Details](#user-details)
   - [Audit Logs](#audit-logs)
   - [Sign in Logs](#sign-in-logs)
-  - [Conditional Access Policies](#conditional-access-policies)
   - [Access Reviews](#access-reviews)
   - [Entitlement Management](#entitlement-management)
   - [Privileged Access Management](#privileged-access-management)
@@ -70,22 +69,6 @@ reasons.
 
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#entra)
-
-## Conditional Access Policies
-
-  - Show me all the Conditional Access policies in my tenant
-- List conditional Access policies configured in my tenant
-- List conditional Access policies configured in the tenant
- - Show me all the Conditional Access policies in my tenant with state
-- List conditional Access policies configured in my tenant with state
-- Show me the details for this specific Conditional Access policy
- - list conditional access policies created using template
-- Get conditional access policy related to 'authentication' in my tenant
--  Show me newly created conditional access policies from audit logs.
-
-&nbsp;
-[![alt text](../../Images/backtotop.svg)](#entra)
-
 
 ## Access Reviews
 
