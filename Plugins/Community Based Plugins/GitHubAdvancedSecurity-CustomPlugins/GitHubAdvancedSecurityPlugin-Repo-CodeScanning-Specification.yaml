@@ -16,16 +16,17 @@ paths:
                 The field "most_recent_instance" contains the location (path, start line & column, end line & column) of the most recent instance of this alert in the default branch.
                 The field "rule" contains the logic that found the code vulnerability and triggered the alert; the most relevant attributes for this rule are its "description" and its "severity".
             parameters:
-                - in: header
-                  name: User-Agent 
-                  schema:
-                    type: string
-                  required: true
                 - in: path
                   name: repo 
                   schema:
                     type: string
                   required: true
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed)
             responses:
                 200:
                     description: Successful authentication. 
@@ -40,11 +41,6 @@ paths:
                 The field "most_recent_instance" contains the location (path of the file, start line & column, end line & column) of the most recent instance of this alert in the default branch.
                 The field "rule" contains the logic that found the code vulnerability and triggered the alert; the most relevant attributes for this rule are its "description" and its "severity".
             parameters:
-                - in: header
-                  name: User-Agent 
-                  schema:
-                    type: string
-                  required: true
                 - in: path
                   name: repo 
                   schema:
@@ -55,6 +51,12 @@ paths:
                   schema:
                     type: string
                   required: true
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed)
             responses:
                 200:
                     description: Successful authentication. 
@@ -68,11 +70,6 @@ paths:
                 The response contain the list of the files (instances) containing this code vulnerability. 
                 In each instance, the field "location" contains the "path" of the file, the start line & column and end line & column in that file.
             parameters:
-                - in: header
-                  name: User-Agent 
-                  schema:
-                    type: string
-                  required: true
                 - in: path
                   name: repo 
                   schema:
@@ -83,6 +80,12 @@ paths:
                   schema:
                     type: string
                   required: true
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed)
             responses:
                 200:
                     description: Successful authentication. 
@@ -97,16 +100,17 @@ paths:
                 Two field "schedule" describe the frequency of execution of the code scanning.
                 The field "updated_at" returns the date when this configuration was last updated.
             parameters:
-                - in: header
-                  name: User-Agent 
-                  schema:
-                    type: string
-                  required: true
                 - in: path
                   name: repo 
                   schema:
                     type: string
                   required: true
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed)
             responses:
                 200:
                     description: Successful authentication. 

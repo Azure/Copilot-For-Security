@@ -1,6 +1,6 @@
 Descriptor:
   Name: GitHub Advanced Security for GitHub Organizations 
-  DisplayName: GitHub Advanced Security for GitHub Organizations (Preview by Stefano Pescosolido)
+  DisplayName: GitHub Advanced Security for GitHub Organizations (Community release)
   Description: Skills to retrieve code scanning, secret scanning and dependabot results (alerts) executed by GitHub Advanced Security (GhAS)
       on all the repositories of a specified GitHub organization 
 

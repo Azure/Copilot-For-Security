@@ -18,16 +18,17 @@ paths:
                 The field named "references" include the links to all relevant official resources describing the vulnerability.
                 The fields named "vulnerable_version_range" and "first_patched_version" describe the versions that are vulnerable and the one where the vulnerability has been removed.
             parameters:
-                - in: header
-                  name: User-Agent 
-                  schema:
-                    type: string
-                  required: true
                 - in: path
                   name: repo 
                   schema:
                     type: string
                   required: true
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed)
             responses:
                 200:
                     description: Successful authentication. 
@@ -43,11 +44,6 @@ paths:
                 The field named "references" include the links to all relevant official resources describing the vulnerability.
                 The fields named "vulnerable_version_range" and "first_patched_version" describe the versions that are vulnerable and the one where the vulnerability has been removed.
             parameters:
-                - in: header
-                  name: User-Agent 
-                  schema:
-                    type: string
-                  required: true
                 - in: path
                   name: repo 
                   schema:
@@ -58,6 +54,12 @@ paths:
                   schema:
                     type: string
                   required: true
+                - in: header
+                  name: User-Agent 
+                  schema:
+                    type: string
+                  required: true
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed)
             responses:
                 200:
                     description: Successful authentication. 
