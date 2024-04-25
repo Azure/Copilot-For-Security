@@ -49,4 +49,4 @@ When did the user last change their password?
 ```
 11. Summarizing the investigation
 ```
-/AskGpt can you summarize the above investigation and provide a conclusion and recommendation
+Can you summarize the above investigation and provide a conclusion and recommendation
