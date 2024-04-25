@@ -4,7 +4,7 @@ info:
     title: GitHub Advanced Security for GitHub Organizations
     description: Skills to retrieve Code Scanning, Dependabot Scanning and Secret Scanning alerts for the default branch of
         all the repositiories (repo) of the specified Organization in GitHub. 
-        These Secret scannings are executed by GitHub Advanced Security (GhAS).
+        These scannings are executed by GitHub Advanced Security (GhAS).
     version: "0.0.1"
 
 paths:
