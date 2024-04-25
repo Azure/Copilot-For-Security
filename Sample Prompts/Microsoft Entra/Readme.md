@@ -4,6 +4,7 @@
 - [Entra](#entra)
   - [User Details](#user-details)
   - [Audit Logs](#audit-logs)
+  - [Terms of Use Agreements](terms-of-use-agreements)
   - [Sign in Logs](#sign-in-logs)
   
 ***
@@ -51,7 +52,7 @@ reasons.
 ## Sign in Logs
 
  
- - show me sign-in logs for the last 24 hours
+ - Show me sign-in logs for the last 24 hours
  - Show me the sign-in logs for **_`<UPN>`_**? 
     - Show me the sign-in logs of users who signed in from **_`<Location>`_**? 
     - Show me the sign-in logs from **_`<Application>`_**? 
@@ -68,6 +69,20 @@ reasons.
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#entra)
 
+## Terms of Use Agreements
+
+   - List user terms of use agreements
+  - What are the terms of use agreements for this user
+  - List all the terms of use agreements in my tenant for this user
+  - Get all terms of use agreements acceptance for user
+  - Show me all agreement acceptances this user
+  - Show me all terms of use agreements of user
+  - List all TOU agreements of user
+  - Get my terms of use agreements
+  - Show my terms of use agreements
+
+&nbsp;
+[![alt text](../../Images/backtotop.svg)](#entra)
 
 &nbsp;
 
