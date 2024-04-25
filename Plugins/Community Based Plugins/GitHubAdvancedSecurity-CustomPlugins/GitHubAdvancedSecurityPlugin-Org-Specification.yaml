@@ -22,7 +22,7 @@ paths:
                   schema:
                     type: string
                   required: true
-                  description: User-Agent (You can write any text here - This parameter is added as a temporary workaround). 
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed) 
             responses:
                 200:
                     description: Successful authentication. 
@@ -44,7 +44,7 @@ paths:
                   schema:
                     type: string
                   required: true
-                  description: User-Agent (You can write any text here - This parameter is added as a temporary workaround). 
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed) 
             responses:
                 200:
                     description: Successful authentication. 
@@ -65,7 +65,7 @@ paths:
                   schema:
                     type: string
                   required: true
-                  description: User-Agent (You can write any text here - This parameter is added as a temporary workaround). 
+                  description: User-Agent (You can write any text here. This parameter is added as a temporary workaround to make the call succeed) 
             responses:
                 200:
                     description: Successful authentication. 
