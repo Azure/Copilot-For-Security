@@ -9,7 +9,7 @@
 
 1. Retreive the history of the User you are investigating 
  ```
-/AskGPT What is <UPN> sign-in history?
+What is <UPN> sign-in history?
  ```
 2. retrieve infromation on any failed sign ins
  ```
