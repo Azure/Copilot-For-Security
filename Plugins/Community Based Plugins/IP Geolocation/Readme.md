@@ -13,7 +13,7 @@
 
 #### Upload the Custom Plugin
 
-1.  Obtain the file KQL_Plugin_SCU_Changes.yaml from this directory.
+1.  Obtain the file KQL_Plugin_IP4toGEO.yaml from this directory.
 2.  Modify the yaml file to specify your specific Entra TentantId, SubscriptionId, ResourceGroupName and WorkspaceName for your Sentinel instance.
 3.  Upload the custom plugin
 
