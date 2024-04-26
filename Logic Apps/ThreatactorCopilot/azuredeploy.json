@@ -494,7 +494,7 @@
                                     "type":  "ApiConnection",
                                     "inputs":  {
                                         "body":  {
-                                            "PromptContent":  "Share with me a summary of threat actor APT 28"
+                                            "PromptContent":  "Share with me a summary of threat actor APT28"
                                         },
                                         "host":  {
                                             "connection":  {
