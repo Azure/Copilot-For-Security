@@ -1,0 +1,19 @@
+Descriptor:
+  Name: TableSizesCost
+  DisplayName: Sentinel Table Sizes and Costs
+  Description: Look at all Sentinel tables and identify sizes and costs
+
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: TableSizesCost
+        DisplayName: Sentinel Tables Not Ingesting Data
+        Description: Look at all Sentinel tables and identify sizes and costs
+        Settings:
+          Target: Sentinel
+          TenantId: <your_tenant_ID>
+          SubscriptionId: <your_subscription_ID>
+          ResourceGroupName: <your_RG_name>
+          WorkspaceName: <your_WS_name>
+          Template: |-
+            union withsource=TableName1 * | where TimeGenerated > ago(30d) | summarize Entries = count(), Size = sum(_BilledSize), last_log = datetime_diff("second",now(), max(TimeGenerated)), estimate  = sumif(_BilledSize, _IsBillable==true)  by TableName1, _IsBillable | project ['Table Name'] = TableName1, ['Table Entries'] = Entries, ['Table Size'] = Size,           ['Size per Entry'] = 1.0 * Size / Entries, ['IsBillable'] = _IsBillable, ['Last Record Received'] =  last_log , ['Estimated Table Price'] =  (estimate/(1024*1024*1024)) * 0.0  | order by ['Table Size']  desc
