@@ -6,10 +6,10 @@ This playbook emphasizes the capability to conduct thorough threat actor profili
 ## Pre-deployment Instructions
 
 Prior to beginning the installation process, it's crucial to confirm that you have met the following prerequisites:
-• The user that will deploy this Logic app need to have a Contributor Role.
-• You enabled the Security Copilot license on your tenant
-• The user authenticated within the CoPilot logic app action and has permission toaccess M365 Defender environment 
-• The user authenticated within the CoPilot logic app action and has permission to send emails.
+- The user that will deploy this Logic app need to have a Contributor Role.
+- You enabled the Security Copilot license on your tenant
+- The user authenticated within the CoPilot logic app action and has permission toaccess M365 Defender environment 
+- The user authenticated within the CoPilot logic app action and has permission to send emails.
 
 Define the email you want the daily logic app to be sent too
 
