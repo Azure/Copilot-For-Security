@@ -38,7 +38,7 @@ Select the following image to sign in with your Azure account and open the logic
 
 1. When you're done, select **Review + Create** and finally **Create**.
 
-## Step 2: Authenticate your logic app to Azure AD with the right permissions
+## Step 2: Authenticate your logic app to Azure Monitor, Teams and Copilot for Security
 
 Edit the Logic App and modify the connections for the following Actions
 
