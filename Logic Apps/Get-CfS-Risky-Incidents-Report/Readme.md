@@ -63,7 +63,7 @@ You can modify the KQL query in the **Get Riskiest Incidents action**, by defaul
 
 ## Sample Incident Reports
 
-The following are sample Incident Reports generated with nothing other then the [Incident Report Skill](https://learn.microsoft.com/en-us/defender-xdr/security-copilot-m365d-create-incident-report) from Copilot for Security on Incidents that were triaged using the [Sentinel Triage Assistant (STAT)](https://github.com/briandelmsft/SentinelAutomationModules).
+The following are sample Incident Reports were generated with nothing other then a single prompt utilizing the [Incident Report Skill](https://learn.microsoft.com/en-us/defender-xdr/security-copilot-m365d-create-incident-report) from Copilot for Security on Incidents that were triaged using the [Sentinel Triage Assistant (STAT)](https://github.com/briandelmsft/SentinelAutomationModules).
 
 ---------------------------------------------------------------------------------------------------------
 
