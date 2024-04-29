@@ -12,7 +12,7 @@ These incident reports could be run post mortem, during incident creation (after
 
 Microsoft Sentinel configured with the new [Unified SOC Preview](https://learn.microsoft.com/en-us/azure/sentinel/connect-microsoft-365-defender?tabs=MDE) enabled 
 
-[Sentinel Triage Assistant (STAT)](https://github.com/briandelmsft/SentinelAutomationModules) deployed, with scoring module, and incidents in Sentinel tagged as "Risk Score - totalRiskScore".
+[Sentinel Triage Assistant (STAT)](https://github.com/briandelmsft/SentinelAutomationModules) deployed with all modules adding comments, scoring module configured and incidents in Sentinel tagged as "Risk Score - totalRiskScore".
 
 [Microsoft Copilot for Security](https://learn.microsoft.com/en-us/copilot/security/get-started-security-copilot) deployed with available SCU Capacity.
 
