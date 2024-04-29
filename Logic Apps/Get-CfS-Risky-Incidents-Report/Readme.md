@@ -50,7 +50,7 @@ Edit the Logic App and modify the connections for the following Actions
 
 **Add Risk Incident Report to Incident** and **Tag Risk Incident with Copilot Summary** - Modify these connections with an identity with access to modify incidents within your Sentinel workspace.
 
-![Daily Threat Exposure](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Get-CFS-Risky-Incidents-Report.png)
+![Get-CFS-Risky-Incidents-Report](https://github.com/Azure/Copilot-For-Security/blob/main/Images/Logicapp%20images/Get-CFS-Risky-Incidents-Report.png)
 
 ## Next steps
 
