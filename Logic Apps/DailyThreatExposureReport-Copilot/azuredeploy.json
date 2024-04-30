@@ -212,7 +212,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "/ASkGpt Summarize this in a report and call it Daily Threat exposure report with the current date , capturing the overview of the latest threats in my organization above , CVEs associated and their mitigation steps , it should be for a technical audience ",
+                                    "PromptContent":  "Summarize this in a report and call it Daily Threat exposure report with the current date , capturing the overview of the latest threats in my organization above , CVEs associated and their mitigation steps , it should be for a technical audience ",
                                     "SessionId":  "@body('Recommendations')?['sessionId']"
                                 },
                                 "host":  {
