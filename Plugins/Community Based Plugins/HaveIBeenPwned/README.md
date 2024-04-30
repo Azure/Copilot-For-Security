@@ -20,9 +20,10 @@
 ### Plugin Utilization
 
 Here's some sample queries you can utilize to trigger this plugin
+Note: you can use the keyword 'Have I Been Pwned' or 'HIBP' in your queries
 
 * Check if the user test@email.com is part of any data breaches from Have I Been Pwned
 * Give me the list of breaches for the user test@email.com from Have I Been Pwned as bullet points
-* Summarize the list of data breaches for the user test@email.com from HIBP
+* Summarize the list of data breaches for the user test@email.com from Have I Been Pwned
 <br>
 <img src="https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Images/hibp-example-screenshot.png"/>
