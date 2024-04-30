@@ -1,7 +1,7 @@
 Descriptor:
   Name: IP Geo Location
   DisplayName: IP Geo Location
-  Description: This tool checks an IP address' location and ISP from IP Geo Location.
+  Description: This tool checks an IP address' location and ISP using IP Geo Location.
   SupportedAuthTypes:
     - ApiKey
   Authorization:

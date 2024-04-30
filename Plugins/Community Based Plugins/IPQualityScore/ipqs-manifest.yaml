@@ -1,7 +1,7 @@
 Descriptor:
   Name: IPQS
   DisplayName: IP Quality Score
-  Description: This tool checks an IP address' location, ISP, reputation etc. from IP Quality Score
+  Description: This tool checks an IP address' location, ISP, reputation etc. using IP Quality Score
   SupportedAuthTypes:
     - ApiKey
   Authorization:
