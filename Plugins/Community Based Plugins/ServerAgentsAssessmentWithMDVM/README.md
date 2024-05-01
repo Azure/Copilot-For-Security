@@ -3,12 +3,12 @@
 The skill in this custom pluging is able to retrieve the versions of the Arc, AMA, MMA and MDE software components running on the Windows and Linux servers. The retrieval is done via KQL query made to the Advanced Hunting feature of Defender XDR on the servers' inventory data collected by Microsoft Defender Vulnerability Management.
 
 ### Acronyms:
-Arc -> It's just Azure Arc
-AMA -> Azure Monitoring Agent
-MMA -> Microsoft Monitoring Agent
-MDE -> Microsoft Defender for Endpoint
-MDVM -> Microsoft Defender Vulnerability Management
-XDR -> eXtended Detection and Response
+* Arc -> It's just Azure Arc
+* AMA -> Azure Monitoring Agent
+* MMA -> Microsoft Monitoring Agent
+* MDE -> Microsoft Defender for Endpoint
+* MDVM -> Microsoft Defender Vulnerability Management
+* XDR -> eXtended Detection and Response
 
 
 ### Refereces of the versions of these components: 
