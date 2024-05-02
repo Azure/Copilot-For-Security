@@ -10,14 +10,29 @@ class ReflectorSimple:
         self.useragent=useragent
 
     def getDict(self):
+
         return self.__dict__
 
+# Use this class to reflect back the parameters passed via GET query
 class ReflectorJson:
     def __init__(self,data,json,ip,useragent):
         self.object = "Reflector Json"
         self.userdata = data
         self.value1 = json["value1"]
         self.value2 = json["value2"]
+        self.sourceip = ip
+        self.useragent=useragent
+
+    def getDict(self):
+        return self.__dict__
+    
+class ReflectorJsonAuth:
+    def __init__(self,data,authToken,json,ip,useragent):
+        self.object = "Reflector Json"
+        self.userdata = data
+        self.value1 = json["value1"]
+        self.value2 = json["value2"]
+        self.AuthToken = authToken
         self.sourceip = ip
         self.useragent=useragent
 
@@ -34,6 +49,8 @@ def main():
     text = "<h3>Welcome to Copilot for Security test REST APIs. Please use the following REST API routes to get specific JSON results.</h1>"
     text += "<p><b> - GET /simple/&lt;data&gt; - Will return a JSON contains &lt;data&gt and few other fields </b>"
     text += "<p><b> - GET /params/&lt;data&gt; - Will return a JSON contains &lt;data&gt and few other fields passed in URL Params</b>"
+    text += "<p><b> - GET /params_auth_header/&lt;data&gt; - Will return a JSON contains &lt;data&gt and few other fields passed in URL Params, along with Authorization field passed in header</b>"
+    text += "<p><b> - GET /params_auth_data/&lt;data&gt; - Will return a JSON contains &lt;data&gt and few other fields passed in URL Params, along with Authorization field passed in data</b>"
     text += "<p><b> - POST /json/&lt;data&gt; - Will return a JSON contains &lt;data&gt and few other fields passed in payload JSON</b>"
     return text  
 
@@ -44,11 +61,42 @@ def get_simple(data):
     response =  jsonify(obj.getDict())
     return response
 
+@app.route('/simple/multiple/<data>', methods=['GET'])
+def get_simple_multiple(data):
+    count = int(data)
+    objs = []
+    for i in range(0,count):
+        obj = ReflectorSimple("Data_"+str(i),getIpAddr(request),request.user_agent.string)
+        objs.append(obj.getDict())
+    response =  jsonify(objs)
+    return response
+
+# This method accepts query parameters,passes them to create a ReflectorJson JSON object
 @app.route('/params/<data>', methods=['GET'])
 def get_params_data(data):
     args = request.args
     jsonData = args
     obj = ReflectorJson(data,jsonData,request.remote_addr,request.user_agent.string)
+    response =  jsonify(obj.getDict())
+    return response
+
+@app.route('/params_auth_header/<data>', methods=['GET'])
+def get_params_auth_header(data):
+    args = request.args
+    jsonData = args
+    # Extract the Authorization Value from the Header
+    authToken = "via Header:" + request.headers["Authorization"]
+    obj = ReflectorJsonAuth(data,authToken,jsonData,request.remote_addr,request.user_agent.string)
+    response =  jsonify(obj.getDict())
+    return response
+
+@app.route('/params_auth_data/<data>', methods=['GET'])
+def get_params_auth_data(data):
+    args = request.args
+    jsonData = args
+    # Extract the Authorization Value from the Parameter
+    authToken = args["Authorization"]
+    obj = ReflectorJsonAuth(data,authToken,jsonData,request.remote_addr,request.user_agent.string)
     response =  jsonify(obj.getDict())
     return response
 
