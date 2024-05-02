@@ -10,7 +10,7 @@ servers:
     - url: http://172.13.112.25:5000
  
 paths:
-    /params_auth_d/{input}:
+    /params_auth_data/{input}:
         get:
             operationId: ReflectionDataGETParams
             summary: A Reflection Data Plugin that reads values from URL Params and returns them
@@ -33,12 +33,6 @@ paths:
                       type: string
                   required: true
                   description: Value Parameter 2
-                - in: query
-                  name: Authorization
-                  schema:
-                      type: string
-                  required: true
-                  description: Authorization Token
             responses:
                 "200":
                     description: OK

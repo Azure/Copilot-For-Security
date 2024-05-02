@@ -8,7 +8,7 @@ Descriptor:
   Authorization:
     Type: APIKey
     Key: Authorization
-    Location: Header
+    Location: QueryParams
     AuthScheme: ''
     
 SkillGroups:
