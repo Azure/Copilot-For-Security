@@ -28,4 +28,4 @@ URL navigates to:
 
 ## Plugin Guidance
 
-It is strongly advised to work with defanged URLs (i.e. containing [.]) where possible to reduce chance of accidental detonantion.
+It is strongly advised to work with defanged URLs (i.e. containing [.]) where possible to reduce chance of accidental detonation.
