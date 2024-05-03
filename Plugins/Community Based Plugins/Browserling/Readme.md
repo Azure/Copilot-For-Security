@@ -19,5 +19,6 @@ This plugin can rewrite URLs ready to be detonated in browserling for a seamless
 ![image](https://github.com/jkerai1/Copilot-For-Security/assets/55988027/bc59e7ac-c407-40c1-9183-5d6b35b3cb58)
 
 URL navigates to:
+
 ![image](https://github.com/jkerai1/Copilot-For-Security/assets/55988027/8a0f39b8-74f1-4364-ba0a-53e4f03453a0)
 
