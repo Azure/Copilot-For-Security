@@ -7,7 +7,7 @@ Descriptor:
     - Description: The URL of the instance to connect to
       Name: SentinelOneInstanceUrl
       Label: SentinelOne Instance URL
-      HintText: e.g. https://<example-company-name>.api.sentinelone.net
+      HintText: e.g. https://<example-instanse-name>.api.sentinelone.net
       SettingType: String
       Required: true
 
