@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: IPQS-Collection
+  version: 1.0.0
+servers:
+  - url: https://ipqualityscore.com
+paths:
+  "/api/json/ip/":
+    get:
+      tags:
+        - default
+      summary: IPQS-Request
+      parameters:
+        - name: ip
+          in: query
+          schema:
+            type: string
+          required: true
+        - name: strictness
+          in: query
+          schema:
+            type: integer
+          example: 0
+        - name: allow_public_access_points
+          in: query
+          schema:
+            type: boolean
+          example: true
+        - name: fast
+          in: query
+          schema:
+            type: boolean
+          example: true
+        - name: lighter_penalties
+          in: query
+          schema:
+            type: boolean
+          example: true
+        - name: mobile
+          in: query
+          schema:
+            type: boolean
+          example: true
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json: {}
+        default:
+          description: default
+components: {}
