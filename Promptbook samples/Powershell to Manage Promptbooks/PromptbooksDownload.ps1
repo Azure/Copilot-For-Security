@@ -8,10 +8,12 @@
 #Replace the region in URI with your own "https://api.securitycopilot.microsoft.com/geo/<region>/promptbooks"
 
 param (
-    [Parameter(Mandatory=$true)][string]$token #Make it mandatory till upload can be done
+    [Parameter(Mandatory=$true)][string]$token, #Make it mandatory till upload can be done
+    [Parameter(Mandatory=$false)][string]$namecontains #Only download promptbook where name contains phrase
  )
 
-Write-Host "DISCLAIMER: This method to upload Promptbooks uses unpublished API calls that are subject to change without notice. This is not an officially supported method from Microsoft and no guarantees are given that this method will work in your environment. Support tickets on its functionality cannot be raised." 
+
+Write-Host "DISCLAIMER: This method to download Promptbooks uses unpublished API calls that are subject to change without notice. This is not an officially supported method from Microsoft and no guarantees are given that this method will work in your environment. Support tickets on its functionality cannot be raised." 
 
  
 $url = "https://api.securitycopilot.microsoft.com/geo/eastus/promptbooks"
@@ -22,6 +24,8 @@ $headers = @{
 
 
 Write-Host "Starting PromptBooks download ..."
+Write-Host "Will only download promptbooks contains phrase: $namecontains "
+
 
 $response = Invoke-WebRequest -Uri $url -Method GET -Headers $headers
 $jsonContent = $response.content
@@ -32,37 +36,39 @@ Write-Host "Number of promptbooks Downloaded: $($fromJson.value.Count)" #$jsonCo
 # Iterate for each promptbook in JSON
 $folder = './Downloads/'
 foreach ($pb in $fromJson.value) {
-    
-    $fileName = $pb.name + ".json"
-    # Remove all special chars from filename
-    $fileName= $fileName.replace("'","")
-    $fileName= $fileName.replace("(","")
-    $fileName= $fileName.replace(")","")
-    $fileName= $fileName.replace("[","-")
-    $fileName= $fileName.replace("]","-")
-    $fileName= $fileName.replace(' ','_') 
-    $fileName = $folder + $fileName 
-
-    # Remove II fields for security reasons
-    $pb.visibility = "Private" #Change all to private which can be changed later on 
-    $pb.PSObject.Properties.Remove('promptbookId')
-    $pb.PSObject.Properties.Remove('createdAt')
-    $pb.PSObject.Properties.Remove('updatedAt')
-    $pb.PSObject.Properties.Remove('workspaceId')
-    $pb.PSObject.Properties.Remove('userId')
-    $pb.PSObject.Properties.Remove('tenantId')
-    $pb.PSObject.Properties.Remove('ownerName')
-    foreach ($p in $pb.prompts) # Update data for each prompt
+    if($pb.name.contains($namecontains))
     {
-        $p.PSObject.Properties.Remove('promptbookPromptId')
-        $p.PSObject.Properties.Remove('plugins')
+        $fileName = $pb.name + ".json"
+        # Remove all special chars from filename
+        $fileName= $fileName.replace("'","")
+        $fileName= $fileName.replace("(","")
+        $fileName= $fileName.replace(")","")
+        $fileName= $fileName.replace("[","-")
+        $fileName= $fileName.replace("]","-")
+        $fileName= $fileName.replace(' ','_') 
+        $fileName = $folder + $fileName 
+
+        # Remove II fields for security reasons
+        $pb.visibility = "Private" #Change all to private which can be changed later on 
+        $pb.PSObject.Properties.Remove('promptbookId')
+        $pb.PSObject.Properties.Remove('createdAt')
+        $pb.PSObject.Properties.Remove('updatedAt')
+        $pb.PSObject.Properties.Remove('workspaceId')
+        $pb.PSObject.Properties.Remove('userId')
+        $pb.PSObject.Properties.Remove('tenantId')
+        $pb.PSObject.Properties.Remove('ownerName')
+        foreach ($p in $pb.prompts) # Update data for each prompt
+        {
+            $p.PSObject.Properties.Remove('promptbookPromptId')
+            $p.PSObject.Properties.Remove('plugins')
+        }
+
+        $json = $pb | ConvertTo-Json
+        #Write-Host $json
+        "$json" | out-file -filepath $fileName #-encoding utf8NoBOM
+
+        Write-Host "Written file $($fileName)"
     }
-
-    $json = $pb | ConvertTo-Json
-    #Write-Host $json
-    "$json" | out-file -filepath $fileName #-encoding utf8NoBOM
-
-    Write-Host "Written file $($fileName)"
 }
 
 Exit

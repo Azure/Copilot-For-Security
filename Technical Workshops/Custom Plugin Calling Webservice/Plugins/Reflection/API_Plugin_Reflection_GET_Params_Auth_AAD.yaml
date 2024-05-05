@@ -1,0 +1,19 @@
+#Filename: API_Plugin_Reflection_GET_Params.yaml
+Descriptor:
+  Name: Elman's Reflection API plug-in using GET params and Authorization
+  DisplayName: Elman's Reflection API plug-in using GET params
+  Description: Skills for getting a GET REST API call reflection based on parameters that were passed
+  SupportedAuthTypes:
+    - AAD
+  Authorization:
+    Type: AAD
+    EntraScopes: https://graph.microsoft.com/.default
+
+SkillGroups:
+  - Format: API
+    Settings:
+      # Replace this with your own URL where the OpenAPI spec file is located.
+      OpenApiSpecUrl:  http://172.13.112.25:5000/file/API_Plugin_Reflection_OAI_GET_Params_Auth_Header.yaml
+
+
+
