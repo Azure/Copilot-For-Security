@@ -13,4 +13,4 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/DEFENDNZ/Copilot-For-Security/main/IP%20Quality%20Score/generated-ipqs-openapi.yaml
+      OpenApiSpecUrl: https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/IPQualityScore/OpenAPI/ipqs-openapi.yaml

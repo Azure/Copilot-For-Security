@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: HIBP-Collection
+  version: 1.0.0
+servers:
+  - url: https://haveibeenpwned.com/api/v3
+paths:
+  /breachedaccount/{email}:
+    get:
+      parameters:
+        - in: path
+          name: email
+          schema:
+            type: string
+          required: true
+        - name: User-Agent
+          in: header
+          schema:
+            type: string
+            default: Default User-Agent
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+        '400':
+          description: The account does not comply with an acceptable format
+          content:
+            application/json: {}
+        '401':
+          description: API Key is missing or invalid
+          content:
+            application/json: {}
+        '403':
+          description: Unauthorized
+          content:
+            application/json: {}
+        '404':
+          description: User Not Found in any data breaches
+          content:
+            application/json: {}
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json: {}
+        '503':
+          description: Service unavailable
+          content:
+            application/json: {}
+        default:
+          description: default
+      summary: Get list of breaches for an account

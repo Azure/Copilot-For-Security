@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: IPGeoLocation-Collection
+  version: 1.0.0
+servers:
+- url: https://api.ipgeolocation.io
+paths:
+  "/ipgeo/":
+    get:
+      tags:
+      - default
+      summary: This path checks the an IP address' location and ISP.
+      parameters:
+      - name: ip
+        in: query
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json: {}
+        default:
+          description: default
+components: {}
