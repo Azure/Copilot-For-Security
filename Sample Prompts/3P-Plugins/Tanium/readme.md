@@ -29,7 +29,7 @@
 
 
 &nbsp;
-[![alt text](../../../Images/backtotop.svg)](#entra)
+[![alt text](../../../Images/backtotop.svg)](#Tanium)
 
 
 &nbsp;
