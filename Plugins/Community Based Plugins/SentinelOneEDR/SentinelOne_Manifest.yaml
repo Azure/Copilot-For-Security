@@ -1,7 +1,6 @@
 Descriptor:
   Name: SentinelOne
   DisplayName: SentinelOne EDR (Community)
-  Icon: 'https://www.sentinelone.com/wp-content/themes/sentinelone/assets/svg/header-logo-dark.svg'
   Description: SentinelOne EDR
   Settings: 
     - Description: The URL of the instance to connect to
