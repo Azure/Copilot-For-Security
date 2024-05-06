@@ -3,7 +3,7 @@
 
 - [Tanium](Tanium)
   - [Endpoint Information](#Endpoint-Information)
-  - [CVE Information](#CVE-Information)
+  - [CVE and Security Information](#CVE-and-Security-Information)
     
 ***
 &nbsp;
@@ -18,7 +18,7 @@
 
 
 &nbsp;
-[![alt text](../../Images/backtotop.svg)](#Tanium)
+[![alt text](../../../Images/backtotop.svg)](#Tanium)
 
 ## CVE and Security Information
 - Using Tanium, return the endpoints vulnerable to **_`<CVE>`_**, so that I can remediate the vulnerability on these endpoints. Display the results in a table, sorted alphabetically by host name, and return a Tanium Console Question Results URL so that I can view the real-time list of endpoints.
@@ -29,7 +29,7 @@
 
 
 &nbsp;
-[![alt text](../../Images/backtotop.svg)](#entra)
+[![alt text](../../../Images/backtotop.svg)](#entra)
 
 
 &nbsp;
