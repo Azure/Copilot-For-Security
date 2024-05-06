@@ -1,0 +1,19 @@
+Descriptor:
+  Name: IP4toGeo
+  DisplayName: Sentinel IP Addresses in Geo Ranges
+  Description: Identify the IP Geo location range for IP Addresses located in Sentinel SecurityEvents
+
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: IP4toGeo
+        DisplayName: Sentinel IP Addresses in Geo Ranges
+        Description: Identify the IP Geo location range for IP Addresses located in Sentinel SecurityEvents
+        Settings:
+          Target: Sentinel
+          TenantId: <your_tenant_ID>
+          SubscriptionId: <your_subscription_ID>
+          ResourceGroupName: <your_RG_name>
+          WorkspaceName: <your_WS_name>
+          Template: |-
+            let geoData = externaldata (network:string,geoname_id:string,continent_code:string,continent_name:string, country_iso_code:string,country_name:string,is_anonymous_proxy:string,is_satellite_provider:string) [@"https://raw.githubusercontent.com/datasets/geoip2-ipv4/master/data/geoip2-ipv4.csv"] with (ignoreFirstRecord=true, format="csv"); SecurityEvent | where TimeGenerated >=ago(24h) | evaluate ipv4_lookup (geoData, IpAddress,  network, false)
