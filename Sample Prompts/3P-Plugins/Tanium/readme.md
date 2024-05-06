@@ -1,7 +1,7 @@
 
 # Tanium
 
-- [Tanium](Tanium)
+- [Tanium](#Tanium)
   - [Endpoint Information](#Endpoint-Information)
   - [CVE and Security Information](#CVE-and-Security-Information)
     
@@ -9,7 +9,7 @@
 &nbsp;
 ## Endpoint Information
 <a name="Endpoint Information"></a>
-- Using Tanium return the installed applications in**_`<Hostname>`_**. Display the results in a table, and return a Tanium Console Question Results URL so that I can view the real-time list of endpoints.
+- Using Tanium return the installed applications in **_`<Hostname>`_**. Display the results in a table, and return a Tanium Console Question Results URL so that I can view the real-time list of endpoints.
 - Using Tanium, return the Driver Details of **_`<Hostname>`_**. Display the results in a table, alphabetically sorted by computer name, and return a Tanium Console Question Results URL so that I can view the real-time list of endpoints.
 - Using Tanium return the CPU Details of **_`<Hostname>`_**.
 - Using Tanium return the BIOS Vendor of **_`<Hostname>`_**.
