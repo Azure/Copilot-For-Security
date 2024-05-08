@@ -71,7 +71,7 @@ reasons.
 
 ## Terms of Use Agreements
 
-   - List user terms of use agreements
+  - List user terms of use agreements
   - What are the terms of use agreements for this user
   - List all the terms of use agreements in my tenant for this user
   - Get all terms of use agreements acceptance for user
