@@ -10,7 +10,7 @@
 
 1. Triage the email
  ```
-/AskGPT Can you triage the email header below and point out what you find suspicious? <emailheaders>
+Can you triage the email header below and point out what you find suspicious? <emailheaders>
  ```
 2. Idenitfy technical indicators in the email header 
  ```
@@ -42,4 +42,4 @@ Hunt my environment and determine if any of the users clicked any URL in the ema
 ```
 9. Summarize the investigation with certaity of suspicious elements
 ```
-/AskGPT Based on the above email investigation, summarize this investigation with all the investigation steps taken during this session. Also share supported evidence and let me know if this is a phishing email with certainty percentage: if the email is not suspicious give it 0-30% if it medium suspicious for phishing give it 30%-74% and if its high suspicious as phishing give it 75%-100%. Always include suspicious certainty percentage.
+Based on the above email investigation, summarize this investigation with all the investigation steps taken during this session. Also share supported evidence and let me know if this is a phishing email with certainty percentage: if the email is not suspicious give it 0-30% if it medium suspicious for phishing give it 30%-74% and if its high suspicious as phishing give it 75%-100%. Always include suspicious certainty percentage.

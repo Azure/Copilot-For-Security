@@ -6,7 +6,7 @@ info:
     version: "v1"
 
 servers:
-#    - url: https://agreeable-moss-9d3fccb3a39246119040a8136f8fefa4.azurewebsites.net
+    # Replace this with your own URL where the OpenAPI spec file is located.
     - url: http://172.13.112.25:5000
  
 paths:
