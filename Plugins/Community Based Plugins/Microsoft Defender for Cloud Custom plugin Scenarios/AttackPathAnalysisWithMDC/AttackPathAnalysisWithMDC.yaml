@@ -1,0 +1,80 @@
+Descriptor:
+  Name: AttackPathAnalysis
+  DisplayName: Attack Path Analysis by Defender for Cloud (Community release)
+  Description:  KQL query for retrieving the list of "Attack Paths" identified by Defender CSPM (Cloud Security Posture Management) in Microsoft Defender for Cloud.  
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: GetAttackPathsInTheLastTimespan
+        DisplayName: Get the Attack Paths by Defender for Cloud  
+        Description: Get the Attack Paths identified by Defender for Cloud in the protected Azure, AWS and GPC cloud environments.
+          The list includes the unique Attack Paths identified by their 
+            Severity, DisplayName, Description, potential impact (PotentialImpact), status (IsActive), 
+            entry point component (EntryPointRef, the first component in the Attack Path, including its name, its cloud environment and its type), 
+            target component (TargetNodeRef, the last component in the Attack Path, including its name, its cloud environment and its type),  
+            number of components included in the Attack Paths (AllNodesCount), 
+            list of components (AllNodesDisplayNamesAndLabels, each component in the Attack Path, including its name, its cloud environment and its type), 
+            first seen day (FirstSeen), 
+            last seen day (LastActive), 
+            days of active duration (ActiveDurationDays which is the number of days between LastActive and FirstSeen), 
+            number of occurrences (Occurrences),
+            risk factors (RiskFactors),
+            potential impact (PotentialImpact),
+            Mitre tactics and techniques (Mitre) and
+            remediation steps (AdditionalRemediationSteps).
+        Inputs:
+          - Name: DaysBack
+            Description: Provide the number of days to be considered in the past, starting today (e.g. 1d for 1 day, 4d for 4 days) 
+            Required: true
+          - Name: IsActive
+            Description: Write Yes or No if you want to filter only the active or remediated Attack Paths. 
+            Required: false
+        Settings:
+          Target: LogAnalytics
+          TenantId: [Write your Tenant Id]
+          SubscriptionId: [Write your Subscription Id]
+          ResourceGroupName: [Write the name of your resource group]
+          WorkspaceName: [Write the name of your Log Analytics or Sentinel workspace]      
+          Template: |-
+            let pastDays = {{DaysBack}};
+            let today = startofday(now());
+            let yesterday = startofday(ago(1d));
+            let startDay = startofday(ago(pastDays));
+            let ap =
+            (SecurityAttackPathData
+            | where TimeGenerated >= startDay and TimeGenerated < today
+            | extend RiskFactors = tostring(RiskFactors)
+            | extend PathObject = parse_json(Path)
+            | mvexpand PathObjectNode = PathObject.nodes
+            | where isnotnull( PathObjectNode.cloudProvider) 
+            | extend NodeDisplayName = tostring(PathObjectNode.displayName)
+            | extend NodeCloudProvider = tostring(PathObjectNode.cloudProvider)
+            | extend NodeLabel = tostring(PathObjectNode.label)
+            | extend NodeDisplayNameAndLabel = strcat(NodeDisplayName, " (", iif(NodeCloudProvider!="General",strcat(NodeCloudProvider,"-"),""), NodeLabel, ")")
+            | order by NodeDisplayNameAndLabel
+            | summarize AllNodesDisplayNamesAndLabels = make_list(NodeDisplayNameAndLabel) by TimeGenerated, tostring(PathObject), AttackPathId, DisplayName, Description, RiskLevel, RiskFactors, PotentialImpact, Mitre, AdditionalRemediationSteps, EntrypointId, TargetId
+            | extend AllNodesDisplayNamesAndLabels = tostring(AllNodesDisplayNamesAndLabels)
+            | extend AllNodesCount = strlen(AllNodesDisplayNamesAndLabels) - strlen(replace(",", "", AllNodesDisplayNamesAndLabels)) +1
+            | extend PathObject = parse_json(PathObject)
+            | mvexpand PathObjectNode = PathObject.nodes
+            | where PathObjectNode.mapIdentifier == EntrypointId or PathObjectNode.mapIdentifier == TargetId
+            | extend EntryNodeDisplayName = iif(PathObjectNode.mapIdentifier == EntrypointId,tostring
+            (PathObjectNode.displayName),"")
+            | extend EntryNodeCloudProvider = iif(PathObjectNode.mapIdentifier == EntrypointId,tostring(PathObjectNode.cloudProvider),"")
+            | extend EntryNodeLabel = iif(PathObjectNode.mapIdentifier == EntrypointId,tostring(PathObjectNode.label),"")
+            | extend EntryNodeDisplayNameAndLabel = strcat(EntryNodeDisplayName," (",EntryNodeCloudProvider,"-",EntryNodeLabel,")")
+            | extend TargetNodeDisplayName = iif(PathObjectNode.mapIdentifier == TargetId,tostring(PathObjectNode.displayName),"")
+            | extend TargetNodeCloudProvider = iif(PathObjectNode.mapIdentifier == TargetId,tostring(PathObjectNode.cloudProvider),"")
+            | extend TargetNodeLabel = iif(PathObjectNode.mapIdentifier == TargetId,tostring(PathObjectNode.label),"")
+            | extend TargetNodeDisplayNameAndLabel = strcat(TargetNodeDisplayName," (",TargetNodeCloudProvider,"-",TargetNodeLabel,")")
+            | summarize EntryNodeRef = max(EntryNodeDisplayNameAndLabel), TargetNodeRef=max(TargetNodeDisplayNameAndLabel) by TimeGenerated, DisplayName, Description, RiskLevel, AllNodesCount, AllNodesDisplayNamesAndLabels, tostring(RiskFactors), PotentialImpact, Mitre, AdditionalRemediationSteps
+            | summarize FirstSeen=min(TimeGenerated), LastActive=max(TimeGenerated), Occurrences=count() by EntryNodeRef, TargetNodeRef, DisplayName, Description, RiskLevel, AllNodesCount, AllNodesDisplayNamesAndLabels, tostring(RiskFactors), PotentialImpact, Mitre, AdditionalRemediationSteps 
+            | extend ActiveDurationDays = datetime_diff('day', LastActive, FirstSeen) + 1
+            | extend IsActive = iff(LastActive > yesterday, "Yes", "No")
+            | extend SevNum = case( RiskLevel == "Critical", 0, RiskLevel == "High", 1, RiskLevel == "Medium", 2, RiskLevel == "Low", 3, 10)
+            | extend RiskLevelNum = strcat(tostring(SevNum),"-",RiskLevel)
+            | project RiskLevelNum, Severity=RiskLevel, DisplayName, Description, PotentialImpact, IsActive, EntryNodeRef, TargetNodeRef, AllNodesCount, AllNodesDisplayNamesAndLabels, FirstSeen, LastActive, ActiveDurationDays, Occurrences, RiskFactors, Mitre
+            | order by RiskLevelNum asc 
+            );
+            ap 
+            | where IsActive contains "{{IsActive}}"
