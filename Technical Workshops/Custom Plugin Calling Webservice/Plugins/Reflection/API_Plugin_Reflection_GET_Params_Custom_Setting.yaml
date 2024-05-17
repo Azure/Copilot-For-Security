@@ -5,6 +5,22 @@ Descriptor:
   Description: Skills for getting a GET REST API call reflection based on parameters that are passed v1
   DescriptionForModel: Skills for getting a GET REST API call reflection based on parameters that are passed.  
                        This can be called with a prompt like "Get Elman's Reflection Data for data1 with value1 and value2".
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Label: Authorization API Key
+    Key: Authorization
+    Location: Header
+    AuthScheme: ''
+  Settings:
+    - Name: CustomValue
+      Label: Custom Value
+      Description: This is a custom value part of plugin
+      HintText: "e.g. Dummy Hint"
+      SettingType: String
+      Required: true
+
 SkillGroups:
   - Format: API
     Settings:
