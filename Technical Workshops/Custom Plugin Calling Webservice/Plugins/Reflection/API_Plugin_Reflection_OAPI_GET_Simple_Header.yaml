@@ -26,6 +26,13 @@ paths:
                       type: string
                   required: true
                   description: Parameter Input
+                - in: header
+                  name: User-Agent
+                  schema:
+                       type: string
+                  required: true
+                  default: Copilot-For-Security
+                  description: Fixed value for the User-Agent header
             responses:
                 "200":
                     description: OK
