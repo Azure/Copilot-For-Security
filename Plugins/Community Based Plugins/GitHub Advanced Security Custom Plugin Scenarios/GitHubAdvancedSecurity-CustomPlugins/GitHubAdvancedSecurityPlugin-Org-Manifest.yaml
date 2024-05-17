@@ -24,5 +24,5 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Plugins/Community%20Based%20Plugins/GitHubAdvancedSecurity-CustomPlugins/GitHubAdvancedSecurityPlugin-Org-Specification.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Plugins/Community%20Based%20Plugins/GitHub%20Advanced%20Security%20Custom%20Plugin%20Scenarios/GitHubAdvancedSecurity-CustomPlugins/GitHubAdvancedSecurityPlugin-Org-Specification.yaml
       EndpointUrlSettingName: GitHubOrganizationUrl
