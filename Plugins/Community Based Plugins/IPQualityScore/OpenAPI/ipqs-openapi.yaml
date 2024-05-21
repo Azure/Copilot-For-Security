@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: IPQS-Collection
+  title: IPQualityScore
   version: 1.0.0
 servers:
   - url: https://ipqualityscore.com
@@ -9,7 +9,8 @@ paths:
     get:
       tags:
         - default
-      summary: IPQS-Request
+      operationId: IPQualityScore 
+      summary: This path checks the an IP address' location, ISP, Type, Reputation Score and Abuse Velocity.
       parameters:
         - name: ip
           in: query

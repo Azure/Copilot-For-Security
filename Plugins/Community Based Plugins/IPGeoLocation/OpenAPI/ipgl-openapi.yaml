@@ -1,12 +1,13 @@
 openapi: 3.0.0
 info:
-  title: IPGeoLocation-Collection
+  title: IPGeoLocation
   version: 1.0.0
 servers:
 - url: https://api.ipgeolocation.io
 paths:
   "/ipgeo/":
     get:
+      operationId: IPGeoLocation
       tags:
       - default
       summary: This path checks the an IP address' location and ISP.
