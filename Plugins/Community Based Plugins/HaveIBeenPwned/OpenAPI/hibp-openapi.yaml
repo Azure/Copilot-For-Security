@@ -1,12 +1,14 @@
 openapi: 3.0.0
 info:
-  title: HIBP-Collection
+  title: HaveIBeenPwned
   version: 1.0.0
 servers:
   - url: https://haveibeenpwned.com/api/v3
 paths:
   /breachedaccount/{email}:
     get:
+      operationId: HaveIBeenPwned
+      summary: This path checks if a email address is part of any data breaches from HaveIBeenPwned.
       parameters:
         - in: path
           name: email
