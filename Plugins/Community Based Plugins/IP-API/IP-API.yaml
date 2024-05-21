@@ -1,0 +1,9 @@
+Descriptor:
+  Name: IP-API
+  DisplayName: IP-API
+  Description: IP-API IP Address Lookup
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://raw.githubusercontent.com/rod-trent/Copilot-for-Security/main/Plugins/IP-API/IP-API.txt
