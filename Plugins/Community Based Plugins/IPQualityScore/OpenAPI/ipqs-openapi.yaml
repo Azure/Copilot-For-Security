@@ -10,7 +10,7 @@ paths:
       tags:
         - default
       operationId: IPQualityScore 
-      summary: This path checks the an IP address' location, ISP, Type, Reputation Score and Abuse Velocity.
+      summary: This path checks an IP address' location, ISP, Type, Reputation Score and Abuse Velocity.
       parameters:
         - name: ip
           in: query

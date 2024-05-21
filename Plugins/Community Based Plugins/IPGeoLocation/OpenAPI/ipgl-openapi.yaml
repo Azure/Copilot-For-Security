@@ -10,7 +10,7 @@ paths:
       operationId: IPGeoLocation
       tags:
       - default
-      summary: This path checks the an IP address' location and ISP.
+      summary: This path checks an IP address' location and ISP.
       parameters:
       - name: ip
         in: query
