@@ -26,13 +26,13 @@ paths:
                   schema:
                       type: string
                   required: true
-                  description: Value Parameter 1
+                  description: Value Parameter 1, default to "Dummy Value 1"
                 - in: query
                   name: value2
                   schema:
                       type: string
                   required: true
-                  description: Value Parameter 2
+                  description: Value Parameter 2, default to "Dummy Value 2"
             responses:
                 "200":
                     description: OK
@@ -41,7 +41,10 @@ paths:
                             schema:
                                 $ref: "#/components/schemas/ReflectionDataParamsPluginResponse"
 
-# This is referred to by $ref
+# This is referred to by $ref, 
+# several fields will be in orig. REST API but not accounted for in following schema.
+# Copilot will be able to display the json values not specified explicitly below, but since their
+# description field is missing it wont be able to format them correctly.
 components:
     schemas:
         ReflectionDataParamsPluginResponse:
@@ -50,19 +53,6 @@ components:
                 objecttype:
                     type: string
                     description: Object type
-                userdata:
-                    type: string
-                    description: Userdata
-                value1:
-                    type: string
-                    description: Reflected Parameter 1
-                value2:
-                    type: string
-                    description: Reflected Parameter 2
-                sourceip:
-                    type: string
-                    description: The Source IP
-                useragent:
-                    type: string
-                    description: The User Agent
+                
+               
                 

@@ -25,14 +25,16 @@ paths:
                   name: value1
                   schema:
                       type: string
+                      default: Dummy 1
                   required: true
-                  description: Value Parameter 1, default to "Dummy Value 1"
+                  description: Value for Parameter 1, default is "Dummy Value 1"
                 - in: query
                   name: value2
                   schema:
                       type: string
+                      default: Dummy 2
                   required: true
-                  description: Value Parameter 2, default to "Dummy Value 2"
+                  description: Value for Parameter 2, default is "Dummy Value 2"
             responses:
                 "200":
                     description: OK

@@ -1,0 +1,17 @@
+#Filename: API_Plugin_Reflection_GET_Params.yaml
+Descriptor:
+  Name: Elman's Reflection API plug-in using GET params v2
+  DisplayName: Elman's Reflection API plug-in using GET params v2
+  Description: Skills for getting a GET REST API call reflection based on parameters that are passed. 
+               Both query params have default values
+  DescriptionForModel: Skills for getting a GET REST API call reflection based on parameters that are passed. 
+                       This can be called with a prompt like "Get Elman's Reflection Data for data1 with value1 and value2 
+
+SkillGroups:
+  - Format: API
+    Settings:
+      # Replace this with your own URL where the OpenAPI spec file is located.
+      OpenApiSpecUrl:  http://172.13.112.25:5000/file/API_Plugin_Reflection_OAPI_GET_Params_Defaults.yaml
+
+
+
