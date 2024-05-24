@@ -1,0 +1,16 @@
+Descriptor:
+  Name: HaveIBeenPwned
+  DisplayName: HaveIBeenPwned
+  Description: This tool checks if an email address has been found in any of the data breaches in Have I Been Pwned (HIBP).
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: hibp-api-key
+    Location: Header
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Plugins/Community%20Based%20Plugins/HaveIBeenPwned/OpenAPI/hibp-openapi.yaml
