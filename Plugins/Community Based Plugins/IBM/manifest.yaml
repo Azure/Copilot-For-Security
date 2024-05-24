@@ -1,0 +1,22 @@
+Descriptor:
+  Name: IBM
+  DisplayName: IBM X-Force Exchange (Preview)
+  DescriptionDisplay: Threat Intelligence Profiles, Threat Group Profiles, and DNS Profiles
+  Description: |
+    Use this skillset to call the IBM X-Force Exchange API:
+    - What it does: Retrieves Threat Intelligence Profiles, Threat Group Profiles, and DNS Profiles from the IBM X-Force Exchange platform. 
+    - To what categories does it belong: DNS Profile, Threat Intelligence, Threat Groups.
+    IBM X-Force's API presents the below functions:
+    - Get Threat Intelligence Reports IBM: Get premium threat intelligence reports based on a given report type.
+    - Get Threat Group Profiles IBM: Get a List of Threat Group Profiles.
+    - Get Dns Records IBM: Verify a domain name, IP address, or URL against IBM X-Force DNS records
+    - Get WHOIS IBM: Returns the WHOIS information for an IP, URL, or domain.
+  SupportedAuthTypes:
+    - Basic
+  Category: other
+  Icon: https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg #TODO: Use IBM X-Force Exchange icon
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://medeinaplugins.blob.core.windows.net/gpt-plugins/ibm-xforce-web-api.yaml
