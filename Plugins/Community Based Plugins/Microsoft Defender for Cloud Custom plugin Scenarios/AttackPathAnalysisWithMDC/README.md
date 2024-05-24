@@ -19,5 +19,5 @@ The skill in this custom pluging allows to retrieve the list of "Attack Paths" i
 
 
 ### Additional references: 
-[Operationalizing Attack Path Insights](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/operationalizing-attack-path-insights/ba-p/4121643), by Giulio Astori
-[Sharing my first experiences on how to build custom KQL plugins for Copilot for Security](https://www.linkedin.com/feed/update/urn:li:activity:7199175292278505472/), my blog post on how this plugin was designed and developed
+* [Operationalizing Attack Path Insights](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/operationalizing-attack-path-insights/ba-p/4121643), by Giulio Astori
+* [Sharing my first experiences on how to build custom KQL plugins for Copilot for Security](https://www.linkedin.com/feed/update/urn:li:activity:7199175292278505472/), my blog post on how this plugin was designed and developed
