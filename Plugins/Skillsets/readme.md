@@ -1,6 +1,6 @@
 ![Copilot for Security Overview](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 
-## Skillset JSON
+## Plugin skillset JSON files
 
 The following provides the extracted JSON associated with Copilot for Security skillsets. To replicate this extraction manually, launch Copilot for Security, open the Edge Developer Tools (F12), locate the network tab, select the response sub-tab, and locate files named “skills”.
 
