@@ -8,7 +8,7 @@ Disclaimer: These skills were extracted on 22-May-2024 and should only be used a
 
 **File name:**	skillsets.json<br/> **URI:** 
 https://api.securitycopilot.microsoft.com/skillsets
-<br/><br/>
+<br/>**URI:** 
 https://api.securitycopilot.microsoft.com/geo/eastus/skillsets
 <br/><br/>
 **File name:** 	skillsets-AzureFirewall-skills.json<br/> **URI:** 
