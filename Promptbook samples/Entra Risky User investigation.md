@@ -1,7 +1,7 @@
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
 # Entra Risky User investigation
 
-**Required plugins** : Microsoft Defender Threat intelligence, Natural Language to KQL to Microsoft Defender XDR, Microsoft Defender XDR
+**Required plugins** : Microsoft Entra, Natural Language to KQL to Microsoft Defender XDR, Microsoft Defender XDR and Microsoft Defender Threat intelligence
 
 **Required Input**:User UPN: <userupn> and Username: <Username>
 
