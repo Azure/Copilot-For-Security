@@ -6,7 +6,7 @@ The following list provides an overview of each plugin skill and its description
 
 **Disclaimer** - All information within this collection is for reference only and is not kept in parity with the production instance of Copilot for Security. You may source the latest information by launching Copilot for Security, opening the Edge Developer Tools (F12), locating the network tab, selecting the "Response" sub-tab, and locating the associated "skills" source file.
 
-Updated - 30-May-2024
+Updated - 31-May-2024
 
 ## AzureAiSearch-skills.json
 **SearchAzureAiSearchIndex** - Search and retrieve text content from your Azure AI Search index. <br/>
