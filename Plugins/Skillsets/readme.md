@@ -219,7 +219,7 @@ Updated - 31-May-2024
 ## ServiceNow-skills.json
 **AnalyzeServiceNowIncidents** - Analyze or summarize one or many ServiceNow incidents based on an optional incident number, optional keyword, incident state, incident priority, date range, and the user's query or desired analysis. <br/>
 **AppendCommentToServiceNowIncident** - Appends comment to a specific ServiceNow Incident <br/>
-**GetServiceNowIncident** - Get detailed information about a ServiceNow Incident such as short description, priority, category, state, configuration item, business service, comments, and worknotes. Must be used when user asks for both comments AND worknotes for an incident.`
+**GetServiceNowIncident** - Get detailed information about a ServiceNow Incident such as short description, priority, category, state, configuration item, business service, comments, and worknotes. Must be used when user asks for both comments AND worknotes for an incident. <br>
 **GetServiceNowIncidentComments** - Gets detailed comments for a ServiceNow incident. <br/>
 **GetServiceNowIncidentWorkNotes** - Gets detailed work notes for a ServiceNow incident. <br/>
 **SearchServiceNowIncidents** - Searches for ServiceNow incidents based on optional keyword, incident state, and incident priority inputs.
