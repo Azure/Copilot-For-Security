@@ -11,7 +11,7 @@
 ### Instructions
 #### Upload the Custom Plugin
 
-1. Obtain the file [KQL-ADX-SignInLogs.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/HuntSignInLogs-ADX/KQL-ADX-SignInLogs.yaml) from this directory.
+1. Obtain the file [KQL-ADX-SignInLogs.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Microsoft%20Sentinel%20Custom%20Plugin%20Scenarios/HuntSignInLogs-ADX/KQL-ADX-SignInLogs.yaml) from this directory.
 2. Modify the .yaml file and specify your *ADX Cluster URL*, your *ADX Database* and your *Entra TenantId* parameters.
    ![ADXPlugin](https://github.com/SCStelz/CopilotForSecurity/blob/main/Images/adx-connection.png)
 4. [Upload the custom plugin](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#add-custom-plugins) and verify it's activated.
