@@ -19,7 +19,7 @@ Details: https://rodtrent.substack.com/p/copilot-for-security-activity-all
 
 ### Instructions
 
-1.  Obtain the file CfSAllinOne.yaml from this directory.
+1.  Obtain the file SCU_All-in-One.yaml from this directory.
 2.  Modify the yaml file to specify your specific Entra TentantId, SubscriptionId, ResourceGroupName and WorkspaceName for your Sentinel instance.
 3.  <a href="https://learn.microsoft.com/en-us/copilot/security/manage-plugins?tabs=securitycopilotplugin#add-custom-plugins" target="_blank">Upload the custom plugin</a>
 
