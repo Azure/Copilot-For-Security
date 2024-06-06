@@ -18,7 +18,6 @@
 ![CopilotForSecurity](https://learn.microsoft.com/en-us/security-copilot/media/add-plugin-button.png)
 
 #### Utilization of the plugin
-- **getReports:** Get a single report by the connector and file ID - this is used as an alternate way to find a report that was submitted by a configured connector, like Box or Microsoft Teams.  You must supply the connector type and the file ID that the connector uses to identify the file.  If the file in question was submitted multiple times by the connector, only the latest report for that file will be returned.
 - **getReport:** Get single report - this fetches the results of a single file submission, known as a report.
 - **getReportsMD5:** Get a single report by md5 or sha256 hash - this fetches the latest results for file submission with the provided md5 or sha256 hash.
 - **getPresignedUrl:** Get a pre-signed URL - this fetches a pre-signed URL link to a browser-viewable report.
