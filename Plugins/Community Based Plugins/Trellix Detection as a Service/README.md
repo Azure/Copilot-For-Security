@@ -11,7 +11,7 @@
 ### Instructions
 #### Upload the Custom Plugin
 
-1. Obtain the file [TrellixDoD.yaml](https://github.com/Azure/Copilot-For-Security/blob/c0d513f176540529fde0e10d9d00cd850433788e/Plugins/Community%20Based%20Plugins/Trellix%20Detection%20as%20a%20Service/TrellixDoD.yaml) from this directory.
+1. Obtain the file [TrellixDoD.yaml](https://raw.githubusercontent.com/alfonso-greenbrook/Copilot-For-Security-Fork/main/Plugins/Community%20Based%20Plugins/Trellix%20Detection%20as%20a%20Service/TrellixDoD.yaml) from this directory.
 2. [Upload the custom plugin](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#add-custom-plugins) and verify it's been activated.
 3. After the plugin has been uploaded, put in your [DoD API Key](https://learn.microsoft.com/en-us/security-copilot/plugin_api#configure-authentication-1).
 
