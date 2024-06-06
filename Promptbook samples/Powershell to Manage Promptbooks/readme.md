@@ -1,4 +1,7 @@
 ![Security CoPilot Logo](https://github.com/Azure/Copilot-For-Security/blob/main/Images/ic_fluent_copilot_64_64%402x.png)
+
+**DISCLAIMER**: This method to upload Promptbooks uses unpublished API calls that are subject to change without notice. This is not an officially supported method from Microsoft and no guarantees are given that this method will work in your environment. Support tickets on its functionality cannot be raised.
+
 # Microsoft Copilot for Security PowerShell to manage Promptbooks
 
 There are two different PowerShell scripts, one for upload one for download.
@@ -6,7 +9,9 @@ There are two different PowerShell scripts, one for upload one for download.
 # Downloading Promptbooks
 The PowerShell script 'PromptBooksDownload.ps1' allows you to download all your Promptbooks in your local disk inside the './Downloads' folder. The Promptbooks are stored in a JSON format and each Promptbook is in its own JSON file. Each file is given the promptbook name, with spaces and special characters removed. To download all the promptbooks execute the following command.
 
-Powershell -file PromptBooksDownload.ps1 -token <authorization token>
+Powershell -file PromptBooksDownload.ps1 -token <authorization token> -namecontains "CVE"
+
+The '-namecontains' parameter is optional. If specified, the script only downloads the promptbooks who's name contains the phrase specified by the '-namecontains' parameter ("CVE" in this case). Specify the phrase in double quotes.
 
 Description of the JSON format and instructions on obtaining the authorization token are given below.
 

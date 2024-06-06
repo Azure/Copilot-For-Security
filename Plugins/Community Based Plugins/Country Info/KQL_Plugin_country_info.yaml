@@ -1,0 +1,19 @@
+Descriptor:
+  Name: CountryInfo
+  DisplayName: Country Codes
+  Description: Country information including country code and language and region and TLD and currency
+
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: CountryInfo
+        DisplayName: Country Codes
+        Description: Country information including country code and language and region and TLD and currency
+        Settings:
+          Target: Sentinel
+          TenantId: <your_tenant_ID>
+          SubscriptionId: <your_subscription_ID>
+          ResourceGroupName: <your_RG_name>
+          WorkspaceName: <your_WS_name>
+          Template: |-
+            let CountryInfo = externaldata (FIFA:string,Dial:string,ISO31661Alpha3:string,MARC:string,independence:string,ISO31661numeric:string,GAUL:string,FIPS:string,WMO:string,ISO31661Alpha2:string,ITU:string,IOC:string,DS:string,UNTERMSpanishFormal:string,GlobalCode:string,IntermediateRegionCode:string,officialnamefr:string,UNTERMFrenchShort:string,ISO4217currencyname:string,DevelopedDevelopingCountries:string,UNTERMRussianFormal:string,UNTERMEnglishShort:string,ISO4217currencyalphabeticcode:string,SmallIslandDevelopingStates:string,UNTERMSpanishShort:string,ISO4217currencynumericcode:string,UNTERMChineseFormal:string,UNTERMFrenchFormal:string,UNTERMRussianShort:string,M49:string,SubregionCode:string,RegionCode:string,officialnamear:string,ISO4217currencyminorunit:string,UNTERMArabicFormal:string,UNTERMChineseShort:string,LandLockedDevelopingCountries:string,IntermediateRegionName:string,officialnamees:string,UNTERMEnglishFormal:string,officialnamecn:string,officialnameen:string,SO4217currencycountryname:string,LeastDevelopedCountries:string,RegionName:string,UNTERMArabicShort:string,SubregionName:string,officialnameru:string,GlobalName:string,Capital:string,Continent:string,TLD:string,Languages:string,GeonameID:string,CLDRdisplayname:string,EDGAR:string) [@"https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv"] with (ignoreFirstRecord=true, format="csv"); CountryInfo

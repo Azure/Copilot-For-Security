@@ -4,11 +4,9 @@
 - [Entra](#entra)
   - [User Details](#user-details)
   - [Audit Logs](#audit-logs)
+  - [Terms of Use Agreements](terms-of-use-agreements)
   - [Sign in Logs](#sign-in-logs)
-  - [Conditional Access Policies](#conditional-access-policies)
-  - [Access Reviews](#access-reviews)
-  - [Entitlement Management](#entitlement-management)
-  - [Privileged Access Management](#privileged-access-management)
+  
 ***
 &nbsp;
 ## User Details
@@ -54,7 +52,7 @@ reasons.
 ## Sign in Logs
 
  
- - show me sign-in logs for the last 24 hours
+ - Show me sign-in logs for the last 24 hours
  - Show me the sign-in logs for **_`<UPN>`_**? 
     - Show me the sign-in logs of users who signed in from **_`<Location>`_**? 
     - Show me the sign-in logs from **_`<Application>`_**? 
@@ -71,73 +69,24 @@ reasons.
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#entra)
 
-## Conditional Access Policies
+## Terms of Use Agreements
 
-  - Show me all the Conditional Access policies in my tenant
-- List conditional Access policies configured in my tenant
-- List conditional Access policies configured in the tenant
- - Show me all the Conditional Access policies in my tenant with state
-- List conditional Access policies configured in my tenant with state
-- Show me the details for this specific Conditional Access policy
- - list conditional access policies created using template
-- Get conditional access policy related to 'authentication' in my tenant
--  Show me newly created conditional access policies from audit logs.
-
-&nbsp;
-[![alt text](../../Images/backtotop.svg)](#entra)
-
-
-## Access Reviews
-
-- Get access review by **_`<Name>`_**? 
-- Show access review by review **_`<ID>`_**? 
-- Get all access review associated with
-- Get all access review by **_`<Displayname>`_**? 
-- show status of access review
-- access review createdBy
-- show settings of access review **_`<Name>`_**? 
-
+  - List user terms of use agreements
+  - What are the terms of use agreements for this user
+  - List all the terms of use agreements in my tenant for this user
+  - Get all terms of use agreements acceptance for user
+  - Show me all agreement acceptances this user
+  - Show me all terms of use agreements of user
+  - List all TOU agreements of user
+  - Get my terms of use agreements
+  - Show my terms of use agreements
 
 &nbsp;
 [![alt text](../../Images/backtotop.svg)](#entra)
-
-## Entitlement Management
-
-
-- Show details of an access package for **_`<Sales Team>`_**? 
-- Show objects which are incompatible for **_`<Sales Team>`_**? access package
-- Show groups which are incompatible for **_`<Sales Team>`_**access package
-- Show access package assignment requests in my tenant
-- Show me the assignment activity for the **_`<Sales`_** access package
-- Show me which connected organizations can access the **_`<Sales`_** access package
-- Who is the sponsor from the connected organization who can approve the assignment of **_`<Sales`_**access package
-- Who approved the **_`<Sales`_** access package assignment?
-- Why was the **_`<Sales`_** access package requested by user(s)
-
-&nbsp;
-[![alt text](../../Images/backtotop.svg)](#entra)
-
-## Privileged Access Management
-
-- Show me the details of eligible Entra role assignments which I can activate through PIM
- - Show me the details of a request made to activate an Entra role through PIM
-- Show me the details of a specific active Entra role assignment request made through PIM
-- Show me the details of requests made to create eligible Entra role assignments through PIM
-- Show me the details of a specific eligible Entra role assignment request made through PIM
-- Show me the details of a specific active Entra role assignment (unifiedRoleAssignmentScheduleId)
-- Show me the details of all eligible Entra role assignments
- - Show me the details of a specific eligible Entra role assignment (unifiedRoleEligibilityScheduleId)
- - Show me the details of requests made to create active role assignments through PIM
-- Show me the details of role management policies that apply to Entra roles
-- Show me the details of a specific role management policy that apply to Entra roles (unifiedRoleManagementPolicyId)
-- Show me the rules or settings defined for a specific role management policy that apply to Entra roles
-- Show me a rule or a setting defined for a specific role management policy that apply to Entra roles
- - Show me the details of all role management policy assignments including the policies and rules associated with the Entra roles
-- Show me the details of a role management policy assignment including the policy and rules associated with the Entra role
 
 &nbsp;
 
 **Disclaimer**: Please know these are sample prompts and are subject to Change
-[![alt text](../../Images/backtotop.svg)](#entra)
+
 
 ***

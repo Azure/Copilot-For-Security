@@ -8,14 +8,14 @@ Descriptor:
   Authorization:
     Type: APIKey
     Key: Authorization
-    Location: Header
+    Location: QueryParams
     AuthScheme: ''
     
 SkillGroups:
   - Format: API
     Settings:
       # Replace this with your own URL where the OpenAPI spec file is located.
-      OpenApiSpecUrl:  http://172.13.112.25:5000/file/API_Plugin_Reflection_OAI_GET_Params_Auth_Data.yaml
+      OpenApiSpecUrl:  http://172.13.112.25:5000/file/API_Plugin_Reflection_OAPI_GET_Params_Auth_Data.yaml
 
 
 

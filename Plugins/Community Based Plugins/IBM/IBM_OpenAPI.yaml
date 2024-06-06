@@ -1,0 +1,156 @@
+openapi: 3.0.0
+info:
+  title: IBM X-Force Exchange API
+  version: 2.0
+servers:
+  - url: https://api.xforce.ibmcloud.com/api
+paths:
+  /reports/:
+    get:
+      operationId: Get Threat Intelligence Reports IBM
+      summary: Get premium threat intelligence reports based on a given report type
+      description: |
+        This endpoint allows you to view the get Threat Intelligence reports by report type. 
+        Possible report types are threatanalysis, osintadvisory, malware, industry, and threatgroup.
+        #ExamplePrompts Tell me about recent IBM threat intelligence reports
+        #ExamplePrompts Show me IBM threat intelligence reports
+        #ExamplePrompts What are the recent X-Force threat intelligence reports?
+        #ExamplePrompts Show me X-Force threat intelligence reports
+      parameters:
+        - name: reportType
+          in: path
+          description: The type of Threat Intelligence report. Possible report types are threatanalysis, osintadvisory, malware, industry, and threatgroup. 
+          required: true
+          schema:
+            type: string
+          example: "threatanalysis"
+        - name: added_after
+          in: query
+          description: To get reports created after specified date, For example, 2022-10-12. If not specified, the query will return the newest IPs.
+          required: false
+          schema:
+            type: string
+          example: "2022-10-12"
+        - name: added_before
+          in: query
+          description: To get reports created before specified date, For example, 2022-10-12. If not specified, the query will return the newest IPs.
+          required: false
+          schema:
+            type: string
+          example: "2022-10-12"
+        - name: limit
+          in: query
+          description: The number of returned Malware Analysis Reports, default value is 200. The limit must not be larger than 200.
+          required: false
+          schema:
+            type: integer
+          example: 201
+        - name: skip
+          in: query
+          description: The startingpoint to retrieve entries, default value is 0
+          required: false
+          schema:
+            type: integer
+          example: 0
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json
+        "403":
+          description: Access denied
+        "404":
+          description: Not found
+
+  /threat_groups:
+    get:
+      operationId: Get Threat Group Profiles IBM
+      summary: Get a List of Threat Group Profiles.
+      description: |
+        Return a list of Threat Group Profiles based on an integer value of how many profiles you wish to see.
+        #ExamplePrompts Show me the most recent IBM Threat Group Profiles
+        #ExamplePrompts Show me the most recent X-Force threat group profiles
+        #ExamplePrompts What are the most recent X-Force threat group profiles?
+        #ExamplePrompts What are the IBM threat group profiles?
+        #ExamplePrompts Show me the top 20 IBM threat group profiles.
+      parameters:
+        - name: limit
+          in: query
+          description: The number of returned Threat Group Profiles, default value is 200. The limit must not be larger than 200.
+          required: true
+          schema:
+            type: integer
+          example: 20
+        - name: skip
+          in: query
+          description: The startingpoint to retrieve entries, default value is 0
+          required: false
+          schema:
+            type: integer
+          example: 0
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json
+        "403":
+          description: Access denied
+        "404":
+          description: Not found
+
+  /resolve/{input}:
+    get:
+      operationId: Get Dns Records IBM
+      summary: Verify a domain name, IP address, or URL against IBM X-Force DNS records
+      description: |
+        This endpoint allows you to view the DNS information for a domain name, IP address, or URL.
+        #ExamplePrompts Show me the IBM DNS records for www.bing.com
+        #ExamplePrompts What are the IBM X-Force DNS records for https://www.bing.com/search?q=microsoft&form=QBLH&sp=-1&lq=0&pq=microsof&sc=11-8&qs=n&sk=&cvid=166E76706804404BAA7390129EE88004&ghsh=0&ghacc=0&ghpl=?
+        #ExamplePrompts What is the IBM DNS record for www.https://www.microsoft.com/?
+        #ExamplePrompts Are there IBM DNS records for www.https://www.google.com?
+      parameters:
+        - name: input
+          in: path
+          description: The domain name, IP Address, or URL to check for DNS information.
+          required: true
+          schema:
+            type: string
+          example: "www.bing.com"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json
+        "403":
+          description: Access denied
+        "404":
+          description: Not found
+
+
+  /whois/{host}:
+    get:
+      operationId: Get WHOIS IBM
+      summary: Returns the WHOIS information for an IP, URL, or domain.
+      description: |
+        This endpoint allows you to view WHOIS for a domain name, IP address, or URL.
+        #ExamplePrompts Show me the IBM whois records for www.bing.com
+        #ExamplePrompts What is the IBM WHOIS for https://www.bing.com/search?q=microsoft&form=QBLH&sp=-1&lq=0&pq=microsof&sc=11-8&qs=n&sk=&cvid=166E76706804404BAA7390129EE88004&ghsh=0&ghacc=0&ghpl=?
+        #ExamplePrompts IBM WHOIS www.https://www.microsoft.com/?
+        #ExamplePrompts Is there a WHOIS for www.https://www.google.com?
+      parameters:
+        - name: host
+          in: path
+          description: The domain name,IP Address, or URL to check for WHOIS information.
+          required: true
+          schema:
+            type: string
+          example: "www.bing.com"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json
+        "403":
+          description: Access denied
+        "404":
+          description: Not found

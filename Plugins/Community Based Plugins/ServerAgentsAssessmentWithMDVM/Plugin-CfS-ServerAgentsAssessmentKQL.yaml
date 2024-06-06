@@ -1,0 +1,58 @@
+Descriptor:
+  Name: ServerAgentsAssessment
+  DisplayName: Server Agents Assessment KQL Plugin
+  Description: Skills to read from Microsoft Defender Vulnerability Management (in Microsoft Defender XDR) the status and versions of the MDE, AMA and Azure Arc agents on the existing servers 
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: ServerAgentsAssessment
+        DisplayName: Get Server Agents Status and Versions
+        Description: Fetches the status and the versions of the MDE, AMA and Azure Arc agents on all the servers known by Defender
+        Settings:
+          Target: Defender
+          Template: |-
+            let DeviceInfo_latest = DeviceInfo
+            | where DeviceType == "Server"
+            | where OnboardingStatus == "Onboarded"
+            | where isnotempty(OSPlatform) 
+            | extend MdeClientVersion = ClientVersion
+            | extend MdeClientType = case(ClientVersion startswith "10.3720", "MMA-Windows", ClientVersion startswith "10.8", "Unified-Windows","Other-OS")
+            | extend MdeOnboardingStatus = OnboardingStatus
+            | extend MdeSensorHealthState = SensorHealthState
+            | extend MdeExposureLevel = ExposureLevel
+            | summarize arg_max(Timestamp,*) by DeviceName;
+            let sw_arc = DeviceTvmSoftwareInventory
+            | extend ArcVersion = SoftwareVersion
+            | where SoftwareName =~ "azcmagent" or SoftwareName =~ "azure_connected_machine_agent";
+            let sw_mma = DeviceTvmSoftwareInventory
+            | extend MmaVersion = SoftwareVersion
+            | where SoftwareName =~ "monitoring_agent";
+            let sw_ama = DeviceTvmSoftwareInventory
+            | extend AmaVersion = SoftwareVersion
+            | where SoftwareName =~ "azuremonitoragent";
+            let sw_mde = DeviceTvmSoftwareInventory
+            | extend MdeBuildNumber = SoftwareVersion
+            | where SoftwareName =~ "microsoft_defender_for_endpoint" or SoftwareName =~ "defender_for_linux";
+            let sw_legacymde = DeviceTvmSoftwareInventory
+            | extend LegacyMdeBuildNumber = SoftwareVersion
+            | where SoftwareName =~ "defender_for_endpoint";
+            let sw_oms = DeviceTvmSoftwareInventory
+            | extend OmsVersion = SoftwareVersion
+            | where SoftwareName =~ "omsagent_for_linux";
+            DeviceInfo_latest
+            | join kind=leftouter sw_arc on DeviceName
+            | join kind=leftouter sw_mma on DeviceName
+            | join kind=leftouter sw_ama on DeviceName
+            | join kind=leftouter sw_legacymde on DeviceName
+            | join kind=leftouter sw_mde on DeviceName
+            | join kind=leftouter sw_oms on DeviceName
+            | project 
+            DeviceName, OSDistribution, OSVersionInfo, MdeClientType, MdeClientVersion,  
+            MdeBuildNumber=iif((MdeClientType == "Unified-Windows")and((OSDistribution endswith "2016")or(OSDistribution endswith "2012R2")),iif(LegacyMdeBuildNumber != "",LegacyMdeBuildNumber,"-"),iif(MdeBuildNumber != "",MdeBuildNumber,"-")), 
+            LegacyMdeBuildNumber=iif((MdeClientType == "MMA-Windows"),iif(LegacyMdeBuildNumber != "",LegacyMdeBuildNumber,"-"),"-"), 
+            ArcVersion=iif(ArcVersion != "",ArcVersion,"-"), 
+            AmaVersion=iif(OSPlatform =~ "Linux",iif(AmaVersion != "",AmaVersion,"-"),"?"),
+            MmaVersion=iif(OSPlatform =~ "Linux",iif(OmsVersion != "",OmsVersion,"-"),iif(MmaVersion != "",MmaVersion,"-")), 
+            PublicIP, 
+            DeviceType, 
+            MdeOnboardingStatus, MdeSensorHealthState, MdeExposureLevel
