@@ -13,4 +13,4 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://gist.githubusercontent.com/Usama015/f7604d84746419e2b2044938ce128f83/raw/2cc0afd84ca24b239bf94f06aa035e81feb89cb8/whoisfreaks.txt
+      OpenApiSpecUrl: https://gist.githubusercontent.com/Usama015/f7604d84746419e2b2044938ce128f83/raw/2cc0afd84ca24b239bf94f06aa035e81feb89cb8/whoisfreaks.json
