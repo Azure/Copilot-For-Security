@@ -872,7 +872,7 @@ paths:
             type: string
             enum: [screenshot,os_changes,vm_artifacts]
           example: screenshot
-          description: "Available values are screenshot, os_changes, vm_artifacts"
+          description: "Type of artifact to download."
       responses:
         200:
           description: "OK"
