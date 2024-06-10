@@ -1,0 +1,16 @@
+Descriptor:
+  Name: Whoisfreaks
+  DisplayName: Whoisfreaks - Domain and IP Intelligence
+  Description: Domain Intelligence includes both current and historical WHOIS and DNS data, as well as real-time SSL data of a domain. IP Intelligence encompasses IP-WHOIS, ASN-WHOIS, and information about domains hosted on specific IPs.
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: apiKey
+    Location: QueryParams
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://gist.githubusercontent.com/Usama015/f7604d84746419e2b2044938ce128f83/raw/2cc0afd84ca24b239bf94f06aa035e81feb89cb8/whoisfreaks.txt
