@@ -1,7 +1,7 @@
 Descriptor:
   Name: Trellix Detection as a Service
-  DisplayName: Get Trellix DoD Sandbox Reports
-  Description: Get detailed sandbox analysis reports from Trellix DoD
+  DisplayName: Trellix Detection as a Service
+  Description: Get detailed sandbox analysis reports from Trellix Detection as a Service
   SupportedAuthTypes:
     - ApiKey
   Authorization:
