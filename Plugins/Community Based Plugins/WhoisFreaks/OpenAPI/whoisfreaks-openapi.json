@@ -19,15 +19,6 @@
                     "operationId": "get Live, Historical or reverse whois",
                     "parameters": [
                         {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
                             "name": "whois",
                             "in": "query",
                             "required": true,
@@ -227,17 +218,6 @@
                     "summary": "Retrieve bulk WHOIS information",
                     "description": "Retrieves WHOIS information for multiple domain names.",
                     "operationId": "getBulkWhois",
-                    "parameters": [
-                        {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        }
-                    ],
                     "requestBody": {
                         "required": true,
                         "content": {
@@ -395,15 +375,6 @@
                                     "historical",
                                     "reverse"
                                 ]
-                            }
-                        },
-                        {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
                             }
                         },
                         {
@@ -572,15 +543,6 @@
                     "operationId": "getBulkLiveDNSRecords",
                     "parameters": [
                         {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
                             "name": "type",
                             "in": "query",
                             "required": true,
@@ -736,15 +698,6 @@
                     "operationId": "getLiveSSLCertificate",
                     "parameters": [
                         {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
                             "name": "domainName",
                             "in": "query",
                             "required": true,
@@ -891,15 +844,6 @@
                     "operationId": "getIpWhois",
                     "parameters": [
                         {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
                             "name": "ip",
                             "in": "query",
                             "required": true,
@@ -1030,15 +974,6 @@
                     "operationId": "getAsnWhois",
                     "parameters": [
                         {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
                             "name": "asn",
                             "in": "query",
                             "required": true,
@@ -1168,15 +1103,6 @@
                     "description": "Checks the availability of the specified domain and provides suggestions if requested.",
                     "operationId": "checkSingleDomainAvailability",
                     "parameters": [
-                        {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
                         {
                             "name": "domain",
                             "in": "query",
@@ -1323,15 +1249,6 @@
                     "description": "Checks the availability of the specified domains and provides suggestions if requested.",
                     "operationId": "checkBulkDomainAvailability",
                     "parameters": [
-                        {
-                            "name": "apiKey",
-                            "in": "query",
-                            "required": true,
-                            "description": "API key for authentication",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
                         {
                             "name": "domain",
                             "in": "query",
