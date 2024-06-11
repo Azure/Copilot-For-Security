@@ -93,7 +93,7 @@
                                             }
                                         },
                                         "method":  "put",
-                                        "path":  "/Incidents/subscriptions/@{encodeURIComponent('ab48f397-fc82-4634-aa52-62dd91b3ebaa')}/resourceGroups/@{encodeURIComponent('Woodgrove-RG')}/workspaces/@{encodeURIComponent('Woodgrove-LogAnalyiticsWorkspace')}"
+                                        "path":  ""
                                     }
                                 },
                                 "Send_an_email_(V2)_2":  {
@@ -586,7 +586,7 @@
             "tags":  {
                 "Created By":  "Yaniv Shasha",
                 "CreatedDate":  "9/25/2023 7:38:44 PM",
-                "CreatorUPN":  "yanivsh@woodgrove.ms"
+                "CreatorUPN":  ""
             },
             "apiVersion":  "2017-07-01",
             "dependsOn":  [
