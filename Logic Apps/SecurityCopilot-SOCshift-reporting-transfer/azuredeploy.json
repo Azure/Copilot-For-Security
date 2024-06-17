@@ -66,7 +66,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "count the number of incidents you menationed above, , this will be used in an automation workflow that only accepts a single string. Provide the incident count in a response with no text before or after",
+                                    "PromptContent":  "Count the number of incidents you mentioned above, this will be used in an automation workflow that only accepts a single string. Provide the incident count in a response with no text before or after",
                                     "SessionId":  "@body('Run_Copilot_for_Security_prompt')?['sessionId']"
                                 },
                                 "host":  {
@@ -195,7 +195,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "im a soc analyst leader and our SOC is in the phase for changing a shift, can you summarize all the defender incident that opened in the last 24 hr and they are in status in progress, from the above response only take the incident number, this will be used in an automation workflow that only accepts a single string. Provide the incident number in a response with no text before or after"
+                                    "PromptContent":  "I'm a SOC analyst leader and our SOC is in the phase for changing a shift, can you summarize all the defender incident that opened in the last 24 hr and if they are in status in progress, from the above response only take the incident number, this will be used in an automation workflow that only accepts a single string. Provide the incident number in a response with no text before or after"
                                 },
                                 "host":  {
                                     "connection":  {

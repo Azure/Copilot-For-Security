@@ -94,7 +94,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "/SummarizeText Explain why you selected this classifiction. Format as bullet points?",
+                                    "PromptContent":  "/SummarizeText Explain why you selected this classification. Format as bullet points.",
                                     "SessionId":  "@body('classify_incident')?['sessionId']"
                                 },
                                 "host":  {
@@ -199,7 +199,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "/GetReputationsByIpAddresses What are the reputation score for the IPv4 addresses on that incident?",
+                                    "PromptContent":  "/GetReputationsByIpAddresses What are the reputation scores for the IPv4 addresses on that incident?",
                                     "SessionId":  "@body('GetIncidentEntities')?['sessionId']"
                                 },
                                 "host":  {
@@ -1800,7 +1800,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "Derive a set of tags (5 tags) to describe this incident. the Tags will be used to group other incidents, include a tag for \"Security Copilot Triaged\", only respond with the category, write it as single line with comma between Tags to tags, and dont add bullet points.",
+                                    "PromptContent":  "Derive a set of tags (5 tags) to describe this incident. the Tags will be used to group other incidents, include a tag for \"Security Copilot Triaged\", only respond with the category, write it as single line with comma between Tags to tags, and don't add bullet points.",
                                     "SessionId":  "@body('Explain_classify')?['sessionId']"
                                 },
                                 "host":  {
