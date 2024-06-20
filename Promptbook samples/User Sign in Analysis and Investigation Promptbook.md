@@ -43,7 +43,7 @@ Does the user's sign-in satisfy the Multi-Factor Authentication (MFA) requiremen
 ```
 /What specific conditional access policies were applied during these sign-in events
 ```
-10. Checking the last passwprd change for the user
+10. Checking the last password change for the user
 ```
 When did the user last change their password?
 ```
