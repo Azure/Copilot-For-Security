@@ -3,7 +3,7 @@
     "contentVersion":  "1.0.0.0",
     "parameters":  {
         "PlaybookName":  {
-            "defaultValue":  "Copilot-Sentinelinvestigation-DynamicSev-Optimize",
+            "defaultValue":  "Copilot-Sentinelinvestigation-DynamicSev",
             "type":  "string"
         }
     },
