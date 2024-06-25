@@ -1,1342 +1,1341 @@
-    {
-        "openapi": "3.0.0",
-        "info": {
-            "title": "Whoisfreaks REST APIs Documentation",
-            "description": "To use the Whoisfreaks APIs you need to have an active API key, which you can get for free by creating an account(No credit card required).  \n  \n[CREATE A Whoisfreaks ACCOUNT](https://whoisfreaks.com/signup.html)\n\nThis documentation covers all APIs provided by Whoisfreaks.",
-            "version": "1.0.0"
-        },
-        "servers": [
-            {
-                "url": "https://api.whoisfreaks.com",
-                "description": "Base server"
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Whoisfreaks REST APIs Documentation",
+        "description": "To use the Whoisfreaks APIs you need to have an active API key, which you can get for free by creating an account(No credit card required).  \n  \n[CREATE A Whoisfreaks ACCOUNT](https://whoisfreaks.com/signup.html)\n\nThis documentation covers all APIs provided by Whoisfreaks.",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://api.whoisfreaks.com",
+            "description": "Base server"
+        }
+    ],
+    "paths": {
+        "/v1.0/whois": {
+            "get": {
+                "summary": "Retrieve WHOIS information",
+                "description": "Retrieves Live, Historical or Reverse WHOIS information based on the specified parameters.",
+                "operationId": "get Live, Historical or reverse whois",
+                "parameters": [
+                    {
+                        "name": "whois",
+                        "in": "query",
+                        "required": true,
+                        "description": "Type of WHOIS data to retrieve (e.g., live, historical, reverse)",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "live",
+                                "historical",
+                                "reverse"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "domainName",
+                        "in": "query",
+                        "required": false,
+                        "description": "Domain name to retrieve Live or Historical WHOIS information for",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "keyword",
+                        "in": "query",
+                        "required": false,
+                        "description": "Keyword for reverse WHOIS lookup",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": false,
+                        "description": "Email address for reverse WHOIS lookup",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "owner",
+                        "in": "query",
+                        "required": false,
+                        "description": "Owner name for reverse WHOIS lookup",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "company",
+                        "in": "query",
+                        "required": false,
+                        "description": "Company name for reverse WHOIS lookup",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "mode",
+                        "in": "query",
+                        "required": false,
+                        "description": "Mode for reverse WHOIS lookup (e.g., mini)",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "mini"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "Page number for paginated results",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
             }
-        ],
-        "paths": {
-            "/v1.0/whois": {
-                "get": {
-                    "summary": "Retrieve WHOIS information",
-                    "description": "Retrieves Live, Historical or Reverse WHOIS information based on the specified parameters.",
-                    "operationId": "get Live, Historical or reverse whois",
-                    "parameters": [
-                        {
-                            "name": "whois",
-                            "in": "query",
-                            "required": true,
-                            "description": "Type of WHOIS data to retrieve (e.g., live, historical, reverse)",
+        },
+        "/v1.0/bulkwhois": {
+            "post": {
+                "summary": "Retrieve bulk WHOIS information",
+                "description": "Retrieves WHOIS information for multiple domain names.",
+                "operationId": "getBulkWhois",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
                             "schema": {
-                                "type": "string",
-                                "enum": [
-                                    "live",
-                                    "historical",
-                                    "reverse"
-                                ]
-                            }
-                        },
-                        {
-                            "name": "domainName",
-                            "in": "query",
-                            "required": false,
-                            "description": "Domain name to retrieve Live or Historical WHOIS information for",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "keyword",
-                            "in": "query",
-                            "required": false,
-                            "description": "Keyword for reverse WHOIS lookup",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "email",
-                            "in": "query",
-                            "required": false,
-                            "description": "Email address for reverse WHOIS lookup",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "owner",
-                            "in": "query",
-                            "required": false,
-                            "description": "Owner name for reverse WHOIS lookup",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "company",
-                            "in": "query",
-                            "required": false,
-                            "description": "Company name for reverse WHOIS lookup",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "mode",
-                            "in": "query",
-                            "required": false,
-                            "description": "Mode for reverse WHOIS lookup (e.g., mini)",
-                            "schema": {
-                                "type": "string",
-                                "enum": [
-                                    "mini"
-                                ]
-                            }
-                        },
-                        {
-                            "name": "page",
-                            "in": "query",
-                            "required": false,
-                            "description": "Page number for paginated results",
-                            "schema": {
-                                "type": "integer"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "/v1.0/bulkwhois": {
-                "post": {
-                    "summary": "Retrieve bulk WHOIS information",
-                    "description": "Retrieves WHOIS information for multiple domain names.",
-                    "operationId": "getBulkWhois",
-                    "requestBody": {
-                        "required": true,
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "domainNames": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
+                                "type": "object",
+                                "properties": {
+                                    "domainNames": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
                                         }
-                                    },
-                                    "example": {
-                                        "domainNames": [
-                                            "whoisfreaks.com",
-                                            "ipgeolocation.io",
-                                            "currencyfreaks.com"
-                                        ]
                                     }
-                                }
-                            }
-                        }
-                    },
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "/v2.0/dns/{data_type}": {
-                "get": {
-                    "summary": "Retrieve Live, historical and reverse DNS records",
-                    "description": "Retrieves DNS records for the specified domain.",
-                    "operationId": "getDNSRecords",
-                    "parameters": [
-                        {
-                            "name": "data_type",
-                            "in": "path",
-                            "required": true,
-                            "description": "Type of DNS operation (live, historical, reverse)",
-                            "schema": {
-                                "type": "string",
-                                "enum": [
-                                    "live",
-                                    "historical",
-                                    "reverse"
-                                ]
-                            }
-                        },
-                        {
-                            "name": "domainName",
-                            "in": "query",
-                            "description": "Domain name to retrieve DNS records for",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "value",
-                            "in": "query",
-                            "description": "Value to perform reverse DNS lookup on (e.g., IP address, domain name, etc.)",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "type",
-                            "in": "query",
-                            "required": true,
-                            "description": "Type of DNS records to retrieve. Possible values are [A, AAAA, NS, MX, CNAME, TXT, SPF, SOA, all]",
-                            "schema": {
-                                "type": "string",
-                                "enum": [
-                                    "A",
-                                    "AAAA",
-                                    "MX",
-                                    "NS",
-                                    "CNAME",
-                                    "SOA",
-                                    "SPF",
-                                    "TXT",
-                                    "ALL"
-                                ]
-                            }
-                        },
-                        {
-                            "name": "page",
-                            "in": "query",
-                            "description": "Page number for paginated results",
-                            "schema": {
-                                "type": "integer"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "/v2.0/dns/bulk/live": {
-                "post": {
-                    "summary": "Retrieve bulk live DNS records",
-                    "description": "Retrieves bulk live DNS records for the specified domains.",
-                    "operationId": "getBulkLiveDNSRecords",
-                    "parameters": [
-                        {
-                            "name": "type",
-                            "in": "query",
-                            "required": true,
-                            "description": "Type of DNS records to retrieve. Possible values are [A, AAAA, NS, MX, CNAME, TXT, SPF, SOA, all]",
-                            "schema": {
-                                "type": "string"
-                            }
-                        }
-                    ],
-                    "requestBody": {
-                        "required": true,
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "domainNames": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
-                                        }
-                                    },
-                                    "example": {
-                                        "domainNames": [
-                                            "whoisfreaks.com",
-                                            "ipgeolocation.io",
-                                            "currencyfreaks.com"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "/v1.0/ssl/live": {
-                "get": {
-                    "summary": "Retrieve live SSL certificate information",
-                    "description": "Retrieves live SSL certificate information for the specified domain.",
-                    "operationId": "getLiveSSLCertificate",
-                    "parameters": [
-                        {
-                            "name": "domainName",
-                            "in": "query",
-                            "required": true,
-                            "description": "Domain name to retrieve SSL certificate information for",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "chain",
-                            "in": "query",
-                            "description": "Whether to include the certificate chain",
-                            "schema": {
-                                "type": "boolean"
-                            }
-                        },
-                        {
-                            "name": "sslRaw",
-                            "in": "query",
-                            "description": "Whether to include the raw SSL data",
-                            "schema": {
-                                "type": "boolean"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "/v1.0/ip-whois": {
-                "get": {
-                    "summary": "Retrieve IP WHOIS information",
-                    "description": "Retrieves WHOIS information for the specified IP address.",
-                    "operationId": "getIpWhois",
-                    "parameters": [
-                        {
-                            "name": "ip",
-                            "in": "query",
-                            "required": true,
-                            "description": "IP address to retrieve WHOIS information for",
-                            "schema": {
-                                "type": "string"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "/v1.0/asn-whois": {
-                "get": {
-                    "summary": "Retrieve ASN WHOIS information",
-                    "description": "Retrieves WHOIS information for the specified ASN.",
-                    "operationId": "getAsnWhois",
-                    "parameters": [
-                        {
-                            "name": "asn",
-                            "in": "query",
-                            "required": true,
-                            "description": "ASN to retrieve WHOIS information for",
-                            "schema": {
-                                "type": "string"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "/v1.0/domain/availability": {
-                "get": {
-                    "summary": "Check domain availability",
-                    "description": "Checks the availability of the specified domain and provides suggestions if requested.",
-                    "operationId": "checkSingleDomainAvailability",
-                    "parameters": [
-                        {
-                            "name": "domain",
-                            "in": "query",
-                            "required": true,
-                            "description": "Domain to check availability for",
-                            "schema": {
-                                "type": "string"
-                            }
-                        },
-                        {
-                            "name": "sug",
-                            "in": "query",
-                            "required": false,
-                            "description": "Whether to provide domain suggestions",
-                            "schema": {
-                                "type": "boolean"
-                            }
-                        },
-                        {
-                            "name": "count",
-                            "in": "query",
-                            "required": false,
-                            "description": "Number of suggestions to provide",
-                            "schema": {
-                                "type": "integer"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "403": {
-                            "description": "Forbidden",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "408": {
-                            "description": "Request Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "413": {
-                            "description": "Request Entity Too Large",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "412": {
-                            "description": "Precondition Failed",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "429": {
-                            "description": "Too Many Requests",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "503": {
-                            "description": "Service Unavailable",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
-                                }
-                            }
-                        },
-                        "504": {
-                            "description": "Gateway Timeout",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object"
-                                    }
+                                },
+                                "example": {
+                                    "domainNames": [
+                                        "whoisfreaks.com",
+                                        "ipgeolocation.io",
+                                        "currencyfreaks.com"
+                                    ]
                                 }
                             }
                         }
                     }
                 },
-                "post": {
-                    "summary": "Check domain availability",
-                    "description": "Checks the availability of the specified domains and provides suggestions if requested.",
-                    "operationId": "checkBulkDomainAvailability",
-                    "parameters": [
-                        {
-                            "name": "domain",
-                            "in": "query",
-                            "required": false,
-                            "description": "Domain to check availability for (when using TLD request body)",
-                            "schema": {
-                                "type": "string"
-                            }
-                        }
-                    ],
-                    "requestBody": {
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "oneOf": [
-                                        {
-                                            "type": "object",
-                                            "properties": {
-                                                "domainNames": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    }
-                                                }
-                                            },
-                                            "example": {
-                                                "domainNames": [
-                                                    "google.com",
-                                                    "google.uk",
-                                                    "google.us"
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "object",
-                                            "properties": {
-                                                "tld": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "string"
-                                                    }
-                                                }
-                                            },
-                                            "example": {
-                                                "tld": [
-                                                    "com",
-                                                    "uk",
-                                                    "us"
-                                                ]
-                                            }
-                                        }
-                                    ]
+                                    "type": "object"
                                 }
                             }
                         }
                     },
-                    "responses": {
-                        "200": {
-                            "description": "Successful response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v2.0/dns/{data_type}": {
+            "get": {
+                "summary": "Retrieve Live, historical and reverse DNS records",
+                "description": "Retrieves live and historical records or dns data for a specified domain OR reverse DNS records for the specified data like IPV4 in case of A record and similarly for other supported records too.",
+                "operationId": "getDNSRecords",
+                "parameters": [
+                    {
+                        "name": "data_type",
+                        "in": "path",
+                        "required": true,
+                        "description": "Type of DNS operation (live, historical, reverse)",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "live",
+                                "historical",
+                                "reverse"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "domainName",
+                        "in": "query",
+                        "description": "Domain name to retrieve DNS records for",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "in": "query",
+                        "description": "Value to perform reverse DNS lookup on (e.g., IP address, domain name, etc.)",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": true,
+                        "description": "Type of DNS records to retrieve. Possible values are [A, AAAA, NS, MX, CNAME, TXT, SPF, SOA, all]",
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "A",
+                                "AAAA",
+                                "MX",
+                                "NS",
+                                "CNAME",
+                                "SOA",
+                                "SPF",
+                                "TXT",
+                                "ALL"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number for paginated results",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v2.0/dns/bulk/live": {
+            "post": {
+                "summary": "Retrieve bulk live DNS records",
+                "description": "Retrieves bulk live DNS records for the specified domains.",
+                "operationId": "getBulkLiveDNSRecords",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": true,
+                        "description": "Type of DNS records to retrieve. Possible values are [A, AAAA, NS, MX, CNAME, TXT, SPF, SOA, all]",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "domainNames": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "example": {
+                                    "domainNames": [
+                                        "whoisfreaks.com",
+                                        "ipgeolocation.io",
+                                        "currencyfreaks.com"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1.0/ssl/live": {
+            "get": {
+                "summary": "Retrieve live SSL certificate information",
+                "description": "Retrieves live SSL certificate information for the specified domain.",
+                "operationId": "getLiveSSLCertificate",
+                "parameters": [
+                    {
+                        "name": "domainName",
+                        "in": "query",
+                        "required": true,
+                        "description": "Domain name to retrieve SSL certificate information for",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "chain",
+                        "in": "query",
+                        "description": "Whether to include the certificate chain",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "sslRaw",
+                        "in": "query",
+                        "description": "Whether to include the raw SSL data",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1.0/ip-whois": {
+            "get": {
+                "summary": "Retrieve IP WHOIS information",
+                "description": "Retrieves WHOIS information for the specified IP address.",
+                "operationId": "getIpWhois",
+                "parameters": [
+                    {
+                        "name": "ip",
+                        "in": "query",
+                        "required": true,
+                        "description": "IP address to retrieve WHOIS information for",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1.0/asn-whois": {
+            "get": {
+                "summary": "Retrieve ASN WHOIS information",
+                "description": "Retrieves WHOIS information for the specified ASN.",
+                "operationId": "getAsnWhois",
+                "parameters": [
+                    {
+                        "name": "asn",
+                        "in": "query",
+                        "required": true,
+                        "description": "ASN to retrieve WHOIS information for",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/v1.0/domain/availability": {
+            "get": {
+                "summary": "Check domain availability",
+                "description": "Checks the availability of the specified domain and provides suggestions if requested.",
+                "operationId": "checkSingleDomainAvailability",
+                "parameters": [
+                    {
+                        "name": "domain",
+                        "in": "query",
+                        "required": true,
+                        "description": "Domain to check availability for",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sug",
+                        "in": "query",
+                        "required": false,
+                        "description": "Whether to provide domain suggestions",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "required": false,
+                        "description": "Number of suggestions to provide",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "408": {
+                        "description": "Request Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "413": {
+                        "description": "Request Entity Too Large",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "412": {
+                        "description": "Precondition Failed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "504": {
+                        "description": "Gateway Timeout",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Check domain availability",
+                "description": "Checks the availability of the specified domains and provides suggestions if requested.",
+                "operationId": "checkBulkDomainAvailability",
+                "parameters": [
+                    {
+                        "name": "domain",
+                        "in": "query",
+                        "required": false,
+                        "description": "Domain to check availability for (when using TLD request body)",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "oneOf": [
+                                    {
                                         "type": "object",
                                         "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "example": "success"
-                                            },
-                                            "data": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "available": {
-                                                        "type": "boolean",
-                                                        "example": true
-                                                    },
-                                                    "domains": {
-                                                        "type": "array",
-                                                        "items": {
-                                                            "type": "object",
-                                                            "properties": {
-                                                                "domain": {
-                                                                    "type": "string",
-                                                                    "example": "google.com"
-                                                                },
-                                                                "available": {
-                                                                    "type": "boolean",
-                                                                    "example": true
-                                                                }
+                                            "domainNames": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "example": {
+                                            "domainNames": [
+                                                "google.com",
+                                                "google.uk",
+                                                "google.us"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "tld": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "example": {
+                                            "tld": [
+                                                "com",
+                                                "uk",
+                                                "us"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {
+                                                "available": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                },
+                                                "domains": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "domain": {
+                                                                "type": "string",
+                                                                "example": "google.com"
+                                                            },
+                                                            "available": {
+                                                                "type": "boolean",
+                                                                "example": true
                                                             }
                                                         }
                                                     }
@@ -1346,62 +1345,62 @@
                                     }
                                 }
                             }
-                        },
-                        "400": {
-                            "description": "Bad request",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object",
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "example": "error"
-                                            },
-                                            "message": {
-                                                "type": "string",
-                                                "example": "Invalid request parameters."
-                                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "error"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Invalid request parameters."
                                         }
                                     }
                                 }
                             }
-                        },
-                        "401": {
-                            "description": "Unauthorized",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object",
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "example": "error"
-                                            },
-                                            "message": {
-                                                "type": "string",
-                                                "example": "Provided API key is invalid or inactive."
-                                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "error"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Provided API key is invalid or inactive."
                                         }
                                     }
                                 }
                             }
-                        },
-                        "500": {
-                            "description": "Internal Server Error",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "object",
-                                        "properties": {
-                                            "status": {
-                                                "type": "string",
-                                                "example": "error"
-                                            },
-                                            "message": {
-                                                "type": "string",
-                                                "example": "Internal Server Error occurred."
-                                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "example": "error"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Internal Server Error occurred."
                                         }
                                     }
                                 }
@@ -1412,3 +1411,4 @@
             }
         }
     }
+}
