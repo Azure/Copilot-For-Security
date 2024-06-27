@@ -1,7 +1,7 @@
 # Copilot-Sentinelinvestigation-DynamicSev
 Author: Yaniv Shasha
 
-### As of this moment, please deploy this logic app in West-US-2 region
+
 
 
 
