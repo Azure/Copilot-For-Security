@@ -1,0 +1,28 @@
+Descriptor:
+  Name: DeviceTimeline
+  DisplayName: Device Timeline
+  Description: Query to identify devices events
+
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: DeviceEvents
+        DisplayName: Get the devices events for a device within a given timeframe
+        Description: Get the devices events for a device within a given timeframe
+        Inputs:
+          - Name: Device
+            Description: The device for the timeline of events
+            Required: true
+          - Name: startDate
+            Description: Start date for the events
+            Required: true
+          - Name: endDate
+            Description: End date for the events
+            Required: true
+        Settings:
+          Target: Defender
+          Template: |-
+            DeviceEvents
+            | where DeviceName == '{{Device}}'
+            | where Timestamp >= datetime('{{startDate}}')
+            | where Timestamp <= datetime('{{endDate}}')
