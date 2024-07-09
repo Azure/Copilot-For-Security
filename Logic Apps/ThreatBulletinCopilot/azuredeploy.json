@@ -23,7 +23,7 @@
     },
     "parameters":  {
         "PlaybookName":  {
-            "defaultValue":  "ThreatBulletinCopilot",
+            "defaultValue":  "ThreatBulletinCopilotTest",
             "type":  "string"
         },
         "email":  {
@@ -94,11 +94,12 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "Share the latest Threat articles published in the last 24 hours in a table format"
+                                    "PromptContent":  "Share the latest Threat articles published in the last 24 hours in a table format",
+                                    "SkillName":  "FindThreatIntelligence"
                                 },
                                 "host":  {
                                     "connection":  {
-                                        "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                        "name":  "@parameters('$connections')['securitycopilot_1']['connectionId']"
                                     }
                                 },
                                 "method":  "post",
@@ -154,7 +155,7 @@
                                 },
                                 "host":  {
                                     "connection":  {
-                                        "name":  "@parameters('$connections')['office365']['connectionId']"
+                                        "name":  "@parameters('$connections')['office365_1']['connectionId']"
                                     }
                                 },
                                 "method":  "post",
@@ -170,12 +171,12 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "Summarize the following articles and consolidate them in a Threat Bulletin format Named Threat bulletin with the current date . In the bulletin ensure to capture all details including the title summary , link , Created date , also highlight the action items the Team should prioritize in relation to these article",
+                                    "PromptContent":  "/AskGPT Summarize the following articles and consolidate them in a Threat Bulletin format Named Threat bulletin with the current date . In the bulletin ensure to capture all details including the title summary , link , Created date , also highlight the action items the Team should prioritize in relation to these article",
                                     "SessionId":  "@body('Get_the_latest_threat_articles_over_the_last_24_hours')?['sessionId']"
                                 },
                                 "host":  {
                                     "connection":  {
-                                        "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                        "name":  "@parameters('$connections')['securitycopilot_1']['connectionId']"
                                     }
                                 },
                                 "method":  "post",
@@ -189,12 +190,12 @@
                 "parameters":  {
                     "$connections":  {
                         "value":  {
-                            "office365":  {
+                            "office365_1":  {
                                 "connectionId":  "[resourceId('Microsoft.Web/connections', variables('Office365ConnectionName'))]",
                                 "connectionName":  "[variables('Office365ConnectionName')]",
                                 "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Office365')]"
                             },
-                            "securitycopilot":  {
+                            "securitycopilot_1":  {
                                 "connectionId":  "[resourceId('Microsoft.Web/connections', variables('SecuritycopilotConnectionName'))]",
                                 "connectionName":  "[variables('SecuritycopilotConnectionName')]",
                                 "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Securitycopilot')]"
@@ -210,7 +211,7 @@
                 "Created By":  "Sean Wasonga",
                 "CreatedDate":  "",
                 "CreatorUPN":  "Sean Wasonga",
-                "hidden-SentinelTemplateName":  "ThreatBulletinCopilot",
+                "hidden-SentinelTemplateName":  "ThreatBulletinCopilotTest",
                 "hidden-SentinelTemplateVersion":  "1.0"
             },
             "identity":  {
