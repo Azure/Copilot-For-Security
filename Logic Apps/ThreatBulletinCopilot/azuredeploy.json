@@ -23,7 +23,7 @@
     },
     "parameters":  {
         "PlaybookName":  {
-            "defaultValue":  "ThreatBulletinCopilotTest",
+            "defaultValue":  "ThreatBulletinCopilot",
             "type":  "string"
         },
         "email":  {
@@ -211,7 +211,7 @@
                 "Created By":  "Sean Wasonga",
                 "CreatedDate":  "",
                 "CreatorUPN":  "Sean Wasonga",
-                "hidden-SentinelTemplateName":  "ThreatBulletinCopilotTest",
+                "hidden-SentinelTemplateName":  "ThreatBulletinCopilot",
                 "hidden-SentinelTemplateVersion":  "1.0"
             },
             "identity":  {

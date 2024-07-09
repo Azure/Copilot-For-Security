@@ -23,7 +23,7 @@
     },
     "parameters":  {
         "PlaybookName":  {
-            "defaultValue":  "ThreatactorCopilotsean",
+            "defaultValue":  "ThreatactorPlaybook",
             "type":  "string"
         },
         "email":  {
@@ -681,7 +681,7 @@
             "location":  "[resourceGroup().location]",
             "tags":  {
                 "Created By":  "Sean Wesonga",
-                "hidden-SentinelTemplateName":  "ThreatactorCopilotsean",
+                "hidden-SentinelTemplateName":  "",
                 "hidden-SentinelTemplateVersion":  "1.0"
             },
             "identity":  {
