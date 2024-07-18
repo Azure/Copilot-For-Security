@@ -14,7 +14,7 @@ Descriptor:
     - Query to get all hosts that have observed a given custom IOC, take in put IOC information (type and value), return total count of hosts
     - Query to get detail of IoC (Indicator of Compromise), take input as IoC ids, return IoC details
     - Query to get a list of IoC (Indicator of Compromise), return a list of IoC ids
-  Icon: https://raw.githubusercontent.com/truongphung12947/copilot-manifest/main/crowdstrike-falcon/crowdstrike_logo.png
+  Icon: https://raw.githubusercontent.com/truongphung12947/copilot-manifest/main/crowdstrike-falcon/crowdstrike_logo_transparent.png
   SupportedAuthTypes:
     - OAuthClientCredentialsFlow
   Authorization:
