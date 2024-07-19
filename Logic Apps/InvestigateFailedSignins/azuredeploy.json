@@ -139,12 +139,12 @@
                                     "type":  "ApiConnection",
                                     "inputs":  {
                                         "body":  {
-                                            "PromptContent":  "Provide a representation of the above table result in JSON FORMAT of the 5 records with the highest sign-in counts",
+                                            "PromptContent":  "/AskGpt Provide a representation of the above table result in JSON FORMAT of the 5 records with the highest sign-in counts",
                                             "SessionId":  "@body('Run_KQL_query_to_identify_Failed_sign_ins')?['sessionId']"
                                         },
                                         "host":  {
                                             "connection":  {
-                                                "name":  "@parameters('$connections')['securitycopilot_1']['connectionId']"
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
                                             }
                                         },
                                         "method":  "post",
@@ -162,7 +162,7 @@
                                         },
                                         "host":  {
                                             "connection":  {
-                                                "name":  "@parameters('$connections')['securitycopilot_1']['connectionId']"
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
                                             }
                                         },
                                         "method":  "post",
@@ -184,7 +184,7 @@
                                         },
                                         "host":  {
                                             "connection":  {
-                                                "name":  "@parameters('$connections')['securitycopilot_1']['connectionId']"
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
                                             }
                                         },
                                         "method":  "post",
@@ -200,12 +200,12 @@
                                     "type":  "ApiConnection",
                                     "inputs":  {
                                         "body":  {
-                                            "PromptContent":  "Create a report with the findings from the above investigation, please assess whether these users pose a potential risk warranting further scrutiny due to anomalous sign-ins. Consider factors such as sign-in details, association with security groups, IPs reputation scoring , Authentication methods , Device compliance information and any other relevant indicators. \nSummarize the risk level into a percentage scale, where. \n- 0-30% denotes it as Neutral status, \n- 30%-50% categorizes as Low risk, \n- 50%-74% as Medium risk, and \n-anything exceeding 75% falls under the High-risk category\nif there is any thing in Medium risk or High risk please add some context to that account\nloop in some recommendations if you can. Present the rationale for your assessment in a bullet points. ( make the report technical)",
+                                            "PromptContent":  "/AskGpt Create a report with the findings from the above investigation, please assess whether these users pose a potential risk warranting further scrutiny due to anomalous sign-ins. Consider factors such as sign-in details, association with security groups, IPs reputation scoring , Authentication methods , Device compliance information and any other relevant indicators. \nSummarize the risk level into a percentage scale, where. \n- 0-30% denotes it as Neutral status, \n- 30%-50% categorizes as Low risk, \n- 50%-74% as Medium risk, and \n-anything exceeding 75% falls under the High-risk category\nif there is any thing in Medium risk or High risk please add some context to that account\nloop in some recommendations if you can. Present the rationale for your assessment in a bullet points. ( make the report technical)",
                                             "SessionId":  "@body('Run_Reputation_Scoring_for_IP_addresses_associated_with_Sign_Ins')?['sessionId']"
                                         },
                                         "host":  {
                                             "connection":  {
-                                                "name":  "@parameters('$connections')['securitycopilot_1']['connectionId']"
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
                                             }
                                         },
                                         "method":  "post",
@@ -233,7 +233,7 @@
                                 },
                                 "host":  {
                                     "connection":  {
-                                        "name":  "@parameters('$connections')['office365_1']['connectionId']"
+                                        "name":  "@parameters('$connections')['office365']['connectionId']"
                                     }
                                 },
                                 "method":  "post",
@@ -247,12 +247,12 @@
                 "parameters":  {
                     "$connections":  {
                         "value":  {
-                            "office365_1":  {
+                            "office365":  {
                                 "connectionId":  "[resourceId('Microsoft.Web/connections', variables('Office365ConnectionName'))]",
                                 "connectionName":  "[variables('Office365ConnectionName')]",
                                 "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Office365')]"
                             },
-                            "securitycopilot_1":  {
+                            "securitycopilot":  {
                                 "connectionId":  "[resourceId('Microsoft.Web/connections', variables('SecuritycopilotConnectionName'))]",
                                 "connectionName":  "[variables('SecuritycopilotConnectionName')]",
                                 "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Securitycopilot')]"
