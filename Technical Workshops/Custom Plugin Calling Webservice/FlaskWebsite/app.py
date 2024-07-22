@@ -119,6 +119,29 @@ def get_json(data):
     return response
 
 
+# Show all headers and the body
+@app.route('/raw_header_body', methods=['POST'])
+def raw_request_post():
+    raw = ""
+    try:
+        raw = "*** Headers\n" 
+        for header in request.headers:
+            raw += header[0] + "::" + header[1] + "\n"
+        if(request.is_json):
+            jsonData = request.get_json(force=True)
+        else:
+            jsonData = "No JSON in request body"
+        raw += "*** Body\n"
+        raw += str(jsonData)
+    except Exception as e:
+        print("Got exception, check if request body has a JSON,",e)
+    finally:
+        print(raw)
+    
+    response =  raw
+    return response
+
+
 #---- OPTIONAL: Use this URL to return YAML files if you do not want to the host the files in FTP/Azure/Blob
 #---- NOTE: All files should be placed in the ./Files folder 
 @app.route('/file/<fileName>')

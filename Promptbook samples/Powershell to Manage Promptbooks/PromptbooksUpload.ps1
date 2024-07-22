@@ -10,7 +10,7 @@
 Write-Host "DISCLAIMER: This method to upload Promptbooks uses unpublished API calls that are subject to change without notice. This is not an officially supported method from Microsoft and no guarantees are given that this method will work in your environment. Support tickets on its functionality cannot be raised." 
 
 #Replace the region in URI with your own "https://api.securitycopilot.microsoft.com/geo/<region>/promptbooks"
-$url = "https://api.securitycopilot.microsoft.com/geo/eastus/promptbooks"
+$url = "https://api.securitycopilot.microsoft.com/geo/westeurope/promptbooks"
 $headers = @{
     "Content-Type" = "application/json"
     "Authorization" = "Bearer $token"

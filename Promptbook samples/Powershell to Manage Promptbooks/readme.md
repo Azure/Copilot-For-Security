@@ -9,7 +9,7 @@ There are two different PowerShell scripts, one for upload one for download.
 # Downloading Promptbooks
 The PowerShell script 'PromptBooksDownload.ps1' allows you to download all your Promptbooks in your local disk inside the './Downloads' folder. The Promptbooks are stored in a JSON format and each Promptbook is in its own JSON file. Each file is given the promptbook name, with spaces and special characters removed. To download all the promptbooks execute the following command.
 
-Powershell -file PromptBooksDownload.ps1 -token <authorization token> -namecontains "CVE"
+Powershell -file PromptBooksDownload.ps1 -token TokenIdWithoutBearerWord -namecontains "CVE"
 
 The '-namecontains' parameter is optional. If specified, the script only downloads the promptbooks who's name contains the phrase specified by the '-namecontains' parameter ("CVE" in this case). Specify the phrase in double quotes.
 
@@ -21,7 +21,7 @@ IMPORTANT: During the download process, certain fields from the Promptbook that 
 
 The PowerShell script 'PromptBooksUpload.ps1' allows you to upload multiple Promptbooks at once. The Promptbooks should be in JSON format and each Promptbook should be in its own JSON file. Once the JSON files are created they should be in placed in the ./Uploads folder and the following command executed to upload them in your Copilot instance:
 
-Powershell -file PromptBooksUpload.ps1 -token <authorization token>
+Powershell -file PromptBooksUpload.ps1 -token TokenIdWithoutBearerWord
 
 Description of the JSON format and instructions on obtaining the authorization token are given below:
 
