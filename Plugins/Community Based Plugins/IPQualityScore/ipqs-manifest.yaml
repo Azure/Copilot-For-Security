@@ -1,0 +1,16 @@
+Descriptor:
+  Name: IPQS
+  DisplayName: IP Quality Score
+  Description: This tool checks an IP address' location, ISP, reputation etc. using IP Quality Score
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: IPQS-KEY
+    Location: Header
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Plugins/Community%20Based%20Plugins/IPQualityScore/OpenAPI/ipqs-openapi.yaml
