@@ -10,7 +10,7 @@
 ### Instructions
 #### Upload the Custom Plugin
 
-1. Obtain the file [hibp-manifest.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/SoC%20Optimization%20Trend%20Report/SoCOptimizationTrend-manifest.yaml) from this directory.
+1. Obtain the file [SoCOptimizationTrend-manifest.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/SoC%20Optimization%20Trend%20Report/SoCOptimizationTrend-manifest.yaml) from this directory.
 2. [Upload the custom plugin](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#add-custom-plugins) and verify it's activated.
 
 ![CopilotForSecurity](https://learn.microsoft.com/en-us/security-copilot/media/add-plugin-button.png)
