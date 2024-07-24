@@ -22,11 +22,14 @@ The Microsoft Copilot for Security connector now supports custom plugins, boosti
 2. [**Community Based Plugins**](https://github.com/Azure/Copilot-For-Security/tree/main/Plugins/Community%20Based%20Plugins) - These are Plugins created and contibuted by the Microsoft Copilot for Security Community.
 3. [**MSFT Plugin Samples**](https://github.com/Azure/Copilot-For-Security/tree/main/Plugins/MSFT_Plugin_Samples) - These are samples of Custom Plugins that will act as a guide you and give you the ability to create a custom plugin for Copilot For Security. The samples are API, GPT, and KQL samples.
 
-   
+
 Should you be interested in participating in a workshop designed to instruct on the creation of custom plugins, you are welcome to access our [Technical workshops](https://github.com/Azure/Copilot-For-Security/tree/main/Technical%20Workshops)
 
+### Microsoft Tech Community blog posts
 
-
+1. [How to build a Copilot for Security API Plugin – Part 1](https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/how-to-build-a-copilot-for-security-api-plugin-part-1/ba-p/4107604)
+2. [How to build a Copilot for Security API Plugin – Part 2](https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/how-to-build-a-copilot-for-security-api-plugin-part-2/ba-p/4163829)
+3. [Using Microsoft Graph as a Microsoft Copilot for Security Plugin with Delegated Access](https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/using-microsoft-graph-as-a-microsoft-copilot-for-security-plugin/ba-p/4198148)
 
 
 
