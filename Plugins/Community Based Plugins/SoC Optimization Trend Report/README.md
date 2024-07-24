@@ -23,4 +23,4 @@ Note: you can use the keyword 'SoC' in your queries
 * Using the Incident Count by High Severity by month/year, tell about incidents from the month of 4 and year 2024
 * Using SOC Mean Time to Response with Tasks by month/year, show me the results from the month of 4 and year 2024
 * Using SOC incidents without automation by severity and month/year show me the results from the month 4 and year 2024 with High severity
-* Please take a look at the sample promptbook located [here](https://github.com/Azure/Copilot-For-Security/blob/main/Sample%20Prompts/Custom%20Plugins/SoC%20Optimization%20Trend%20Report/README.md)
+* Please take a look at the sample promptbook located [here](https://github.com/Azure/Copilot-For-Security/blob/main/Promptbook%20samples/SoC%20Optimization%20Trend%20Report.md)
