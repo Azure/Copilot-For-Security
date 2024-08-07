@@ -72,7 +72,7 @@ Usage requirements:
 - Contributor access of some kind is required to the Copilot for Security Compute Capacity for any users who will be modifying the schedule since it works by applying Resource Tags to the Compute Capacity.
 
 ## Deployment
-**Deploy Solution**
+**Deploy Solution**<br>
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Fmain%2FSCU%20Capacity%20Optimizer%2Fsolution%2Fazuredeploy.json)<br>
 
 Note: During deployment, the selected Playbook Resource Group must be different than the Sentinel Resource Group.
