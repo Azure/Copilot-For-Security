@@ -1,0 +1,19 @@
+Descriptor:
+  Name: WatchlistKQL
+  DisplayName: Trusted Users List
+  Description: Fetches the list of trusted users that is being maintained as a Microsoft Sentinel watchlist
+
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: GetTrustedUsers
+        DisplayName: Get the Trusted Users List
+        Description: Fetches the list of trusted users that is being maintained as a Microsoft Sentinel watchlist
+        Settings:
+          Target: Sentinel
+          TenantId: <your_tenant_ID>
+          SubscriptionId: <your_subscription_ID>
+          ResourceGroupName: <your_RG_name>
+          WorkspaceName: <your_WS_name>
+          Template: |-
+            _GetWatchlist('TrustedUsers') | distinct TrustedUsers

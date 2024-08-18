@@ -1,0 +1,11 @@
+Descriptor:
+  Name: Hochreiter's Reflection API plug-in using POST json
+  DisplayName: Hochreiter's Reflection API plug-in using POST json
+  Description: Skills for getting a POST REST API call reflection
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: http://172.13.112.25:5000/file/API_Plugin_Reflection_OAI_POST_JSON.yaml
+
+

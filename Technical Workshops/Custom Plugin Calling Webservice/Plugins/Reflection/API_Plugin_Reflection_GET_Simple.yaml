@@ -1,0 +1,15 @@
+#Filename: API_Plugin_Reflection_GET_Simple.yaml
+Descriptor:
+  Name: McCulloch–Pitts's Reflection API plug-in using GET
+  DisplayName: McCulloch–Pitts's Reflection API plug-in using GET
+  Description: Skills for getting a GET REST API call reflection
+  DescriptionForModel: Skills for getting a GET REST API call reflection. Uses ReflectionData as operationId
+
+SkillGroups:
+  - Format: API
+    Settings:
+      # Replace this with your own URL where the OpenAPI spec file is located.
+      OpenApiSpecUrl:  http://172.13.112.25:5000/file/API_Plugin_Reflection_OAPI_GET_Simple.yaml
+
+
+

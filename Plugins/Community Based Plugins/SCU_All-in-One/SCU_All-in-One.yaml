@@ -1,0 +1,19 @@
+Descriptor:
+  Name: CfSAllinOne
+  DisplayName: Copilot for Security Activity
+  Description: Looks for Copilot for Security Activity including SCU creation, changes and deletion and Standalone experience logins. Will be updated when new activities are discovered.
+
+SkillGroups:
+  - Format: KQL
+    Skills:
+      - Name: CfSAllinOne
+        DisplayName: Copilot for Security Activity
+        Description: Looks for Copilot for Security Activity including SCU creation, changes and deletion and Standalone experience logins. Will be updated when new activities are discovered.
+        Settings:
+          Target: Sentinel
+          TenantId: <your_tenant_ID>
+          SubscriptionId: <your_sub_ID>
+          ResourceGroupName: <your_RG>
+          WorkspaceName: <your_Sentinel_WS>
+          Template: |-
+            let CfS_Logins = SigninLogs | where AppDisplayName == "Medeina Portal" | project TimeGenerated, Identity, Caller=UserPrincipalName, AppDisplayName, OperationName; let SCU_Changes = AzureActivity | where ResourceProviderValue == "MICROSOFT.SECURITYCOPILOT" | extend resourceName = tostring(parse_json(Properties).resource) | extend resourceGroupName = tostring(parse_json(Properties).resourceGroup) | extend resourceActivity = tostring(parse_json(Properties).message) | where resourceActivity == "Microsoft.SecurityCopilot/capacities/write"| project Caller, CallerIpAddress, resourceName, resourceGroupName, resourceActivity, TimeGenerated; let SCU_Deleted = AzureActivity | where ResourceProviderValue == "MICROSOFT.SECURITYCOPILOT" | extend resourceName = tostring(parse_json(Properties).resource) | extend resourceGroupName = tostring(parse_json(Properties).resourceGroup) | extend resourceActivity = tostring(parse_json(Properties).message) | where resourceActivity == "Microsoft.SecurityCopilot/capacities/delete" | project Caller, resourceName, resourceGroupName, resourceActivity, TimeGenerated; union CfS_Logins, SCU_Changes, SCU_Deleted

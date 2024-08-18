@@ -1,0 +1,14 @@
+Descriptor: 
+  Description: Evaluate Access Decisions in SGNL with Microsoft Copilot for Security
+  Name: SGNL 
+  DisplayName: SGNL (Preview)
+  Category: Other
+  Icon: https://sgnl.ai/images/sgnl-glyph--RGB.png
+  SupportedAuthTypes:
+    - Basic
+  
+  
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: 'https://gist.githubusercontent.com/marc-sgnl/361c010bc07f6854197f86d458fcff14/raw/979250a34ad0bf1acf4ca99c60d706b250465ddf/sgnl-oapi-logs.yaml'

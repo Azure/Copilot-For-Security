@@ -1,0 +1,721 @@
+{
+    "$schema":  "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion":  "1.0.0.0",
+    "metadata":  {
+        "title":  "",
+        "description":  "",
+        "prerequisites":  "",
+        "postDeployment":  [
+        ],
+        "prerequisitesDeployTemplateFile":  "",
+        "lastUpdateTime":  "",
+        "entities":  [
+        ],
+        "tags":  [
+        ],
+        "support":  {
+            "tier":  "community",
+            "armtemplate":  "Generated from https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator"
+        },
+        "author":  {
+            "name":  ""
+        }
+    },
+    "parameters":  {
+        "PlaybookName":  {
+            "defaultValue":  "ThreatactorCopilot",
+            "type":  "string"
+        },
+        "email":  {
+            "type":  "string",
+            "metadata":  {
+                "description":  "Enter value for email"
+            }
+        }
+    },
+    "variables":  {
+        "Office365ConnectionName":  "[concat('Office365-', parameters('PlaybookName'))]",
+        "SecuritycopilotConnectionName":  "[concat('Securitycopilot-', parameters('PlaybookName'))]"
+    },
+    "resources":  [
+        {
+            "properties":  {
+                "provisioningState":  "Succeeded",
+                "state":  "Enabled",
+                "definition":  {
+                    "$schema":  "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "contentVersion":  "1.0.0.0",
+                    "parameters":  {
+                        "$connections":  {
+                            "defaultValue":  {
+                            },
+                            "type":  "Object"
+                        },
+                        "email":  {
+                            "defaultValue":  "[parameters('email')]",
+                            "type":  "string"
+                        }
+                    },
+                    "triggers":  {
+                        "Recurrence":  {
+                            "recurrence":  {
+                                "frequency":  "Day",
+                                "interval":  1
+                            },
+                            "evaluatedRecurrence":  {
+                                "frequency":  "Day",
+                                "interval":  1
+                            },
+                            "type":  "Recurrence"
+                        }
+                    },
+                    "actions":  {
+                        "CVE_infromation":  {
+                            "actions":  {
+                                "CVEs":  {
+                                    "runAfter":  {
+                                        "Compose_6":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@decodeUriComponent(replace(encodeUriComponent(outputs('Compose_6')), '%0A', '%3Cbr%3E'))"
+                                },
+                                "Compose_6":  {
+                                    "runAfter":  {
+                                        "Parse_JSON_7":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@body('Parse_JSON_7')?['Evaluation Result Content']"
+                                },
+                                "Parse_JSON_7":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ParseJson",
+                                    "inputs":  {
+                                        "content":  "@body('CVES_on_threat_actor')",
+                                        "schema":  {
+                                            "properties":  {
+                                                "Evaluation Result Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "Evaluation Result Type":  {
+                                                    "type":  "string"
+                                                },
+                                                "Prompt Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "SessionId":  {
+                                                    "type":  "string"
+                                                },
+                                                "Skill Name":  {
+                                                },
+                                                "Skill Sources":  {
+                                                    "type":  "array"
+                                                }
+                                            },
+                                            "type":  "object"
+                                        }
+                                    }
+                                }
+                            },
+                            "runAfter":  {
+                                "Parse_recommendation":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "Scope"
+                        },
+                        "Parse_Mitre":  {
+                            "actions":  {
+                                "Compose_5":  {
+                                    "runAfter":  {
+                                        "Parse_JSON_3":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@body('Parse_JSON_3')?['Evaluation Result Content']"
+                                },
+                                "Mitre":  {
+                                    "runAfter":  {
+                                        "Compose_5":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@decodeUriComponent(replace(encodeUriComponent(outputs('Compose_5')), '%0A', '%3Cbr%3E'))"
+                                },
+                                "Parse_JSON_3":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ParseJson",
+                                    "inputs":  {
+                                        "content":  "@body('Check_for_Mitre_attack_techniques_with_Threat_Actor')",
+                                        "schema":  {
+                                            "properties":  {
+                                                "Evaluation Result Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "Evaluation Result Type":  {
+                                                    "type":  "string"
+                                                },
+                                                "Prompt Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "SessionId":  {
+                                                    "type":  "string"
+                                                },
+                                                "Skill Name":  {
+                                                },
+                                                "Skill Sources":  {
+                                                    "type":  "array"
+                                                }
+                                            },
+                                            "type":  "object"
+                                        }
+                                    }
+                                }
+                            },
+                            "runAfter":  {
+                                "Parse_threar_articles":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "Scope"
+                        },
+                        "Parse_recommendation":  {
+                            "actions":  {
+                                "Compose":  {
+                                    "runAfter":  {
+                                        "Parse_JSON":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@body('Parse_JSON')?['Evaluation Result Content']"
+                                },
+                                "Parse_JSON":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ParseJson",
+                                    "inputs":  {
+                                        "content":  "@body('Recommendations_against_Threat_actor')",
+                                        "schema":  {
+                                            "properties":  {
+                                                "Evaluation Result Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "Evaluation Result Type":  {
+                                                    "type":  "string"
+                                                },
+                                                "Prompt Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "SessionId":  {
+                                                    "type":  "string"
+                                                },
+                                                "Skill Name":  {
+                                                },
+                                                "Skill Sources":  {
+                                                    "type":  "array"
+                                                }
+                                            },
+                                            "type":  "object"
+                                        }
+                                    }
+                                },
+                                "recommendations":  {
+                                    "runAfter":  {
+                                        "Compose":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@decodeUriComponent(replace(encodeUriComponent(outputs('Compose')), '%0A', '%3Cbr%3E'))"
+                                }
+                            },
+                            "runAfter":  {
+                                "Security_Copilot_Prompts":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "Scope"
+                        },
+                        "Parse_threar_articles":  {
+                            "actions":  {
+                                "Compose_7":  {
+                                    "runAfter":  {
+                                        "Parse_JSON_4":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@body('Parse_JSON_4')?['Evaluation Result Content']"
+                                },
+                                "Parse_JSON_4":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ParseJson",
+                                    "inputs":  {
+                                        "content":  "@body('Check_for_Threat_articles_on_threat_actor_profile')",
+                                        "schema":  {
+                                            "properties":  {
+                                                "Evaluation Result Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "Evaluation Result Type":  {
+                                                    "type":  "string"
+                                                },
+                                                "Prompt Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "SessionId":  {
+                                                    "type":  "string"
+                                                },
+                                                "Skill Name":  {
+                                                },
+                                                "Skill Sources":  {
+                                                    "type":  "array"
+                                                }
+                                            },
+                                            "type":  "object"
+                                        }
+                                    }
+                                },
+                                "threat_articles":  {
+                                    "runAfter":  {
+                                        "Compose_7":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@decodeUriComponent(replace(encodeUriComponent(outputs('Compose_7')), '%0A', '%3Cbr%3E'))"
+                                }
+                            },
+                            "runAfter":  {
+                                "hunting_result":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "Scope"
+                        },
+                        "Parse_threat_actor":  {
+                            "actions":  {
+                                "Compose_3":  {
+                                    "runAfter":  {
+                                        "Parse_JSON_2":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@body('Parse_JSON_2')?['Evaluation Result Content']"
+                                },
+                                "Parse_JSON_2":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ParseJson",
+                                    "inputs":  {
+                                        "content":  "@body('Summary_of_threat_actor')",
+                                        "schema":  {
+                                            "properties":  {
+                                                "Evaluation Result Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "Evaluation Result Type":  {
+                                                    "type":  "string"
+                                                },
+                                                "Prompt Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "SessionId":  {
+                                                    "type":  "string"
+                                                },
+                                                "Skill Name":  {
+                                                },
+                                                "Skill Sources":  {
+                                                    "type":  "array"
+                                                }
+                                            },
+                                            "type":  "object"
+                                        }
+                                    }
+                                },
+                                "Thrat_actor":  {
+                                    "runAfter":  {
+                                        "Compose_3":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@decodeUriComponent(replace(encodeUriComponent(outputs('Compose_3')), '%0A', '%3Cbr%3E'))"
+                                }
+                            },
+                            "runAfter":  {
+                                "Parse_Mitre":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "Scope"
+                        },
+                        "Security_Copilot_Prompts":  {
+                            "actions":  {
+                                "CVES_on_threat_actor":  {
+                                    "runAfter":  {
+                                        "Check_for_Mitre_attack_techniques_with_Threat_Actor":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "ApiConnection",
+                                    "inputs":  {
+                                        "body":  {
+                                            "PromptContent":  "If there are any CVES references in regards to the threat Actor please share them in a table format",
+                                            "SessionId":  "@body('Check_for_Mitre_attack_techniques_with_Threat_Actor')?['sessionId']"
+                                        },
+                                        "host":  {
+                                            "connection":  {
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                            }
+                                        },
+                                        "method":  "post",
+                                        "path":  "/process-prompt"
+                                    }
+                                },
+                                "Check_for_Mitre_attack_techniques_with_Threat_Actor":  {
+                                    "runAfter":  {
+                                        "Check_for_Threat_articles_on_threat_actor_profile":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "ApiConnection",
+                                    "inputs":  {
+                                        "body":  {
+                                            "PromptContent":  "Based on the above can you share a list of Mitre attack techniques referencing the Threat Actor",
+                                            "SessionId":  "@body('Check_for_Threat_articles_on_threat_actor_profile')?['sessionId']"
+                                        },
+                                        "host":  {
+                                            "connection":  {
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                            }
+                                        },
+                                        "method":  "post",
+                                        "path":  "/process-prompt"
+                                    }
+                                },
+                                "Check_for_Threat_articles_on_threat_actor_profile":  {
+                                    "runAfter":  {
+                                        "Summary_of_threat_actor":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "ApiConnection",
+                                    "inputs":  {
+                                        "body":  {
+                                            "PromptContent":  "Based on the above can you share the latest articles referencing the threat actor and when it was published in a table",
+                                            "SessionId":  "@body('Summary_of_threat_actor')?['sessionId']"
+                                        },
+                                        "host":  {
+                                            "connection":  {
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                            }
+                                        },
+                                        "method":  "post",
+                                        "path":  "/process-prompt"
+                                    }
+                                },
+                                "Hunt_my_environment_against_CVE":  {
+                                    "runAfter":  {
+                                        "CVES_on_threat_actor":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "ApiConnection",
+                                    "inputs":  {
+                                        "body":  {
+                                            "PromptContent":  "/LookupDataFromDefender365Hunting hunt across my defender environment and determine if these CVEs have exploited my devices",
+                                            "SessionId":  "@body('CVES_on_threat_actor')?['sessionId']"
+                                        },
+                                        "host":  {
+                                            "connection":  {
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                            }
+                                        },
+                                        "method":  "post",
+                                        "path":  "/process-prompt"
+                                    }
+                                },
+                                "Recommendations_against_Threat_actor":  {
+                                    "runAfter":  {
+                                        "Hunt_my_environment_against_CVE":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "ApiConnection",
+                                    "inputs":  {
+                                        "body":  {
+                                            "PromptContent":  "Based on your understanding , what recommendations can you provide to protect my environment from the following threat Actor",
+                                            "SessionId":  "@body('Hunt_my_environment_against_CVE')?['sessionId']"
+                                        },
+                                        "host":  {
+                                            "connection":  {
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                            }
+                                        },
+                                        "method":  "post",
+                                        "path":  "/process-prompt"
+                                    }
+                                },
+                                "Summarize_investigation":  {
+                                    "runAfter":  {
+                                        "Recommendations_against_Threat_actor":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "ApiConnection",
+                                    "inputs":  {
+                                        "body":  {
+                                            "PromptContent":  "Can you create a report , capturing Each and every step in the investigation above ,Make sure to capture the CVEs and their References , the Articles and their references as well ,  the report is intended for a technical audience and should encapsulate actions that need to be taken in regards to this investigation",
+                                            "SessionId":  "@body('Recommendations_against_Threat_actor')?['sessionId']"
+                                        },
+                                        "host":  {
+                                            "connection":  {
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                            }
+                                        },
+                                        "method":  "post",
+                                        "path":  "/process-prompt"
+                                    }
+                                },
+                                "Summary_of_threat_actor":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ApiConnection",
+                                    "inputs":  {
+                                        "body":  {
+                                            "PromptContent":  "Share with me a summary of threat actor APT28"
+                                        },
+                                        "host":  {
+                                            "connection":  {
+                                                "name":  "@parameters('$connections')['securitycopilot']['connectionId']"
+                                            }
+                                        },
+                                        "method":  "post",
+                                        "path":  "/process-prompt"
+                                    }
+                                }
+                            },
+                            "runAfter":  {
+                            },
+                            "type":  "Scope"
+                        },
+                        "Send_an_email_(V2)":  {
+                            "runAfter":  {
+                                "Summarize_the_report":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "ApiConnection",
+                            "inputs":  {
+                                "body":  {
+                                    "Body":  "\u003cp\u003e@{outputs('Compose_4')}\u003c/p\u003e",
+                                    "Importance":  "Normal",
+                                    "Subject":  "Threat Actor Profle Analysis - APT28",
+                                    "To":  "@parameters('email')"
+                                },
+                                "host":  {
+                                    "connection":  {
+                                        "name":  "@parameters('$connections')['office365_1']['connectionId']"
+                                    }
+                                },
+                                "method":  "post",
+                                "path":  "/v2/Mail"
+                            }
+                        },
+                        "Summarize_the_report":  {
+                            "actions":  {
+                                "Compose_2":  {
+                                    "runAfter":  {
+                                        "Parse_JSON_6":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@body('Parse_JSON_6')?['Evaluation Result Content']"
+                                },
+                                "Compose_4":  {
+                                    "runAfter":  {
+                                        "Compose_2":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@decodeUriComponent(replace(encodeUriComponent(outputs('Compose_2')), '%0A', '%3Cbr%3E'))"
+                                },
+                                "Parse_JSON_6":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ParseJson",
+                                    "inputs":  {
+                                        "content":  "@body('Summarize_investigation')",
+                                        "schema":  {
+                                            "properties":  {
+                                                "Evaluation Result Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "Evaluation Result Type":  {
+                                                    "type":  "string"
+                                                },
+                                                "Prompt Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "SessionId":  {
+                                                    "type":  "string"
+                                                },
+                                                "Skill Name":  {
+                                                },
+                                                "Skill Sources":  {
+                                                    "type":  "array"
+                                                }
+                                            },
+                                            "type":  "object"
+                                        }
+                                    }
+                                }
+                            },
+                            "runAfter":  {
+                                "Parse_threat_actor":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "Scope"
+                        },
+                        "hunting_result":  {
+                            "actions":  {
+                                "Compose_9":  {
+                                    "runAfter":  {
+                                        "Parse_JSON_5":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@body('Parse_JSON_5')?['Evaluation Result Content']"
+                                },
+                                "Parse_JSON_5":  {
+                                    "runAfter":  {
+                                    },
+                                    "type":  "ParseJson",
+                                    "inputs":  {
+                                        "content":  "@body('Hunt_my_environment_against_CVE')",
+                                        "schema":  {
+                                            "properties":  {
+                                                "Evaluation Result Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "Evaluation Result Type":  {
+                                                    "type":  "string"
+                                                },
+                                                "Prompt Content":  {
+                                                    "type":  "string"
+                                                },
+                                                "SessionId":  {
+                                                    "type":  "string"
+                                                },
+                                                "Skill Name":  {
+                                                },
+                                                "Skill Sources":  {
+                                                    "type":  "array"
+                                                }
+                                            },
+                                            "type":  "object"
+                                        }
+                                    }
+                                },
+                                "hunts":  {
+                                    "runAfter":  {
+                                        "Compose_9":  [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type":  "Compose",
+                                    "inputs":  "@decodeUriComponent(replace(encodeUriComponent(outputs('Compose_9')), '%0A', '%3Cbr%3E'))"
+                                }
+                            },
+                            "runAfter":  {
+                                "CVE_infromation":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "Scope"
+                        }
+                    },
+                    "outputs":  {
+                    }
+                },
+                "parameters":  {
+                    "$connections":  {
+                        "value":  {
+                            "office365_1":  {
+                                "connectionId":  "[resourceId('Microsoft.Web/connections', variables('Office365ConnectionName'))]",
+                                "connectionName":  "[variables('Office365ConnectionName')]",
+                                "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Office365')]"
+                            },
+                            "securitycopilot":  {
+                                "connectionId":  "[resourceId('Microsoft.Web/connections', variables('SecuritycopilotConnectionName'))]",
+                                "connectionName":  "[variables('SecuritycopilotConnectionName')]",
+                                "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Securitycopilot')]"
+                            }
+                        }
+                    }
+                }
+            },
+            "name":  "[parameters('PlaybookName')]",
+            "type":  "Microsoft.Logic/workflows",
+            "location":  "[resourceGroup().location]",
+            "tags":  {
+                "Created By":  "Sean Wesonga",
+                "hidden-SentinelTemplateName":  "ThreatactorCopilot",
+                "hidden-SentinelTemplateVersion":  "1.0"
+            },
+            "identity":  {
+                "type":  "SystemAssigned"
+            },
+            "apiVersion":  "2017-07-01",
+            "dependsOn":  [
+                "[resourceId('Microsoft.Web/connections', variables('Office365ConnectionName'))]",
+                "[resourceId('Microsoft.Web/connections', variables('SecuritycopilotConnectionName'))]"
+            ]
+        },
+        {
+            "type":  "Microsoft.Web/connections",
+            "apiVersion":  "2016-06-01",
+            "name":  "[variables('Office365ConnectionName')]",
+            "location":  "[resourceGroup().location]",
+            "kind":  "V1",
+            "properties":  {
+                "displayName":  "[variables('Office365ConnectionName')]",
+                "customParameterValues":  {
+                },
+                "api":  {
+                    "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Office365')]"
+                }
+            }
+        },
+        {
+            "type":  "Microsoft.Web/connections",
+            "apiVersion":  "2016-06-01",
+            "name":  "[variables('SecuritycopilotConnectionName')]",
+            "location":  "[resourceGroup().location]",
+            "kind":  "V1",
+            "properties":  {
+                "displayName":  "[variables('SecuritycopilotConnectionName')]",
+                "customParameterValues":  {
+                },
+                "api":  {
+                    "id":  "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/Securitycopilot')]"
+                }
+            }
+        }
+    ]
+}

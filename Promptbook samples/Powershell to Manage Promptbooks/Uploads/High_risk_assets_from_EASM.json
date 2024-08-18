@@ -1,0 +1,18 @@
+{"name":"High Risk Assets from the External Attack Surface",
+"description":"This promptbook identifies assets which are high risk and have been recently targeted.",
+"prompts":
+[
+ {"promptType":"Prompt","content":"Get the high priority attack surface insights using a prebuilt footprint for <Companyname> using External Attack surface Management","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":0},
+ {"promptType":"Prompt","content":"List all the CVE IDs from the above summary","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":1},
+ {"promptType":"Prompt","content":"Check if any of the CVE IDs are associated with any MDTI articles","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":2},
+ {"promptType":"Prompt","content":"List all the articles and the dates they were published","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":3},
+ {"promptType":"Prompt","content":"List all the articles which were published in the last 3 months","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":4},
+ {"promptType":"Prompt","content":"Tell me of any threat actors associated with these articles","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":5},
+ {"promptType":"Prompt","content":"What industries do these threat actors target?","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":6},
+ {"promptType":"Prompt","content":"List all the approved host and IP addresses from the <Companyname> attack surface associated with the CVE IDs found in the MDTI articles in the last 3 months","skillName":null,"inputs":null,"plugins":[],"sequenceNumber":7}
+ ],
+"promptbookinputs":
+[
+ {"name":"Companyname","description":"Name of Company"}
+],
+"visibility":"Private","tags":null}
