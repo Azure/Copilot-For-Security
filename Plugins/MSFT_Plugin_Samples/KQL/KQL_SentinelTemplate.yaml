@@ -1,9 +1,0 @@
-Settings:
-  # The ID of the AAD Organization that the Sentinel workspace is in.
-  TenantId:
-  # The id of the Azure Subscription that the Sentinel workspace is in.
-  SubscriptionId:
-  # The name of the Resource Group that the Sentinel workspace is in.
-  ResourceGroupName:
-  # The name of the Sentinel workspace.
-  WorkspaceName:

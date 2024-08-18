@@ -1,8 +1,0 @@
-Descriptor:
-  Name: SampleAPI
-  Description: Sample API
-  SupportedAuthTypes:
-    - AAD
-  Authorization:
-    Type: AAD
-    EntraScopes: https://graph.microsoft.com/.default

@@ -1,9 +1,0 @@
-Descriptor:
-  Name:
-  DisplayName:
-  Description:
-
-SkillGroups:
-  - Format: API
-    Settings:
-      OpenApiSpecUrl: https://[domain]/template.yaml
