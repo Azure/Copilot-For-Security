@@ -22,4 +22,4 @@ The plugin can monitor applications accessing sensitive content and provide deta
 ### Promptbooks
 These are valuable resources for implementing standard operating procedures for security incidents, helping to identify various dimensions of an incident and summarize outcomes.
 
-Learn more
+[Learn more](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/learn-how-to-customize-and-optimize-copilot-for-security-with/ba-p/4120147)
