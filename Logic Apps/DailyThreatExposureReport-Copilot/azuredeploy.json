@@ -1,26 +1,6 @@
 {
     "$schema":  "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion":  "1.0.0.0",
-    "metadata":  {
-        "title":  "",
-        "description":  "",
-        "prerequisites":  "",
-        "postDeployment":  [
-        ],
-        "prerequisitesDeployTemplateFile":  "",
-        "lastUpdateTime":  "",
-        "entities":  [
-        ],
-        "tags":  [
-        ],
-        "support":  {
-            "tier":  "community",
-            "armtemplate":  "Generated from https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator"
-        },
-        "author":  {
-            "name":  ""
-        }
-    },
     "parameters":  {
         "PlaybookName":  {
             "defaultValue":  "DailyThreatExposureReport-Copilot",
@@ -80,7 +60,8 @@
                             "inputs":  {
                                 "body":  {
                                     "PromptContent":  "If there are CVEs listed above can you provide more detail on the CVE profile and the affected technologies associated with the CVE",
-                                    "SessionId":  "@body('Overview_of_latest_threats')?['sessionId']"
+                                    "SessionId":  "@body('Overview_of_latest_threats')?['sessionId']",
+                                    "SkillName":  "FindThreatIntelligence"
                                 },
                                 "host":  {
                                     "connection":  {
@@ -115,7 +96,8 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  "Give me an overview of the latest threats in my organization"
+                                    "PromptContent":  "Give me an overview of the latest threats in my organization",
+                                    "SkillName":  "FindThreatIntelligence"
                                 },
                                 "host":  {
                                     "connection":  {
@@ -169,7 +151,8 @@
                             "inputs":  {
                                 "body":  {
                                     "PromptContent":  "What recommendations do you advise to put in place in regards to these vulnerabilities using defender threat intelligence",
-                                    "SessionId":  "@body('CVE_information')?['sessionId']"
+                                    "SessionId":  "@body('CVE_information')?['sessionId']",
+                                    "SkillName":  "FindThreatIntelligence"
                                 },
                                 "host":  {
                                     "connection":  {
@@ -213,7 +196,8 @@
                             "inputs":  {
                                 "body":  {
                                     "PromptContent":  "Summarize this in a report and call it Daily Threat exposure report with the current date , capturing the overview of the latest threats in my organization above , CVEs associated and their mitigation steps , it should be for a technical audience ",
-                                    "SessionId":  "@body('Recommendations')?['sessionId']"
+                                    "SessionId":  "@body('Recommendations')?['sessionId']",
+                                    "SkillName":  "SummarizeData"
                                 },
                                 "host":  {
                                     "connection":  {
