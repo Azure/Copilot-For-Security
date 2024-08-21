@@ -1,7 +1,7 @@
 Descriptor:
   Name: AnomalousAppandAdminUserActivity
   DisplayName: Anomalous Application and Admin User Activity 
-  Description: Uses UEBA normalized Insights in Sentinel UEBA to identify Applications observed for the first time in the tenant over the last 30 days. It applies to profiled activities across ARM, Azure sign-in, and audit logs
+  Description: Uses UEBA normalized Insights in Sentinel UEBA to identify Applications and admin users exhibiting anomalous behavior. It applies to profiled activities across ARM, Azure sign-in, and audit logs
   Settings:
     - Name: TenantId
       Required: true

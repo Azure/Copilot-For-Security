@@ -27,4 +27,4 @@
 
 ### Plugin Utilization
 
-Refer to the blog in this link:
+Refer to the blog in this [link](https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/harnessing-the-power-of-kql-plugins-for-enhanced-security/ba-p/4221891)
