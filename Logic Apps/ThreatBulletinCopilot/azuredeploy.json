@@ -27,7 +27,7 @@
             "type":  "string"
         },
         "email":  {
-            "type":  "string",
+            "type":  "String",
             "metadata":  {
                 "description":  "Enter value for email"
             }
@@ -53,7 +53,7 @@
                         },
                         "email":  {
                             "defaultValue":  "[parameters('email')]",
-                            "type":  "string"
+                            "type":  "String"
                         }
                     },
                     "triggers":  {
@@ -72,12 +72,12 @@
                     "actions":  {
                         "Compose":  {
                             "runAfter":  {
-                                "Parse_JSON":  [
+                                "Summarize_into_a_threat_bulletin":  [
                                     "Succeeded"
                                 ]
                             },
                             "type":  "Compose",
-                            "inputs":  "@body('Parse_JSON')?['Evaluation Result Content']"
+                            "inputs":  "@body('Summarize_into_a_threat_bulletin')?['EvaluationResultContent']"
                         },
                         "Compose_2":  {
                             "runAfter":  {
@@ -106,39 +106,6 @@
                                 "path":  "/process-prompt"
                             }
                         },
-                        "Parse_JSON":  {
-                            "runAfter":  {
-                                "Summarize_into_a_threat_bulletin":  [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type":  "ParseJson",
-                            "inputs":  {
-                                "content":  "@body('Summarize_into_a_threat_bulletin')",
-                                "schema":  {
-                                    "properties":  {
-                                        "Evaluation Result Content":  {
-                                            "type":  "string"
-                                        },
-                                        "Evaluation Result Type":  {
-                                            "type":  "string"
-                                        },
-                                        "Prompt Content":  {
-                                            "type":  "string"
-                                        },
-                                        "SessionId":  {
-                                            "type":  "string"
-                                        },
-                                        "Skill Name":  {
-                                        },
-                                        "Skill Sources":  {
-                                            "type":  "array"
-                                        }
-                                    },
-                                    "type":  "object"
-                                }
-                            }
-                        },
                         "Send_an_email_(V2)":  {
                             "runAfter":  {
                                 "Compose_2":  [
@@ -148,7 +115,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "Body":  "\u003cp\u003e@{outputs('Compose_2')}\u003c/p\u003e",
+                                    "Body":  "\u003cp\u003e@{outputs('Compose_2')}\u003cbr\u003e\n\u003c/p\u003e",
                                     "Importance":  "Normal",
                                     "Subject":  "Daily Threat Bulletin",
                                     "To":  "@parameters('email')"

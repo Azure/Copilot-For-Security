@@ -1,13 +1,33 @@
 {
     "$schema":  "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion":  "1.0.0.0",
+    "metadata":  {
+        "title":  "",
+        "description":  "",
+        "prerequisites":  "",
+        "postDeployment":  [
+        ],
+        "prerequisitesDeployTemplateFile":  "",
+        "lastUpdateTime":  "",
+        "entities":  [
+        ],
+        "tags":  [
+        ],
+        "support":  {
+            "tier":  "community",
+            "armtemplate":  "Generated from https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator"
+        },
+        "author":  {
+            "name":  ""
+        }
+    },
     "parameters":  {
         "PlaybookName":  {
             "defaultValue":  "DailyThreatExposureReport-Copilot",
             "type":  "string"
         },
         "email":  {
-            "type":  "string",
+            "type":  "String",
             "metadata":  {
                 "description":  "Enter value for email"
             }
@@ -33,7 +53,7 @@
                         },
                         "email":  {
                             "defaultValue":  "[parameters('email')]",
-                            "type":  "string"
+                            "type":  "String"
                         }
                     },
                     "triggers":  {
@@ -74,12 +94,12 @@
                         },
                         "Compose":  {
                             "runAfter":  {
-                                "Parse_JSON":  [
+                                "Summarize_the_investigation":  [
                                     "Succeeded"
                                 ]
                             },
                             "type":  "Compose",
-                            "inputs":  "@body('Parse_JSON')?['Evaluation Result Content']"
+                            "inputs":  "@body('Summarize_the_investigation')?['EvaluationResultContent']"
                         },
                         "Compose_2":  {
                             "runAfter":  {
@@ -106,39 +126,6 @@
                                 },
                                 "method":  "post",
                                 "path":  "/process-prompt"
-                            }
-                        },
-                        "Parse_JSON":  {
-                            "runAfter":  {
-                                "Summarize_the_investigation":  [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type":  "ParseJson",
-                            "inputs":  {
-                                "content":  "@body('Summarize_the_investigation')",
-                                "schema":  {
-                                    "properties":  {
-                                        "Evaluation Result Content":  {
-                                            "type":  "string"
-                                        },
-                                        "Evaluation Result Type":  {
-                                            "type":  "string"
-                                        },
-                                        "Prompt Content":  {
-                                            "type":  "string"
-                                        },
-                                        "SessionId":  {
-                                            "type":  "string"
-                                        },
-                                        "Skill Name":  {
-                                        },
-                                        "Skill Sources":  {
-                                            "type":  "array"
-                                        }
-                                    },
-                                    "type":  "object"
-                                }
                             }
                         },
                         "Recommendations":  {
