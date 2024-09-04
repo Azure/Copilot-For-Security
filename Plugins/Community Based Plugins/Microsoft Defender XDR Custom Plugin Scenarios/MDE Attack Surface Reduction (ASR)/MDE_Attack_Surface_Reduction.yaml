@@ -96,7 +96,7 @@ SkillGroups:
     Skills:
       - Name: GetASRBlockedEvents
         DisplayName: Get ASR Blocked Events
-        Description: Fetches a count of the top 25 ASR ASR blocked events
+        Description: Fetches a count of the top 25 ASR blocked events
         ExamplePrompt:
         - 'Attack Surface Reduction Rules'
         - 'ASR Blocked Events'
