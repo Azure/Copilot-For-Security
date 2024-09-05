@@ -1,3 +1,18 @@
 add text here
 
 MDA Advanced Threat Protection (ATP) Detection
+
+CloudAppEvents
+| where ActionType == "AtpDetection"
+| extend
+     DetectionMethod = parse_json(RawEventData).DetectionMethod,
+     EventDeepLink = parse_json(RawEventData).EventDeepLink,
+     FileData = parse_json(RawEventData).FileData
+| project-reorder
+     Timestamp,
+     ActionType,
+     Application,
+     AccountId,
+     DetectionMethod,
+     FileData,
+     EventDeepLink
