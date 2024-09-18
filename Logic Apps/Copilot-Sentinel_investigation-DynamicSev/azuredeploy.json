@@ -66,12 +66,12 @@
                         },
                         "Compose":  {
                             "runAfter":  {
-                                "Parse_JSON_4":  [
+                                "Tags_collection":  [
                                     "Succeeded"
                                 ]
                             },
                             "type":  "Compose",
-                            "inputs":  "@split(body('Parse_JSON_4')?['Evaluation Result Content'],',')"
+                            "inputs":  "@split(body('Tags_collection')?['EvaluationResultContent'],',')"
                         },
                         "Create_HTML_table":  {
                             "runAfter":  {
@@ -116,7 +116,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  " Show the authentication methods setup for each user involved in that incident. Especially indicate whether they have MFA enabled.",
+                                    "PromptContent":  "Show the authentication methods setup for each user involved in that incident. Especially indicate whether they have MFA enabled.",
                                     "SessionId":  "@body('GetReputationsByIpAddresses')?['sessionId']",
                                     "SkillName":  "GetEntraUserDetails"
                                 },
@@ -138,7 +138,7 @@
                             "type":  "ApiConnection",
                             "inputs":  {
                                 "body":  {
-                                    "PromptContent":  " Tell me about the entities associated with that incident.",
+                                    "PromptContent":  "Tell me about the entities associated with that incident.",
                                     "SessionId":  "@body('GetSentinelIncident')?['sessionId']",
                                     "SkillName":  "GetIncidentEntities"
                                 },
@@ -218,7 +218,7 @@
                         },
                         "Initialize_variable":  {
                             "runAfter":  {
-                                "Parse_JSON_6":  [
+                                "Report":  [
                                     "Succeeded"
                                 ]
                             },
@@ -228,7 +228,24 @@
                                     {
                                         "name":  "summrize_report",
                                         "type":  "string",
-                                        "value":  "@body('Parse_JSON_6')?['Evaluation Result Content']"
+                                        "value":  "@body('Report')?['EvaluationResultContent']"
+                                    }
+                                ]
+                            }
+                        },
+                        "Initialize_variable_2":  {
+                            "runAfter":  {
+                                "classify_incident":  [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type":  "InitializeVariable",
+                            "inputs":  {
+                                "variables":  [
+                                    {
+                                        "name":  "sev",
+                                        "type":  "string",
+                                        "value":  "@trim(body('classify_incident')?['EvaluationResultContent'])"
                                     }
                                 ]
                             }
@@ -579,166 +596,6 @@
                                 }
                             }
                         },
-                        "Parse_JSON_2":  {
-                            "runAfter":  {
-                                "classify_incident":  [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type":  "ParseJson",
-                            "inputs":  {
-                                "content":  "@body('classify_incident')",
-                                "schema":  {
-                                    "properties":  {
-                                        "Evaluation Result Content":  {
-                                            "type":  "string"
-                                        },
-                                        "Evaluation Result Type":  {
-                                            "type":  "string"
-                                        },
-                                        "Next Prompt Suggestions":  {
-                                        },
-                                        "Prompt Content":  {
-                                            "type":  "string"
-                                        },
-                                        "SessionId":  {
-                                            "type":  "string"
-                                        },
-                                        "Skill Name":  {
-                                        }
-                                    },
-                                    "type":  "object"
-                                }
-                            }
-                        },
-                        "Parse_JSON_3":  {
-                            "runAfter":  {
-                                "Explain_classify":  [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type":  "ParseJson",
-                            "inputs":  {
-                                "content":  "@body('Explain_classify')",
-                                "schema":  {
-                                    "properties":  {
-                                        "Evaluation Result Content":  {
-                                            "type":  "string"
-                                        },
-                                        "Evaluation Result Type":  {
-                                            "type":  "string"
-                                        },
-                                        "Next Prompt Suggestions":  {
-                                        },
-                                        "Prompt Content":  {
-                                            "type":  "string"
-                                        },
-                                        "SessionId":  {
-                                            "type":  "string"
-                                        },
-                                        "Skill Name":  {
-                                        }
-                                    },
-                                    "type":  "object"
-                                }
-                            }
-                        },
-                        "Parse_JSON_4":  {
-                            "runAfter":  {
-                                "Tags_collection":  [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type":  "ParseJson",
-                            "inputs":  {
-                                "content":  "@body('Tags_collection')",
-                                "schema":  {
-                                    "properties":  {
-                                        "Evaluation Result Content":  {
-                                            "type":  "string"
-                                        },
-                                        "Evaluation Result Type":  {
-                                            "type":  "string"
-                                        },
-                                        "Next Prompt Suggestions":  {
-                                        },
-                                        "Prompt Content":  {
-                                            "type":  "string"
-                                        },
-                                        "SessionId":  {
-                                            "type":  "string"
-                                        },
-                                        "Skill Name":  {
-                                        }
-                                    },
-                                    "type":  "object"
-                                }
-                            }
-                        },
-                        "Parse_JSON_5":  {
-                            "runAfter":  {
-                                "adding_tags_for_the_incident":  [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type":  "ParseJson",
-                            "inputs":  {
-                                "content":  "@body('Tags_collection')",
-                                "schema":  {
-                                    "properties":  {
-                                        "Evaluation Result Content":  {
-                                            "type":  "string"
-                                        },
-                                        "Evaluation Result Type":  {
-                                            "type":  "string"
-                                        },
-                                        "Next Prompt Suggestions":  {
-                                        },
-                                        "Prompt Content":  {
-                                            "type":  "string"
-                                        },
-                                        "SessionId":  {
-                                            "type":  "string"
-                                        },
-                                        "Skill Name":  {
-                                        }
-                                    },
-                                    "type":  "object"
-                                }
-                            }
-                        },
-                        "Parse_JSON_6":  {
-                            "runAfter":  {
-                                "Report":  [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type":  "ParseJson",
-                            "inputs":  {
-                                "content":  "@body('Report')",
-                                "schema":  {
-                                    "properties":  {
-                                        "Evaluation Result Content":  {
-                                            "type":  "string"
-                                        },
-                                        "Evaluation Result Type":  {
-                                            "type":  "string"
-                                        },
-                                        "Next Prompt Suggestions":  {
-                                        },
-                                        "Prompt Content":  {
-                                            "type":  "string"
-                                        },
-                                        "SessionId":  {
-                                            "type":  "string"
-                                        },
-                                        "Skill Name":  {
-                                        }
-                                    },
-                                    "type":  "object"
-                                }
-                            }
-                        },
                         "Report":  {
                             "runAfter":  {
                                 "GetIntuneDevices":  [
@@ -763,7 +620,7 @@
                         },
                         "Report_answer":  {
                             "runAfter":  {
-                                "Parse_JSON_5":  [
+                                "adding_tags_for_the_incident":  [
                                     "Succeeded"
                                 ]
                             },
@@ -773,7 +630,7 @@
                                     {
                                         "name":  "Answer",
                                         "type":  "array",
-                                        "value":  "@array(body('Parse_JSON_5')?['Evaluation Result Content'])"
+                                        "value":  "@array(body('Tags_collection')?['EvaluationResultContent'])"
                                     }
                                 ]
                             }
@@ -795,7 +652,7 @@
                         },
                         "Switch":  {
                             "runAfter":  {
-                                "Parse_JSON_2":  [
+                                "Initialize_variable_2":  [
                                     "Succeeded"
                                 ]
                             },
@@ -877,7 +734,7 @@
                                 "actions":  {
                                 }
                             },
-                            "expression":  "@toLower(body('Parse_JSON_2')?['Evaluation Result Content'])",
+                            "expression":  "@toLower(variables('sev'))",
                             "type":  "Switch"
                         },
                         "Tags_collection":  {
@@ -978,7 +835,7 @@
                         },
                         "classified_explain":  {
                             "runAfter":  {
-                                "Parse_JSON_3":  [
+                                "Explain_classify":  [
                                     "Succeeded"
                                 ]
                             },
@@ -988,7 +845,7 @@
                                     {
                                         "name":  "classified explain",
                                         "type":  "string",
-                                        "value":  "@body('Parse_JSON_3')?['Evaluation Result Content']"
+                                        "value":  "@body('Explain_classify')?['EvaluationResultContent']"
                                     }
                                 ]
                             }
