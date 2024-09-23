@@ -24,7 +24,7 @@ You can find detailed product information about CheckPhish here: https://checkph
 
 1. URL Scan - Analyze a URL for potential threats:
    - Example Prompt(s):
-     - "Ask checkphish to check [URL]"
+     - "Ask checkPhish to check [URL]"
      - "What does CheckPhish say about [URL]?"
    - Inputs: [URL]
 
