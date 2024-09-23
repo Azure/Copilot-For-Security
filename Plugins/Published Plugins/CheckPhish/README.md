@@ -1,4 +1,4 @@
-# Checkphish
+# CheckPhish
 
 This plugin allows users to utilize the CheckPhish AI to analyze URLs for potential phishing threats, tech support scams, cryptojacking, and other security risks. Utilizing CheckPhish's advanced machine learning models, this plugin provides detailed insights including:
 
