@@ -1,0 +1,17 @@
+Descriptor:
+  Description: "CheckPhish scan plugin for Microsoft Security Copilot"
+  Name: "CheckPhish"
+  DisplayName: "CheckPhish"
+  Category: "Other"
+  Icon: https://developers.checkphish.ai/copilot/checkphish-logo.svg
+  SupportedAuthTypes:
+    - APIKey
+  Authorization:
+    Type: APIKey
+    Key: apiKey
+    Location: Header
+    AuthScheme: ''
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://developers.checkphish.ai/copilot/checkphish-api.yaml

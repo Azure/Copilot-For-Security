@@ -1,0 +1,179 @@
+openapi: 3.0.0
+info:
+  title: "CheckPhish Lookup API"
+  description: "CheckPhish API integration for URL scanning and lookup"
+  version: "1.0.0"
+servers:
+  - url: "https://developers.checkphish.ai/api"
+
+paths:
+  /neo/copilot/scan:
+    post:
+      summary: "Scan a URL"
+      description: "Scan a specific URL using CheckPhish"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                apiKey:
+                  type: string
+                  description: "API key for authorization"
+                url:
+                  type: string
+                  description: "URL to be scanned"
+                  example: "https://bolster.ai"
+      responses:
+        '200':
+          description: "Lookup result"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  created_ts:
+                    type: integer
+                    description: "Timestamp of when the scan was created"
+                  source:
+                    type: string
+                    description: "Source of the scan"
+                  matrix_domain:
+                    type: string
+                    description: "The domain being scanned"
+                  scan_category:
+                    type: string
+                    description: "The category of the scan"
+                  scan_location:
+                    type: string
+                    description: "The location of the scan"
+                  disposition:
+                    type: string
+                    description: "The scan result (e.g., clean, malicious)"
+                  descriptors_matched:
+                    type: integer
+                    description: "Number of descriptors matched"
+                  descriptors:
+                    type: array
+                    description: "List of descriptors matched"
+                    items:
+                      type: object
+                  screenshotTries:
+                    type: integer
+                    description: "Number of screenshot attempts"
+                  brand_id:
+                    type: string
+                    description: "Detected brand ID"
+                  final_category:
+                    type: string
+                    description: "Final category of the scan"
+                  private_scan:
+                    type: boolean
+                    description: "Whether the scan was private"
+                  dst_url:
+                    type: string
+                    description: "Destination URL"
+                  imageStatus:
+                    type: object
+                    properties:
+                      size_kb:
+                        type: integer
+                        description: "Size of the image in KB"
+                      SS_STATUS:
+                        type: integer
+                        description: "Screenshot status"
+                      dst_url:
+                        type: string
+                        description: "Destination URL of the screenshot"
+                  dns_info:
+                    type: object
+                    properties:
+                      A:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            ip:
+                              type: string
+                              description: "IP address of the A record"
+                      AAAA:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            ip:
+                              type: string
+                              description: "IPv6 address of the AAAA record"
+                  logo_detection:
+                    type: object
+                    properties:
+                      annotations:
+                        type: array
+                        items:
+                          type: string
+                      model_version:
+                        type: string
+                        description: "Version of the logo detection model"
+                      threshold:
+                        type: number
+                        description: "Threshold for logo detection"
+                  brand_nlp_verdict:
+                    type: object
+                    properties:
+                      topBrand:
+                        type: object
+                        properties:
+                          brand:
+                            type: string
+                            description: "Top detected brand"
+                          score:
+                            type: number
+                            description: "Score of the detected brand"
+                      score:
+                        type: number
+                        description: "Overall brand detection score"
+                  sherlock:
+                    type: object
+                    properties:
+                      brand_id:
+                        type: string
+                        description: "Brand ID detected by the Sherlock engine"
+                      score:
+                        type: number
+                        description: "Sherlock engine score"
+                  primary_domain_whois:
+                    type: object
+                    properties:
+                      domain_name:
+                        type: string
+                        description: "Primary domain name"
+                      nameservers:
+                        type: string
+                        description: "Nameservers of the domain"
+                      domain_registration_date:
+                        type: string
+                        format: date-time
+                        description: "Registration date of the domain"
+                      domain_registration_update_date:
+                        type: string
+                        format: date-time
+                        description: "Last update date of the domain registration"
+                      registrar:
+                        type: string
+                        description: "Registrar of the domain"
+                  http_code:
+                    type: integer
+                    description: "HTTP response code of the lookup"
+                  technologies_used:
+                    type: array
+                    items:
+                      type: string
+                    description: "List of technologies detected on the website"
+                  verdict_source:
+                    type: string
+                    description: "Source of the verdict"
+                  categories:
+                    type: array
+                    description: "List of detected categories"
+                    items:
+                      type: string
