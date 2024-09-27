@@ -29,4 +29,4 @@ Logic App View
 ![Threat Bulletin Logic App](https://github.com/KwachSean/SecurityCopilot/raw/main/playbooks/ThreatBulletinCopilot/threatbulletinlogicapp.png)
 
 Results of the Logic APP
-![Threat Bulletin Image](https://github.com/KwachSean/SecurityCopilot/raw/main/playbooks/ThreatBulletinCopilot/Threatbulletin.png)
+![Threat Bulletin Image](https://github.com/Azure/Copilot-For-Security/blob/main/Logic%20Apps/ThreatBulletinCopilot/Threatbulletin.png)
