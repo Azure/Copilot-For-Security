@@ -14,7 +14,7 @@
 1.  Obtain the file MDA_Advanced_Threat_Protection_Detection.yaml from this directory.
 2.  Upload the custom plugin
 
-#### Skills
+#### Utilization of the plugin
 
 - **GetCloudAppATPEvents**: Fetches a list of Advanced Threat Protection events within a specified timeframe
 - **GetOfficeActivityATPEvents**: Fetches a list of Advanced Threat Protection events within a specified timeframe
