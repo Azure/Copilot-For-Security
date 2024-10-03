@@ -24,7 +24,6 @@ The CloudAppEvents table contains enriched logs from all SaaS applications conne
 
 - **GetOneDriveActivtyForUser**: Feteches a list of a user's OneDrive activity within a specified timeframe
 - **GetSharePointActivityForUser**: Fetches a list of a user's SharePoint activity within a specified timeframe
-- **GetSharePointActivityPerSite**: Fetches a list of a SharePoint activity for a specified site within a timeframe
 - **GetExchangeOnlineActivityForUser**: Fetches a list of a user's Exchange Online activity within a specified timeframe
 - **GetTeamsActivityForUser**: Fetches a list of a user's Teams activity within a specified timeframe
 
