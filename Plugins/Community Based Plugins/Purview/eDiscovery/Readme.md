@@ -14,7 +14,8 @@ Pre-requisites
 ### Instructions
 #### Upload the Custom Plugin
 
-* Obtain the file [eDiscovery_OAuth_API_manifest.yaml](https://github.com/samitks77/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Purview/eDiscovery/eDiscovery_OAuth_API_manifest.yaml) from this directory. From your EntraID App registration(Images/create-api-key.png), add the ClientId & tenant ID. This is the yaml that you will upload in Copilot for Security. Also note that during the upload process you will need to have your Secret Value from Certificates & secrets handy, as that will be your API key for this plugin to work (https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials)
+* Obtain the file [eDiscovery_OAuth_API_manifest.yaml](https://github.com/samitks77/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Purview/eDiscovery/eDiscovery_OAuth_API_manifest.yaml) from this directory. This is the yaml that you will upload in Copilot for Security. From your EntraID App registration, add the ClientId & tenant ID ![alt text](EntraID-ClientID-TenantID.png)
+* During the upload process as a custom plugin in Copilot for Security you will need to have your Secret Value from Certificates & secrets handy as that will be your API key for this plugin to work. Copy your secret value once the secret is created because if you navigate away from this screen, your secret value would be obfiscuated. ![alt text](EntraID-SecretValue.png) (https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials)
 
 ### Skills & Prompts
 Look up IP address: Ask CrowdSec about an IP
