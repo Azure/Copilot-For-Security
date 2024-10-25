@@ -1,7 +1,7 @@
 # eDiscovery Plugin for Copilot for Security
 Author: Amit Singh
 
-This custom plugin for Copilot for Security offers a range of functionalities to enhance your organization's eDiscovery capabilities in Microsoft Purview. Use this plugin if you create the case and then export the artifacts, if you attach search to review set & review those in eDiscovery then do not use this plugin. 
+This custom plugin for Copilot for Security offers a range of functionalities to enhance your organization's eDiscovery capabilities in Microsoft Purview. Use this plugin if you create the case and then export the artifacts. If you attach search to review set & review those in eDiscovery then this plugin will not work as currently constructed. 
 
 Pre-requisites
 
