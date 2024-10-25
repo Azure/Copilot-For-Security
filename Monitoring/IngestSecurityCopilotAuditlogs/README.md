@@ -78,8 +78,6 @@ Thanks to the published ARM template the deployment of the [Azure Funtion App](h
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy.json)
 
-[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy.json)
-
 2. Now it is time to use the noted details from previous steps.  
 - Select the right **Subscription**, **Resource Group** and **Region** where you what to deploy the Azure Funtion App.  
 - Fill the Instance Details **Client ID**, **Client Secret**, **Tenant Domain**, **Publisher Guid**.  

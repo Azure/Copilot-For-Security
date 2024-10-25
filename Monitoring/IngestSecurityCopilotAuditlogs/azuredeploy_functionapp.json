@@ -44,19 +44,19 @@
 			"metadata": {
 				"description": "Specifies the Log Analytics Workspace Key."
 			}
-        }		
+        }
     },
     "variables": {            
-			"FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",            
-			"StorageAccountName":"[concat(substring(variables('FunctionName'), 0, 20), 'sa')]",    
-			"KeyVaultName": "[concat(substring(variables('FunctionName'), 0, 20), 'kv')]",
-			"AzureAADClientSecret": "AzureAADClientSecret",    
-			"LogAnalyticsWorkspaceKey": "LogAnalyticsWorkspaceKey",
-			"StorageSuffix":"[environment().suffixes.storage]",
-			"HostingPlanName":"[concat('ASP-', variables('FunctionName'))]",																	   
-			"LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('workspaceId')), '.ods.opinsights'))]",
-			"OfficeLoginUri":"[replace(environment().portal, 'https://portal.azure', 'https://manage.office')]",
-			"AzureAADLoginUri":"[replace(environment().portal, 'https://portal.azure', 'https://login.microsoftonline')]"
+        "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",            
+        "StorageAccountName":"[concat(substring(variables('FunctionName'), 0, 20), 'sa')]",    
+        "KeyVaultName": "[concat(substring(variables('FunctionName'), 0, 20), 'kv')]",
+        "AzureAADClientSecret": "AzureAADClientSecret",    
+        "LogAnalyticsWorkspaceKey": "LogAnalyticsWorkspaceKey",
+        "StorageSuffix":"[environment().suffixes.storage]",
+        "HostingPlanName":"[concat('ASP-', variables('FunctionName'))]",																	   
+        "LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('workspaceId')), '.ods.opinsights'))]",
+        "OfficeLoginUri":"[replace(environment().portal, 'https://portal.azure', 'https://manage.office')]",
+        "AzureAADLoginUri":"[replace(environment().portal, 'https://portal.azure', 'https://login.microsoftonline')]"
     },
     "resources": [
         {
@@ -300,6 +300,6 @@
             "properties": {
                 "shareQuota": 5120
             }
-        }       
+        }               
     ]
 }
