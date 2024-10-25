@@ -4,7 +4,7 @@ This function app is designed to ingest Security Copilot Audit logs
 The Azure Function App uses a PowerShell script to collect Security Copilot Audit logs and ingests into a custom table (CFS_Audit). The secrets for the required connections are stored in Azure Key Vault. 
 ***Note***: Custom Logs are a billable data source.
 
-![Function App](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture1.png)<br>
+![Function App](./images/Picture1.png)<br>
 
 Let’s get started with the configuration! 
 
@@ -21,20 +21,20 @@ The Azure AD app is later required to use it as service principle for the [Azure
 
 1. Go to **Azure Active Directory** / **App Registrations**
 2. Create **New Registration**<br>
-![App Registration](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture2.png)<br>
+![App Registration](./images/Picture2.png)<br>
 3. Call it "O365APItoAzureSentinel".  Click **Register**.
 4. Click **API Permissions** Blade.
 5. Click **Add a Permission**.  
 6. Click **Office 365 Management APIs**.
 7. Click **Appplication Permissions**
 8. Check **ActivityFeed.Read** and **ActivityFeed.ReadDlp**.  Click **Add permissions**.<br>
-![Permissions](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture5.png)<br>
+![Permissions](./images/Picture5.png)<br>
 9. Click **Grant admin consent for ...**.<br>
-![Admin Consent](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture6.png)<br>
+![Admin Consent](./images/Picture6.png)<br>
 10. Click **Certificates and Secrets** blade.
 11. Click **New Client Secret**.
 12. Enter a description, select **never**.  Click **Add**.<br>
-![Secret](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture3.png)<br>
+![Secret](./images/Picture3.png)<br>
 13. **IMPORTANT**.  Click **copy** next to the new secret and paste it somewhere temporaily.  You can not come back to get the secret once you leave the blade.
 14. Copy the **client Id** from the application properties and paste it somewhere.
 15. Also copy the **tenant Id** from the AAD directory properties blade.
@@ -70,7 +70,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.office.[com][us]/api/v1.0/$tenantGuid/activity/feed/subscriptions/start?contentType=DLP.ALL&PublisherIdentifier=$Publisher"
 ```
 5. A successful output looks like as below. <br>
-![Output](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture7.png)<br>
+![Output](./images/Picture7.png)<br>
 
 ### Deploy the Azure Function App 
 Thanks to the published ARM template the deployment of the [Azure Funtion App](https://github.com/sreedharande/IngestOffice365AuditLogs) is done with just a few clicks. 
@@ -85,7 +85,7 @@ Thanks to the published ARM template the deployment of the [Azure Funtion App](h
 - Fill the Instance Details **Client ID**, **Client Secret**, **Tenant Domain**, **Publisher Guid**.  
 - There is also a need of **Workspace ID** and **Workspace Key** from where Azure Sentinel is deployed. 
 - The Content Types you can leave as default with **Audit.General**, or you can also add **DLP.All** as well. Or use only **DLP.All**. 
-![Deployment](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture9.png)
+![Deployment](./images/Picture9.png)
 3. Click to **Review + create**, review the configuration and click **Create**. 
 4. Now the deployment of ARM template is completed. 
-![Complete](./Monitoring/IngestSecurityCopilotAuditlogs/images/Picture10.png)
+![Complete](./images/Picture10.png)
