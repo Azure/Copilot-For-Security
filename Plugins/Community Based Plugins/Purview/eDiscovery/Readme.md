@@ -7,7 +7,7 @@ Pre-requisites
 
 * [Copilot for Security Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
 * [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
-* [EntraID Application Registration created](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#register-an-application) Make sure your application has the following delegated graph (https://graph.microsoft.com) permissions: offline_access user.read eDiscovery.Read.All & eDiscovery.ReadWrite.All
+* Make sure your application has the following delegated graph (https://graph.microsoft.com) permissions: offline_access user.read eDiscovery.Read.All & eDiscovery.ReadWrite.All. See this link for App registration [EntraID Application Registration created](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#register-an-application) 
 
 ### Instructions
 #### Upload the Custom Plugin
