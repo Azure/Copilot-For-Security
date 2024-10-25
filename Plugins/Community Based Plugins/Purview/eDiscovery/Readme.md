@@ -69,4 +69,9 @@ Pre-requisites
        and their properties
    - Inputs: [Case ID]
 
+### eDiscovery prompt book based on variables like CaseID etc
+![alt text](CfS-Prompt-Sample.png)
+
+
+
 
