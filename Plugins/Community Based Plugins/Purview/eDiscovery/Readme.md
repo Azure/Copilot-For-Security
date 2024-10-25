@@ -37,7 +37,7 @@ Pre-requisites
    - Inputs: [Custodian ID]
 4. Add new userSource objects to Custodians 
    - Example Prompt(s): 
-     - add new userSource object associated with the eDiscovery custodian id ""2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx6"", include this 
+     - add new userSource object associated with the eDiscovery custodian id "2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx6", include this 
        custodian email "test@test123.com" and Mailbox, site for sources. 
    - Inputs: [Custodian ID]
    - Inputs: [Email]
@@ -52,4 +52,21 @@ Pre-requisites
      - Run an estimate of the number of emails and documents in eDiscovery with this Search ID "2xxxxxxx-xxx4-xxxd-4xxx- 
        5xxxxxxxxxxx" or the Search ID from above
    - Inputs: [Search ID]
+7. Create new eDiscovery ReviewSet: 
+   - Example Prompt(s): 
+     - Create new ediscoveryReviewSet for the above case id or use this Case ID "1xxxx234-XXXX-XXXX-a1cd- 
+       fxxxxxxxxxx0" with the Display Name of "Test-123-reviewset"
+   - Inputs: [Case ID]
+8. Initiate an Export in eDiscovery: 
+   - Example Prompt(s): 
+     - Use this Case ID "1xxxx234-XXXX-XXXX-a1cd-fxxxxxxxxxx0" or the Case ID from above & this ReviewSetId "dxxxxxxx-xxxx-xxxx-xxxx- 
+       xxxxxxxxxxxx" or the ReviewSetId from above and initiate an export
+   - Inputs: [Case ID]
+   - Inputs: [Review Set ID]
+9. Get a list of Case Operation in eDiscovery: 
+   - Example Prompt(s): 
+     - Use the Case ID from above or use this Case ID "1xxxx234-XXXX-XXXX-a1cd-fxxxxxxxxxx0", get a list of the caseOperation objects 
+       and their properties
+   - Inputs: [Case ID]
+
 
