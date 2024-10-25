@@ -21,9 +21,35 @@ Pre-requisites
 * Paste the Client Secret Value from EntraID App Registration & click connect ![alt text](CfS-Secret.png) It should open another window where you
 
 ### Skills & Prompts
-*  Create eDiscovery Case
-   Example Prompt(s): Create eDiscovery case in Purview with the Case name "CfS-Test-123", response should be a bullet list
-   Inputs: [Case name]
-According to CrowdSec what are the top targeted countries by this IP: [IP]
-Inputs: [IP]
-  
+1. Create eDiscovery Case: 
+   - Example Prompt(s): 
+     - Create eDiscovery case in Purview with the Case name "Test-123", response should be a bulleted list
+   - Inputs: [Case name]
+2. Add custodian to eDiscovery Case: 
+   - Example Prompt(s): 
+     - Add custodian to the eDiscovery case in Purview, use the case id from above or use this Case ID "1xxxx234-XXXX-XXXX-a1cd- 
+       fxxxxxxxxxx0" and add this email for the custodian "test@test123.com" 
+   - Inputs: [Email]
+   - Inputs: [Case ID]
+3. Apply hold on eDiscovery Custodian 
+   - Example Prompt(s): 
+     - Apply hold on eDiscovery custodians using the custodian id from above or use this Custodian ID "2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx6" 
+   - Inputs: [Custodian ID]
+4. Add new userSource objects to Custodians 
+   - Example Prompt(s): 
+     - add new userSource object associated with the eDiscovery custodian id ""2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx6"", include this 
+       custodian email "test@test123.com" and Mailbox, site for sources. 
+   - Inputs: [Custodian ID]
+   - Inputs: [Email]
+5. Add new eDiscovery Search object to the Case 
+   - Example Prompt(s): 
+     - Add a new ediscoverySearch object with this Case ID "1xxxx234-XXXX-XXXX-a1cd-fxxxxxxxxxx0" with the display name "Test-123- 
+       search", also add dataSourceScopes to allTenantMailboxes, allTenantSites, allCaseCustodians.
+   - Inputs: [Case ID]
+   - Inputs: [Display Name]
+6. Run an estimate on eDiscovery Case: 
+   - Example Prompt(s): 
+     - Run an estimate of the number of emails and documents in eDiscovery with this Search ID "2xxxxxxx-xxx4-xxxd-4xxx- 
+       5xxxxxxxxxxx" or the Search ID from above
+   - Inputs: [Search ID]
+
