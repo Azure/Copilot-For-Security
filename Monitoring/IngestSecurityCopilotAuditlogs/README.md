@@ -81,11 +81,8 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 - Select the right **Subscription**, **Resource Group** and **Region** where you what to deploy the Azure Funtion App.  
 - Fill the Instance Details **Client ID**, **Client Secret**, **Tenant Domain**, **Publisher Guid**.  
 - There is also a need of **Workspace ID** and **Workspace Key** from where Azure Sentinel is deployed. 
-- The Content Types you can leave as default with **Audit.General**, or you can also add **DLP.All** as well. Or use only **DLP.All**. 
-![Deployment](./images/Picture9.png)
 3. Click to **Review + create**, review the configuration and click **Create**. 
-4. Now the deployment of ARM template is completed. 
-![Complete](./images/Picture10.png)
+
 
 ### Deploy Analytical Rules
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy_analytics.json)
