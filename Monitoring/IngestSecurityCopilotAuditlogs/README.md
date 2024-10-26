@@ -72,11 +72,10 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 5. A successful output looks like as below. <br>
 ![Output](./images/Picture7.png)<br>
 
-### Deploy the Azure Function App 
-Thanks to the published ARM template the deployment of the [Azure Funtion App](https://github.com/sreedharande/IngestOffice365AuditLogs) is done with just a few clicks. 
+### Deploy the Azure FunctionApp 
 1. Click to **Deploy the template / Deploy to Azure** below.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy_functionapp.json)
 
 2. Now it is time to use the noted details from previous steps.  
 - Select the right **Subscription**, **Resource Group** and **Region** where you what to deploy the Azure Funtion App.  
@@ -87,3 +86,9 @@ Thanks to the published ARM template the deployment of the [Azure Funtion App](h
 3. Click to **Review + create**, review the configuration and click **Create**. 
 4. Now the deployment of ARM template is completed. 
 ![Complete](./images/Picture10.png)
+
+### Deploy Analytical Rules
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy_analytics.json)
+
+### Deploy Workbook 
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy_workbook.json)
