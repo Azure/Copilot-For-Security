@@ -1,0 +1,159 @@
+# Spacing matters between parent and child objects. Hitting enter is fine, but tabular spaces will cause errors.
+# Updated 2024-10-28
+
+Descriptor:
+  Name: Example KQL plugin
+  DisplayName: Example KQL plugin that use Sentinel and Defender
+  Description: This plugin demonstrates how Copilot for Security can utilize custom KQL based plugins to extend its capabilities. To manually invoke the skills within this plugin, simply search for "SOC tools ~" in the skills menu of Copilot for Security. | Rick Kotlarz | Updated 2024-09-24
+ 
+##################################################################################################
+# Leaving the 'Settings' section below as-is. This will project variable fields to the end user
+#   during plugin installation and allow these values to be referenced throughout the plugin.
+##################################################################################################
+
+  Settings:
+    - Name: TenantId
+      Description: The ID of the AAD Organization that the Sentinel workspace is in.
+      Required: true
+    - Name: WorkspaceName
+      Description: The id of the Azure Subscription that the Sentinel workspace is in.
+      Required: true
+    - Name: SubscriptionId
+      Description: The name of the Resource Group that the Sentinel workspace is in.
+      Required: true
+    - Name: ResourceGroupName
+      Description: The name of the Sentinel workspace.
+      Required: true
+
+  SupportedAuthTypes:
+    - None
+    
+SkillGroups:
+  - Format: KQL
+    Skills:
+
+#####################################################################################
+# Skill format 
+#####################################################################################
+#
+#      - Name: uniqueSkillName
+#        DisplayName: Name of the skill that the user will see when manually selecting the skill
+#        Description: |
+#          Detailed description that the user will see when manually selecting a skill.
+#          This area can be multiple lines when using the pipe character after the colon character.
+#          You'll want to include additional information that is relevant for the Orchestreator to understand
+#        ExamplePrompts:
+#          - 'An example prompt that you would expect from a user to invoke this skill'
+#          - 'Another example prompt, make sure you exclude entities that are meant to change (e.g. IP, username)'
+#        Inputs:
+#          - Name: variableYouWantFromTheUserThatIsReferencedInYourKQL
+#            Description: Description or examples that user will see before filling out this variable
+#            DefaultValue: defaultValue
+#            Required: true or false
+#        Settings:
+#          Target: DefenderOrSentinel
+#          Template: |-
+#            KQLtableYouAreReferencing
+#             //KQL comment to help the Orchestrator or users responsible for maintaining the code
+#             | KQL content {{variableYouWantFromTheUserThatIsReferencedInYourKQL}}
+#             | Additional KQL content
+
+
+#######################################################################################
+# KQL Example 1 - Defender KQL example with no user input required
+#   Defender KQL skills do not require configuring the TenantId, SubscriptionId, 
+#     ResourceGroupName, or WorkspaceName but are limited to in their data storage.
+#######################################################################################
+
+      - Name: GetSigninDataForLast7Days
+        DisplayName: Get High and Critical alerts over the past 7 days
+        Description: |
+          Fetches Defender for all High and Critical alerts over the past 7 days
+        ExamplePrompts:
+          - 'Get high and critical alerts for the last 7 days'
+          - 'Get high and critical alerts for the last week'
+        Settings:
+          Target: Defender
+          Template: |-
+            // This query retrieves the most recent sign-in time for each user, within a specified time range, and displays only the user's name and their last sign-in date to validate location. Provide insights and summarize this data.
+            AlertInfo
+            | where Severity in ('High', 'Critical')
+            | where TimeGenerated > ago(7d)
+            | project AlertId, Title, TimeGenerated
+
+#######################################################################################
+# KQL Example 2 - Sentinel example with user input
+#   Sentinel KQL skills require configuring the TenantId, SubscriptionId, 
+#     ResourceGroupName, and WorkspaceName. You can do this in-line and hard code
+#     the data, however a best practice is to simply reference this varable and have
+#     the user enter it in upon deployment. In the example below the Sentinel
+#     configuration is entered by the user.   
+#######################################################################################
+
+      - Name: GetSigninData
+        DisplayName: Get sign-in data over the past n-days
+        Description: |
+          Fetches sign-in data with UPN over past n-days
+        ExamplePrompts:
+          - 'Get sign-in data for the last days'
+          - 'Get login data for the last days'
+          - 'Get Entra sign-in data for the last days'
+          - 'Get Entra login data for the last days'
+        Inputs:
+          - Name: dayRange
+            Description: The time range for the query (e.g., 1d, 7d)
+            DefaultValue: 1d
+            Required: true
+        Settings:
+#=====================================================================================
+# The following 'Settings' configuration relies on data entered during plugin install
+#=====================================================================================
+          Target: Sentinel
+          TenantId: '{{TenantId}}'
+          WorkspaceName: '{{WorkspaceName}}'
+          SubscriptionId: '{{SubscriptionId}}'
+          ResourceGroupName: '{{ResourceGroupName}}'
+#=====================================================================================
+          Template: |-
+            // This query retrieves the most recent sign-in time for each user, within a specified time range, and displays only the user's name and their last sign-in date to validate location. Provide insights and summarize this data.
+            SigninLogs
+            | where TimeGenerated >= ago({{dayRange}})
+            | summarize LastSignInDate=max(TimeGenerated) by UserPrincipalName 
+            | project UserPrincipalName, LastSignInDate 
+
+
+#######################################################################################
+# KQL Example 3 - Sentinel example with hard coded configuration
+#   Sentinel KQL skills require configuring the TenantId, SubscriptionId, 
+#     ResourceGroupName, and WorkspaceName. In this example I've hard coded
+#     the Sentinel configuration with sample configuration information.
+#######################################################################################
+
+      - Name: ShowUserIPinfo
+        DisplayName: Show user IP addresses
+        Description: |
+          Lists unique IP logins for a given user and last login
+          Searches Sentinel for all IP addresses which a given user has every used to authenticate. Then counts the frequency that each IP was used, shows only the unique results and associated count, as well as the last time that IP was used.
+        ExamplePrompts:
+          - 'Use Sentinel and show all unique for all IP addresses for this user'
+          - 'Show the unique IPs for user'
+          - 'What are the unique IP addresses for user'
+        Inputs:
+          - Name: UserPrincipalNameYouAreLookingUp
+            Description: User Principal Name to search for (e.g. user@mydomain.com)
+#           DefaultValue: 
+            Required: true
+#=====================================================================================
+# The following 'Settings' configuration uses a hardcoded configuration
+#=====================================================================================
+        Settings:
+          Target: Sentinel
+          TenantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+          SubscriptionId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+          ResourceGroupName: yourSentinalResourceGroup
+          WorkspaceName: yourSentinelWorkspace
+          Template: |-
+            SigninLogs
+            | where UserPrincipalName == "{{UserPrincipalNameYouAreLookingUp}}"
+            | summarize Count = count(), LastUsed = max(TimeGenerated) by IPAddress
+            | project IPAddress, Count, LastUsed
