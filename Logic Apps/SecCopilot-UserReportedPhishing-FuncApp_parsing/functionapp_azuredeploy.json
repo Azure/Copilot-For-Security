@@ -153,7 +153,7 @@
                       "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(variables('StorageAccountName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                       "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(variables('StorageAccountName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                       "WEBSITE_CONTENTSHARE": "[toLower(variables('FunctionName'))]",
-                      "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/cd1zz/cfsphishing_mdti/raw/refs/heads/main/FunctionApp.zip"
+                      "WEBSITE_RUN_FROM_PACKAGE": "https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Logic%20Apps/SecCopilot-UserReportedPhishing-FuncApp_parsing/FunctionApp.zip"
                   } 
               }
           ]
