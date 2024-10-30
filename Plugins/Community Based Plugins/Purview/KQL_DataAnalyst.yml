@@ -1033,7 +1033,8 @@ SkillGroups:
             let endpoint = (
             CloudAppEvents
               | where ISP has ispvar
-              | where IPTags has iptagvar  
+              | extend IPTags = tostring(IPTags)
+              | where IPTags has iptagvar    
             | where RawEventData.UserId has user
             | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != ''
             | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != '[]'
@@ -1056,6 +1057,7 @@ SkillGroups:
             (CloudAppEvents
                 | where ActionType !has 'DLPRuleMatch'
                 | where ISP has ispvar
+                | extend IPTags = tostring(IPTags)
                 | where IPTags has iptagvar  
                 | project ISP, ObjectId,IPTags,ActionType
             ) on ObjectId
@@ -1109,6 +1111,7 @@ SkillGroups:
             (
             CloudAppEvents
             | where ISP has ispvar
+            | extend IPTags = tostring(IPTags)
             | where IPTags has iptagvar 
             | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != ''
             | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != '[]'
@@ -1137,6 +1140,7 @@ SkillGroups:
             (CloudAppEvents
                 | where ActionType !has 'DLPRuleMatch'
                 | where ISP has ispvar
+                | extend IPTags = tostring(IPTags)
                 | where IPTags has iptagvar  
                 | project ISP, ObjectId,IPTags,ActionType
             ) on ObjectId
@@ -1195,6 +1199,7 @@ SkillGroups:
               | where tostring(RawEventData.Operation) == "MailItemsAccessed"
               | where tolower(ISP) has tolower(ispvar)
               | extend IPtagsv = iff(isnull(IPTags),'NotSet',IPTags)
+              | extend IPTags = tostring(IPTags)
               | where IPtagsv has iptagvar
               | mv-expand RawEventData.Folders
               | mv-expand FolderItem = RawEventData_Folders.FolderItems
@@ -1439,6 +1444,7 @@ SkillGroups:
                 CloudAppEvents
                   | where RawEventData.MDATPDeviceId != ''
                   | where ISP has ispvar
+                  | extend IPTags = tostring(IPTags)
                   | where IPTags has iptagvar
                   | where Timestamp > ago(31d)
                   | where ActionType in ('FileCopiedToClipboard', 'FileCopiedToNetworkShare', 'FileCopiedToRemoteDesktopSession', 'FileCopiedToRemovableMedia', 'FilePrinted', 'FileSensitivityLabelApplied', 'FileUploadedToCloud','FileUploaded','SharingSet', 'FileRead','FileRenamed', 'MipLabel', 'SensitivityLabelApplied', 'SensitivityLabeledFileOpened', 'SensitivityLabelRemoved', 'SensitivityLabelUpdated', 'ArchiveCreated', 'FileAccessedByUnallowedApp', 'FileArchived','FileAccessed', 'FileCreatedOnNetworkShare', 'FileCreatedOnRemovableMedia', 'FileModified', 'RemoveProtection','FileTransferredByBluetooth', 'WebpagePrinted', 'WebpageCopiedToClipboard', 'WebpageSavedToLocal', 'PastedToBrowser','FileSensitivityLabelChanged','FileDownloaded','SensitivityLabelPolicyMatched','SharingLinkCreated','SharingLinkUsed')
@@ -1493,6 +1499,7 @@ SkillGroups:
                   | where Timestamp > ago(14d)
                   | where RawEventData.MDATPDeviceId != ''
                   | where ISP has ispvar
+                  | extend IPTags = tostring(IPTags)
                   | where IPTags has iptagvar
                   | where ActionType in ('FileCopiedToClipboard', 'FileCopiedToNetworkShare', 'FileCopiedToRemoteDesktopSession', 'FileCopiedToRemovableMedia', 'FilePrinted', 'FileSensitivityLabelApplied', 'FileUploadedToCloud','FileUploaded','SharingSet', 'FileRead','FileRenamed', 'MipLabel', 'SensitivityLabelApplied', 'SensitivityLabeledFileOpened', 'SensitivityLabelRemoved', 'SensitivityLabelUpdated', 'ArchiveCreated', 'FileAccessedByUnallowedApp', 'FileArchived','FileAccessed', 'FileCreatedOnNetworkShare', 'FileCreatedOnRemovableMedia', 'FileModified', 'RemoveProtection','FileTransferredByBluetooth', 'WebpagePrinted', 'WebpageCopiedToClipboard', 'WebpageSavedToLocal', 'PastedToBrowser','FileSensitivityLabelChanged','FileDownloaded','SensitivityLabelPolicyMatched','SharingLinkCreated','SharingLinkUsed')
                   | where Application <> 'Microsoft Exchange Online'
@@ -1550,6 +1557,7 @@ SkillGroups:
               (
                 CloudAppEvents 
               | where ISP has ispvar
+              | extend IPTags = tostring(IPTags)
               | where IPTags has iptagvar  
               | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != "" 
               | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != "[]" 
@@ -1590,6 +1598,7 @@ SkillGroups:
             let sitvar = '{{sit}}';
                 CloudAppEvents 
               | where ISP has ispvar
+              | extend IPTags = tostring(IPTags)
               | where IPTags has iptagvar  
               | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != "" 
               | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != "[]" 
@@ -1625,6 +1634,7 @@ SkillGroups:
             let splitime=(max_baseline_t+min_peak_t)/2.0;
             CloudAppEvents
               | where ISP has ispvar
+              | extend IPTags = tostring(IPTags)
               | where IPTags has iptagvar
               | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != ""
               | where parse_json(tostring(RawEventData.SensitiveInfoTypeData)) != "[]"
