@@ -6,7 +6,7 @@
           "type": "String"
       }
   },
-  "variables": {        "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",		
+  "variables": {"FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",		
   "StorageAccountName":"[concat(uniquestring(resourceGroup().id),'funcapp')]"},
 "resources": [
       {
@@ -134,7 +134,7 @@
               "alwaysOn": true,
               "reserved": true,
                       "siteConfig": {
-       "linuxFxVersion": "python|3.9"
+       "linuxFxVersion": "python|3.10"
       }
           },
           "resources": [
@@ -158,6 +158,23 @@
               }
           ]
       },
+    {
+      "type": "Microsoft.Web/sites/config",
+      "apiVersion": "2018-11-01",
+      "name": "[concat(variables('FunctionName'), '/web')]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('FunctionName'))]"
+      ],
+      "properties": {
+        "cors": {
+          "allowedOrigins": [
+            "https://portal.azure.com"
+          ],
+          "supportCredentials": false
+        }
+      }
+    },
       {
           "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
           "apiVersion": "2019-06-01",
