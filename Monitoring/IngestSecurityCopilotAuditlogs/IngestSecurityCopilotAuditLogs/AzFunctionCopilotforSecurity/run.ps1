@@ -21,7 +21,7 @@ if ($env:MSI_SECRET -and (Get-Module -ListAvailable Az.Accounts)){
 
 $Office365ContentTypes = "Audit.General"
 $Office365RecordTypes = "261,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325"
-$Office365CustomLog = "CFS_Audit"
+$Office365CustomLog = "SecurityCopilot_Audit"
 $LAWorkspaceId = $env:workspaceID
 $LAWorkspaceKey = $env:workspaceKey
 $AADAppClientId = $env:clientID 
