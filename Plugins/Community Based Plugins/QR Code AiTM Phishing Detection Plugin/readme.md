@@ -9,7 +9,7 @@ QR code AiTM (Adversary-in-the-Middle) phishing is a technique where attackers e
 For more detailed information, refer to the full article [here](https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/hunting-for-qr-code-aitm-phishing-and-user-compromise/ba-p/4053324).
 
 ## Prerequisites
-- <span style="color:blue">**Copilot for Security instance**</span>
+- <span style="color:blue">**Security Copilot instance**</span>
 - <span style="color:blue">**Microsoft Defender for Endpoint**</span>
 
 <span style="color:green">**Note:** This plugin is KQL-based and leverages hunting queries to hunt across Defender tables to identify risky behavior and suspicious activity. The tables include CloudAppEvents, EmailEvents, EmailAttachmentInfo, AADSignIn, etc.</span>
@@ -26,7 +26,7 @@ In this guide, we will provide high-level steps to get started using the new too
 
 ![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/raw/main/Plugins/Community%20Based%20Plugins/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture2.png)
 
-5. Select the Copilot for Security plugin and upload the QR Code AiTM Phishing Detection Plugin
+5. Select the Security Copilot plugin and upload the QR Code AiTM Phishing Detection Plugin
 
 ![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/raw/main/Plugins/Community%20Based%20Plugins/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture3.png)
 
@@ -44,4 +44,4 @@ under **QRCODE** you will find the following
 
 
 
-**Let us get started using this together with the Copilot for Security capabilities**
+**Let us get started using this together with the Security Copilot capabilities**
