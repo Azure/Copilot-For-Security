@@ -1,6 +1,6 @@
-# Custom Data Security Plugin for Copilot for Security
+# Custom Data Security Plugin for Security Copilot
 
-The custom Data Security plugin for Copilot for Security offers a range of functionalities to enhance your organization's cybersecurity capabilities. Here are the key features:
+The custom Data Security plugin for Security Copilot offers a range of functionalities to enhance your organization's cybersecurity capabilities. Here are the key features:
 
 ## Key Features
 
