@@ -10,7 +10,6 @@
 ### Instructions
 #### Upload the Custom Plugin
 
-1. Obtain the file [KQL_SentinelDailyOperationsSample.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/SentinelDailyOperations/KQL_SentinelDailyOperationsSample.yml) from this directory.
-2. Modify the yaml file to specify your specific Entra TentantId, SubscriptionId, ResourceGroupName and WorkspaceName for your Sentinel instance.
+1. Obtain the file [KQL_SentinelDailyOperationsSample.yaml](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Microsoft%20Sentinel%20Custom%20Plugin%20Scenarios/SentinelDailyOperations/KQL_SentinelDailyOperationsSample.yml) from this directory.
+2. Modify the yaml file to specify your specific Entra `TentantId`, `SubscriptionId`, `ResourceGroupName` and `WorkspaceName` for your Sentinel instance.
 3. Upload the custom plugin
-
