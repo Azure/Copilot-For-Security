@@ -75,7 +75,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 ### Deploy the Azure FunctionApp 
 1. Click to **Deploy the template / Deploy to Azure** below.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy_functionapp.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Frefs%2Fheads%2Fmain%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Fazuredeploy_functionapp.json)
 
 2. Now it is time to use the noted details from previous steps.  
 - Select the right **Subscription**, **Resource Group** and **Region** where you what to deploy the Azure Funtion App.  
@@ -85,7 +85,7 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 
 
 ### Deploy Analytical Rules
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy_analytics.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Frefs%2Fheads%2Fmain%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Fazuredeploy_analytics.json)
 
 ### Deploy Workbook 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Frefs%2Fheads%2Fmain%2Fazuredeploy_workbook.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/Azure/Copilot-For-Security/refs/heads/main/Monitoring/IngestSecurityCopilotAuditlogs/azuredeploy_workbook.json)
