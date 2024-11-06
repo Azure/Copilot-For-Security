@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
     title: eDiscovery Case Plugin
     description: Skills for creating a plugin that will help create eDiscovery case & additional workflows in Purview via Graph API Call
-    version: "v1.0"
+    version: "v1"
 servers:
    - url: https://graph.microsoft.com/v1.0/security/cases
    
