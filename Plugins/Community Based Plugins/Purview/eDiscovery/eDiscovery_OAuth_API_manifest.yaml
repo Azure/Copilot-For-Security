@@ -15,4 +15,4 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/samitks77/Copilot-For-Security/refs/heads/main/Plugins/Community%20Based%20Plugins/Purview/eDiscovery/eDiscovery_API_Plugin.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/Azure/Copilot-For-Security/refs/heads/main/Plugins/Community%20Based%20Plugins/Purview/eDiscovery/eDiscovery_API_Plugin.yaml
