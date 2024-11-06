@@ -1,10 +1,10 @@
-# Copilot for Security Custom Plugin - Sentinel KQL - GCPAudit Logs
+# Security Copilot Custom Plugin - Sentinel KQL - GCPAudit Logs
 
-#### Copilot for Security Plugin to run a Dynamic KQL Query for a particluar user, IP Address and time and date range against the GCPAudit logs in a Microsoft Sentinel workspace.
+#### Security Copilot Plugin to run a Dynamic KQL Query for a particluar user, IP Address and time and date range against the GCPAudit logs in a Microsoft Sentinel workspace.
 
 ### Pre-requisites
 
-* [Copilot for Security Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
+* [Security Copilot Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
 * [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
 * [Microsoft Sentinel Workspace](https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard) created.
 * Microsoft Sentinel [GCP Audit Logs Connector](https://learn.microsoft.com/en-us/azure/sentinel/connect-google-cloud-platform?tabs=terraform%2Cauditlogs) enabled.
