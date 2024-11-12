@@ -88,4 +88,4 @@ Invoke-WebRequest -Method Post -Headers $headerParams -Uri "https://manage.offic
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Frefs%2Fheads%2Fmain%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Fazuredeploy_analytics.json)
 
 ### Deploy Workbook 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/Azure/Copilot-For-Security/refs/heads/main/Monitoring/IngestSecurityCopilotAuditlogs/azuredeploy_workbook.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FCopilot-For-Security%2Frefs%2Fheads%2Fmain%2FMonitoring%2FIngestSecurityCopilotAuditlogs%2Fazuredeploy_workbook.json)
