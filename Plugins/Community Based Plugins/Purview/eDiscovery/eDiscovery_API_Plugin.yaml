@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
     title: eDiscovery Case Plugin
     description: Skills for creating a plugin that will help create eDiscovery case & additional workflows in Purview via Graph API Call
-    version: "v1.0"
+    version: "v1"
 servers:
    - url: https://graph.microsoft.com/v1.0/security/cases
    
@@ -278,50 +278,7 @@ paths:
                     description: OK
                     content:
                         application/json:
-
-    /ediscoveryCases/{ediscoveryCaseId}/reviewSets/{eDiscoveryReviewSetId}/addToReviewSet:
-        post:
-            operationId: Add eDiscovery search to a review set
-            description: Add an eDiscovery search to a review set by associating review set ID with search ID
-            parameters:
-                - in: path
-                  name: ediscoveryCaseId
-                  schema:
-                      type: string
-                  required: true
-                  description: caseId in eDiscovery
-                - in: path
-                  name: eDiscoveryReviewSetId
-                  schema:
-                      type: string
-                  required: true
-                  description: eDiscoveryReviewSetId in eDiscovery
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                search:
-                                    type: object #this will be an object as well
-                                    properties:
-                                        id:
-                                          type: string
-                                          description: Q-The ID of the eDiscovery search you'd like to add to the review set, supplied by the user. Required.
-                                          example: "cxxxxx-xxx0-4exx-bxx8-2xxxxxxxb7"
-                                additionalDataOptions:
-                                    type: string
-                                    description: The options for adding items to reviewSet that you'd like to add to the review set, supplied by the user. Examples are "allVersions" and/or linkedFiles, you can use both seperated by a comma. Required
-                        required:
-                            - search
-                            - additionalDataOptions
-            responses:
-                "200":
-                    description: OK
-                    content:
-                        application/json:
-
+                        
     /ediscoveryCases/{ediscoveryCaseId}/reviewSets/{eDiscoveryReviewSetId}/export:
         post:
             operationId: Initiate an export from a ediscoveryReviewSet
