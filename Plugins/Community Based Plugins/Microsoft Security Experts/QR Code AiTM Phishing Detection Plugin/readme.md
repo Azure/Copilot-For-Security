@@ -20,19 +20,19 @@ In this guide, we will provide high-level steps to get started using the new too
 2. Download the QR Code AiTM Phishing Detection Plugin YAML File
 3. Select the plugins icon in the bottom left corner
 
-![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/raw/main/Plugins/Community%20Based%20Plugins/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture1.png)
+![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Microsoft%20Security%20Experts/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture1.png)
 
 4. Under Custom upload, select **Upload plugin**
 
-![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/raw/main/Plugins/Community%20Based%20Plugins/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture2.png)
+![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Microsoft%20Security%20Experts/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture2.png)
 
 5. Select the Copilot for Security plugin and upload the QR Code AiTM Phishing Detection Plugin
 
-![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/raw/main/Plugins/Community%20Based%20Plugins/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture3.png)
+![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Microsoft%20Security%20Experts/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture3.png)
 
 6. Click **Add**
 7. Under Custom, you will see the plugin
-![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/raw/main/Plugins/Community%20Based%20Plugins/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture4.png)
+![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Microsoft%20Security%20Experts/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture4.png)
 
 
 
@@ -40,7 +40,7 @@ The custom package contains the following prompts :
 
 
 under **QRCODE** you will find the following 
-![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/raw/main/Plugins/Community%20Based%20Plugins/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture5.png)
+![QR Code AiTM Phishing Detection Plugin](https://github.com/Azure/Copilot-For-Security/blob/main/Plugins/Community%20Based%20Plugins/Microsoft%20Security%20Experts/QR%20Code%20AiTM%20Phishing%20Detection%20Plugin/images/Picture5.png)
 
 
 
