@@ -10,8 +10,14 @@ SkillGroups:
         DisplayName: Get PnP Events From Device
         Description: Summarises the PnP connection events from a specific device over a set timeframe
         ExamplePrompt:
-        - 'PnP'
-        - 'Plug and Play'
+        - 'PnP Events'
+        - 'Plug and Play Events'
+        - 'Get PnP events from device DEVICENAME from the last 7 days'
+        - 'Get PnP events from device DEVICENAME from the past 24 hours'
+        - 'Fetch PnP events from device DEVICENAME from the past 7 days'
+        - 'Fetch PnP events from device DEVICENAME from the past 24 hours'
+        - 'List PnP events from device DEVICENAME from the past 7 days'
+        - 'List PnP events from device DEVICENAME from the past 24 hours'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -40,8 +46,14 @@ SkillGroups:
         DisplayName: Get PnP Top 25 Devices
         Description: Fetches a count of the top 25 PnP devices across the estate
         ExamplePrompt:
-        - 'PnP'
-        - 'Plug and Play'
+        - 'PnP Devices'
+        - 'Plug and Play Devices'
+        - 'Get a list of the top 25 PnP devices from the last 24 hours'
+        - 'Get a list of the top 25 PnP devices from the last 1 day'
+        - 'Fetch a list of the top 25 PnP devices from the last 24 hours'
+        - 'Fetch a list of the top 25 PnP devices from the last 1 day'
+        - 'List the top 25 PnP devices from the last 24 hours'
+        - 'List the top 25 PnP devices from the last 1 day'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -67,8 +79,16 @@ SkillGroups:
         DisplayName: Get PnP Least Common Devices
         Description: Fetches a count of the 25 least common PnP devices which could be anomalous
         ExamplePrompt:
-        - 'PnP'
-        - 'Plug and Play'
+        - 'PnP Devices'
+        - 'Plug and Play Devices'
+        - 'Anomalous PnP'
+        - 'Anomalous Plug and Play'
+        - 'Get a list of the 25 least common PnP devices from the last 24 hours'
+        - 'Get a list of the 25 least common PnP devices from the last 1 day'
+        - 'Fetch a list of the 25 least common PnP devices from the last 24 hours'
+        - 'Fetch a list of the 25 least common PnP devices from the last 1 day'
+        - 'List the 25 least common PnP devices from the last 1 day'
+        - 'List the 25 least common PnP devices from the last 24 hours'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
