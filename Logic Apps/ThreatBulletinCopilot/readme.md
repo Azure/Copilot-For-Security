@@ -26,7 +26,7 @@ Prior to beginning the installation process, it's crucial to confirm that you ha
 3. Proceed to run the Logic app and Prepare for the results 
 
 Logic App View
-![Threat Bulletin Logic App](https://github.com/KwachSean/SecurityCopilot/raw/main/playbooks/ThreatBulletinCopilot/threatbulletinlogicapp.png)
+![Threat Bulletin Logic App](https://github.com/Azure/Copilot-For-Security/blob/main/Logic%20Apps/ThreatBulletinCopilot/threatbulletinlogicapp.png)
 
 Results of the Logic APP
-![Threat Bulletin Image](https://github.com/KwachSean/SecurityCopilot/raw/main/playbooks/ThreatBulletinCopilot/Threatbulletin.png)
+![Threat Bulletin Image](https://github.com/Azure/Copilot-For-Security/blob/main/Logic%20Apps/ThreatBulletinCopilot/Threatbulletin.png)
