@@ -13,6 +13,19 @@ SkillGroups:
         - 'OneDrive Malware'
         - 'SharePoint Malware'
         - 'Cloud App ATP'
+        - 'Cloud App Advanced Threat Protection'
+        - 'Get a list of Advanced Threat Protection malware events from Cloud Apps for the past 24 hours'
+        - 'Get a list of Advanced Threat Protection malware events from Cloud Apps for the past 30 days'
+        - 'Get a list of ATP malware events from Cloud Apps for the past 24 hours'
+        - 'Get a list of ATP malware events from Cloud Apps for the past 30 days'
+        - 'Fetch a list of Advanced Threat Protection malware events from Cloud Apps for the past 24 hours'
+        - 'Fetch a list of Advanced Threat Protection malware events from Cloud Apps for the past 30 days'
+        - 'Fetch a list of ATP malware events from Cloud Apps for the past 24 hours'
+        - 'Fetch a list of ATP malware events from Cloud Apps for the past 30 days'
+        - 'List the Advanced Threat Protection malware events from Cloud Apps for the past 24 hours'
+        - 'List the Advanced Threat Protection malware events from Cloud Apps for the past 30 days'
+        - 'List the ATP malware events from Cloud Apps for the past 24 hours'
+        - 'List the ATP malware events from Cloud Apps for the past 30 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -39,6 +52,19 @@ SkillGroups:
         - 'OneDrive Malware'
         - 'SharePoint Malware'
         - 'Office Activity ATP'
+        - 'Office Activity Advanced Threat Protection'
+        - 'Get a list of Advanced Threat Protection malware events from Office Activity for the past 24 hours'
+        - 'Get a list of Advanced Threat Protection malware events from Office Activity for the past 30 days'
+        - 'Get a list of ATP malware events from Office Activity for the past 24 hours'
+        - 'Get a list of ATP malware events from Office Activity for the past 30 days'
+        - 'Fetch a list of Advanced Threat Protection malware events from Office Activity for the past 24 hours'
+        - 'Fetch a list of Advanced Threat Protection malware events from Office Activity for the past 30 days'
+        - 'Fetch a list of ATP malware events from Office Activity for the past 24 hours'
+        - 'Fetch a list of ATP malware events from Office Activity for the past 30 days'
+        - 'List the Advanced Threat Protection malware events from Office Activity for the past 24 hours'
+        - 'List the Advanced Threat Protection malware events from Office Activity for the past 30 days'
+        - 'List the ATP malware events from Office Activity for the past 24 hours'
+        - 'List the ATP malware events from Office Activity for the past 30 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
