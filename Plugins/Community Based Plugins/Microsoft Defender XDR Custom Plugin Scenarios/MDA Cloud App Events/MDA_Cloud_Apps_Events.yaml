@@ -83,7 +83,7 @@ SkillGroups:
   - Format: KQL
     Skills:
       - Name: GetExchangeOnlineActivityForUser
-        DisplayName: Get Exchange Online Activity For User:
+        DisplayName: Get Exchange Online Activity For User
         Description: Fetches a list of a user's Exchange Online activity within a specified timeframe
         ExamplePrompt:
         - 'Exchange Online User Activity'
