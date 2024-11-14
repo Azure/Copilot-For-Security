@@ -8,11 +8,15 @@ SkillGroups:
     Skills:
       - Name: GetOneDriveActivityForUser
         DisplayName: Get OneDrive Activity For User
-        Description: Feteches a list of a user's OneDrive activity within a specified timeframe
+        Description: Fetches a list of a user's OneDrive activity within a specified timeframe
         ExamplePrompt:
-        - 'OneDrive Activity'
-        - 'User Activity'
-        - 'Cloud App Activity'
+        - 'OneDrive User Activity'
+        - 'Get a list of OneDrive activity for someone@example.com from the past 2 hours'
+        - 'Get a list of OneDrive activity for someone@example.com from the past 1 day'
+        - 'Fetch a list of OneDrive activity for someone@example.com from the past 2 hours'
+        - 'Fetch a list of OneDrive activity for someone@example.com from the past 1 day'
+        - 'List all the OneDrive activity for someone@example.com from the past 2 hours'
+        - 'List all the OneDrive activity for someone@example.com from the past 1 day'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -43,9 +47,13 @@ SkillGroups:
         DisplayName: Get SharePoint Activity For User
         Description: Fetches a list of a user's SharePoint activity within a specified timeframe
         ExamplePrompt:
-        - 'SharePoint Activity'
-        - 'User Activity'
-        - 'Cloud App Activity'
+        - 'SharePoint User Activity'
+        - 'Get a list of SharePoint activity for someone@example.com from the past 2 hours'
+        - 'Get a list of SharePoint activity for someone@example.com from the past 1 day'
+        - 'Fetch a list of SharePoint activity for someone@example.com from the past 2 hours'
+        - 'Fetch a list of SharePoint activity for someone@example.com from the past 1 day'
+        - 'List all the SharePoint activity for someone@example.com from the past 2 hours'
+        - 'List all the SharePoint activity for someone@example.com from the past 1 day'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -78,9 +86,13 @@ SkillGroups:
         DisplayName: Get Exchange Online Activity For User:
         Description: Fetches a list of a user's Exchange Online activity within a specified timeframe
         ExamplePrompt:
-        - 'Exchange Online Activity'
-        - 'User Activity'
-        - 'Cloud App Activity'
+        - 'Exchange Online User Activity'
+        - 'Get a list of Exchange Online activity for someone@example.com from the past 2 hours'
+        - 'Get a list of Exchange Online activity for someone@example.com from the past 1 day'
+        - 'Fetch a list of Exchange Online activity for someone@example.com from the past 2 hours'
+        - 'Fetch a list of Exchange Online activity for someone@example.com from the past 1 day'
+        - 'List all the Exchange Online activity for someone@example.com from the past 2 hours'
+        - 'List all the Exchange Online activity for someone@example.com from the past 1 day'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -112,9 +124,13 @@ SkillGroups:
         DisplayName: Get Teams Activity For User
         Description: Fetches a list of a user's Teams activity within a specified timeframe
         ExamplePrompt:
-        - 'Teams Activity'
-        - 'User Activity'
-        - 'Cloud App Activity'
+        - 'Teams User Activity'
+        - 'Get a list of Teams activity for someone@example.com from the past 2 hours'
+        - 'Get a list of Teams activity for someone@example.com from the past 1 day'
+        - 'Fetch a list of Teams activity for someone@example.com from the past 2 hours'
+        - 'Fetch a list of Teams activity for someone@example.com from the past 1 day'
+        - 'List all the Teams activity for someone@example.com from the past 2 hours'
+        - 'List all the Teams activity for someone@example.com from the past 1 day'        
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
