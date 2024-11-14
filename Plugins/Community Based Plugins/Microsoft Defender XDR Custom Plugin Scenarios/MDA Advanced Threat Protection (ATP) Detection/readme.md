@@ -25,7 +25,7 @@
 
 - Get a list of Advanced Threat Protection malware events from Cloud Apps for the past 24 hours
 - Fetch a list of Advanced Threat Protection malware events from Office Activity for the past 30 days
-- List the ATP malware events from Office Activity for the past 24 hours
+- List the ATP malware events from Cloud Apps for the past 24 hours
 - Get a list of ATP malware events from Office Activity for the past 30 days
 
 #### Example Usage
