@@ -10,10 +10,13 @@ SkillGroups:
         DisplayName: Get SmartScreen Events
         Description: Summarises SmartScreen events over a specified timeframe
         ExamplePrompt:
-        - 'SmartScreen'
-        - 'Blocked Phishing URLs'
-        - 'Blocked Malware URLs'
-        - 'Untrusted URLs'
+        - 'SmartScreen Events'
+        - 'Get a list of SmartScreen events from the past 24 hours'
+        - 'Get a list of SmartScreen events from the past 7 days'
+        - 'Fetch a list of SmartScreen events from the past 24 hours'
+        - 'Fetch a list of SmartScreen events from the past 7 days'
+        - 'List the SmartScreen events from the past 24 hours'
+        - 'List the SmartScreen events from the past 7 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -36,8 +39,13 @@ SkillGroups:
         DisplayName: Get SmartScreen Warning Events
         Description: Summarises SmartScreen warning events over a specified timeframe
         ExamplePrompt:
-        - 'SmartScreen'
-        - 'SmartScreen Warning'
+        - 'SmartScreen Warning Events'
+        - 'Get a list of SmartScreen warning events from the past 24 hours'
+        - 'Get a list of SmartScreen warning events from the past 7 days'
+        - 'Fetch a list of SmartScreen warning events from the past 24 hours'
+        - 'Fetch a list of SmartScreen warning events from the past 7 days'
+        - 'List the SmartScreen warning events from the past 24 hours'
+        - 'List the SmartScreen warning events from the past 7 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -60,9 +68,14 @@ SkillGroups:
         DisplayName: Get SmartScreen Bypass Events
         Description: Summarises SmartScreen bypass events over a specified timeframe
         ExamplePrompt:
-        - 'SmartScreen'
         - 'SmartScreen User Override'
         - 'SmartScreen Bypass'
+        - 'Get a list of SmartScreen bypass events from the past 24 hours'
+        - 'Get a list of SmartScreen override events from the past 7 days'
+        - 'Fetch a list of SmartScreen override events from the past 24 hours'
+        - 'Fetch a list of SmartScreen bypass events from the past 7 days'
+        - 'List the SmartScreen override events from the past 24 hours'
+        -' List the SmartScreen bypass events from the past 7 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -85,8 +98,13 @@ SkillGroups:
         DisplayName: Get SmartScreen Events URL
         Description: Fetches a count of SmartScreen events grouped by URL
         ExamplePrompt:
-        - 'SmartScreen'
         - 'SmartScreen URLs'
+        - 'Get a list of URLs identified by SmartScreen from the past 24 hours'
+        - 'Get a list of URLs identified by SmartScreen from the past 7 days'
+        - 'Fetch a list of URLs identified by SmartScreen from the past 24 hours'
+        - 'Fetch a list of URLs identified by SmartScreen from the past 7 days'
+        - 'List the URLs identified by SmartScreen from the past 24 hours'
+        - 'List the URLs identified by SmartScreen from the past 7 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -110,9 +128,13 @@ SkillGroups:
         DisplayName: Get SmartScreen Warning Events URL
         Description: Fetches a count of SmartScreen warning events grouped by URL
         ExamplePrompt:
-        - 'SmartScreen'
-        - 'SmartScreen URLs'
-        - 'SmartScreen Warning'
+        - 'SmartScreen URLs Warning'
+        - 'Get a list of URLs marked with a warning by SmartScreen from the past 24 hours'
+        - 'Get a list of URLs marked with a warning by SmartScreen from the past 7 days'
+        - 'Fetch a list of URLs marked with a warning by SmartScreen from the past 24 hours'
+        - 'Fetch a list of URLs marked with a warning by SmartScreen from the past 7 days'
+        - 'List the URLs marked with a warning by SmartScreen from the past 24 hours'
+        - 'List the URLs marked with a warning by SmartScreen from the past 7 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
@@ -136,10 +158,14 @@ SkillGroups:
         DisplayName: Get SmartScreen Bypass Events URL
         Description: Fetches a count of SmartScreen bypass events grouped by URL
         ExamplePrompt:
-        - 'SmartScreen'
-        - 'SmartScreen URLs'
-        - 'SmartScreen User Override'
-        - 'SmartScreen Bypass'
+        - 'SmartScreen URLs User Override'
+        - 'SmartScreen URLs Bypass'
+        - 'Get a list of URLs where the user has overridden SmartScreen from the past 24 hours'
+        - 'Get a list of URLs where the user has bypassed SmartScreen from the past 7 days'
+        - 'Fetch a list of URLs where the user has overridden SmartScreen from the past 24 hours'
+        - 'Fetch a list of URLs where the user has bypassed SmartScreen from the past 7 days'
+        - 'List the URLs where the user has bypassed SmartScreen from the past 24 hours'
+        - 'List the URLs where the user has overridden SmartScreen from the past 7 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
