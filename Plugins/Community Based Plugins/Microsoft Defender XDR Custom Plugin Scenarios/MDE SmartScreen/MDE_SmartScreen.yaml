@@ -75,7 +75,7 @@ SkillGroups:
         - 'Fetch a list of SmartScreen override events from the past 24 hours'
         - 'Fetch a list of SmartScreen bypass events from the past 7 days'
         - 'List the SmartScreen override events from the past 24 hours'
-        -' List the SmartScreen bypass events from the past 7 days'
+        - 'List the SmartScreen bypass events from the past 7 days'
         Inputs:
           - Name: hourorday
             Description: hours (h) or days (d)
