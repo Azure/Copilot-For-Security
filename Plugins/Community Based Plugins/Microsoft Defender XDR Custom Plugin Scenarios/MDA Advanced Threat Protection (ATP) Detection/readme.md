@@ -2,7 +2,7 @@
 
 ### **This KQL plugin enables SOC analysts and managers to get insights about potential malware in their Cloud App environments based on the Defender for Cloud Apps CloudAppEvents table and Sentinel OfficeActivity table.**
 
-### Pre-requisites
+### Prerequisites
 
 -   [Copilot for Security enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
 -   [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
@@ -14,10 +14,19 @@
 1.  Obtain the file MDA_Advanced_Threat_Protection_Detection.yaml from this directory.
 2.  Upload the custom plugin
 
-#### Utilization of the plugin
+### Plugin Utilisation
+
+#### Skills
 
 - **GetCloudAppATPEvents**: Fetches a list of Advanced Threat Protection events within a specified timeframe
 - **GetOfficeActivityATPEvents**: Fetches a list of Advanced Threat Protection events within a specified timeframe
+
+#### Example Prompts
+
+- Get a list of Advanced Threat Protection malware events from Cloud Apps for the past 24 hours
+- Fetch a list of Advanced Threat Protection malware events from Office Activity for the past 30 days
+- List the ATP malware events from Office Activity for the past 24 hours
+- Get a list of ATP malware events from Office Activity for the past 30 days
 
 #### Example Usage
 
