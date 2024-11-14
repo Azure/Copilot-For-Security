@@ -15,6 +15,8 @@
 1.  Obtain the file MDE_Attack_Surface_Reduction.yaml from this directory.
 2.  Upload the custom plugin
 
+### Plugin Utilisation
+
 #### Skills
 
 - **GetASREventCountWithinTimeframe**: Fetches a count of ASR events within the specified timeframe
@@ -23,6 +25,16 @@
 - **GetASRBlockedEvents**: Fetches a count of the top 25 ASR blocked events
 - **GetASRAuditedEvents**: Fetches a count of the top 25 ASR audited events
 - **GetASREventsByCategory**: Fetches a count of ASR events grouped by category and day
+
+#### Example Prompts
+
+- Get a count of the ASR events from the past 24 hours
+- Fetch a count of the Attack Surface Reduction events seen on device DEVICENAME in the past 7 days
+- List the count of ASR events for file FILENAME.EXE in the past 24 hours
+- Get a count of the blocked ASR events from the past 7 days
+- Fetch a count of the audited Attack Surface Reduction events from the past 24 hours
+- List the ASR events grouped by category and day from the past 48 hours
+- Get a count of the Attack Surface Reduction events grouped by category and day from the last 30 days
 
 #### Example Usage
 
