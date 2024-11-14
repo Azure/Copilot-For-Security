@@ -8,7 +8,7 @@ The CloudAppEvents table contains enriched logs from all SaaS applications conne
 - Exchange Online
 - Teams
 
-### Pre-requisites
+### Prerequisites
 
 -   [Copilot for Security enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
 -   [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
@@ -20,12 +20,21 @@ The CloudAppEvents table contains enriched logs from all SaaS applications conne
 1.  Obtain the file MDA_Cloud_App_Events.yaml from this directory.
 2.  Upload the custom plugin
 
-#### Utilization of the plugin
+### Plugin Utilisation
+
+#### Skills
 
 - **GetOneDriveActivtyForUser**: Feteches a list of a user's OneDrive activity within a specified timeframe
 - **GetSharePointActivityForUser**: Fetches a list of a user's SharePoint activity within a specified timeframe
 - **GetExchangeOnlineActivityForUser**: Fetches a list of a user's Exchange Online activity within a specified timeframe
 - **GetTeamsActivityForUser**: Fetches a list of a user's Teams activity within a specified timeframe
+
+#### Example Prompts
+
+- Get a list of OneDrive activity for someone@example.com from the past 2 hours
+- Fetch a list of SharePoint activity for someone@example.com from the past 1 day
+- List all the Exchange Online activity for someone@example.com from the past 2 hours
+- Get a list of Teams activity for someone@example.com from the past 1 day
 
 #### Example Usage
 
