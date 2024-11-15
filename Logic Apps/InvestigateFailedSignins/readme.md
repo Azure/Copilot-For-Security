@@ -26,5 +26,5 @@ Prior to beginning the installation process, it's crucial to confirm that you ha
 3. Proceed to run the Logic app and Prepare for the results 
 
 
-![Investigate Failed Sign-Ins](https://raw.githubusercontent.com/KwachSean/SecurityCopilot/main/playbooks/InvestigateFailedSignins/investigatefailedsignins.png)
+![Investigate Failed Sign-Ins](https://github.com/Azure/Copilot-For-Security/blob/main/Logic%20Apps/InvestigateFailedSignins/investigatefailedsignins.png)
 
