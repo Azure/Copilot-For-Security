@@ -14,6 +14,18 @@
 1.  Obtain the file IOC_Query_Builder.yaml from this directory.
 2.  Upload the custom plugin
 
+### Plugin Utilisation
+
+#### Skills
+
+- **GenerateIOCListForKQL**: Formats a list of IOCs so they can be used by SOC analysts in KQL queries
+
+#### Example Prompts
+
+- Format the following list of IOCs:
+- Create a dynamic array from this list of IP addresses:
+- Format the following list of hashes:
+
 #### Example Usage
 
 1. Use the FetchURL skill to gather a list of IOCs from a threat intelligence report webpage.
