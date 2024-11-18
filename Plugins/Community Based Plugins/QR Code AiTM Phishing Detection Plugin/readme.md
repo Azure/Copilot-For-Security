@@ -44,4 +44,4 @@ under **QRCODE** you will find the following
 
 
 
-**Let us get started using this together with the Copilot for Security capabilities**
+**Let us get started using this together with the Security Copilot capabilities**
