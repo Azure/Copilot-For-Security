@@ -1,4 +1,4 @@
-# Tutorial: Generate Copilot for Security Risky Incident Reports 
+# Tutorial: Generate Security Copilot Risky Incident Reports 
 
 Intent: As a SecOps Analyst or Manager, I want to automatically create detailed incident reports summazrizing critical investigation tasks and evidence for the riskiest incidents in my organization.
 
