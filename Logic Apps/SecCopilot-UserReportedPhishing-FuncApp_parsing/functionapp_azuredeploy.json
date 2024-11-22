@@ -7,7 +7,7 @@
       }
   },
   "variables": {"FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",		
-  "StorageAccountName":"[concat(uniquestring(resourceGroup().id),'funcapp')]"},
+  "StorageAccountName":"[concat(toLower(parameters('FunctionName')),'funcapp')]"},
 "resources": [
       {
           "type": "Microsoft.Insights/components",
@@ -153,7 +153,9 @@
                       "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(variables('StorageAccountName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                       "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(variables('StorageAccountName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                       "WEBSITE_CONTENTSHARE": "[toLower(variables('FunctionName'))]",
-                      "WEBSITE_RUN_FROM_PACKAGE": "https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Logic%20Apps/SecCopilot-UserReportedPhishing-FuncApp_parsing/FunctionApp.zip"
+                      "WEBSITE_RUN_FROM_PACKAGE": "https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Logic%20Apps/SecCopilot-UserReportedPhishing-FuncApp_parsing/FunctionApp.zip",
+                      "SCM_DO_BUILD_DURING_DEPLOYMENT": true
+                      
                   } 
               }
           ]
