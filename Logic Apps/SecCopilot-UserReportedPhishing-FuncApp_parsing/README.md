@@ -1,4 +1,5 @@
 # User Submitted Phishing Analysis with Security Copilot
+Author: Yaniv Shasha & Craig Freyman
 This solution automates the analysis of user-submitted phishing emails using Security Copilot. It monitors a shared inbox, triggering a Logic App upon new email arrival. The Logic App processes the email using a Function App, which extracts relevant details, leverages the MDTI Security Copilot Skills for reputation insights, and sends the results to an email recipient. 
 
 ## Deploy the Solution
