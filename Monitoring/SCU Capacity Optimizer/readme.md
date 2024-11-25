@@ -73,14 +73,14 @@ Usage requirements:
 
 ## Deployment
 **Deploy Solution**<br>
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FSecurity-Copilot%2Fmain%2FSCU%20Capacity%20Optimizer%2Fsolution%2Fazuredeploy.json)<br>
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FSecurity-Copilot%2Fmain%2FMonitoring%2FSCU%20Capacity%20Optimizer%2Fsolution%2Fazuredeploy.json)<br>
 
 Note: During deployment, the selected Playbook Resource Group must be different than the Sentinel Resource Group.
 
 
 ## Post-deployment
 1. (Optional) Deploy the Security Copilot Capacity Creator role to each subscription where Security Copilot Compute Capacities are present for a least-privilege approach<br>
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FSecurity-Copilot%2Fmain%2FSCU%20Capacity%20Optimizer%2Fcustomrole%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FSecurity-Copilot%2Fmain%2FMonitoring%2FSCU%20Capacity%20Optimizer%2Fcustomrole%2Fazuredeploy.json)
 
 2. Assign the Security Copilot Capacity Creator custom role, or Contributor built-in role to the Playbook's managed identity - https://docs.microsoft.com/azure/logic-apps/create-managed-service-identity?tabs=consumption#assign-managed-identity-role-based-access-in-the-azure-portal
 
