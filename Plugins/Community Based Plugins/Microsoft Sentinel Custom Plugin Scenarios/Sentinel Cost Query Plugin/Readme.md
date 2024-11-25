@@ -1,10 +1,10 @@
-# Copilot for Security Custom Plugin - Sentinel KQL - Sentinel Costs
+# Security Copilot Custom Plugin - Sentinel KQL - Sentinel Costs
 
-#### Copilot for Security Plugin to run a Dynamic KQL Query to estimate Microsoft Sentinel Costs for a specific time and date range by running a KQL query against the Usage table in Microsoft Sentinel.
+#### Security Copilot Plugin to run a Dynamic KQL Query to estimate Microsoft Sentinel Costs for a specific time and date range by running a KQL query against the Usage table in Microsoft Sentinel.
 
 ### Pre-requisites
 
-* [Copilot for Security Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
+* [Security Copilot Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
 * [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
 * [Microsoft Sentinel Workspace](https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard) created.
 * Parameters for KQL Plugin - Microsoft Sentinel Workspace Name, Subscription ID, Resource Group Name and Entra Tenant ID

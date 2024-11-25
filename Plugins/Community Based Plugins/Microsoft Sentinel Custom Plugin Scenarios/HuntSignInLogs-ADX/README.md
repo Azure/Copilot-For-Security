@@ -1,10 +1,10 @@
-# Copilot for Security Custom Plugin - ADX KQL - Get Entra Sign-in Logs from Azure Data Explorer
+# Security Copilot Custom Plugin - ADX KQL - Get Entra Sign-in Logs from Azure Data Explorer
 
-#### Copilot for Security Plugin to retrieve Entra ID Sign-in logs from an Azure Data Explorer cluster.
+#### Security Copilot Plugin to retrieve Entra ID Sign-in logs from an Azure Data Explorer cluster.
 
 ### Pre-requisites
 
-* [Copilot for Security Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
+* [Security Copilot Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
 * [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
 * [An Azure Data Explorer cluster](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/using-azure-data-explorer-for-long-term-retention-of-microsoft/ba-p/1883947) with Entra ID Sign in logs exported from the Signinlogs table in Sentinel to ADX
 
