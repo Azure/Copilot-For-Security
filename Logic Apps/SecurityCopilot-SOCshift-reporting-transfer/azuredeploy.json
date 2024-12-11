@@ -3,9 +3,15 @@
     "contentVersion":  "1.0.0.0",
     "parameters":  {
         "PlaybookName":  {
-            "defaultValue":  "SecurityCopilot-SOCshift-reporting-transfer_1001",
+            "defaultValue":  "SecurityCopilot-SOCshift-reporting-transfer",
             "type":  "string"
-        }
+        },
+        "email":  {
+            "type":  "string",
+            "metadata":  {
+                "description":  "Enter value for email"
+            }
+        }   
     },
     "variables":  {
         "Office365ConnectionName":  "[concat('Office365-', parameters('PlaybookName'))]",
@@ -24,6 +30,10 @@
                             "defaultValue":  {
                             },
                             "type":  "Object"
+                        },
+                        "email":  {
+                            "defaultValue":  "[parameters('email')]",
+                            "type":  "string"
                         }
                     },
                     "triggers":  {
@@ -94,7 +104,7 @@
                                     {
                                         "name":  "Soc Email address",
                                         "type":  "string",
-                                        "value":  "yanivsh@microsoft.com"
+                                        "value":  "@parameters('email')"
                                     }
                                 ]
                             }
