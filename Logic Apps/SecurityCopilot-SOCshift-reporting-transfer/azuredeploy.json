@@ -301,9 +301,9 @@
             "type":  "Microsoft.Logic/workflows",
             "location":  "[resourceGroup().location]",
             "tags":  {
-                "Created By":  "Yaniv Shasha",
+                "Created By":  "Yaniv",
                 "CreatedDate":  "1/29/2024 10:04:47 PM",
-                "CreatorUPN":  "yanivsh@woodgrove.ms"
+                "CreatorUPN":  ""
             },
             "apiVersion":  "2017-07-01",
             "dependsOn":  [
