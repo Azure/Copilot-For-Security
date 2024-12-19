@@ -37,4 +37,4 @@ SkillGroups:
             EmailEvents
             | where RecipientEmailAddress =~ '{{email}}'
             | project Timestamp, NetworkMessageId, SenderFromAddress, SenderDisplayName, Subject, DeliveryLocation
-            | top 100 by Timestamp desc
+            | top 10 by Timestamp desc
