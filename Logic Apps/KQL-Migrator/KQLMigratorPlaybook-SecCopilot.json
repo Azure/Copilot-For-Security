@@ -106,7 +106,7 @@
                             },
                             "method": "post",
                             "body": {
-                                "PromptbookId": "9eca5480-f518-4ea4-9d67-1757b5105003",
+                                "PromptbookId": "<PromptBook-ID>",
                                 "PromptbookInputs": {
                                     "YARAQuery": "@variables('Query')"
                                 }

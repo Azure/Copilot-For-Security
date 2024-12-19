@@ -18,12 +18,14 @@ Prior to beginning the installation process, it's crucial to confirm that you ha
   <img src="https://aka.ms/deploytoazurebutton"/>
 </a>
 
+In case you face any deployment issue, you can use the attached Playbook json code file instead and replace the initial default blank azure logic app code view considering the public related blog post documentation in Techcommunity to update the subscription ID, Ressource Group, Workspace Name..etc with your tenant's value and edit the controls connection to be authenticated with you environement settings. 
+
 
 ### Post-Deployment Instructions
 
 1. Select the freaquency on how many times you want the Logic App to run 
 2. Authenticate the Copilot Prompts with a User that has Access to Security Copilot 
-3. Make sure you upload and define the watchlist item from Microosft Sentinel (two examples provided one for AQL queries and the other for YARA rules) you want to leverage in the playbook and app registeration if you want to automate creating Microsoft Sentinel analytics rules via the playbook
+3. Make sure you upload and define the watchlist item from Microosft Sentinel (two examples provided one for AQL queries and the other for YARA rules) you want to leverage in the playbook and app registeration if you want to automate creating Microsoft Sentinel analytics rules via the playbook, remember that you might need to edit the Logic App playbook with the watchlist required ones.
 3. Proceed to run the Logic app and Prepare for the results 
 
 
