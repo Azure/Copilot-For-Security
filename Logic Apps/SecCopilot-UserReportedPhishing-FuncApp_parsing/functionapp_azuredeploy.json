@@ -6,8 +6,8 @@
           "type": "String"
       }
   },
-  "variables": {        "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",		
-  "StorageAccountName":"[concat(uniquestring(resourceGroup().id),'funcapp')]"},
+  "variables": {"FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",		
+  "StorageAccountName":"[concat(toLower(parameters('FunctionName')),'funcapp')]"},
 "resources": [
       {
           "type": "Microsoft.Insights/components",
@@ -134,7 +134,7 @@
               "alwaysOn": true,
               "reserved": true,
                       "siteConfig": {
-       "linuxFxVersion": "python|3.9"
+       "linuxFxVersion": "python|3.10"
       }
           },
           "resources": [
@@ -153,11 +153,30 @@
                       "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(variables('StorageAccountName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                       "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(variables('StorageAccountName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                       "WEBSITE_CONTENTSHARE": "[toLower(variables('FunctionName'))]",
-                      "WEBSITE_RUN_FROM_PACKAGE": "https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Logic%20Apps/SecCopilot-UserReportedPhishing-FuncApp_parsing/FunctionApp.zip"
+                      "WEBSITE_RUN_FROM_PACKAGE": "https://raw.githubusercontent.com/Azure/Copilot-For-Security/main/Logic%20Apps/SecCopilot-UserReportedPhishing-FuncApp_parsing/FunctionApp.zip",
+                      "SCM_DO_BUILD_DURING_DEPLOYMENT": true
+                      
                   } 
               }
           ]
       },
+    {
+      "type": "Microsoft.Web/sites/config",
+      "apiVersion": "2018-11-01",
+      "name": "[concat(variables('FunctionName'), '/web')]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('FunctionName'))]"
+      ],
+      "properties": {
+        "cors": {
+          "allowedOrigins": [
+            "https://portal.azure.com"
+          ],
+          "supportCredentials": false
+        }
+      }
+    },
       {
           "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
           "apiVersion": "2019-06-01",

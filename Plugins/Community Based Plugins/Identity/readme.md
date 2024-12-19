@@ -1,4 +1,4 @@
-# Custom Identity Security Analyst plugin for Copilot for Security
+# Custom Identity Security Analyst plugin for Security Copilot
 
 The custom Identity Security skills to query Identity events for detection and forensics hunting across User Risk Assessment, Sign-in Monitoring, Admin Activity Monitoring, Application Usage Monitoring, Privileged Identity Management, Access Review:
 

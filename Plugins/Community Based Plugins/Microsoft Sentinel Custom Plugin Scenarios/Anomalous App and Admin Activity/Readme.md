@@ -1,10 +1,10 @@
-# Copilot for Security Custom KQL Plugin - Detect Anomalous App and User Activty using Microsoft Sentinel UEBA Insights
+# Security Copilot Custom KQL Plugin - Detect Anomalous App and User Activty using Microsoft Sentinel UEBA Insights
 
-#### Copilot for Security Plugin to that brings in data from Microsoft Sentinel UEBA insights focussed on anomalies related to Applications and administrative user activity. For details refer to this blog:
+#### Security Copilot Plugin to that brings in data from Microsoft Sentinel UEBA insights focussed on anomalies related to Applications and administrative user activity. For details refer to this blog:
 
 ### Pre-requisites
 
-* [Copilot for Security Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
+* [Security Copilot Enabled](https://learn.microsoft.com/en-us/security-copilot/get-started-security-copilot#onboarding-to-microsoft-security-copilot)
 * [Access to upload custom plugins](https://learn.microsoft.com/en-us/security-copilot/manage-plugins?tabs=securitycopilotplugin#managing-custom-plugins)
 * [Microsoft Sentinel Workspace](https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard) created.
 * [Microsoft Sentinel UEBA enabled](https://learn.microsoft.com/en-us/azure/sentinel/identify-threats-with-entity-behavior-analytics)
@@ -22,7 +22,7 @@
 ![CopilotForSecurity](https://learn.microsoft.com/en-us/security-copilot/media/add-plugin-button.png)
 
 
-4. [Enter your workspace details in the Copilot for Security UI](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KQL Plugin images/Workspacedetails.png)
+4. [Enter your workspace details in the Security Copilot UI](https://github.com/Azure/Copilot-For-Security/blob/main/Images/KQL Plugin images/Workspacedetails.png)
 
 
 ### Plugin Utilization
