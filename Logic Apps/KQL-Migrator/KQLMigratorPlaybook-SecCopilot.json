@@ -1,0 +1,150 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "contentVersion": "1.0.0.0",
+        "triggers": {
+            "Recurrence": {
+                "recurrence": {
+                    "interval": 1,
+                    "frequency": "Day"
+                },
+                "evaluatedRecurrence": {
+                    "interval": 1,
+                    "frequency": "Day"
+                },
+                "type": "Recurrence"
+            }
+        },
+        "actions": {
+            "UseCase-Var": {
+                "runAfter": {},
+                "type": "InitializeVariable",
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "UseCase",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "Query-Var": {
+                "runAfter": {
+                    "UseCase-Var": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "InitializeVariable",
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "Query",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "Get_Watchlist_Items": {
+                "runAfter": {
+                    "Query-Var": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection",
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['azuremonitorlogs']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "body": "_GetWatchlist('Yara2Sentinel')",
+                    "path": "/queryData",
+                    "queries": {
+                        "subscriptions": "<subscription-ID>",
+                        "resourcegroups": "<ResourceGroup-Name>",
+                        "resourcetype": "Log Analytics Workspace",
+                        "resourcename": "<SentinelWorkspace-Name>",
+                        "timerange": "@addDays(utcNow(), -10000)"
+                    }
+                }
+            },
+            "Watchlist_For_each_Query": {
+                "foreach": "@body('Get_Watchlist_Items')?['value']",
+                "actions": {
+                    "UseCase-SetVar": {
+                        "type": "SetVariable",
+                        "inputs": {
+                            "name": "UseCase",
+                            "value": "@items('Watchlist_For_each_Query')['UseCase']"
+                        }
+                    },
+                    "Query-SetVar": {
+                        "runAfter": {
+                            "UseCase-SetVar": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "SetVariable",
+                        "inputs": {
+                            "name": "Query",
+                            "value": "@items('Watchlist_For_each_Query')['Yara']"
+                        }
+                    },
+                    "Run_a_Security_Copilot_promptbook_1": {
+                        "runAfter": {
+                            "Query-SetVar": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "ApiConnection",
+                        "inputs": {
+                            "host": {
+                                "connection": {
+                                    "name": "@parameters('$connections')['securitycopilot']['connectionId']"
+                                }
+                            },
+                            "method": "post",
+                            "body": {
+                                "PromptbookId": "<PromptBook-ID>",
+                                "PromptbookInputs": {
+                                    "YARAQuery": "@variables('Query')"
+                                }
+                            },
+                            "path": "/run-promptbook"
+                        }
+                    }
+                },
+                "runAfter": {
+                    "Get_Watchlist_Items": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Foreach"
+            }
+        },
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "type": "Object",
+                "defaultValue": {}
+            }
+        }
+    },
+    "parameters": {
+        "$connections": {
+            "value": {
+                "azuremonitorlogs": {
+                    "id": "/subscriptions/<subscription-ID>/providers/Microsoft.Web/locations/westeurope/managedApis/",
+                    "connectionId": "/subscriptions/<subscription-ID>/resourceGroups/<ResourceGroup-Name>/providers/Microsoft.Web/connections/",
+                    "connectionName": "azuremonitorlogs-1"
+                },
+                "securitycopilot": {
+                    "id": "/subscriptions/<subscription-ID>/providers/Microsoft.Web/locations/westeurope/managedApis/securitycopilot",
+                    "connectionId": "/subscriptions/<subscription-ID>/resourceGroups/<ResourceGroup-Name>/providers/Microsoft.Web/connections/securitycopilot",
+                    "connectionName": "securitycopilot"
+                }
+            }
+        }
+    }
+}
